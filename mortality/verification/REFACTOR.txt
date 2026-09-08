@@ -1,0 +1,60 @@
+PAPER-FOCUSED MORTALITY FORMALIZATION
+
+The mathematical source is now the seven-module FiniteMonoidMortality library.
+It proves the same three published endpoints, with unchanged assumptions,
+conclusions and numerical bound. Publication.lean imports its Main module.
+
+Reading order and purpose
+
+1. MatrixWords: chronological matrix-word multiplication and scalar extension.
+   This is the only word convention used in the paper; no digit/radix notions
+   or unrelated word-density predicates are imported.
+2. ReachableSpans: the linear-word orbit and ascending bounded orbit spans.
+   Only the ambient-dimension spanning result needed for a short observation
+   is retained; observable rows, forbidden contexts and broader orbit-mortality
+   developments are omitted.
+3. Compression: rank-sized factorization H = U V, rank/unit lemmas and the
+   compressed return V Y U. Minimum-rank immortal-semigroup applications and
+   multiple-reset boundary observations are omitted.
+4. InvariantForms: the finite unit group, the sum of g g^T, its positive trace,
+   and the trace-defect certificate for rank loss in a sandwich.
+5. QuadraticObservation: symmetric coordinates, their n(n+1)/2 dimension,
+   the affine linear lift and a short nonzero observation.
+6. Descent: the exact recurrence L -> 2L + D, a singular initial generator,
+   and induction on rank. Both outside copies of the word remain charged.
+7. Main: the short rank-decreasing sandwich, real mortality and its rational
+   specialization. No finiteness assumption is added on the generator type.
+
+Scope of the refactor
+
+The previous publication contained 102 mathematical modules, 15,695 lines
+and 675,198 bytes. The focused library has 7 modules, 1,038 lines and
+43,554 bytes after explicit Mathlib import fixes. The final
+machine-readable counts are recorded separately. Definitions, theorem
+statements and proof terms written in retained declarations were extracted
+from the prior development and renamed consistently, not replaced by
+unproved wrappers around the original library. No original project imports
+remain. The 66 retained declaration bodies compare exactly with the originals
+after the explicit identifier mapping and removal of comments/whitespace.
+
+Verification and compatibility
+
+Audit.lean prints all three endpoint statements, their transitive axioms and
+the mortality bound. Specification.lean reproduces the original endpoint
+statements and the complete custom definition closure appearing in those
+statements (matrixWord and finiteMortalityBound); each original claim is
+proved directly by its refactored endpoint. These are compile-checked
+compatibility theorems, not assumed equalities. The public dependency pins
+remain unchanged, so Matrix.rank, real/rational fields, lists and arithmetic
+continue to refer to the same Mathlib definitions.
+
+The declaration map and source-equivalence report provide an additional,
+reproducible record of the extraction. The manuscript continues to supply
+mathematical attribution and the distinction between named formal endpoints
+and written corollaries. This refactor adds no mathematical novelty claim.
+
+The retained final build starts with an empty project .lake/build and sets
+LAKE_ARTIFACT_CACHE=false to prevent restoration of prior project artifacts.
+All seven modules and the Publication entry point visibly compile in the
+recorded build.log. The only build warning is the original main proof's
+style suggestion to replace letI with let; it does not affect correctness.

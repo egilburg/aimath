@@ -1,0 +1,3260 @@
+{
+  "source_public_commit": "735383665b012b5b2d30450735ed062fde7bd030",
+  "namespace": "SoficMarkovOrder",
+  "renaming": {
+    "modules": {
+      "UniformNilpotence": "CommonKernel",
+      "ExteriorRankCutoff": "ExteriorRank",
+      "SoficHankel": "HankelRankCriterion",
+      "StationaryWordMarkov": "StationaryWordLaw",
+      "SoficProcessMarkov": "ProcessMarkov",
+      "CanonicalHankelRepresentation": "CanonicalHankel",
+      "ExteriorPairMaps": "ExteriorPairs",
+      "BasisChain": "BasisChain",
+      "SoficPairChain": "PairChain",
+      "SoficPositiveCompletion": "PositiveCompletion",
+      "SoficSharpLaw": "SharpWordLaw",
+      "SoficRationalSharpness": "RationalSharpness",
+      "FiniteIIDMeasure": "IIDMeasure",
+      "FiniteIIDWordLaw": "IIDWordLaw",
+      "IIDPairFactor": "IIDPairFactor",
+      "UniformSoficRealization": "UniformRealization",
+      "SoficSharpProcess": "SharpProcess",
+      "ReachableSpanMortality": "WordProducts",
+      "StationarySourceBridge": "SequenceSpace",
+      "WeightedWordEnumeration": "FiniteWords",
+      "FiniteStateSourceProbability": "SelectorWeights"
+    },
+    "identifiers": {
+      "IndependentZeroBlocks": "SoficMarkovOrder",
+      "digitShift": "sequenceShift",
+      "digitHead": "sequenceHead",
+      "stationaryPrefix": "orbitPrefix",
+      "soficPairChain": "pairChain",
+      "sourceSelectorWeights": "selectorWeight",
+      "_digit_eq_ofFn": "_sequence_eq_ofFn",
+      "integral_comp_orbitPrefix_digit": "integral_comp_orbitPrefix_sequence"
+    }
+  },
+  "counting_convention": "Handwritten named top-level declarations; generated constructors, recursors and fields are excluded. Module and line counts exclude Publication/Audit entry files.",
+  "before": {
+    "modules": 192,
+    "lines": 31613,
+    "named_declarations": 1743
+  },
+  "after": {
+    "modules": 21,
+    "lines": 2186,
+    "named_declarations": 212
+  },
+  "declarations": [
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.basisChain",
+        "kind": "def",
+        "module": "BasisChain",
+        "line": 11
+      },
+      "new": {
+        "name": "SoficMarkovOrder.basisChain",
+        "kind": "def",
+        "module": "BasisChain",
+        "line": 11
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.basisChain_apply_basis",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 15
+      },
+      "new": {
+        "name": "SoficMarkovOrder.basisChain_apply_basis",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 15
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.basisChain_word_basis_zero",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 24
+      },
+      "new": {
+        "name": "SoficMarkovOrder.basisChain_word_basis_zero",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 24
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.basisChain_word_zero",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 40
+      },
+      "new": {
+        "name": "SoficMarkovOrder.basisChain_word_zero",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 40
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.basisChainWord",
+        "kind": "def",
+        "module": "BasisChain",
+        "line": 48
+      },
+      "new": {
+        "name": "SoficMarkovOrder.basisChainWord",
+        "kind": "def",
+        "module": "BasisChain",
+        "line": 48
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.basisChainWord_length",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 51
+      },
+      "new": {
+        "name": "SoficMarkovOrder.basisChainWord_length",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 51
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.basisChainWord_succ",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 54
+      },
+      "new": {
+        "name": "SoficMarkovOrder.basisChainWord_succ",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 54
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.basisChainWord_apply",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 62
+      },
+      "new": {
+        "name": "SoficMarkovOrder.basisChainWord_apply",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 62
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.basisChain_critical_nonzero",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 74
+      },
+      "new": {
+        "name": "SoficMarkovOrder.basisChain_critical_nonzero",
+        "kind": "theorem",
+        "module": "BasisChain",
+        "line": 74
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.hankelColumn",
+        "kind": "def",
+        "module": "CanonicalHankelRepresentation",
+        "line": 10
+      },
+      "new": {
+        "name": "SoficMarkovOrder.hankelColumn",
+        "kind": "def",
+        "module": "CanonicalHankel",
+        "line": 10
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.contextShift",
+        "kind": "def",
+        "module": "CanonicalHankelRepresentation",
+        "line": 12
+      },
+      "new": {
+        "name": "SoficMarkovOrder.contextShift",
+        "kind": "def",
+        "module": "CanonicalHankel",
+        "line": 12
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.contextShift_column",
+        "kind": "theorem",
+        "module": "CanonicalHankelRepresentation",
+        "line": 15
+      },
+      "new": {
+        "name": "SoficMarkovOrder.contextShift_column",
+        "kind": "theorem",
+        "module": "CanonicalHankel",
+        "line": 15
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.contextShift_invariant",
+        "kind": "theorem",
+        "module": "CanonicalHankelRepresentation",
+        "line": 19
+      },
+      "new": {
+        "name": "SoficMarkovOrder.contextShift_invariant",
+        "kind": "theorem",
+        "module": "CanonicalHankel",
+        "line": 19
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.hankelLetter",
+        "kind": "def",
+        "module": "CanonicalHankelRepresentation",
+        "line": 31
+      },
+      "new": {
+        "name": "SoficMarkovOrder.hankelLetter",
+        "kind": "def",
+        "module": "CanonicalHankel",
+        "line": 31
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.hankelInitial",
+        "kind": "def",
+        "module": "CanonicalHankelRepresentation",
+        "line": 34
+      },
+      "new": {
+        "name": "SoficMarkovOrder.hankelInitial",
+        "kind": "def",
+        "module": "CanonicalHankel",
+        "line": 34
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.hankelRow",
+        "kind": "def",
+        "module": "CanonicalHankelRepresentation",
+        "line": 37
+      },
+      "new": {
+        "name": "SoficMarkovOrder.hankelRow",
+        "kind": "def",
+        "module": "CanonicalHankel",
+        "line": 37
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.hankelWord_apply",
+        "kind": "theorem",
+        "module": "CanonicalHankelRepresentation",
+        "line": 40
+      },
+      "new": {
+        "name": "SoficMarkovOrder.hankelWord_apply",
+        "kind": "theorem",
+        "module": "CanonicalHankel",
+        "line": 40
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.hankel_represents",
+        "kind": "theorem",
+        "module": "CanonicalHankelRepresentation",
+        "line": 49
+      },
+      "new": {
+        "name": "SoficMarkovOrder.hankel_represents",
+        "kind": "theorem",
+        "module": "CanonicalHankel",
+        "line": 49
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.hankel_reduced",
+        "kind": "theorem",
+        "module": "CanonicalHankelRepresentation",
+        "line": 56
+      },
+      "new": {
+        "name": "SoficMarkovOrder.hankel_reduced",
+        "kind": "theorem",
+        "module": "CanonicalHankel",
+        "line": 56
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wordHankelSpan_finiteDimensional_of_representation",
+        "kind": "theorem",
+        "module": "CanonicalHankelRepresentation",
+        "line": 85
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wordHankelSpan_finiteDimensional_of_representation",
+        "kind": "theorem",
+        "module": "CanonicalHankel",
+        "line": 85
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.stationary_process_markov_cutoff_of_finite_hankel",
+        "kind": "theorem",
+        "module": "CanonicalHankelRepresentation",
+        "line": 94
+      },
+      "new": {
+        "name": "SoficMarkovOrder.stationary_process_markov_cutoff_of_finite_hankel",
+        "kind": "theorem",
+        "module": "CanonicalHankel",
+        "line": 94
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.stationary_process_markov_cutoff_of_representation",
+        "kind": "theorem",
+        "module": "CanonicalHankelRepresentation",
+        "line": 109
+      },
+      "new": {
+        "name": "SoficMarkovOrder.stationary_process_markov_cutoff_of_representation",
+        "kind": "theorem",
+        "module": "CanonicalHankel",
+        "line": 109
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.commonKernel",
+        "kind": "def",
+        "module": "UniformNilpotence",
+        "line": 19
+      },
+      "new": {
+        "name": "SoficMarkovOrder.commonKernel",
+        "kind": "def",
+        "module": "CommonKernel",
+        "line": 19
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.commonKernel_zero",
+        "kind": "theorem",
+        "module": "UniformNilpotence",
+        "line": 23
+      },
+      "new": {
+        "name": "SoficMarkovOrder.commonKernel_zero",
+        "kind": "theorem",
+        "module": "CommonKernel",
+        "line": 23
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.commonKernel_succ",
+        "kind": "theorem",
+        "module": "UniformNilpotence",
+        "line": 26
+      },
+      "new": {
+        "name": "SoficMarkovOrder.commonKernel_succ",
+        "kind": "theorem",
+        "module": "CommonKernel",
+        "line": 26
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.commonKernel_le_succ",
+        "kind": "theorem",
+        "module": "UniformNilpotence",
+        "line": 29
+      },
+      "new": {
+        "name": "SoficMarkovOrder.commonKernel_le_succ",
+        "kind": "theorem",
+        "module": "CommonKernel",
+        "line": 29
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.commonKernel_mono",
+        "kind": "theorem",
+        "module": "UniformNilpotence",
+        "line": 36
+      },
+      "new": {
+        "name": "SoficMarkovOrder.commonKernel_mono",
+        "kind": "theorem",
+        "module": "CommonKernel",
+        "line": 36
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.mem_commonKernel_iff",
+        "kind": "theorem",
+        "module": "UniformNilpotence",
+        "line": 40
+      },
+      "new": {
+        "name": "SoficMarkovOrder.mem_commonKernel_iff",
+        "kind": "theorem",
+        "module": "CommonKernel",
+        "line": 40
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.commonKernel_top_iff",
+        "kind": "theorem",
+        "module": "UniformNilpotence",
+        "line": 58
+      },
+      "new": {
+        "name": "SoficMarkovOrder.commonKernel_top_iff",
+        "kind": "theorem",
+        "module": "CommonKernel",
+        "line": 58
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.commonKernel_le_of_plateau",
+        "kind": "theorem",
+        "module": "UniformNilpotence",
+        "line": 73
+      },
+      "new": {
+        "name": "SoficMarkovOrder.commonKernel_le_of_plateau",
+        "kind": "theorem",
+        "module": "CommonKernel",
+        "line": 73
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformNilpotence_cutoff_finrank",
+        "kind": "theorem",
+        "module": "UniformNilpotence",
+        "line": 90
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformNilpotence_cutoff_finrank",
+        "kind": "theorem",
+        "module": "CommonKernel",
+        "line": 85
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wedgePair",
+        "kind": "def",
+        "module": "ExteriorPairMaps",
+        "line": 15
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wedgePair",
+        "kind": "def",
+        "module": "ExteriorPairs",
+        "line": 15
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wedgePair_add_left",
+        "kind": "theorem",
+        "module": "ExteriorPairMaps",
+        "line": 17
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wedgePair_add_left",
+        "kind": "theorem",
+        "module": "ExteriorPairs",
+        "line": 17
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wedgePair_smul_left",
+        "kind": "theorem",
+        "module": "ExteriorPairMaps",
+        "line": 21
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wedgePair_smul_left",
+        "kind": "theorem",
+        "module": "ExteriorPairs",
+        "line": 21
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wedgePair_swap",
+        "kind": "theorem",
+        "module": "ExteriorPairMaps",
+        "line": 25
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wedgePair_swap",
+        "kind": "theorem",
+        "module": "ExteriorPairs",
+        "line": 25
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wedgePair_add_right",
+        "kind": "theorem",
+        "module": "ExteriorPairMaps",
+        "line": 33
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wedgePair_add_right",
+        "kind": "theorem",
+        "module": "ExteriorPairs",
+        "line": 33
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wedgePair_smul_right",
+        "kind": "theorem",
+        "module": "ExteriorPairMaps",
+        "line": 38
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wedgePair_smul_right",
+        "kind": "theorem",
+        "module": "ExteriorPairs",
+        "line": 38
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wedgePair_self",
+        "kind": "theorem",
+        "module": "ExteriorPairMaps",
+        "line": 42
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wedgePair_self",
+        "kind": "theorem",
+        "module": "ExteriorPairs",
+        "line": 42
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wedgePair_linear_combination",
+        "kind": "theorem",
+        "module": "ExteriorPairMaps",
+        "line": 46
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wedgePair_linear_combination",
+        "kind": "theorem",
+        "module": "ExteriorPairs",
+        "line": 46
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.twoVectorMap",
+        "kind": "def",
+        "module": "ExteriorPairMaps",
+        "line": 55
+      },
+      "new": {
+        "name": "SoficMarkovOrder.twoVectorMap",
+        "kind": "def",
+        "module": "ExteriorPairs",
+        "line": 55
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairFunctional",
+        "kind": "def",
+        "module": "ExteriorPairMaps",
+        "line": 58
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairFunctional",
+        "kind": "def",
+        "module": "ExteriorPairs",
+        "line": 58
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairFunctional_wedgePair",
+        "kind": "theorem",
+        "module": "ExteriorPairMaps",
+        "line": 61
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairFunctional_wedgePair",
+        "kind": "theorem",
+        "module": "ExteriorPairs",
+        "line": 61
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.exterior_twoVectorMap",
+        "kind": "theorem",
+        "module": "ExteriorPairMaps",
+        "line": 66
+      },
+      "new": {
+        "name": "SoficMarkovOrder.exterior_twoVectorMap",
+        "kind": "theorem",
+        "module": "ExteriorPairs",
+        "line": 66
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairTransition",
+        "kind": "def",
+        "module": "ExteriorPairMaps",
+        "line": 81
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairTransition",
+        "kind": "def",
+        "module": "ExteriorPairs",
+        "line": 81
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.exterior_pairTransition",
+        "kind": "theorem",
+        "module": "ExteriorPairMaps",
+        "line": 89
+      },
+      "new": {
+        "name": "SoficMarkovOrder.exterior_pairTransition",
+        "kind": "theorem",
+        "module": "ExteriorPairs",
+        "line": 89
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.finrank_range_exteriorPower_map",
+        "kind": "theorem",
+        "module": "ExteriorRankCutoff",
+        "line": 21
+      },
+      "new": {
+        "name": "SoficMarkovOrder.finrank_range_exteriorPower_map",
+        "kind": "theorem",
+        "module": "ExteriorRank",
+        "line": 21
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.exteriorSquare_zero_iff_rank_le_one",
+        "kind": "theorem",
+        "module": "ExteriorRankCutoff",
+        "line": 33
+      },
+      "new": {
+        "name": "SoficMarkovOrder.exteriorSquare_zero_iff_rank_le_one",
+        "kind": "theorem",
+        "module": "ExteriorRank",
+        "line": 33
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.linearWord_exteriorPower",
+        "kind": "theorem",
+        "module": "ExteriorRankCutoff",
+        "line": 41
+      },
+      "new": {
+        "name": "SoficMarkovOrder.linearWord_exteriorPower",
+        "kind": "theorem",
+        "module": "ExteriorRank",
+        "line": 41
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.eventual_rankOne_cutoff_choose_two",
+        "kind": "theorem",
+        "module": "ExteriorRankCutoff",
+        "line": 51
+      },
+      "new": {
+        "name": "SoficMarkovOrder.eventual_rankOne_cutoff_choose_two",
+        "kind": "theorem",
+        "module": "ExteriorRank",
+        "line": 51
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wordWeight",
+        "kind": "def",
+        "module": "RenewalWordDecomposition",
+        "line": 75
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wordWeight",
+        "kind": "def",
+        "module": "FiniteWords",
+        "line": 12
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.finSuccTupleEquiv",
+        "kind": "def",
+        "module": "MatrixWordLogDensityBridge",
+        "line": 27
+      },
+      "new": {
+        "name": "SoficMarkovOrder.finSuccTupleEquiv",
+        "kind": "def",
+        "module": "FiniteWords",
+        "line": 15
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.representedWord",
+        "kind": "def",
+        "module": "SoficHankel",
+        "line": 18
+      },
+      "new": {
+        "name": "SoficMarkovOrder.representedWord",
+        "kind": "def",
+        "module": "HankelRankCriterion",
+        "line": 18
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wordHankelSpan",
+        "kind": "def",
+        "module": "SoficHankel",
+        "line": 22
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wordHankelSpan",
+        "kind": "def",
+        "module": "HankelRankCriterion",
+        "line": 22
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wordObservationMap",
+        "kind": "def",
+        "module": "SoficHankel",
+        "line": 26
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wordObservationMap",
+        "kind": "def",
+        "module": "HankelRankCriterion",
+        "line": 26
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wordHankelSpan_eq_map_reachable",
+        "kind": "theorem",
+        "module": "SoficHankel",
+        "line": 29
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wordHankelSpan_eq_map_reachable",
+        "kind": "theorem",
+        "module": "HankelRankCriterion",
+        "line": 29
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.ContextMarkov",
+        "kind": "def",
+        "module": "SoficHankel",
+        "line": 39
+      },
+      "new": {
+        "name": "SoficMarkovOrder.ContextMarkov",
+        "kind": "def",
+        "module": "HankelRankCriterion",
+        "line": 39
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.WordReduced",
+        "kind": "structure",
+        "module": "SoficHankel",
+        "line": 44
+      },
+      "new": {
+        "name": "SoficMarkovOrder.WordReduced",
+        "kind": "structure",
+        "module": "HankelRankCriterion",
+        "line": 44
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.WordReduced.observation_injective",
+        "kind": "theorem",
+        "module": "SoficHankel",
+        "line": 48
+      },
+      "new": {
+        "name": "SoficMarkovOrder.WordReduced.observation_injective",
+        "kind": "theorem",
+        "module": "HankelRankCriterion",
+        "line": 48
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.WordReduced.finrank_wordHankelSpan",
+        "kind": "theorem",
+        "module": "SoficHankel",
+        "line": 63
+      },
+      "new": {
+        "name": "SoficMarkovOrder.WordReduced.finrank_wordHankelSpan",
+        "kind": "theorem",
+        "module": "HankelRankCriterion",
+        "line": 63
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.end_eq_zero_of_context_zero",
+        "kind": "theorem",
+        "module": "SoficHankel",
+        "line": 70
+      },
+      "new": {
+        "name": "SoficMarkovOrder.end_eq_zero_of_context_zero",
+        "kind": "theorem",
+        "module": "HankelRankCriterion",
+        "line": 70
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.matrix_eq_zero_of_forbidden_contexts",
+        "kind": "theorem",
+        "module": "SoficHankel",
+        "line": 87
+      },
+      "new": {
+        "name": "SoficMarkovOrder.matrix_eq_zero_of_forbidden_contexts",
+        "kind": "theorem",
+        "module": "HankelRankCriterion",
+        "line": 87
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.rankOne_bilinear",
+        "kind": "theorem",
+        "module": "SoficHankel",
+        "line": 99
+      },
+      "new": {
+        "name": "SoficMarkovOrder.rankOne_bilinear",
+        "kind": "theorem",
+        "module": "HankelRankCriterion",
+        "line": 99
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.contextMarkov_of_rankOne",
+        "kind": "theorem",
+        "module": "SoficHankel",
+        "line": 111
+      },
+      "new": {
+        "name": "SoficMarkovOrder.contextMarkov_of_rankOne",
+        "kind": "theorem",
+        "module": "HankelRankCriterion",
+        "line": 111
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.rankOne_of_context_identity_of_ne_zero",
+        "kind": "theorem",
+        "module": "SoficHankel",
+        "line": 123
+      },
+      "new": {
+        "name": "SoficMarkovOrder.rankOne_of_context_identity_of_ne_zero",
+        "kind": "theorem",
+        "module": "HankelRankCriterion",
+        "line": 123
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.contextMarkov_iff_rankOne",
+        "kind": "theorem",
+        "module": "SoficHankel",
+        "line": 161
+      },
+      "new": {
+        "name": "SoficMarkovOrder.contextMarkov_iff_rankOne",
+        "kind": "theorem",
+        "module": "HankelRankCriterion",
+        "line": 161
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.contextMarkov_cutoff_choose_two",
+        "kind": "theorem",
+        "module": "SoficHankel",
+        "line": 178
+      },
+      "new": {
+        "name": "SoficMarkovOrder.contextMarkov_cutoff_choose_two",
+        "kind": "theorem",
+        "module": "HankelRankCriterion",
+        "line": 178
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights",
+        "kind": "structure",
+        "module": "FiniteIIDMeasure",
+        "line": 22
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights",
+        "kind": "structure",
+        "module": "IIDMeasure",
+        "line": 22
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights.letterMeasure",
+        "kind": "def",
+        "module": "FiniteIIDMeasure",
+        "line": 32
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights.letterMeasure",
+        "kind": "def",
+        "module": "IIDMeasure",
+        "line": 32
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights.letterMeasure.instIsProbabilityMeasure",
+        "kind": "instance",
+        "module": "FiniteIIDMeasure",
+        "line": 35
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights.letterMeasure.instIsProbabilityMeasure",
+        "kind": "instance",
+        "module": "IIDMeasure",
+        "line": 35
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights.iidMeasure",
+        "kind": "def",
+        "module": "FiniteIIDMeasure",
+        "line": 48
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights.iidMeasure",
+        "kind": "def",
+        "module": "IIDMeasure",
+        "line": 48
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights.iidMeasure.instIsProbabilityMeasure",
+        "kind": "instance",
+        "module": "FiniteIIDMeasure",
+        "line": 51
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights.iidMeasure.instIsProbabilityMeasure",
+        "kind": "instance",
+        "module": "IIDMeasure",
+        "line": 51
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights.letterMeasure_singleton",
+        "kind": "theorem",
+        "module": "FiniteIIDMeasure",
+        "line": 56
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights.letterMeasure_singleton",
+        "kind": "theorem",
+        "module": "IIDMeasure",
+        "line": 56
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights.measurePreserving_digitShift_iidMeasure",
+        "kind": "theorem",
+        "module": "FiniteIIDMeasure",
+        "line": 76
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights.measurePreserving_sequenceShift_iidMeasure",
+        "kind": "theorem",
+        "module": "IIDMeasure",
+        "line": 71
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights.map_iidMeasure_firstCoordinates",
+        "kind": "theorem",
+        "module": "FiniteIIDMeasure",
+        "line": 89
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights.map_iidMeasure_firstCoordinates",
+        "kind": "theorem",
+        "module": "IIDMeasure",
+        "line": 84
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairOutput",
+        "kind": "def",
+        "module": "IIDPairFactor",
+        "line": 12
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairOutput",
+        "kind": "def",
+        "module": "IIDPairFactor",
+        "line": 12
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairProcess",
+        "kind": "def",
+        "module": "IIDPairFactor",
+        "line": 17
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairProcess",
+        "kind": "def",
+        "module": "IIDPairFactor",
+        "line": 17
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairProcess_shift",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 19
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairProcess_shift",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 19
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairOutput_prefix",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 22
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairOutput_prefix",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 22
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.mem_wordCylinder_iff_prefix",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 33
+      },
+      "new": {
+        "name": "SoficMarkovOrder.mem_wordCylinder_iff_prefix",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 33
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.measurable_pairProcess",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 45
+      },
+      "new": {
+        "name": "SoficMarkovOrder.measurable_pairProcess",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 45
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairFactorMeasure",
+        "kind": "def",
+        "module": "IIDPairFactor",
+        "line": 53
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairFactorMeasure",
+        "kind": "def",
+        "module": "IIDPairFactor",
+        "line": 53
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairFactorMeasure_probability",
+        "kind": "instance",
+        "module": "IIDPairFactor",
+        "line": 56
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairFactorMeasure_probability",
+        "kind": "instance",
+        "module": "IIDPairFactor",
+        "line": 56
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairFactorMeasure_stationary",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 60
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairFactorMeasure_stationary",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 60
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairLetter",
+        "kind": "def",
+        "module": "IIDPairFactor",
+        "line": 70
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairLetter",
+        "kind": "def",
+        "module": "IIDPairFactor",
+        "line": 70
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairLetter_apply",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 76
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairLetter_apply",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 76
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.iidRow",
+        "kind": "def",
+        "module": "IIDPairFactor",
+        "line": 85
+      },
+      "new": {
+        "name": "SoficMarkovOrder.iidRow",
+        "kind": "def",
+        "module": "IIDPairFactor",
+        "line": 85
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.iidRow_apply",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 90
+      },
+      "new": {
+        "name": "SoficMarkovOrder.iidRow_apply",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 90
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pair_tail_sum",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 96
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pair_tail_sum",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 96
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pair_full_sum",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 129
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pair_full_sum",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 129
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairFactorMeasure_cylinder",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 145
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairFactorMeasure_cylinder",
+        "kind": "theorem",
+        "module": "IIDPairFactor",
+        "line": 145
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights.stationaryPrefix_digit_eq_ofFn",
+        "kind": "theorem",
+        "module": "FiniteIIDWordLaw",
+        "line": 26
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights.orbitPrefix_sequence_eq_ofFn",
+        "kind": "theorem",
+        "module": "IIDWordLaw",
+        "line": 26
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights.measurable_firstCoordinates",
+        "kind": "theorem",
+        "module": "FiniteIIDWordLaw",
+        "line": 40
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights.measurable_firstCoordinates",
+        "kind": "theorem",
+        "module": "IIDWordLaw",
+        "line": 40
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteProbabilityWeights.integral_comp_stationaryPrefix_digit",
+        "kind": "theorem",
+        "module": "FiniteIIDWordLaw",
+        "line": 77
+      },
+      "new": {
+        "name": "SoficMarkovOrder.FiniteProbabilityWeights.integral_comp_orbitPrefix_sequence",
+        "kind": "theorem",
+        "module": "IIDWordLaw",
+        "line": 51
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.soficPairChain",
+        "kind": "def",
+        "module": "SoficPairChain",
+        "line": 11
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairChain",
+        "kind": "def",
+        "module": "PairChain",
+        "line": 21
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.exterior_soficPairChain",
+        "kind": "theorem",
+        "module": "SoficPairChain",
+        "line": 15
+      },
+      "new": {
+        "name": "SoficMarkovOrder.exterior_pairChain",
+        "kind": "theorem",
+        "module": "PairChain",
+        "line": 25
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.soficPairChain_rankOne_at_cutoff",
+        "kind": "theorem",
+        "module": "SoficPairChain",
+        "line": 25
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairChain_rankOne_at_cutoff",
+        "kind": "theorem",
+        "module": "PairChain",
+        "line": 35
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.soficPairChain_critical_rank",
+        "kind": "theorem",
+        "module": "SoficPairChain",
+        "line": 36
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairChain_critical_rank",
+        "kind": "theorem",
+        "module": "PairChain",
+        "line": 46
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.linearWord_uniform_smul",
+        "kind": "theorem",
+        "module": "SoficPairChain",
+        "line": 50
+      },
+      "new": {
+        "name": "SoficMarkovOrder.linearWord_uniform_smul",
+        "kind": "theorem",
+        "module": "PairChain",
+        "line": 60
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.linearWord_uniform_smul_range",
+        "kind": "theorem",
+        "module": "SoficPairChain",
+        "line": 61
+      },
+      "new": {
+        "name": "SoficMarkovOrder.linearWord_uniform_smul_range",
+        "kind": "theorem",
+        "module": "PairChain",
+        "line": 71
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.entryMap",
+        "kind": "def",
+        "module": "SoficPositiveCompletion",
+        "line": 14
+      },
+      "new": {
+        "name": "SoficMarkovOrder.entryMap",
+        "kind": "def",
+        "module": "PositiveCompletion",
+        "line": 14
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.entryMap_apply",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 17
+      },
+      "new": {
+        "name": "SoficMarkovOrder.entryMap_apply",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 17
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.averageRow",
+        "kind": "def",
+        "module": "SoficPositiveCompletion",
+        "line": 21
+      },
+      "new": {
+        "name": "SoficMarkovOrder.averageRow",
+        "kind": "def",
+        "module": "PositiveCompletion",
+        "line": 21
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.averageRow_apply",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 24
+      },
+      "new": {
+        "name": "SoficMarkovOrder.averageRow_apply",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 24
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformMean",
+        "kind": "def",
+        "module": "SoficPositiveCompletion",
+        "line": 28
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformMean",
+        "kind": "def",
+        "module": "PositiveCompletion",
+        "line": 28
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformMean_apply",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 30
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformMean_apply",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 30
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.endEntry",
+        "kind": "def",
+        "module": "SoficPositiveCompletion",
+        "line": 33
+      },
+      "new": {
+        "name": "SoficMarkovOrder.endEntry",
+        "kind": "def",
+        "module": "PositiveCompletion",
+        "line": 33
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.end_eq_sum_entryMap",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 35
+      },
+      "new": {
+        "name": "SoficMarkovOrder.end_eq_sum_entryMap",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 35
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.endEntry_uniformMean",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 52
+      },
+      "new": {
+        "name": "SoficMarkovOrder.endEntry_uniformMean",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 52
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.averageRow_ones",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 56
+      },
+      "new": {
+        "name": "SoficMarkovOrder.averageRow_ones",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 56
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformMean_ones",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 59
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformMean_ones",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 59
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.averageRow_uniformMean",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 63
+      },
+      "new": {
+        "name": "SoficMarkovOrder.averageRow_uniformMean",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 63
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairTransition_pi_apply",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 72
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairTransition_pi_apply",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 72
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairTransition_nonneg",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 81
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairTransition_nonneg",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 81
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.endEntry_pairTransition_le_one",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 91
+      },
+      "new": {
+        "name": "SoficMarkovOrder.endEntry_pairTransition_le_one",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 91
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.completionEpsilon",
+        "kind": "def",
+        "module": "SoficPositiveCompletion",
+        "line": 101
+      },
+      "new": {
+        "name": "SoficMarkovOrder.completionEpsilon",
+        "kind": "def",
+        "module": "PositiveCompletion",
+        "line": 101
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.completionEpsilon_pos",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 103
+      },
+      "new": {
+        "name": "SoficMarkovOrder.completionEpsilon_pos",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 103
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.completionResidual",
+        "kind": "def",
+        "module": "SoficPositiveCompletion",
+        "line": 108
+      },
+      "new": {
+        "name": "SoficMarkovOrder.completionResidual",
+        "kind": "def",
+        "module": "PositiveCompletion",
+        "line": 108
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.completionResidual_entry_pos",
+        "kind": "theorem",
+        "module": "SoficPositiveCompletion",
+        "line": 112
+      },
+      "new": {
+        "name": "SoficMarkovOrder.completionResidual_entry_pos",
+        "kind": "theorem",
+        "module": "PositiveCompletion",
+        "line": 112
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.wordCylinder",
+        "kind": "def",
+        "module": "SoficProcessMarkov",
+        "line": 22
+      },
+      "new": {
+        "name": "SoficMarkovOrder.wordCylinder",
+        "kind": "def",
+        "module": "ProcessMarkov",
+        "line": 22
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.measurableSet_wordCylinder",
+        "kind": "theorem",
+        "module": "SoficProcessMarkov",
+        "line": 26
+      },
+      "new": {
+        "name": "SoficMarkovOrder.measurableSet_wordCylinder",
+        "kind": "theorem",
+        "module": "ProcessMarkov",
+        "line": 26
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.iUnion_wordCylinder_append",
+        "kind": "theorem",
+        "module": "SoficProcessMarkov",
+        "line": 34
+      },
+      "new": {
+        "name": "SoficMarkovOrder.iUnion_wordCylinder_append",
+        "kind": "theorem",
+        "module": "ProcessMarkov",
+        "line": 34
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.iUnion_wordCylinder_cons",
+        "kind": "theorem",
+        "module": "SoficProcessMarkov",
+        "line": 42
+      },
+      "new": {
+        "name": "SoficMarkovOrder.iUnion_wordCylinder_cons",
+        "kind": "theorem",
+        "module": "ProcessMarkov",
+        "line": 42
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairwise_disjoint_wordCylinder_cons",
+        "kind": "theorem",
+        "module": "SoficProcessMarkov",
+        "line": 47
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairwise_disjoint_wordCylinder_cons",
+        "kind": "theorem",
+        "module": "ProcessMarkov",
+        "line": 47
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairwise_disjoint_wordCylinder_append",
+        "kind": "theorem",
+        "module": "SoficProcessMarkov",
+        "line": 54
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairwise_disjoint_wordCylinder_append",
+        "kind": "theorem",
+        "module": "ProcessMarkov",
+        "line": 54
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.stationaryCylinderLaw",
+        "kind": "def",
+        "module": "SoficProcessMarkov",
+        "line": 65
+      },
+      "new": {
+        "name": "SoficMarkovOrder.stationaryCylinderLaw",
+        "kind": "def",
+        "module": "ProcessMarkov",
+        "line": 65
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.ProcessMarkov",
+        "kind": "def",
+        "module": "SoficProcessMarkov",
+        "line": 81
+      },
+      "new": {
+        "name": "SoficMarkovOrder.ProcessMarkov",
+        "kind": "def",
+        "module": "ProcessMarkov",
+        "line": 81
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.processMarkov_iff_rankOne",
+        "kind": "theorem",
+        "module": "SoficProcessMarkov",
+        "line": 87
+      },
+      "new": {
+        "name": "SoficMarkovOrder.processMarkov_iff_rankOne",
+        "kind": "theorem",
+        "module": "ProcessMarkov",
+        "line": 87
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.stationary_process_markov_cutoff_hankel",
+        "kind": "theorem",
+        "module": "SoficProcessMarkov",
+        "line": 101
+      },
+      "new": {
+        "name": "SoficMarkovOrder.stationary_process_markov_cutoff_hankel",
+        "kind": "theorem",
+        "module": "ProcessMarkov",
+        "line": 101
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.canonicalPairEnumeration",
+        "kind": "def",
+        "module": "SoficRationalSharpness",
+        "line": 9
+      },
+      "new": {
+        "name": "SoficMarkovOrder.canonicalPairEnumeration",
+        "kind": "def",
+        "module": "RationalSharpness",
+        "line": 9
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.RationalReal",
+        "kind": "def",
+        "module": "SoficRationalSharpness",
+        "line": 13
+      },
+      "new": {
+        "name": "SoficMarkovOrder.RationalReal",
+        "kind": "def",
+        "module": "RationalSharpness",
+        "line": 13
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.RationalReal.natCast",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 16
+      },
+      "new": {
+        "name": "SoficMarkovOrder.RationalReal.natCast",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 16
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.RationalReal.zero",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 17
+      },
+      "new": {
+        "name": "SoficMarkovOrder.RationalReal.zero",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 17
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.RationalReal.one",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 18
+      },
+      "new": {
+        "name": "SoficMarkovOrder.RationalReal.one",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 18
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.RationalReal.add",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 19
+      },
+      "new": {
+        "name": "SoficMarkovOrder.RationalReal.add",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 19
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.RationalReal.sub",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 21
+      },
+      "new": {
+        "name": "SoficMarkovOrder.RationalReal.sub",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 21
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.RationalReal.mul",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 23
+      },
+      "new": {
+        "name": "SoficMarkovOrder.RationalReal.mul",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 23
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.RationalReal.inv",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 25
+      },
+      "new": {
+        "name": "SoficMarkovOrder.RationalReal.inv",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 25
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.RationalReal.sum",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 27
+      },
+      "new": {
+        "name": "SoficMarkovOrder.RationalReal.sum",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 27
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.completionEpsilon_rational",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 39
+      },
+      "new": {
+        "name": "SoficMarkovOrder.completionEpsilon_rational",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 39
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.pairTransition_entry_rational",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 45
+      },
+      "new": {
+        "name": "SoficMarkovOrder.pairTransition_entry_rational",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 45
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.completionResidual_entry_rational",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 50
+      },
+      "new": {
+        "name": "SoficMarkovOrder.completionResidual_entry_rational",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 50
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpLetter_entry_rational",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 61
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpLetter_entry_rational",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 61
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.exists_rational_sharp_word_law",
+        "kind": "theorem",
+        "module": "SoficRationalSharpness",
+        "line": 74
+      },
+      "new": {
+        "name": "SoficMarkovOrder.exists_rational_sharp_word_law",
+        "kind": "theorem",
+        "module": "RationalSharpness",
+        "line": 74
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sourceSelectorWeights",
+        "kind": "def",
+        "module": "FiniteSourceAnalyticWeights",
+        "line": 68
+      },
+      "new": {
+        "name": "SoficMarkovOrder.selectorWeight",
+        "kind": "def",
+        "module": "SelectorWeights",
+        "line": 16
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteStateSource.sum_selectorWeight",
+        "kind": "theorem",
+        "module": "FiniteStateSourceLaw",
+        "line": 71
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sum_selectorWeight",
+        "kind": "theorem",
+        "module": "SelectorWeights",
+        "line": 20
+      },
+      "adaptation": "standalone finite-product lemma; redundant source wrapper removed"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteStateSource.sum_selectorWeight_eq_one",
+        "kind": "theorem",
+        "module": "FiniteStateSourceLaw",
+        "line": 79
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sum_selectorWeight_eq_one",
+        "kind": "theorem",
+        "module": "SelectorWeights",
+        "line": 27
+      },
+      "adaptation": "standalone finite-product lemma; redundant source wrapper removed"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.FiniteStateSource.sum_selectorWeight_mul_apply",
+        "kind": "theorem",
+        "module": "FiniteStateSourceLaw",
+        "line": 88
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sum_selectorWeight_mul_apply",
+        "kind": "theorem",
+        "module": "SelectorWeights",
+        "line": 35
+      },
+      "adaptation": "standalone finite-product lemma; redundant source wrapper removed"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.digitShift",
+        "kind": "def",
+        "module": "StationarySourceBridge",
+        "line": 52
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sequenceShift",
+        "kind": "def",
+        "module": "SequenceSpace",
+        "line": 10
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.digitHead",
+        "kind": "def",
+        "module": "StationarySourceBridge",
+        "line": 55
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sequenceHead",
+        "kind": "def",
+        "module": "SequenceSpace",
+        "line": 13
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.digitShift_apply",
+        "kind": "theorem",
+        "module": "StationarySourceBridge",
+        "line": 57
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sequenceShift_apply",
+        "kind": "theorem",
+        "module": "SequenceSpace",
+        "line": 15
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.digitHead_apply",
+        "kind": "theorem",
+        "module": "StationarySourceBridge",
+        "line": 60
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sequenceHead_apply",
+        "kind": "theorem",
+        "module": "SequenceSpace",
+        "line": 18
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.measurable_digitShift",
+        "kind": "theorem",
+        "module": "StationarySourceBridge",
+        "line": 64
+      },
+      "new": {
+        "name": "SoficMarkovOrder.measurable_sequenceShift",
+        "kind": "theorem",
+        "module": "SequenceSpace",
+        "line": 22
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.stationaryPrefix",
+        "kind": "def",
+        "module": "StationarySkew",
+        "line": 26
+      },
+      "new": {
+        "name": "SoficMarkovOrder.orbitPrefix",
+        "kind": "def",
+        "module": "SequenceSpace",
+        "line": 33
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.stationaryPrefix_zero",
+        "kind": "theorem",
+        "module": "StationarySkew",
+        "line": 30
+      },
+      "new": {
+        "name": "SoficMarkovOrder.orbitPrefix_zero",
+        "kind": "theorem",
+        "module": "SequenceSpace",
+        "line": 37
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.stationaryPrefix_succ",
+        "kind": "theorem",
+        "module": "StationarySkew",
+        "line": 33
+      },
+      "new": {
+        "name": "SoficMarkovOrder.orbitPrefix_succ",
+        "kind": "theorem",
+        "module": "SequenceSpace",
+        "line": 40
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.exists_rational_sharp_sofic_process",
+        "kind": "theorem",
+        "module": "SoficSharpProcess",
+        "line": 13
+      },
+      "new": {
+        "name": "SoficMarkovOrder.exists_rational_sharp_sofic_process",
+        "kind": "theorem",
+        "module": "SharpProcess",
+        "line": 13
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.SharpAlphabet",
+        "kind": "abbrev",
+        "module": "SoficSharpLaw",
+        "line": 12
+      },
+      "new": {
+        "name": "SoficMarkovOrder.SharpAlphabet",
+        "kind": "abbrev",
+        "module": "SharpWordLaw",
+        "line": 12
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpLetter",
+        "kind": "def",
+        "module": "SoficSharpLaw",
+        "line": 14
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpLetter",
+        "kind": "def",
+        "module": "SharpWordLaw",
+        "line": 14
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sum_sharpLetter",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 19
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sum_sharpLetter",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 19
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpLetter_nonneg",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 26
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpLetter_nonneg",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 26
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpWord_nonneg",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 39
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpWord_nonneg",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 39
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpLaw",
+        "kind": "def",
+        "module": "SoficSharpLaw",
+        "line": 48
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpLaw",
+        "kind": "def",
+        "module": "SharpWordLaw",
+        "line": 48
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharp_reduced",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 67
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharp_reduced",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 67
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.rankOne_word_of_rankOne_letter",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 98
+      },
+      "new": {
+        "name": "SoficMarkovOrder.rankOne_word_of_rankOne_letter",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 98
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpLetter_filler_rankOne",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 114
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpLetter_filler_rankOne",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 114
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpLetter_pure_word",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 130
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpLetter_pure_word",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 130
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharp_rankOne_at_cutoff",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 137
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharp_rankOne_at_cutoff",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 137
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpCriticalWord",
+        "kind": "def",
+        "module": "SoficSharpLaw",
+        "line": 159
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpCriticalWord",
+        "kind": "def",
+        "module": "SharpWordLaw",
+        "line": 159
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpCriticalWord_length",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 162
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpCriticalWord_length",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 162
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharp_critical_rank",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 166
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharp_critical_rank",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 166
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.rankOne_of_prefix",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 172
+      },
+      "new": {
+        "name": "SoficMarkovOrder.rankOne_of_prefix",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 172
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpLaw_exact_order",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 181
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpLaw_exact_order",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 181
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.sharpLaw_hankel_dimension",
+        "kind": "theorem",
+        "module": "SoficSharpLaw",
+        "line": 200
+      },
+      "new": {
+        "name": "SoficMarkovOrder.sharpLaw_hankel_dimension",
+        "kind": "theorem",
+        "module": "SharpWordLaw",
+        "line": 200
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw",
+        "kind": "structure",
+        "module": "StationaryWordMarkov",
+        "line": 13
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw",
+        "kind": "structure",
+        "module": "StationaryWordLaw",
+        "line": 13
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw.append_singleton_le",
+        "kind": "theorem",
+        "module": "StationaryWordMarkov",
+        "line": 22
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw.append_singleton_le",
+        "kind": "theorem",
+        "module": "StationaryWordLaw",
+        "line": 22
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw.cons_le",
+        "kind": "theorem",
+        "module": "StationaryWordMarkov",
+        "line": 28
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw.cons_le",
+        "kind": "theorem",
+        "module": "StationaryWordLaw",
+        "line": 28
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw.append_le",
+        "kind": "theorem",
+        "module": "StationaryWordMarkov",
+        "line": 34
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw.append_le",
+        "kind": "theorem",
+        "module": "StationaryWordLaw",
+        "line": 34
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw.prepend_le",
+        "kind": "theorem",
+        "module": "StationaryWordMarkov",
+        "line": 42
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw.prepend_le",
+        "kind": "theorem",
+        "module": "StationaryWordLaw",
+        "line": 42
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw.context_le",
+        "kind": "theorem",
+        "module": "StationaryWordMarkov",
+        "line": 48
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw.context_le",
+        "kind": "theorem",
+        "module": "StationaryWordLaw",
+        "line": 48
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw.forbidden_context",
+        "kind": "theorem",
+        "module": "StationaryWordMarkov",
+        "line": 52
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw.forbidden_context",
+        "kind": "theorem",
+        "module": "StationaryWordLaw",
+        "line": 52
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw.ConditionalMarkov",
+        "kind": "def",
+        "module": "StationaryWordMarkov",
+        "line": 58
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw.ConditionalMarkov",
+        "kind": "def",
+        "module": "StationaryWordLaw",
+        "line": 58
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw.conditionalMarkov_iff_contextMarkov",
+        "kind": "theorem",
+        "module": "StationaryWordMarkov",
+        "line": 62
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw.conditionalMarkov_iff_contextMarkov",
+        "kind": "theorem",
+        "module": "StationaryWordLaw",
+        "line": 62
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw.conditionalMarkov_iff_rankOne",
+        "kind": "theorem",
+        "module": "StationaryWordMarkov",
+        "line": 80
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw.conditionalMarkov_iff_rankOne",
+        "kind": "theorem",
+        "module": "StationaryWordLaw",
+        "line": 80
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.StationaryWordLaw.conditionalMarkov_cutoff_hankel",
+        "kind": "theorem",
+        "module": "StationaryWordMarkov",
+        "line": 89
+      },
+      "new": {
+        "name": "SoficMarkovOrder.StationaryWordLaw.conditionalMarkov_cutoff_hankel",
+        "kind": "theorem",
+        "module": "StationaryWordLaw",
+        "line": 89
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformEmission",
+        "kind": "def",
+        "module": "UniformSoficRealization",
+        "line": 22
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformEmission",
+        "kind": "def",
+        "module": "UniformRealization",
+        "line": 14
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformEmission_nonneg",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 25
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformEmission_nonneg",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 17
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformEmission_sum",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 29
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformEmission_sum",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 21
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformSelectorLaw",
+        "kind": "def",
+        "module": "UniformSoficRealization",
+        "line": 39
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformSelectorLaw",
+        "kind": "def",
+        "module": "UniformRealization",
+        "line": 31
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformSelector_marginal",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 53
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformSelector_marginal",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 39
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.UniformIIDAlphabet",
+        "kind": "abbrev",
+        "module": "UniformSoficRealization",
+        "line": 66
+      },
+      "new": {
+        "name": "SoficMarkovOrder.UniformIIDAlphabet",
+        "kind": "abbrev",
+        "module": "UniformRealization",
+        "line": 49
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformIIDLaw",
+        "kind": "def",
+        "module": "UniformSoficRealization",
+        "line": 68
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformIIDLaw",
+        "kind": "def",
+        "module": "UniformRealization",
+        "line": 51
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformIIDCode",
+        "kind": "abbrev",
+        "module": "UniformSoficRealization",
+        "line": 76
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformIIDCode",
+        "kind": "abbrev",
+        "module": "UniformRealization",
+        "line": 59
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.selectorCollapse",
+        "kind": "def",
+        "module": "UniformSoficRealization",
+        "line": 78
+      },
+      "new": {
+        "name": "SoficMarkovOrder.selectorCollapse",
+        "kind": "def",
+        "module": "UniformRealization",
+        "line": 61
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.selectorCollapse_apply",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 82
+      },
+      "new": {
+        "name": "SoficMarkovOrder.selectorCollapse_apply",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 65
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.selectorCollapse_ones",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 87
+      },
+      "new": {
+        "name": "SoficMarkovOrder.selectorCollapse_ones",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 70
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.end_apply_eq_sum",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 91
+      },
+      "new": {
+        "name": "SoficMarkovOrder.end_apply_eq_sum",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 74
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.selectorCollapse_intertwines",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 98
+      },
+      "new": {
+        "name": "SoficMarkovOrder.selectorCollapse_intertwines",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 81
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.selectorCollapse_word",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 128
+      },
+      "new": {
+        "name": "SoficMarkovOrder.selectorCollapse_word",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 111
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.iidRow_uniform",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 141
+      },
+      "new": {
+        "name": "SoficMarkovOrder.iidRow_uniform",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 124
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformIIDMeasurableSpace",
+        "kind": "def",
+        "module": "UniformSoficRealization",
+        "line": 151
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformIIDMeasurableSpace",
+        "kind": "def",
+        "module": "UniformRealization",
+        "line": 134
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformIIDMeasurableSingletonClass",
+        "kind": "instance",
+        "module": "UniformSoficRealization",
+        "line": 155
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformIIDMeasurableSingletonClass",
+        "kind": "instance",
+        "module": "UniformRealization",
+        "line": 138
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformSoficMeasure",
+        "kind": "def",
+        "module": "UniformSoficRealization",
+        "line": 161
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformSoficMeasure",
+        "kind": "def",
+        "module": "UniformRealization",
+        "line": 144
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformSoficMeasure_probability",
+        "kind": "instance",
+        "module": "UniformSoficRealization",
+        "line": 166
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformSoficMeasure_probability",
+        "kind": "instance",
+        "module": "UniformRealization",
+        "line": 149
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformSoficMeasure_stationary",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 172
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformSoficMeasure_stationary",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 155
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.uniformSoficMeasure_cylinder",
+        "kind": "theorem",
+        "module": "UniformSoficRealization",
+        "line": 177
+      },
+      "new": {
+        "name": "SoficMarkovOrder.uniformSoficMeasure_cylinder",
+        "kind": "theorem",
+        "module": "UniformRealization",
+        "line": 160
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.linearWord",
+        "kind": "def",
+        "module": "ReachableSpanMortality",
+        "line": 20
+      },
+      "new": {
+        "name": "SoficMarkovOrder.linearWord",
+        "kind": "def",
+        "module": "WordProducts",
+        "line": 15
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.linearWord_nil",
+        "kind": "theorem",
+        "module": "ReachableSpanMortality",
+        "line": 23
+      },
+      "new": {
+        "name": "SoficMarkovOrder.linearWord_nil",
+        "kind": "theorem",
+        "module": "WordProducts",
+        "line": 18
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.linearWord_cons",
+        "kind": "theorem",
+        "module": "ReachableSpanMortality",
+        "line": 26
+      },
+      "new": {
+        "name": "SoficMarkovOrder.linearWord_cons",
+        "kind": "theorem",
+        "module": "WordProducts",
+        "line": 21
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.linearWord_append",
+        "kind": "theorem",
+        "module": "ReachableSpanMortality",
+        "line": 30
+      },
+      "new": {
+        "name": "SoficMarkovOrder.linearWord_append",
+        "kind": "theorem",
+        "module": "WordProducts",
+        "line": 25
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.linearOrbit",
+        "kind": "def",
+        "module": "ReachableSpanMortality",
+        "line": 34
+      },
+      "new": {
+        "name": "SoficMarkovOrder.linearOrbit",
+        "kind": "def",
+        "module": "WordProducts",
+        "line": 29
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.linearReachableSpan",
+        "kind": "def",
+        "module": "ReachableSpanMortality",
+        "line": 37
+      },
+      "new": {
+        "name": "SoficMarkovOrder.linearReachableSpan",
+        "kind": "def",
+        "module": "WordProducts",
+        "line": 32
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    },
+    {
+      "old": {
+        "name": "IndependentZeroBlocks.linearWord_mem_linearReachableSpan",
+        "kind": "theorem",
+        "module": "ReachableSpanMortality",
+        "line": 40
+      },
+      "new": {
+        "name": "SoficMarkovOrder.linearWord_mem_linearReachableSpan",
+        "kind": "theorem",
+        "module": "WordProducts",
+        "line": 35
+      },
+      "adaptation": "extracted or retained under explicit renaming"
+    }
+  ],
+  "source_files": {
+    "SoficMarkovOrder/BasisChain.lean": "fe6d34d591c4cf80b5ba0a70454103771916ef8d563731454d8e22e98228824b",
+    "SoficMarkovOrder/CanonicalHankel.lean": "d26fe18a2eeab0a1053c630814eaf1255a3f9b0eec32cd52053c37e3cd4ad86c",
+    "SoficMarkovOrder/CommonKernel.lean": "00bdfb6911d02cd4522a6c665e1a44c04858f38f22c56c0e1340d6c42af64386",
+    "SoficMarkovOrder/ExteriorPairs.lean": "b4d89c418db7a8757c0856233fec872cfb013e110420dfc146fbcfdd631c1e74",
+    "SoficMarkovOrder/ExteriorRank.lean": "cfca2ee25e34fe9e9266041a78f18a8465dc149f8f03a293b02946261cc40942",
+    "SoficMarkovOrder/FiniteWords.lean": "3d34d573c04d0bc301b40716402582efac64d0e8ac97903364689283e715a853",
+    "SoficMarkovOrder/HankelRankCriterion.lean": "2d77815336ec0904a87fefbe5d2e61e3eba4ad5a243cb509f3a843902b057f51",
+    "SoficMarkovOrder/IIDMeasure.lean": "168b6481b76db629921bf62011044e2665b7cb152aff36268664adc5eee90942",
+    "SoficMarkovOrder/IIDPairFactor.lean": "7967de52314868a674aa0024202ed0738ff370bfbc57f43f8a91a23b90e42c43",
+    "SoficMarkovOrder/IIDWordLaw.lean": "6839f9f4137164db137e1e4a15841543bcbb3e55cfedd560598ffeead20bf4c6",
+    "SoficMarkovOrder/PairChain.lean": "f761ea699ade2b55814b8a3fc592bdb88fd0faac97ea733d32f8ac8f67511f72",
+    "SoficMarkovOrder/PositiveCompletion.lean": "617a99571b7ae52685ba9cc9a337232228fd33ff7f92606de293b4aa22f39705",
+    "SoficMarkovOrder/ProcessMarkov.lean": "93ecfc0adc76e28a26cbd140fec48b8cb546c368b78f36e0f300733cfca7626a",
+    "SoficMarkovOrder/RationalSharpness.lean": "7eea12d0e38bac5e6107fd4a7926d0acb3da423ab26b75a28241ca2e00ccdd45",
+    "SoficMarkovOrder/SelectorWeights.lean": "b8a426bb89c5d1b7e01ef79abad8d37e721a83fe0174c2e634431a329dc267fe",
+    "SoficMarkovOrder/SequenceSpace.lean": "fee227c2ba90af5d86f33256cc71c2bd8b89a59ac4ab9f67c6f1241b32b65490",
+    "SoficMarkovOrder/SharpProcess.lean": "4af90dd5e91f2fb68da254170fd26ad26599cc87b5b3bd192bd398fee78e20e8",
+    "SoficMarkovOrder/SharpWordLaw.lean": "9cee7274cc1623292696b03dce143d0484b0f6ade1834c60be14a0ef9c0cc43e",
+    "SoficMarkovOrder/StationaryWordLaw.lean": "d4eeefcc0251cf4947d33a6e97c8695da02595e3f19a76aef692f06887abd168",
+    "SoficMarkovOrder/UniformRealization.lean": "add5dd21a20f77fbe7c23b454045caffcb6c5f0ee508cf511123f445304b63a4",
+    "SoficMarkovOrder/WordProducts.lean": "031c9dd5b51aefe07f9baf5111dd3587718aef58127497f672943793aff2d48a"
+  },
+  "removed_summary": {
+    "named_declarations": 1531,
+    "wholly_omitted_modules": 168,
+    "description": "Unrelated arithmetic, digit-density, ergodic, support and mortality developments were omitted. Shared ancestors contributed only the finite word, sequence-space and product-weight declarations actually used by this proof."
+  }
+}

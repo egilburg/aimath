@@ -19,3 +19,18 @@ Mortality: https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed0
 
 All 375 initial payload file Git hashes were checked against the prepared inventory.
 Lean verification provenance, build/audit logs and checksums are included in each verification/ folder.
+
+
+2026-09-08-r2 — 8 September 2026
+Paper-specific Lean refactor for both manuscripts. Sofic mathematical source:
+192 to 21 modules, 31,613 to 2,186 lines. Mortality: 102 to 7 modules,
+15,695 to 1,038 lines. Original assumptions, conclusions and mathematical
+arguments are preserved. Formal namespaces and manuscript verification
+references are updated; both PDFs display r2.
+
+Fresh extracted-project builds, endpoint axiom audits and statement/definition
+correspondence checks are retained in verification/. Public transfer preserves
+these Lean and verification files byte-for-byte; no new build is claimed here.
+The commit introducing this revision is its immutable payload snapshot; explicit
+links are added in the following metadata commit. No professional human review
+or new novelty assessment is claimed. Corrections use forward revisions.

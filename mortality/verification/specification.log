@@ -1,0 +1,9 @@
+'PublishedSpecification.exists_short_zero_word_of_finite_real_monoid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PublishedSpecification.exists_short_zero_word_of_finite_rational_monoid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PublishedSpecification.exists_short_rank_decreasing_sandwich_of_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -11,7 +11,7 @@ Let \(n>0\), and let a family of real \(n\times n\) matrices generate a finite e
       =\Theta(n^2 2^n).
 \]
 For rational matrices this improves the bound \(3^{n^2}\) of Kiefer and Ryzhikov (2026), Theorem 7.1, under the same finite-product promise and without irreducibility. It also improves Almeida and Steinberg's (2009) universal rational mortality bound \((2n-1)^{n^2}-1\) for \(n>1\), Theorem 5.6, supplying the exponential alternative in their Question 5.7; the polynomial alternative remains unsettled. The proof combines established finite-group averaging, compressed returns and symmetric-matrix lifting into a short-word test for rank descent. An accompanying Lean development proves the real theorem and rational specialization.
-This discovery was made through the use of artificial intelligence.
+Discoveries presented here were made through the use of artificial intelligence.
 \end{abstract}
 
 \section{The theorem and its comparison}
@@ -162,9 +162,9 @@ The matrices \(\rho(a)\) generate the finite image \(\rho(F)\). Apply Corollary 
 Since \(b(n)=2^{n+O(\log n)}\), this supplies the exponential alternative in \cite[Question 5.7]{AS2009}. It is the stated mathematical implication, not a claim of historical first resolution. The polynomial alternative, a sharp mortality threshold and quadratic rational Rystsov remain unresolved here.
 
 \section{Formal verification and provenance}
-The accompanying \texttt{lean/} directory contains the complete project-local import closure, \texttt{Publication.lean}, \texttt{Audit.lean}, and dependency pins. The environment is Lean 4.33.1 and Mathlib commit \texttt{0df444a360eaa60ab8c11dca51a86af692955474}, credited in \cite{Lean,Mathlib}. The included \texttt{verification/} supplement supplies build logs, exact statement and axiom audits, source hashes, and verification provenance; its \texttt{README.txt} explains reproduction and \texttt{SHA256SUMS} checks the proof files. The manuscript-to-formal correspondence is recorded in \texttt{CLAIM\_MAP.txt}.
+The accompanying \texttt{lean/} directory contains a self-contained development for this paper, \texttt{Publication.lean}, \texttt{Audit.lean}, and dependency pins. The environment is Lean 4.33.1 and Mathlib commit \texttt{0df444a360eaa60ab8c11dca51a86af692955474}, credited in \cite{Lean,Mathlib}. The included \texttt{verification/} supplement supplies build logs, exact statement and axiom audits, source hashes, and verification provenance; its \texttt{README.txt} explains reproduction and \texttt{SHA256SUMS} checks the proof files. The manuscript-to-formal correspondence is recorded in \texttt{CLAIM\_MAP.txt}. This revision extracts the needed lemmas into subject-specific modules; the supplement records their correspondence to the earlier proof and the fresh build checks.
 
-In namespace \texttt{IndependentZeroBlocks}, the principal declarations are:
+In namespace \texttt{FiniteMonoidMortality}, the principal declarations are:
 \begin{itemize}
 \item \texttt{exists\_short\_zero\_word\_of\_finite\_real\_monoid};
 \item \texttt{exists\_short\_zero\_word\_of\_finite\_rational\_monoid};

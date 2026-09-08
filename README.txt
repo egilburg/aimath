@@ -30,3 +30,10 @@ Third-party notices and license exceptions are preserved in each package.
 
 Versions and permanent links: RELEASES.txt.
 Corrections: https://github.com/egilburg/aimath/issues (Correction report form).
+
+
+CURRENT REVISION: 2026-09-08-r2 (8 September 2026).
+The focused proof libraries have 21 sofic and 7 mortality mathematical modules.
+Their claims and mathematical arguments are unchanged from r1; formal names,
+proof organization and verification references are updated. Earlier versions
+remain accessible through the immutable links in RELEASES.txt.

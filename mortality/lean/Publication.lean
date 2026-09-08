@@ -1,1 +1,1 @@
-import SierpinskiFormal.FiniteMortalityBound
+import FiniteMonoidMortality.Main

@@ -1,12 +1,12 @@
-theorem IndependentZeroBlocks.exists_short_zero_word_of_finite_real_monoid.{u_1} : ∀ {A : Type u_1} {n : ℕ},
+theorem FiniteMonoidMortality.exists_short_zero_word_of_finite_real_monoid.{u_1} : ∀ {A : Type u_1} {n : ℕ},
   0 < n →
     ∀ (M : A → Matrix (Fin n) (Fin n) ℝ),
-      (Set.range (IndependentZeroBlocks.matrixWord M)).Finite →
-        (∃ z, IndependentZeroBlocks.matrixWord M z = 0) →
-          ∃ z, IndependentZeroBlocks.matrixWord M z = 0 ∧ z.length ≤ IndependentZeroBlocks.finiteMortalityBound n :=
+      (Set.range (FiniteMonoidMortality.matrixWord M)).Finite →
+        (∃ z, FiniteMonoidMortality.matrixWord M z = 0) →
+          ∃ z, FiniteMonoidMortality.matrixWord M z = 0 ∧ z.length ≤ FiniteMonoidMortality.finiteMortalityBound n :=
 fun {A} {n} hn M hfinite hzero =>
-  have hdrop := IndependentZeroBlocks.exists_short_rank_decreasing_sandwich_of_finite M hfinite hzero;
-  Exists.casesOn (IndependentZeroBlocks.exists_zero_word_bound_of_short_sandwich M (n * (n + 1) / 2) hzero hdrop)
+  have hdrop := FiniteMonoidMortality.exists_short_rank_decreasing_sandwich_of_finite M hfinite hzero;
+  Exists.casesOn (FiniteMonoidMortality.exists_zero_word_bound_of_short_sandwich M (n * (n + 1) / 2) hzero hdrop)
     fun z h =>
     And.casesOn h fun hz hl =>
       Exists.intro z
@@ -24,41 +24,41 @@ fun {A} {n} hn M hfinite hzero =>
                         1))
                     (n * (n + 1) / 2))))
               hl)⟩
-'IndependentZeroBlocks.exists_short_zero_word_of_finite_real_monoid' depends on axioms: [propext,
+'FiniteMonoidMortality.exists_short_zero_word_of_finite_real_monoid' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-theorem IndependentZeroBlocks.exists_short_zero_word_of_finite_rational_monoid.{u_1} : ∀ {A : Type u_1} {n : ℕ},
+theorem FiniteMonoidMortality.exists_short_zero_word_of_finite_rational_monoid.{u_1} : ∀ {A : Type u_1} {n : ℕ},
   0 < n →
     ∀ (M : A → Matrix (Fin n) (Fin n) ℚ),
-      (Set.range (IndependentZeroBlocks.matrixWord M)).Finite →
-        (∃ z, IndependentZeroBlocks.matrixWord M z = 0) →
-          ∃ z, IndependentZeroBlocks.matrixWord M z = 0 ∧ z.length ≤ IndependentZeroBlocks.finiteMortalityBound n :=
+      (Set.range (FiniteMonoidMortality.matrixWord M)).Finite →
+        (∃ z, FiniteMonoidMortality.matrixWord M z = 0) →
+          ∃ z, FiniteMonoidMortality.matrixWord M z = 0 ∧ z.length ≤ FiniteMonoidMortality.finiteMortalityBound n :=
 fun {A} {n} hn M hfinite hzero =>
   let f := Rat.castHom ℝ;
   let MR := fun a => (M a).map ⇑f;
-  have hRfinite := IndependentZeroBlocks.finite_matrixWord_range_map f M hfinite;
+  have hRfinite := FiniteMonoidMortality.finite_matrixWord_range_map f M hfinite;
   have hRzero :=
-    Exists.casesOn hzero fun z hz => Exists.intro z ((IndependentZeroBlocks.matrixWord_map_eq_zero_iff f M z).mpr hz);
-  Exists.casesOn (IndependentZeroBlocks.exists_short_zero_word_of_finite_real_monoid hn MR hRfinite hRzero) fun z h =>
-    And.casesOn h fun hz hl => Exists.intro z ⟨(IndependentZeroBlocks.matrixWord_map_eq_zero_iff f M z).mp hz, hl⟩
-'IndependentZeroBlocks.exists_short_zero_word_of_finite_rational_monoid' depends on axioms: [propext,
+    Exists.casesOn hzero fun z hz => Exists.intro z ((FiniteMonoidMortality.matrixWord_map_eq_zero_iff f M z).mpr hz);
+  Exists.casesOn (FiniteMonoidMortality.exists_short_zero_word_of_finite_real_monoid hn MR hRfinite hRzero) fun z h =>
+    And.casesOn h fun hz hl => Exists.intro z ⟨(FiniteMonoidMortality.matrixWord_map_eq_zero_iff f M z).mp hz, hl⟩
+'FiniteMonoidMortality.exists_short_zero_word_of_finite_rational_monoid' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-theorem IndependentZeroBlocks.exists_short_rank_decreasing_sandwich_of_finite.{u_1} : ∀ {A : Type u_1} {n : ℕ}
+theorem FiniteMonoidMortality.exists_short_rank_decreasing_sandwich_of_finite.{u_1} : ∀ {A : Type u_1} {n : ℕ}
   (M : A → Matrix (Fin n) (Fin n) ℝ),
-  (Set.range (IndependentZeroBlocks.matrixWord M)).Finite →
-    (∃ z, IndependentZeroBlocks.matrixWord M z = 0) →
+  (Set.range (FiniteMonoidMortality.matrixWord M)).Finite →
+    (∃ z, FiniteMonoidMortality.matrixWord M z = 0) →
       ∀ (h : List A),
-        IndependentZeroBlocks.matrixWord M h ≠ 0 →
+        FiniteMonoidMortality.matrixWord M h ≠ 0 →
           ∃ w,
             w.length ≤ n * (n + 1) / 2 ∧
-              (IndependentZeroBlocks.matrixWord M (h ++ w ++ h)).rank < (IndependentZeroBlocks.matrixWord M h).rank :=
+              (FiniteMonoidMortality.matrixWord M (h ++ w ++ h)).rank < (FiniteMonoidMortality.matrixWord M h).rank :=
 fun {A} {n} M hfinite hzero h hh =>
-  Exists.casesOn (IndependentZeroBlocks.exists_rankFactorization (IndependentZeroBlocks.matrixWord M h)) fun U h_1 =>
+  Exists.casesOn (FiniteMonoidMortality.exists_rankFactorization (FiniteMonoidMortality.matrixWord M h)) fun U h_1 =>
     Exists.casesOn h_1 fun V hfac =>
       Exists.casesOn
-        (IndependentZeroBlocks.exists_invariant_quadraticForm_returnMatrix_of_finite
-          (IndependentZeroBlocks.rank_pos_of_ne_zero (IndependentZeroBlocks.matrixWord M h) hh) M h U V hfac hfinite)
+        (FiniteMonoidMortality.exists_invariant_quadraticForm_compressedReturn_of_finite
+          (FiniteMonoidMortality.rank_pos_of_ne_zero (FiniteMonoidMortality.matrixWord M h) hh) M h U V hfac hfinite)
         fun Q h_2 =>
         And.casesOn h_2 fun hQsymm right =>
           And.casesOn right fun hQtrace hQinv =>
@@ -76,50 +76,50 @@ fun {A} {n} M hfinite hzero h hh =>
                   (of_eq_true
                     (Eq.trans (congrArg (Eq (U * (Q * U.transpose))) (Matrix.mul_assoc U Q U.transpose))
                       (eq_self (U * (Q * U.transpose))))));
-            let ell := IndependentZeroBlocks.traceSandwichMatrixDual V;
+            let ell := FiniteMonoidMortality.traceSandwichMatrixDual V;
             have heval := fun w =>
               of_eq_true
                 (Eq.trans
                   (congr
                     (congrArg Eq
                       (Eq.trans
-                        (congrArg (⇑(IndependentZeroBlocks.traceSandwichMatrixDual V))
+                        (congrArg (⇑(FiniteMonoidMortality.traceSandwichMatrixDual V))
                           (Eq.trans
                             (Eq.trans
                               (congrFun'
                                 (congrArg HMul.hMul
-                                  (congrArg (HMul.hMul (IndependentZeroBlocks.matrixWord M w))
+                                  (congrArg (HMul.hMul (FiniteMonoidMortality.matrixWord M w))
                                     (Matrix.mul_assoc U Q U.transpose)))
-                                (IndependentZeroBlocks.matrixWord M w).transpose)
-                              (Matrix.mul_assoc (IndependentZeroBlocks.matrixWord M w) (U * (Q * U.transpose))
-                                (IndependentZeroBlocks.matrixWord M w).transpose))
-                            (congrArg (HMul.hMul (IndependentZeroBlocks.matrixWord M w))
+                                (FiniteMonoidMortality.matrixWord M w).transpose)
+                              (Matrix.mul_assoc (FiniteMonoidMortality.matrixWord M w) (U * (Q * U.transpose))
+                                (FiniteMonoidMortality.matrixWord M w).transpose))
+                            (congrArg (HMul.hMul (FiniteMonoidMortality.matrixWord M w))
                               (Eq.trans
-                                (Matrix.mul_assoc U (Q * U.transpose) (IndependentZeroBlocks.matrixWord M w).transpose)
+                                (Matrix.mul_assoc U (Q * U.transpose) (FiniteMonoidMortality.matrixWord M w).transpose)
                                 (congrArg (HMul.hMul U)
-                                  (Matrix.mul_assoc Q U.transpose (IndependentZeroBlocks.matrixWord M w).transpose))))))
+                                  (Matrix.mul_assoc Q U.transpose (FiniteMonoidMortality.matrixWord M w).transpose))))))
                         (congrArg Matrix.trace
                           (Eq.trans
                             (Matrix.mul_assoc V
-                              (IndependentZeroBlocks.matrixWord M w *
-                                (U * (Q * (U.transpose * (IndependentZeroBlocks.matrixWord M w).transpose))))
+                              (FiniteMonoidMortality.matrixWord M w *
+                                (U * (Q * (U.transpose * (FiniteMonoidMortality.matrixWord M w).transpose))))
                               V.transpose)
                             (congrArg (HMul.hMul V)
                               (Eq.trans
-                                (Matrix.mul_assoc (IndependentZeroBlocks.matrixWord M w)
-                                  (U * (Q * (U.transpose * (IndependentZeroBlocks.matrixWord M w).transpose)))
+                                (Matrix.mul_assoc (FiniteMonoidMortality.matrixWord M w)
+                                  (U * (Q * (U.transpose * (FiniteMonoidMortality.matrixWord M w).transpose)))
                                   V.transpose)
-                                (congrArg (HMul.hMul (IndependentZeroBlocks.matrixWord M w))
+                                (congrArg (HMul.hMul (FiniteMonoidMortality.matrixWord M w))
                                   (Eq.trans
                                     (Matrix.mul_assoc U
-                                      (Q * (U.transpose * (IndependentZeroBlocks.matrixWord M w).transpose))
+                                      (Q * (U.transpose * (FiniteMonoidMortality.matrixWord M w).transpose))
                                       V.transpose)
                                     (congrArg (HMul.hMul U)
                                       (Eq.trans
                                         (Matrix.mul_assoc Q
-                                          (U.transpose * (IndependentZeroBlocks.matrixWord M w).transpose) V.transpose)
+                                          (U.transpose * (FiniteMonoidMortality.matrixWord M w).transpose) V.transpose)
                                         (congrArg (HMul.hMul Q)
-                                          (Matrix.mul_assoc U.transpose (IndependentZeroBlocks.matrixWord M w).transpose
+                                          (Matrix.mul_assoc U.transpose (FiniteMonoidMortality.matrixWord M w).transpose
                                             V.transpose))))))))))))
                     (congrArg Matrix.trace
                       (Eq.trans
@@ -129,37 +129,37 @@ fun {A} {n} M hfinite hzero h hh =>
                               (Eq.trans
                                 (Eq.trans
                                   (congrFun'
-                                    (congrArg HMul.hMul (Matrix.mul_assoc V (IndependentZeroBlocks.matrixWord M w) U))
+                                    (congrArg HMul.hMul (Matrix.mul_assoc V (FiniteMonoidMortality.matrixWord M w) U))
                                     Q)
-                                  (Matrix.mul_assoc V (IndependentZeroBlocks.matrixWord M w * U) Q))
-                                (congrArg (HMul.hMul V) (Matrix.mul_assoc (IndependentZeroBlocks.matrixWord M w) U Q))))
+                                  (Matrix.mul_assoc V (FiniteMonoidMortality.matrixWord M w * U) Q))
+                                (congrArg (HMul.hMul V) (Matrix.mul_assoc (FiniteMonoidMortality.matrixWord M w) U Q))))
                             (Eq.trans
                               (Eq.trans
                                 (congrArg Matrix.transpose
-                                  (Matrix.mul_assoc V (IndependentZeroBlocks.matrixWord M w) U))
-                                (Matrix.transpose_mul V (IndependentZeroBlocks.matrixWord M w * U)))
+                                  (Matrix.mul_assoc V (FiniteMonoidMortality.matrixWord M w) U))
+                                (Matrix.transpose_mul V (FiniteMonoidMortality.matrixWord M w * U)))
                               (Eq.trans
                                 (congrFun'
-                                  (congrArg HMul.hMul (Matrix.transpose_mul (IndependentZeroBlocks.matrixWord M w) U))
+                                  (congrArg HMul.hMul (Matrix.transpose_mul (FiniteMonoidMortality.matrixWord M w) U))
                                   V.transpose)
-                                (Matrix.mul_assoc U.transpose (IndependentZeroBlocks.matrixWord M w).transpose
+                                (Matrix.mul_assoc U.transpose (FiniteMonoidMortality.matrixWord M w).transpose
                                   V.transpose))))
-                          (Matrix.mul_assoc V (IndependentZeroBlocks.matrixWord M w * (U * Q))
-                            (U.transpose * ((IndependentZeroBlocks.matrixWord M w).transpose * V.transpose))))
+                          (Matrix.mul_assoc V (FiniteMonoidMortality.matrixWord M w * (U * Q))
+                            (U.transpose * ((FiniteMonoidMortality.matrixWord M w).transpose * V.transpose))))
                         (congrArg (HMul.hMul V)
                           (Eq.trans
-                            (Matrix.mul_assoc (IndependentZeroBlocks.matrixWord M w) (U * Q)
-                              (U.transpose * ((IndependentZeroBlocks.matrixWord M w).transpose * V.transpose)))
-                            (congrArg (HMul.hMul (IndependentZeroBlocks.matrixWord M w))
+                            (Matrix.mul_assoc (FiniteMonoidMortality.matrixWord M w) (U * Q)
+                              (U.transpose * ((FiniteMonoidMortality.matrixWord M w).transpose * V.transpose)))
+                            (congrArg (HMul.hMul (FiniteMonoidMortality.matrixWord M w))
                               (Matrix.mul_assoc U Q
-                                (U.transpose * ((IndependentZeroBlocks.matrixWord M w).transpose * V.transpose)))))))))
+                                (U.transpose * ((FiniteMonoidMortality.matrixWord M w).transpose * V.transpose)))))))))
                   (eq_self
                     (V *
-                        (IndependentZeroBlocks.matrixWord M w *
+                        (FiniteMonoidMortality.matrixWord M w *
                           (U *
                             (Q *
                               (U.transpose *
-                                ((IndependentZeroBlocks.matrixWord M w).transpose * V.transpose)))))).trace));
+                                ((FiniteMonoidMortality.matrixWord M w).transpose * V.transpose)))))).trace));
             have hsignal :=
               Exists.casesOn hzero fun z hz =>
                 Exists.intro z
@@ -181,16 +181,16 @@ fun {A} {n} M hfinite hzero h hh =>
                         0))
                     (LT.lt.ne' hQtrace));
             Exists.casesOn
-              (IndependentZeroBlocks.exists_short_quadratic_observation_matrixDual_ne_zero M B hB ell Q.trace hsignal)
+              (FiniteMonoidMortality.exists_short_quadratic_observation_matrixDual_ne_zero M B hB ell Q.trace hsignal)
               fun w h_3 =>
               And.casesOn h_3 fun hwlen hw =>
                 Exists.intro w
                   ⟨hwlen,
-                    IndependentZeroBlocks.rank_resetSandwich_lt_of_invariantTraceDefect_ne_zero M h w U V hfac Q
+                    FiniteMonoidMortality.rank_wordSandwich_lt_of_invariantTraceDefect_ne_zero M h w U V hfac Q
                       (hQinv w)
                       (id (Eq.mp (congrFun' (congrArg Ne (congrArg (HSub.hSub Q.trace) ((fun w => heval w) w))) 0) hw))⟩
-'IndependentZeroBlocks.exists_short_rank_decreasing_sandwich_of_finite' depends on axioms: [propext,
+'FiniteMonoidMortality.exists_short_rank_decreasing_sandwich_of_finite' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-def IndependentZeroBlocks.finiteMortalityBound : ℕ → ℕ :=
+def FiniteMonoidMortality.finiteMortalityBound : ℕ → ℕ :=
 fun n => 2 ^ (n - 1) + (2 ^ (n - 1) - 1) * (n * (n + 1) / 2)

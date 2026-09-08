@@ -1,0 +1,41 @@
+REPRODUCING THE MORTALITY REFACTOR AUDIT
+
+The earlier publicly released source is available at the immutable snapshot:
+https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/mortality/lean
+
+No old research module is needed to compile the refactored proof. To reproduce
+the supplementary textual comparison, obtain that snapshot separately and
+run, replacing ORIGINAL_LEAN and REFACTORED_LEAN with its mortality/lean
+folder and the present lean folder:
+
+    python3 check_source_equivalence.py ORIGINAL_LEAN REFACTORED_LEAN \
+      --mapping REFACTOR_MAP.json --output reproduced_source_equivalence.json
+
+The report compares all retained declaration bodies after removing comments
+and whitespace and applying the explicit identifier mapping. This is a
+textual provenance check. It deliberately does not claim to compare all
+surrounding declaration contexts or elaborated proof terms.
+
+The stronger published-claim check is performed by Lean itself:
+
+    cd REFACTORED_LEAN
+    lake build Publication
+    lake env lean Specification.lean
+
+Specification.lean contains the original theorem statements and their
+transparent matrixWord and finiteMortalityBound definitions, in a separate
+namespace. The refactored theorem directly proves each original statement.
+No original project modules, axioms or assumed equivalences are imported.
+The normal verify.sh command also runs this check and audits the axioms.
+
+For extraction provenance, extract.py accepts the old source root and a
+separate empty output root; it writes the seven mathematical modules,
+Publication.lean, Audit.lean and pinned Lake configuration:
+
+    python3 extract.py ORIGINAL_LEAN TEMPORARY_OUTPUT_LEAN \
+      --report-dir TEMPORARY_REPORT_DIR
+    python3 make_specification.py ORIGINAL_LEAN TEMPORARY_OUTPUT_LEAN
+
+Reader documentation, the verification driver and saved verification outputs
+are packaged separately; the extraction script is not a release builder.
+Do not use the original source folder as the extraction output.

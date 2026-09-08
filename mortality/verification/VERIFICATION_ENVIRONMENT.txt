@@ -1,0 +1,40 @@
+Formal-verification environment
+===============================
+
+The proof projects use the official Lean 4.33.1 Linux release, compiler commit
+819816b2e0a3bf405af45ae5c7af2491d8f5bee6. The observed version strings, release
+archive SHA-256, compiler executable/library SHA-256 values, and the verified
+Git revisions of Mathlib and its eight dependencies are in ENVIRONMENT.json.
+The project's lean-toolchain and lake-manifest.json pin the reproducible inputs.
+
+Dependency binaries were obtained from Mathlib's official public master cache,
+selected by the official cache tool using the pinned source content. Some
+dependency modules were also compiled from those pinned sources during
+early setup/development attempts or following import adjustments. The package
+build logs identify actual compilation jobs; Lake's aggregate job count also
+includes reused targets. The paper-specific modules are separately rebuilt
+and audited, with the actual results in the build and statement/axiom logs.
+
+Normal reproduction from lean/:
+
+  lake exe cache get
+  lake build Publication
+  lake env lean Audit.lean
+
+For a clean project rebuild, remove only the project's .lake/build directory
+before lake build Publication, retaining or downloading public dependencies.
+
+The recorded environment required the accompanying runtime-self-exe.c wrapper:
+
+  cc -shared -fPIC runtime-self-exe.c -ldl -o runtime-self-exe.so
+  export LD_PRELOAD=/absolute/path/to/runtime-self-exe.so
+
+It redirects readlink of the current process's own /proc/<getpid()>/exe path to
+/proc/self/exe because this runtime exposes only the latter. It changes no Lean
+compiler or kernel source, no proof terms, and no other process's paths. This
+compatibility adjustment is unnecessary on normal Linux systems. The wrapper
+source hash and command are recorded alongside the compiler identity.
+
+Verification establishes the checked formal statements under the listed axioms
+and toolchain trust assumptions. Separate claim mapping documents connect the
+formal statements to the manuscript and identify any exposition-only material.

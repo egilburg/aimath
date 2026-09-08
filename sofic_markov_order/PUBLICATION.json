@@ -1,44 +1,33 @@
 {
   "schema_version": 1,
   "title": "Sharp Finite Markov Order in Intrinsic Sofic Dimension",
-  "version": "2026-09-08-r1",
-  "date": "2026-09-08",
+  "version": "2026-09-08-r2",
+  "release_date": "2026-09-08",
+  "public_release_status": "released",
   "source_credit": {
     "text": "github.com/egilburg/aimath",
-    "url": "https://github.com/egilburg/aimath"
+    "url": "https://github.com/egilburg/aimath",
+    "role": null
   },
-  "current_url": "https://github.com/egilburg/aimath/tree/main/sofic_markov_order",
-  "immutable_version": "Use the initial release commit listed in the repository-root RELEASES.txt.",
-  "manuscript": "sharp_finite_markov_order_in_intrinsic_sofic_dimension.pdf",
-  "editable_manuscript": "sharp_finite_markov_order_in_intrinsic_sofic_dimension.tex",
   "license": "CC-BY-4.0",
-  "license_exceptions": "THIRD_PARTY_NOTICES.txt",
-  "publication_status": "self_published",
-  "professional_human_review": false,
-  "verification": {
-    "lean": "4.33.1",
-    "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
-    "project_modules": 192,
-    "matches_successfully_built_source_and_configuration": true,
-    "source_closure_check": "passed",
-    "endpoint_audits": 4,
-    "endpoint_axioms": [
-      "propext",
-      "Classical.choice",
-      "Quot.sound"
-    ],
-    "export_lean_rebuild": false,
-    "reason": "Lean source, import closure and build configuration are byte-identical to the verified package; only public attachment/navigation text changes.",
-    "pdf_rebuilt": true,
-    "pdf_pages": 6,
-    "pdf_visual_inspection": "passed"
+  "professional_mathematical_review": false,
+  "public_url": "https://github.com/egilburg/aimath/tree/main/sofic_markov_order",
+  "immutable_snapshot": "See repository-root RELEASES.txt; assigned by the commit introducing this revision.",
+  "previous_public_version": {
+    "version": "2026-09-08-r1",
+    "commit": "735383665b012b5b2d30450735ed062fde7bd030",
+    "url": "https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/sofic_markov_order"
   },
-  "lean_verification_documentation_included": true,
-  "lean_verification_documentation": "verification/README.txt",
-  "research_evidence_included": false,
-  "public_export_changes": "Omitted private Markdown/evidence/history; adjusted references to omitted attachments and supplied concise public instructions. No mathematical claims or Lean source changed.",
-  "corrections": "https://github.com/egilburg/aimath/issues",
-  "inventory_hash": "SHA-256; all package payload files except this manifest itself",
+  "changes": "Paper-specific Lean extraction and naming; unchanged mathematical claims and arguments; updated manuscript formal references and current version metadata.",
+  "verification": {
+    "status": "passed",
+    "source_build": "Fresh extracted-project build recorded in verification/; reused for byte-identical public proof export.",
+    "new_build_during_public_transfer": false,
+    "provenance": "verification/PROVENANCE.json",
+    "checksums": "verification/SHA256SUMS",
+    "historical_record_status": "The verified_private_review_update status in build provenance records the verification stage; this publication metadata records its subsequent release."
+  },
+  "inventory_algorithm": "SHA-256 of every public package file except PUBLICATION.json itself; no private research archive included.",
   "files": [
     {
       "path": ".gitignore",
@@ -47,8 +36,8 @@
     },
     {
       "path": "CORRECTIONS.txt",
-      "bytes": 1054,
-      "sha256": "b2882152d2ff461ecc74fd9b252dcc7b890044499673fa953d6cc63dafa00857"
+      "bytes": 1486,
+      "sha256": "3f5fbb39dd7eda951fc69d373a1c6178a7cd51866475634f86dfc6afe7f1e0b0"
     },
     {
       "path": "LICENSE.txt",
@@ -57,8 +46,8 @@
     },
     {
       "path": "README.txt",
-      "bytes": 3240,
-      "sha256": "d7d4b554a19b1c2c2e30ac55e9a2f3059bf33b162c346f5692a3b0623473b033"
+      "bytes": 2804,
+      "sha256": "57627ddbc872415a509b46eee7f5eb72cd79bf97e21282a079cc0da3273b8b3c"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
@@ -77,8 +66,8 @@
     },
     {
       "path": "citation.bib",
-      "bytes": 523,
-      "sha256": "a2afd2cbefcfd489769a19657210920d1f0c69731385e787cac325f30bd231e2"
+      "bytes": 553,
+      "sha256": "e376f1b380683ceb34f1f6741661a07c0da27065d17217f98b9a1cda54fc29d7"
     },
     {
       "path": "disclosure.tex",
@@ -87,973 +76,123 @@
     },
     {
       "path": "lean/Audit.lean",
-      "bytes": 649,
-      "sha256": "dd47925d3e1b05023615a8ffbc6f3e57c7dd16bd1ec23421a92a30f47068abaf"
+      "bytes": 604,
+      "sha256": "40a5e03cd99e4bf04e47c02aec86a847d66b092f148cb9dfc356664e18a6504a"
     },
     {
       "path": "lean/Publication.lean",
-      "bytes": 96,
-      "sha256": "3fe1bc431882b948ba1213391e5ced5c0a84291389bcb2c77bf079c903ce4aa7"
+      "bytes": 77,
+      "sha256": "a8960824da2c3fb0ce3ad9b22e63cd19662389e5205a9b8459062338cc3369bb"
     },
     {
-      "path": "lean/SierpinskiFormal/AbsorbedBlockForm.lean",
-      "bytes": 3676,
-      "sha256": "964fb3fd93471f437ab0abb3ebefddb5ef20212dbfda1d72c6eb12d2fc85c601"
+      "path": "lean/README.txt",
+      "bytes": 5071,
+      "sha256": "da98987dfd3aa349a16109cb429dcc103f79b09d5c13ef5855fa053f7dce0442"
     },
     {
-      "path": "lean/SierpinskiFormal/AffinePredicateDensity.lean",
-      "bytes": 6986,
-      "sha256": "6521b64dfcd75be404e32af60c91e781abc51e16586768a24df00280fe5c4425"
+      "path": "lean/SoficMarkovOrder/BasisChain.lean",
+      "bytes": 3230,
+      "sha256": "fe6d34d591c4cf80b5ba0a70454103771916ef8d563731454d8e22e98228824b"
     },
     {
-      "path": "lean/SierpinskiFormal/ArbitraryRational.lean",
-      "bytes": 8730,
-      "sha256": "720df9e7a72a6693eec361326175739bd36b9a7b64b97284ee4b63f5c9c1d3e7"
+      "path": "lean/SoficMarkovOrder/CanonicalHankel.lean",
+      "bytes": 5580,
+      "sha256": "d26fe18a2eeab0a1053c630814eaf1255a3f9b0eec32cd52053c37e3cd4ad86c"
     },
     {
-      "path": "lean/SierpinskiFormal/Assembly.lean",
-      "bytes": 4345,
-      "sha256": "0c22dd0fdd1f8408b3fef8653996a4f6e5e590da536273f5765ae993744160db"
+      "path": "lean/SoficMarkovOrder/CommonKernel.lean",
+      "bytes": 4444,
+      "sha256": "00bdfb6911d02cd4522a6c665e1a44c04858f38f22c56c0e1340d6c42af64386"
     },
     {
-      "path": "lean/SierpinskiFormal/AuxiliaryField.lean",
-      "bytes": 8481,
-      "sha256": "8ea543a7fb045d2159883a432c2a04a502428a972c5d07e29055829ec209acd7"
+      "path": "lean/SoficMarkovOrder/ExteriorPairs.lean",
+      "bytes": 4435,
+      "sha256": "b4d89c418db7a8757c0856233fec872cfb013e110420dfc146fbcfdd631c1e74"
     },
     {
-      "path": "lean/SierpinskiFormal/BasisChain.lean",
-      "bytes": 3245,
-      "sha256": "b99c9382dcbff2b7334b200eccb4cfd0c54d061f182c7622c81a72eedc3ba5e6"
+      "path": "lean/SoficMarkovOrder/ExteriorRank.lean",
+      "bytes": 2983,
+      "sha256": "cfca2ee25e34fe9e9266041a78f18a8465dc149f8f03a293b02946261cc40942"
     },
     {
-      "path": "lean/SierpinskiFormal/BernoulliWeightNormalization.lean",
-      "bytes": 3519,
-      "sha256": "62be0a497ee356dddff89192714b885c7cbdbaea2ec771a3e618d17adda1af03"
+      "path": "lean/SoficMarkovOrder/FiniteWords.lean",
+      "bytes": 866,
+      "sha256": "3d34d573c04d0bc301b40716402582efac64d0e8ac97903364689283e715a853"
     },
     {
-      "path": "lean/SierpinskiFormal/BooleanDoubleLimit.lean",
-      "bytes": 14091,
-      "sha256": "8adee1f8acdb5b4404c75b3169e87e8e24dca79ee7724f80c923d9a092d67bd7"
+      "path": "lean/SoficMarkovOrder/HankelRankCriterion.lean",
+      "bytes": 8425,
+      "sha256": "2d77815336ec0904a87fefbe5d2e61e3eba4ad5a243cb509f3a843902b057f51"
     },
     {
-      "path": "lean/SierpinskiFormal/BooleanDoubleLimitClosure.lean",
-      "bytes": 10529,
-      "sha256": "ca9fdd856b29cba9cbf66d86fdabe1ecbd1f3f2e699c2a147f61f5bcc04f76c4"
+      "path": "lean/SoficMarkovOrder/IIDMeasure.lean",
+      "bytes": 3680,
+      "sha256": "168b6481b76db629921bf62011044e2665b7cb152aff36268664adc5eee90942"
     },
     {
-      "path": "lean/SierpinskiFormal/BooleanFilterLimit.lean",
-      "bytes": 4099,
-      "sha256": "ae9252d0f80bc8c143dd4856624559b5eaecb22f63a571561b763f146df1c85a"
+      "path": "lean/SoficMarkovOrder/IIDPairFactor.lean",
+      "bytes": 7771,
+      "sha256": "7967de52314868a674aa0024202ed0738ff370bfbc57f43f8a91a23b90e42c43"
     },
     {
-      "path": "lean/SierpinskiFormal/BooleanRegularLogDensity.lean",
-      "bytes": 6198,
-      "sha256": "9511fc4f326a15ec2b10b2d4762d04b30ca07106ca795bc7090831958614d94f"
+      "path": "lean/SoficMarkovOrder/IIDWordLaw.lean",
+      "bytes": 3299,
+      "sha256": "6839f9f4137164db137e1e4a15841543bcbb3e55cfedd560598ffeead20bf4c6"
     },
     {
-      "path": "lean/SierpinskiFormal/BooleanRowCompactness.lean",
-      "bytes": 2629,
-      "sha256": "9873b43b534884f8ea4591395dd22aa1f05d65205766a8f3abc69fa2b4c9f1ce"
+      "path": "lean/SoficMarkovOrder/PairChain.lean",
+      "bytes": 3111,
+      "sha256": "f761ea699ade2b55814b8a3fc592bdb88fd0faac97ea733d32f8ac8f67511f72"
     },
     {
-      "path": "lean/SierpinskiFormal/BooleanUltrafilterExtension.lean",
-      "bytes": 2612,
-      "sha256": "e67d5658dacc05d76a60451bfc10d76faa7242d6e766c74541cb18cbf0787fec"
+      "path": "lean/SoficMarkovOrder/PositiveCompletion.lean",
+      "bytes": 5773,
+      "sha256": "617a99571b7ae52685ba9cc9a337232228fd33ff7f92606de293b4aa22f39705"
     },
     {
-      "path": "lean/SierpinskiFormal/BooleanWeakCompactness.lean",
-      "bytes": 4529,
-      "sha256": "90e676bb688f6e42acdf974b9835aee566090f5c862e51a72e0fe2bf49b3cd18"
+      "path": "lean/SoficMarkovOrder/ProcessMarkov.lean",
+      "bytes": 5218,
+      "sha256": "93ecfc0adc76e28a26cbd140fec48b8cb546c368b78f36e0f300733cfca7626a"
     },
     {
-      "path": "lean/SierpinskiFormal/BooleanWordCesaro.lean",
-      "bytes": 11090,
-      "sha256": "8d717a256ccea7591d21fd60a9d3dd14ca2f44b74d385432a6c561eb04239862"
+      "path": "lean/SoficMarkovOrder/RationalSharpness.lean",
+      "bytes": 4883,
+      "sha256": "7eea12d0e38bac5e6107fd4a7926d0acb3da423ab26b75a28241ca2e00ccdd45"
     },
     {
-      "path": "lean/SierpinskiFormal/CanonicalHankelRepresentation.lean",
-      "bytes": 5589,
-      "sha256": "549c1d6dbae15511dc2b57e71e06dd2a1eb420dd6cc9c2905bc8b0763aa9a260"
+      "path": "lean/SoficMarkovOrder/SelectorWeights.lean",
+      "bytes": 3104,
+      "sha256": "b8a426bb89c5d1b7e01ef79abad8d37e721a83fe0174c2e634431a329dc267fe"
     },
     {
-      "path": "lean/SierpinskiFormal/CanonicalSeries.lean",
-      "bytes": 7182,
-      "sha256": "88773baf71ebebb1ff89f18dd673dd59afae4f1ca402b6fbf3f9d57927e3f48d"
+      "path": "lean/SoficMarkovOrder/SequenceSpace.lean",
+      "bytes": 1408,
+      "sha256": "fee227c2ba90af5d86f33256cc71c2bd8b89a59ac4ab9f67c6f1241b32b65490"
     },
     {
-      "path": "lean/SierpinskiFormal/CesaroSqueeze.lean",
-      "bytes": 1887,
-      "sha256": "5bf2fd2d797252f9e745243d1c5bc17ef65a21cd5516521a265cb918e0999c44"
+      "path": "lean/SoficMarkovOrder/SharpProcess.lean",
+      "bytes": 2701,
+      "sha256": "4af90dd5e91f2fb68da254170fd26ad26599cc87b5b3bd192bd398fee78e20e8"
     },
     {
-      "path": "lean/SierpinskiFormal/CommRingMatrixGeometry.lean",
-      "bytes": 5146,
-      "sha256": "c2a49e390ba2877cbba6403afc7679262563ee99ccdc409c48024c34a819fb91"
+      "path": "lean/SoficMarkovOrder/SharpWordLaw.lean",
+      "bytes": 9405,
+      "sha256": "9cee7274cc1623292696b03dce143d0484b0f6ade1834c60be14a0ef9c0cc43e"
     },
     {
-      "path": "lean/SierpinskiFormal/CommRingObservationFamilies.lean",
-      "bytes": 2641,
-      "sha256": "da3a16182e60acf7044892e89f5d77da877c0a070f721c68e75fb3e136a826ed"
+      "path": "lean/SoficMarkovOrder/StationaryWordLaw.lean",
+      "bytes": 4306,
+      "sha256": "d4eeefcc0251cf4947d33a6e97c8695da02595e3f19a76aef692f06887abd168"
     },
     {
-      "path": "lean/SierpinskiFormal/CommRingObservationGeometry.lean",
-      "bytes": 5035,
-      "sha256": "587f91c1035331a769afec6cfbc76556c3338cb7494935965b01f7f0f7c3d109"
+      "path": "lean/SoficMarkovOrder/UniformRealization.lean",
+      "bytes": 7717,
+      "sha256": "add5dd21a20f77fbe7c23b454045caffcb6c5f0ee508cf511123f445304b63a4"
     },
     {
-      "path": "lean/SierpinskiFormal/CommonContextLogDensity.lean",
-      "bytes": 14346,
-      "sha256": "65912cbf45093f255e5dd763c25b1e1f25225ee9bee32065c37def4d4543202c"
-    },
-    {
-      "path": "lean/SierpinskiFormal/CommonSeed.lean",
-      "bytes": 6925,
-      "sha256": "78f44b7fd001403a3f0d8daa6e8117df41e0d49d5440ae9eb47d10ff283427cb"
-    },
-    {
-      "path": "lean/SierpinskiFormal/CommutingConvexAverages.lean",
-      "bytes": 3959,
-      "sha256": "ea6f8ebefb4a11ed04481f3b413e01e2c1bed70cd8073490fecabed55840cece"
-    },
-    {
-      "path": "lean/SierpinskiFormal/CompatibleKernels.lean",
-      "bytes": 3157,
-      "sha256": "da0ba6260646901e03c1edd4eca66e50cef3c8a42a6c97558c420fecc2c9ae8e"
-    },
-    {
-      "path": "lean/SierpinskiFormal/Convolution.lean",
-      "bytes": 5776,
-      "sha256": "c832bca5fe7a9ccb73c3104586fd5cbb78a561c5f04fc42b7b3f9dae5dd6bb26"
-    },
-    {
-      "path": "lean/SierpinskiFormal/CountableWeakBooleanClosure.lean",
-      "bytes": 2830,
-      "sha256": "2a4619d8784776e3e8d70a295cdfb5baae67a758114a613d5c10428784174720"
-    },
-    {
-      "path": "lean/SierpinskiFormal/CountableWeakKrein.lean",
-      "bytes": 16394,
-      "sha256": "1cc5b68efceee13edfdcd3be5e13e2ccb08849bc6de9a1b1ac88055bdfe922bf"
-    },
-    {
-      "path": "lean/SierpinskiFormal/DenominatorShift.lean",
-      "bytes": 3715,
-      "sha256": "3a200afee9bb5c8970198dc9f4af64935b3c576c826147ee0fcbf0c4666536cb"
-    },
-    {
-      "path": "lean/SierpinskiFormal/DenseSequentialExtension.lean",
-      "bytes": 1201,
-      "sha256": "5076352cafd1b5e2352fa9b01362c152f7996975b0d04d8c0646574dbf694b2c"
-    },
-    {
-      "path": "lean/SierpinskiFormal/DigitRelativeHoles.lean",
-      "bytes": 5782,
-      "sha256": "b61608fc7371cc1824ce2dce36cebc68c4a81b51f4577c96f2b132d32e896c6d"
-    },
-    {
-      "path": "lean/SierpinskiFormal/DigitState.lean",
-      "bytes": 8675,
-      "sha256": "1a5649ab76e67d30c7e740209ab66c9ef082bf429df6ea0d0425da68a9b6fe01"
-    },
-    {
-      "path": "lean/SierpinskiFormal/DigitSupportCardinality.lean",
-      "bytes": 6491,
-      "sha256": "e11f1190ec1f46a5568b5db2a15237d75fd18f73877c0f2bc348e06fd840e5f2"
-    },
-    {
-      "path": "lean/SierpinskiFormal/DigitSupportGrowth.lean",
-      "bytes": 6414,
-      "sha256": "e48cb518180477c5a1f6399b88d12dce80a87910e4c05dec6332c8aabad54cea"
-    },
-    {
-      "path": "lean/SierpinskiFormal/DilationInitialZero.lean",
-      "bytes": 6107,
-      "sha256": "662260ef2e58a374ce984e9cf0bf09158f6d1353a0298b19fc0d2a1dd2055f22"
-    },
-    {
-      "path": "lean/SierpinskiFormal/DilationWindowThreshold.lean",
-      "bytes": 4748,
-      "sha256": "81e7a45f85185dbbcc49660f0985b200c577ea21c049b0ac74d7f0378c25db45"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ExactDigitSupport.lean",
-      "bytes": 6986,
-      "sha256": "c5dd3705be5332d54c09083d59e8ef0e2b995a0ff397a7551e8c4fe87e35aca6"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ExactGrowthGapExamples.lean",
-      "bytes": 3259,
-      "sha256": "e3054d4e6469a9a9e4f99f4fc461e59b83cbc496fba445b81a0a669cb2ac21e3"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ExactPowerGrowth.lean",
-      "bytes": 8885,
-      "sha256": "6a5fbb437bdefa91a61ddc14e921ba647c0dc331741b8b5248b024a8b2bc0777"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ExteriorPairMaps.lean",
-      "bytes": 4451,
-      "sha256": "ea07adb68bc3c1acb5e2dedd21e45990789cc91b9bd5c6ef70e9c1d627de0e5c"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ExteriorRankCutoff.lean",
-      "bytes": 3017,
-      "sha256": "a124c479f5c31cb0fc19c67625caed8685b9b07ca22deaa85b2c8a8a3ed15370"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FiniteExceptionalGaps.lean",
-      "bytes": 7150,
-      "sha256": "e653473e9be3c14262c1a5f62c1532e1b6ba260afbb4e8198c7d9e135fd1d21a"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FiniteFieldDensity.lean",
-      "bytes": 4003,
-      "sha256": "ec7b54f3d2353247b2c96731285555488d58b7119bae0a366b22fba822cf5316"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FiniteFieldPrefixSaturation.lean",
-      "bytes": 3220,
-      "sha256": "c741c9215a39123aef7f500ae950ea0ca9c8319d34f7c77bd445e256c55daccb"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FiniteIIDMeasure.lean",
-      "bytes": 3983,
-      "sha256": "21b37bc4ce840451e284df7ebe76e28b876d435652ed1b9afdc4d345cbb43f14"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FiniteIIDWordLaw.lean",
-      "bytes": 5708,
-      "sha256": "ee32861d6d675022d72df58965f9fe939e2952f2ce742ea80ecb34673bfd6c0a"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FiniteSourceAnalyticWeights.lean",
-      "bytes": 3544,
-      "sha256": "933ba6aeecc621da7f0c18db79b096116be947fd569b7f594f7083b77c74473a"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FiniteStateSourceLaw.lean",
-      "bytes": 7469,
-      "sha256": "0a04cd7b92cf4ece2e72767ca0266f508b6375c804960b3a1ebbc3fe9dde9c43"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FiniteStateSourceProbability.lean",
-      "bytes": 5443,
-      "sha256": "fcdde47520b6e84b20b656e3c4f0306d1dbac482f99b5d4e9f6919e23b706146"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FiniteStateTransducer.lean",
-      "bytes": 4809,
-      "sha256": "8b990e35edb110299564b975da109412cd79c2db80ef67e6a90fdc68ad35b46e"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FiniteWindowSupport.lean",
-      "bytes": 10065,
-      "sha256": "d653f3b08c119820ca4b637dec1f41c3c5d3b3b45dcd30ce3300e621233d6b0c"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ForbiddenWordGeometry.lean",
-      "bytes": 4740,
-      "sha256": "75f19ddd5b16f0111224b08c132b81af532ee9c59327b208ca2db14dc76fe814"
-    },
-    {
-      "path": "lean/SierpinskiFormal/FourierBridge.lean",
-      "bytes": 6769,
-      "sha256": "a7b14b2b95bbd65cb0c50c8d15f0099c6a36c30c8f09095c1c8c64045535bbba"
-    },
-    {
-      "path": "lean/SierpinskiFormal/GeometricFilter.lean",
-      "bytes": 2491,
-      "sha256": "4e89b9fe0b16582e44defc1d179e93d61da7e54ccecdc6aa8b095062ee14ea60"
-    },
-    {
-      "path": "lean/SierpinskiFormal/GroupBooleanFlow.lean",
-      "bytes": 5779,
-      "sha256": "6f7983aa9d5be9c82087d9a5cac0c214ebaa60944e1ef8309daadfdaa06bb282"
-    },
-    {
-      "path": "lean/SierpinskiFormal/GroupBooleanTranslations.lean",
-      "bytes": 6970,
-      "sha256": "088e1c1fe643b92ce6b65ad629cab825543ce1ceb5fc359f199ef9ac535f83f9"
-    },
-    {
-      "path": "lean/SierpinskiFormal/GroupFlowStationaryState.lean",
-      "bytes": 16367,
-      "sha256": "41c31aec155cb44bdb6de5e7ed39b3889228b9bc0af538be1b314f46046d6fc9"
-    },
-    {
-      "path": "lean/SierpinskiFormal/IIDPairFactor.lean",
-      "bytes": 7763,
-      "sha256": "2ebd51ab47b719c0f4451f3348f6c151cfff8533c75d1a42bb3686d7c52bee39"
-    },
-    {
-      "path": "lean/SierpinskiFormal/IidCompactWordAverages.lean",
-      "bytes": 9519,
-      "sha256": "f056899359a839980e6925fe832740a9e6b08985d482801cb6d6a45c53ccb4e3"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ImmortalConeDensity.lean",
-      "bytes": 6777,
-      "sha256": "01ba2e076fd04c1aee7d50c036688c9f3153477d4e818f4c85346e5e9da6d4d3"
-    },
-    {
-      "path": "lean/SierpinskiFormal/KernelAssembly.lean",
-      "bytes": 9090,
-      "sha256": "4ce9ee238a87bbea718352b14bf0c7605c38b52fa562a9a661330c58ce4965ba"
-    },
-    {
-      "path": "lean/SierpinskiFormal/KernelPeriodic.lean",
-      "bytes": 2069,
-      "sha256": "132053168fc6d4735964a0aadf1cd221ce94206a74271ec4b9fe551c8f3f6776"
-    },
-    {
-      "path": "lean/SierpinskiFormal/KernelPrefix.lean",
-      "bytes": 3955,
-      "sha256": "ed595f3465456006a9bc565389258d885d07116658144827b0b749b85793dc4e"
-    },
-    {
-      "path": "lean/SierpinskiFormal/KreinWeakHullReduction.lean",
-      "bytes": 1958,
-      "sha256": "98ce5744d8404c17825ec3bdf9d766faf3cdecf6cd57e2c8172619346771ee82"
-    },
-    {
-      "path": "lean/SierpinskiFormal/LinearDigitGeometry.lean",
-      "bytes": 7120,
-      "sha256": "5d5b9a8f895be5eb4d1c84ee218ea5bb7c7c1cac0786005303ae00e742fadf7f"
-    },
-    {
-      "path": "lean/SierpinskiFormal/LinearDigitRepresentation.lean",
-      "bytes": 8334,
-      "sha256": "620617417912092d35687a9de0fcdaf40c07948eb67fa298a8dfba209eb42f46"
-    },
-    {
-      "path": "lean/SierpinskiFormal/LinearObservationDescent.lean",
-      "bytes": 8660,
-      "sha256": "d5de84a0dbe1fcaa53efc946994ed1649774a1190b68fe12944c01e1c7d23ac0"
-    },
-    {
-      "path": "lean/SierpinskiFormal/LogDensityClassification.lean",
-      "bytes": 5654,
-      "sha256": "001b24ef4712cf991eedb4874913acbdfc651bea71fa9c18919f871cd658eabc"
-    },
-    {
-      "path": "lean/SierpinskiFormal/LogDensityNormalization.lean",
-      "bytes": 12871,
-      "sha256": "8031e0d42cb96e0e22462474061f1df67ab4fd260206af491f51b66a14a07772"
-    },
-    {
-      "path": "lean/SierpinskiFormal/Lucas.lean",
-      "bytes": 8849,
-      "sha256": "30b843fa06663b1935c8656bfe286896c93d54daefc716ee31d3ae7957f12aae"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MatrixCertificateTransfer.lean",
-      "bytes": 2050,
-      "sha256": "8c04060b0550c890e3daef6e2979ad342ae9fef58a47688b14a540ef55e0b964"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MatrixCoefficientDescent.lean",
-      "bytes": 8781,
-      "sha256": "53bbf15f822f6069b6ab0f068a0735672da7579b63707e8e6ec1e27241ce883a"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MatrixRadixRegularity.lean",
-      "bytes": 4533,
-      "sha256": "fb0cd49e717e8448865d79172a709440edbdcada4a6d0bb21941ccb5cd131c9b"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MatrixSparseGeometry.lean",
-      "bytes": 7152,
-      "sha256": "7a85eb0a1c0da8719be8338c5618f3718598bde94eb5b5ddf4e301116d42048f"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MatrixWindowLift.lean",
-      "bytes": 11444,
-      "sha256": "0e6f8c631fe043d462d43ce58afda75382129ec95825c2c6599884971d01395f"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MatrixWordLogDensityBridge.lean",
-      "bytes": 10533,
-      "sha256": "f9f42023bfd2a7239b966cac307098bd2f88b094f216dbd350d53a7e7b448f7b"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MinimalRankCompression.lean",
-      "bytes": 9665,
-      "sha256": "de311c3e466e9febe55d42abc4048eeef8e1de129b8e2a64a4c9fc8e9e35acf7"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MissingDigitClassification.lean",
-      "bytes": 14381,
-      "sha256": "11bdb40cfaacd3b3637ac6a7422ce71dd3772fe17a3c593c04a6d06e3d9817b9"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MissingDigitDensity.lean",
-      "bytes": 5479,
-      "sha256": "f03001ff412e3cdad2988ef34759ec105e0f3fbf0502715bad8faaa949bf12c7"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MissingDigitFiber.lean",
-      "bytes": 11657,
-      "sha256": "b0a8de755bda25e3f3957a2bd3986fe861f0a21c90edf7fa06b0caa471af76f8"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MissingDigitGrowth.lean",
-      "bytes": 2772,
-      "sha256": "95a23470ca98aa4ce99dc43761fae4209bb763e1e962430ae1f68230968cddff"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MissingDigitPrefixes.lean",
-      "bytes": 23044,
-      "sha256": "c9381b8cc1f7771d4c4656960f6689313a7943e2c5937de247ff9a55ec6cc35e"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MonoidDigitProduct.lean",
-      "bytes": 10622,
-      "sha256": "dda8dd04bd6e715ff5454e5854660ac70f97ff9764b835d7d08c6d6842660f07"
-    },
-    {
-      "path": "lean/SierpinskiFormal/MortalWordCounting.lean",
-      "bytes": 7935,
-      "sha256": "ece11b182cf32996381629fec2988c28022b50f3a29cb5a34e62df308e85b2e2"
-    },
-    {
-      "path": "lean/SierpinskiFormal/NoetherianStaircase.lean",
-      "bytes": 11138,
-      "sha256": "7450ff24e4d42203161fb221e9447f61b30de37ba03786f276c4e1fd4a4b727d"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ObservableNoetherian.lean",
-      "bytes": 4570,
-      "sha256": "bf675ecdd1da7369d26f908b9feffe0f056596df948c0b03112a07ccb7b280aa"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ObservableSpan.lean",
-      "bytes": 4345,
-      "sha256": "7d88a9de6bf01a8705a669b4546caf1a245cc82547a394ffe255a723afb8efd7"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ObservationCertificate.lean",
-      "bytes": 3376,
-      "sha256": "e8f6340f788f67da09baadfef40445736e88de238ac6788f9ff43c4d39a86654"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ObservationClassification.lean",
-      "bytes": 3112,
-      "sha256": "d4272fd150d3021ef725f6eb76cfc207ad9d83f7a31f140e4c3bf94c825f46f1"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ObservationFamilies.lean",
-      "bytes": 4719,
-      "sha256": "03e42b5e8553d210176fda0f65f7aa27a96a9a0c07b7ed9078e9f7be59e0994a"
-    },
-    {
-      "path": "lean/SierpinskiFormal/OptimalUniformClassification.lean",
-      "bytes": 5537,
-      "sha256": "99d7dc11d89cc40a9c0c99f17e055eecd06dd89db02012bbdac315a2ec89910f"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PaddedStableLogDensity.lean",
-      "bytes": 4716,
-      "sha256": "263e1452b32d20dd7a93ffdd53846132815b28a6026b10d81f39078f0f331f64"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PeriodicConvolution.lean",
-      "bytes": 15632,
-      "sha256": "e255c58257917abbadc41c98b3ac195e51a15d497ff0bb0c966b723221fb8147"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PoleCompatibility.lean",
-      "bytes": 3492,
-      "sha256": "bb2e3109988ed4fb0f35a47c0c8041f8d687254c194f15087d890fc3c2d509d0"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PoleEvaluation.lean",
-      "bytes": 3118,
-      "sha256": "0f893d5d24455d2dd1fae127c42b028087d2516bc75ec529808e542b6af9626f"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PolynomialBlockSupport.lean",
-      "bytes": 2537,
-      "sha256": "8dcc26000f9685e1038eced7e16b95c53fc4ea78a802d1965f90e1a77749fa23"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PolynomialDilationGaps.lean",
-      "bytes": 9193,
-      "sha256": "ae75e828b8083e9da3a3107dd02d8888e7432cb7ee90585de2bbf6847e1d4c73"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PolynomialMatrixObservation.lean",
-      "bytes": 3893,
-      "sha256": "08b6500a5fbc4fbeb3a55c4ca3a890e45d314ad83dd89d16284058b9f8e3ef32"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PolynomialObservedSupport.lean",
-      "bytes": 3042,
-      "sha256": "18a9d6078e7e294de0d15906ad371ef9056cbba223e6abe86c74bbfaa537e65e"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PolynomialSaturation.lean",
-      "bytes": 5242,
-      "sha256": "e475cbd28390451656a4a1c73840ae3daf67c6637ec762391e9573623f76f947"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PorousSupportBounds.lean",
-      "bytes": 11162,
-      "sha256": "3f453c4e48dc08380484b4bfc20d730eb1a59c7acb2c2474668a96a68a8040cc"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PositiveFunctionalDecomposition.lean",
-      "bytes": 12430,
-      "sha256": "e2ed831f0bcbd466c73d67d7bdec70d5eb40f5536db9c78e9bfee2830539f5cc"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PowerDensityBridge.lean",
-      "bytes": 2177,
-      "sha256": "f50aed6cb8dd5a385f991865b57cdd8d7dc548d516cd8553fe9a3dcd4ca2260d"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PowerExceptionalGaps.lean",
-      "bytes": 6399,
-      "sha256": "4dafeea5ccd25a4edfad1f7bf3fdae53a1370c9deaa0dc95cc933eacece2a3f2"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PowerFilterBounds.lean",
-      "bytes": 9535,
-      "sha256": "671f09652de57c8d6dc80038b02923d1a744b6f82ffaa18ac172c3ab72fbc81d"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PowerIntervalDefs.lean",
-      "bytes": 3170,
-      "sha256": "fd831caab682c13c204870ef51048b00928545015fcfcaca77a6fc696772b00c"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PowerSupportFamilies.lean",
-      "bytes": 3019,
-      "sha256": "bce931870b91285dffad817d0a282576a23b2bf4cde40e61d812871da48fff23"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PredicateLogDensity.lean",
-      "bytes": 17849,
-      "sha256": "e87c00a377117763c585cd73320e65a03c583db8ace18c92c476979cc913684b"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PrefixDilation.lean",
-      "bytes": 6188,
-      "sha256": "be40d9613b1f66399fbcac675b316d339309241b5b886462fd9819e7aa9d85e3"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PrefixGapCriterion.lean",
-      "bytes": 5235,
-      "sha256": "cfb756efb9234cc057431b84007625fda0441a8658a8a24cb9a7254ff0bef366"
-    },
-    {
-      "path": "lean/SierpinskiFormal/PrimePeriod.lean",
-      "bytes": 2929,
-      "sha256": "40cf8c5791eaf452f72c584e331ba18e8330f186ab94aa2ceff51bdb4b6b20fe"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ProductPrefixes.lean",
-      "bytes": 10977,
-      "sha256": "10e442d31466d2ff8e0e29c566e33478e552950ed89bd81c5143837edecaf4a7"
-    },
-    {
-      "path": "lean/SierpinskiFormal/QuantitativeGapExamples.lean",
-      "bytes": 2857,
-      "sha256": "5382e8bace933fbe280005524c3a102f2a9de7eebbd6232186076cbebee0b573"
-    },
-    {
-      "path": "lean/SierpinskiFormal/QuantitativeSynchronization.lean",
-      "bytes": 6020,
-      "sha256": "8e595e0b216ccc35b3a75c9e7a17f059a8f1b4418610acc4b8502f7896e455c0"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RadixExtension.lean",
-      "bytes": 9316,
-      "sha256": "b802fb00906f2f842f1c27de96937599f0454e406c8dc936dbf78b4d14c5d25f"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RadixLogDensityTransfer.lean",
-      "bytes": 30432,
-      "sha256": "de91dbae517e709defc6301efbf3d7979d809464ca6dedd10f20b1db2f197990"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RadixRegularRepresentation.lean",
-      "bytes": 4412,
-      "sha256": "f02347ee5a3625e9153a7c378b5bc3928fb9624f6198441b0690ac8cf8a602c7"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RationalBridge.lean",
-      "bytes": 10201,
-      "sha256": "5a7bc9da01530c324e4cb5b57f6ec8e1054d3578f39618abcab4ae7d74a9f163"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RationalDensityCriterion.lean",
-      "bytes": 6525,
-      "sha256": "08c2a42d6404e0e6dc799abc7d4fef04cc5f55d696abf417108a57289f27b1f4"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RationalPrefixTransfer.lean",
-      "bytes": 3895,
-      "sha256": "b435b7aebae5ee95bc0397bb4d0938ae1d3a8a3c30e5550fc0e902c043583fd4"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RationalRelativeHoles.lean",
-      "bytes": 3890,
-      "sha256": "f0c4080c931e89bd7562b772fd67161158586e8a10193d90ea3764df2b83fa2e"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RationalSpan.lean",
-      "bytes": 3775,
-      "sha256": "f567963c2af70bcb27c90b959fa9529405ede54fdab4e1cb3f985438ff631bde"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RationalSupportGrowth.lean",
-      "bytes": 8657,
-      "sha256": "52a5b3ad5d31e060b9c0b8c27f0eb5dced7bd9bfafa24a7c2f7c8d9417fb0f3a"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RationalTailDensity.lean",
-      "bytes": 7825,
-      "sha256": "deb3ca336c4c809a4434b785197208dc380a4caccbdb4c3a94a5ab2f511155dd"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ReachableSpanMortality.lean",
-      "bytes": 8048,
-      "sha256": "ff057799fbf959b9dec493a487ca78363e18f38e4c2a466bc6ec9f8c95459ff7"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RecognizableSupportCompactness.lean",
-      "bytes": 3734,
-      "sha256": "b6b299864f32973ad38e1c55158216ea154491e437e58a4739665046ed1af646"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RegularSequenceRing.lean",
-      "bytes": 4424,
-      "sha256": "8912647c319e4623a46521571146322e31ac6afc95fd589e14b196827edc86fb"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RegularSupportApplications.lean",
-      "bytes": 4196,
-      "sha256": "1590a835cd4cd4c8b0fdc267b3dde5f6f1f5e07268bbee7f94dca2880ec3b112"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RegularSupportClassification.lean",
-      "bytes": 2750,
-      "sha256": "ffdeb11a3338a2d6474a6eb357f5e0fefd8682b73f1716b93a472d8d62c13991"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RelativeHoleSynchronization.lean",
-      "bytes": 3521,
-      "sha256": "ee0867550f394593aff4416b4fff99130544b359ca6a474aff4bea80a2fb8941"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RenewalWordDecomposition.lean",
-      "bytes": 6759,
-      "sha256": "69e9c8164ec1d79905a1da5f9d84b7f32810d319b44d6d98ef6b43426129022e"
-    },
-    {
-      "path": "lean/SierpinskiFormal/RootSupportedDenominator.lean",
-      "bytes": 5570,
-      "sha256": "928a0efca4e45f862e76720f7e79c6742eb53242344ab028f80a11e7972efa89"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ScalarObservationGeometry.lean",
-      "bytes": 10563,
-      "sha256": "70519d73c5d39e7d0b924d5e007ec3b4f228857f620c473dd7f7c4804f9943c3"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SeedBlocks.lean",
-      "bytes": 5135,
-      "sha256": "be6d2261bfbb00710443d32ea24f595cafa59cdd80f9859c23fd549c071c06f8"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SeedFamilies.lean",
-      "bytes": 7990,
-      "sha256": "2efd911c6e9e6a106c75b5cf6b143ec08413a6a66e1c06f023bc2dcc7991821f"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SimultaneousRational.lean",
-      "bytes": 4982,
-      "sha256": "4be15aa571581c11c70240bd257fe57c7d9b945450ce88ba9f04829f2f2fcad9"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SoficHankel.lean",
-      "bytes": 8441,
-      "sha256": "f382b6e06a6f63941af0b0dcc8fd02af694a8fc858d12fb1539d6fe348ef4367"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SoficPairChain.lean",
-      "bytes": 2763,
-      "sha256": "969a7b9c9e6c07acd75ff65780810661a1c1d8264f4fd0379e9f866a50b9bcda"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SoficPositiveCompletion.lean",
-      "bytes": 5806,
-      "sha256": "37bbe2cb56dad09bf1c2aed11fad871622c6eb35e5faa8dab9fc7096023e95d6"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SoficProcessMarkov.lean",
-      "bytes": 5222,
-      "sha256": "d815a5d0c6a28fd47b41dd9506e93a485e202628dc11c7993dcadafce91ef2d5"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SoficRationalSharpness.lean",
-      "bytes": 4899,
-      "sha256": "1b145b75d3719c63dc7cff13d00bb1db9fb2198899145195447eb69c9ccce5f4"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SoficSharpLaw.lean",
-      "bytes": 9440,
-      "sha256": "8453493b01c2a5658b3c2842e66a6a43997782b771ea011ed1deafd2dd3f6df3"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SoficSharpProcess.lean",
-      "bytes": 2729,
-      "sha256": "ae1f7877611f99893bf4acf03d4eb5ea77b18998474e6a98b3ce6ec5de989216"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SparseIntervalBridges.lean",
-      "bytes": 4203,
-      "sha256": "af1025c6294e5962a7ea8a25583312b9c68258946fdf19c8842ed08a6ffcb1a0"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SparseIntervalDefs.lean",
-      "bytes": 954,
-      "sha256": "695f331f642e3e7c0e99616c645d6688030d44091a1e0bf7c212c9db55f1aacb"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryAlgebraicApplications.lean",
-      "bytes": 3338,
-      "sha256": "95676141131752d106bd8e4dc80ad5f29b1d1a994ac7bbdadf4dd334f569f831"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryBooleanConvergence.lean",
-      "bytes": 3171,
-      "sha256": "c0553944142c4de9dae476362c377e7f33989b51e1237a59b8068ddd1139ac9f"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryBooleanDuality.lean",
-      "bytes": 1237,
-      "sha256": "8e01dd9a28d54492992d25c0484493a47feb565f179a03e478f00bdc94c4a441"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryBooleanFrequency.lean",
-      "bytes": 6608,
-      "sha256": "870aa7363b8fc2785ca825c986cb88af0c8f02754d7b69524ee1e9bf5e730ac5"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryBooleanMean.lean",
-      "bytes": 2692,
-      "sha256": "7a611c224fb774ab104e78639d6e053ad1f75a5c0568c2dd1f25cd9841516710"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryBooleanWeakCluster.lean",
-      "bytes": 3995,
-      "sha256": "ce65e8808e8c0ff53edfa183d8c7453b6c3623ba2dbe2741e2b948f6a99b486e"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryCompactness.lean",
-      "bytes": 17208,
-      "sha256": "5737d9b7030317aa49fc022e05675f30942e277d4d1bc29b0b8e30a5ec8da663"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryCompactnessPositive.lean",
-      "bytes": 14861,
-      "sha256": "3a2f2dd434918751c357b3c422b1b7bbbc5cd7cce5a48894e6e60bd566122f93"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryCompactnessPositiveMeasure.lean",
-      "bytes": 2031,
-      "sha256": "922604ed06e0c6422c463a32ab4f94e267aae4eade27299fd3d00af38b58a5bc"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryDualPairing.lean",
-      "bytes": 3613,
-      "sha256": "731176c2c39f9b4675bada38189fccb2eb4473f4e9708cc27a80447041f5f4dd"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryDualRepresentation.lean",
-      "bytes": 5930,
-      "sha256": "4ae545a8f1273f6c3bf32f67ea5b635dd419bd6437b29099f0ecd875ec510fcf"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryFiberBarycenter.lean",
-      "bytes": 29026,
-      "sha256": "e69b71f394b2cc9973ae8a786447fb25c644b1e2a335cac0b0b31618148bfc4b"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryFiberMeasures.lean",
-      "bytes": 9172,
-      "sha256": "056d8e1383cb7f3e2a1d195a1cf79630ab7a1ab2bd484c5a621ead434b29eab4"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryGraphTests.lean",
-      "bytes": 15427,
-      "sha256": "d63bed730971e9ea7d897a0d2720f112ba112f94e78c48c43dcad23978263126"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryGraphWeakCluster.lean",
-      "bytes": 12372,
-      "sha256": "515e318acf34760d38acbac1eadd13c6b16e9a4d94c883879541d2ea16f89476"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryL1Duality.lean",
-      "bytes": 2694,
-      "sha256": "930a57205fcb774346a67276f9edb16d4b2b319c3b475c615d8df6b5b9fa2cfc"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryL1Skew.lean",
-      "bytes": 17504,
-      "sha256": "3c2fbd7fb0e456f10578f1bebc525b6719adabdf84630e597d39df36d02f4a30"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryMaximal.lean",
-      "bytes": 36928,
-      "sha256": "aa576915d57c1b269e4c97e1339a44cf654c443befcd76fb0b8cad23652cc091"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryMean.lean",
-      "bytes": 4474,
-      "sha256": "2b152a6097b8fc19034e0881edc47a03661b563c9bf1de599e60fbdbe6ff531a"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryMeanConvergence.lean",
-      "bytes": 5309,
-      "sha256": "cc0c2ed70c49e043aadd9632af9a1b0e38546f5bacd89937747bfc5da014567c"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryPairedCompacta.lean",
-      "bytes": 24880,
-      "sha256": "3631d550bbfae8fffb9b99a7835d354baf4356701ebebe3a2282eeb0519b3755"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryPointwise.lean",
-      "bytes": 14572,
-      "sha256": "772ce8f3cbbc2225b5118ed779787f8afc35cfe3c758d5a3d2eb95422fe1ac50"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationarySkew.lean",
-      "bytes": 9893,
-      "sha256": "b43f6e4dd9c5244e725c46f23634fe1e810a242902580bf48711b41c811a066a"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationarySourceBridge.lean",
-      "bytes": 18152,
-      "sha256": "af0dd4bd3196a336ad8a040b4237f387f6751b51c9b5709fd08a16cdd37a518d"
-    },
-    {
-      "path": "lean/SierpinskiFormal/StationaryWordMarkov.lean",
-      "bytes": 4308,
-      "sha256": "87b46c0f24df8d6cdf6b01536a069c88e1ce885731a7a0ba1be0b638cf95ccf7"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SublinearAbsorption.lean",
-      "bytes": 2578,
-      "sha256": "bff82c65012d77eba67c95dad1407d5a76760b7a005ee79b84b419aab59fb444"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SupportCounting.lean",
-      "bytes": 13312,
-      "sha256": "1ac030306b54d7fed540bb4fb537be888dae31342ec0c844423672e6cd265628"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SupportDensityBounds.lean",
-      "bytes": 5431,
-      "sha256": "8de18a19611ec47c7c776941b5a9de83798d8d8cca932b2f74b274edf0e3b2e4"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SupportDensityDefs.lean",
-      "bytes": 1025,
-      "sha256": "5ca2b97eafaaa2eb261fafa39a42f7dcadbb410c1718e65fb350196cea23730e"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SupportGeometryEquivalence.lean",
-      "bytes": 6622,
-      "sha256": "f9e4a70771ab18cf4ac92727db1039068e80629db70588a949a6a868cfd49195"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SupportLogDensityExistence.lean",
-      "bytes": 7028,
-      "sha256": "1eea66a59c7b3bf15ca24a5db5437673383f4f6b1c34c74c02367a2adba0cc8b"
-    },
-    {
-      "path": "lean/SierpinskiFormal/SynchronizationBeyondCompatibility.lean",
-      "bytes": 10531,
-      "sha256": "15cd7db0559889e016e5a9f7a02c6a8379241b976967bd6bc93d833f6d1f7848"
-    },
-    {
-      "path": "lean/SierpinskiFormal/UnifiedObservationTheorem.lean",
-      "bytes": 3362,
-      "sha256": "7a45834a95f6de9b76a7e672c11504ed44437c38ff1a1f5a5873cf1ad7d727cf"
-    },
-    {
-      "path": "lean/SierpinskiFormal/UniformDigitGrowth.lean",
-      "bytes": 7564,
-      "sha256": "1124c9bdb2ffc2cfaa0b7da80b3eb97a790de3446da132580feaf312a056f4fb"
-    },
-    {
-      "path": "lean/SierpinskiFormal/UniformNilpotence.lean",
-      "bytes": 4729,
-      "sha256": "c6ffbeae4441048dc4fc1b3f58590c0a0fa75722d59bc69f47ad76cb9a09cf95"
-    },
-    {
-      "path": "lean/SierpinskiFormal/UniformPowerClosure.lean",
-      "bytes": 12251,
-      "sha256": "76e803d5003a2397b034c9772f880a3bcbd6d3bd53a093e95d2bcae303e4dcde"
-    },
-    {
-      "path": "lean/SierpinskiFormal/UniformRelativeHoles.lean",
-      "bytes": 14905,
-      "sha256": "c21d869a81d1f330f3192ec3a0e04323a8e31b67174719fff8e924e8ac230ea7"
-    },
-    {
-      "path": "lean/SierpinskiFormal/UniformSoficRealization.lean",
-      "bytes": 8432,
-      "sha256": "a1827b65754ebdb38ee0df1d7e82c717f35978cd756f09afff80141ed873b075"
-    },
-    {
-      "path": "lean/SierpinskiFormal/UniversalAuxiliaryField.lean",
-      "bytes": 4277,
-      "sha256": "046dd87203ab898f3e45db7d0c5a0581ffab52e1e3154b808ff8bf61b95e7e2c"
-    },
-    {
-      "path": "lean/SierpinskiFormal/UniversalRational.lean",
-      "bytes": 6096,
-      "sha256": "0cab95e01b2be6aea7e3c6db056e852c249bf4f49d505edfe16948b77e141862"
-    },
-    {
-      "path": "lean/SierpinskiFormal/WeakContinuousMapConvergence.lean",
-      "bytes": 4753,
-      "sha256": "dd81e382cbf6f4645cf6bb50762a8a48c4e3d4969d82bda63fa42e32d4202744"
-    },
-    {
-      "path": "lean/SierpinskiFormal/WeakMeanErgodic.lean",
-      "bytes": 8573,
-      "sha256": "8497953c4b4246f83d29562e48782da9bffb00278cea4954fc65dff2436ef6f5"
-    },
-    {
-      "path": "lean/SierpinskiFormal/WeightedWordCesaro.lean",
-      "bytes": 6854,
-      "sha256": "fb2108710fc34924c0a275c4f998a2336000f5530380da37dc0b213202846663"
-    },
-    {
-      "path": "lean/SierpinskiFormal/WeightedWordEnumeration.lean",
-      "bytes": 1601,
-      "sha256": "d94733b965f93ef3cca00c006c726d9f7d636deb9d1ae8e8d6057d2b7f2734ea"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ZeroBlocks.lean",
-      "bytes": 9171,
-      "sha256": "d53305dded9bacb68ee95e032282e9511b969211241d8e1327041a5e08139509"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ZeroCylinderCounting.lean",
-      "bytes": 7083,
-      "sha256": "9709bec62bb2f5803fea7ffc46c5017fd11efd6aaa1d7d0e85c6d485b670e447"
-    },
-    {
-      "path": "lean/SierpinskiFormal/ZeroCylinderGeometry.lean",
-      "bytes": 3688,
-      "sha256": "8d09a7fc5547bd5941ab6320bf5113135a21840cdad0bb953a25494afa5e9751"
+      "path": "lean/SoficMarkovOrder/WordProducts.lean",
+      "bytes": 1470,
+      "sha256": "031c9dd5b51aefe07f9baf5111dd3587718aef58127497f672943793aff2d48a"
     },
     {
       "path": "lean/lake-manifest.json",
@@ -1062,8 +201,8 @@
     },
     {
       "path": "lean/lakefile.toml",
-      "bytes": 265,
-      "sha256": "98483ba8244caddcd7098781bbf2e7c2c7d04c587e24c2ec8cdce64b2e427cdb"
+      "bytes": 259,
+      "sha256": "fea4f0d4b2ccb8721477ee2201698b8f40e91e340fd11b49364e4419502a89b3"
     },
     {
       "path": "lean/lean-toolchain",
@@ -1072,23 +211,23 @@
     },
     {
       "path": "lean/verify.sh",
-      "bytes": 792,
-      "sha256": "22d64b2634a7c20743f18d371d28552ce9fec5ccacb8cc8e677b805746ad22e6"
+      "bytes": 1507,
+      "sha256": "691b22a8bcf8ed22951bb75207228b36e4033a7acc70db88fdfa8f83baab198a"
     },
     {
       "path": "preamble.tex",
       "bytes": 1039,
-      "sha256": "d355d0ee205b7422aff9e058a85c7acb1cfb45ce2466d7c2bab96015698e6597"
+      "sha256": "6f25ca924da8c2c8c1a899244fadd7bef5f2bb8b1fbfaaed44edb7518cca372a"
     },
     {
       "path": "sharp_finite_markov_order_in_intrinsic_sofic_dimension.pdf",
-      "bytes": 347146,
-      "sha256": "91076d071d77484478dc817e7d006fa8261690e6776c31ca5b25d84342522b11"
+      "bytes": 346919,
+      "sha256": "a0238d5eb5e91ee4502b0f7c6e43937d4951b4520fdc5b4f2900a489be6babf2"
     },
     {
       "path": "sharp_finite_markov_order_in_intrinsic_sofic_dimension.tex",
-      "bytes": 14633,
-      "sha256": "df099886b0c9b38b21990aae3d29f2238c4f5e02b43c70441ee28e7ea4afeded"
+      "bytes": 14812,
+      "sha256": "445806cf26c3d998f47e46a4fec38adf084ff80d04902d6c8026d6c4f199f9e6"
     },
     {
       "path": "third_party_licenses/Cli.txt",
@@ -1147,33 +286,73 @@
     },
     {
       "path": "verification/CLAIM_MAP.txt",
-      "bytes": 2547,
-      "sha256": "c7feb95f1ff98dd2f4d498b5c8d39c1d760f91c686644c6dbfa7f501808e6265"
+      "bytes": 2828,
+      "sha256": "915e34cdf0420f306b9fbad5da89db45011c4241a974c35c045a1f3dbb5d7fe6"
+    },
+    {
+      "path": "verification/ENVIRONMENT.json",
+      "bytes": 5438,
+      "sha256": "137d02041cf59c7ad570e0c4b43f4e0b4b3a367d30c7388999844295956d157a"
     },
     {
       "path": "verification/PROVENANCE.json",
-      "bytes": 1237,
-      "sha256": "34524175fe9ae3a260911184e369694ad639034d27160475e0c8fb5cc47106ed"
+      "bytes": 3570,
+      "sha256": "9de10f0b42ab510b9be6c4fc81a0e29ce9d6c0e3796bac02476ce8fe0eb008b4"
     },
     {
       "path": "verification/README.txt",
-      "bytes": 2924,
-      "sha256": "3611758793c0235ab9c7f0c3234a0c34c09b97acc199161f80ba77b7a783ed66"
+      "bytes": 2485,
+      "sha256": "51778407a3f1aeb73340939daffec33a3abb4e13ffb74979610eed0f74018994"
+    },
+    {
+      "path": "verification/REFACTOR.txt",
+      "bytes": 5393,
+      "sha256": "57135e13ef08c584d2a11eed2708ecd64fb2c665a6bac71f8a4cfe516923d991"
+    },
+    {
+      "path": "verification/REFACTOR_MAP.json",
+      "bytes": 93854,
+      "sha256": "6e9ed5e46754d5342cdd619da54c9935b7384902b8908a946c63e3fe8eb31fa3"
+    },
+    {
+      "path": "verification/REVIEW_NOTES.txt",
+      "bytes": 1022,
+      "sha256": "9591e6e701df7c81fdd534d8ad8065bbb8ee66ffadc9cf0887d3bfecb7dfdc7a"
     },
     {
       "path": "verification/SHA256SUMS",
-      "bytes": 23126,
-      "sha256": "6ffc3fd2512e05529afa77cfd8c4fda05fae305570c31061b98c3e07baa10155"
+      "bytes": 4625,
+      "sha256": "7c21d2fd0533c7ce490a482b0164d83be22277442db4abd0291f23db8867db3f"
+    },
+    {
+      "path": "verification/SemanticComparison.lean",
+      "bytes": 3451,
+      "sha256": "9756acdd3f9d41f053df8cd356baa53bb64808e142125712f0b82ca15691d637"
+    },
+    {
+      "path": "verification/VERIFICATION_ENVIRONMENT.txt",
+      "bytes": 2081,
+      "sha256": "498e91805a475ea33fa1680b60c69f7d2a208313955c4f8f4a7c1f66731996cc"
     },
     {
       "path": "verification/axioms_and_statements.txt",
-      "bytes": 10305,
-      "sha256": "1199f3af36e285f0e43fdb30397d90c3a3d6fe4a98b70739d1221e3fcb432a0a"
+      "bytes": 9711,
+      "sha256": "0680f766ebaaaf1851ec06de8867cf74ce598218ad46f969458679ada2a595d6"
     },
     {
       "path": "verification/build.log",
-      "bytes": 145439,
-      "sha256": "96748711720ac3df9dec21be7fc931ac4888234a7c74ffb4931ee3271921dbcc"
+      "bytes": 16395,
+      "sha256": "5a17270fc81bd71d2ee36fdfcdb72121e9cdc1ada2d2212f85020e7bd4a535c2"
+    },
+    {
+      "path": "verification/manuscript-build.log",
+      "bytes": 27990,
+      "sha256": "4210648641705d4d5900a4f3f4392387c15ed737d619d1052cdd990ae5ccf132"
+    },
+    {
+      "path": "verification/manuscript_correspondence.json",
+      "bytes": 260,
+      "sha256": "534602798a118ddd5ed464ee195a8dcad14ed7234bf1387df30a3b3bdc15bd6b"
     },
     {
       "path": "verification/runtime-self-exe.c",
@@ -1181,9 +360,24 @@
       "sha256": "a41c81f0c36f54833593352e95384deccd01145c3f2df07fcf9911fd62eb06b9"
     },
     {
+      "path": "verification/semantic_comparison.log",
+      "bytes": 2664,
+      "sha256": "7044d6656146c374f603c0f442b18444913e563ddd40213588609b385079cb5a"
+    },
+    {
       "path": "verification/source_closure.json",
-      "bytes": 55736,
-      "sha256": "e7e4441408689675388aef123c0cae3ff647500856de4da5425ef50cbeaddbd6"
+      "bytes": 6900,
+      "sha256": "1f7d1a3f57d74a322973406667421e94bf4a312d607bdc8cf2a988e1412d832e"
+    },
+    {
+      "path": "verification/source_comparison.json",
+      "bytes": 5564,
+      "sha256": "6ed52f7d81cf44a8e8302b51be52d3f5007378ea516340c3f837a2f3aa6623ea"
+    },
+    {
+      "path": "verification/source_comparison.py",
+      "bytes": 3585,
+      "sha256": "893cbd0a27d9c00339e55676d4f0a94e6c48516681d8c133425947f89f3ea197"
     }
   ]
 }

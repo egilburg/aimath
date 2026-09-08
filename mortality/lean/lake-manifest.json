@@ -111,8 +111,7 @@
       "configFile": "lakefile.toml"
     }
   ],
-  "name": "IndependentZeroBlocks",
+  "name": "FiniteMonoidMortality",
   "lakeDir": ".lake",
   "fixedToolchain": false
 }
-

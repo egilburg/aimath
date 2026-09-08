@@ -1,2 +1,2 @@
-import SierpinskiFormal.CanonicalHankelRepresentation
-import SierpinskiFormal.SoficSharpProcess
+import SoficMarkovOrder.CanonicalHankel
+import SoficMarkovOrder.SharpProcess

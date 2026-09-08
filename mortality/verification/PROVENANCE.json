@@ -1,36 +1,60 @@
 {
-  "verification_date": "2026-09-08",
-  "proof_source_commit": "6372f85822ed9d035df4919de385ac2a79170930",
-  "proof_source_root": "proofs/lean/word_density/",
-  "source_identity": "source_closure.json",
-  "lean_version": "4.33.1",
-  "lean_compiler_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
-  "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
-  "dependency_pins": "../lean/lake-manifest.json",
-  "environment": "Linux x86_64; official compiler; own-process executable-path LD_PRELOAD wrapper documented in README.txt",
-  "project_modules": 102,
-  "clean_project_build": true,
-  "public_dependency_caches_reused": true,
-  "commands": [
-    {
-      "cwd": "lean",
-      "command": "lake build Publication",
-      "exit_status": 0,
-      "output": "build.log"
-    },
-    {
-      "cwd": "lean",
-      "command": "lake env lean Audit.lean",
-      "exit_status": 0,
-      "output": "axioms_and_statements.txt"
-    }
-  ],
-  "endpoint_count": 3,
-  "endpoint_axioms": [
+  "revision": "2026-09-08-r2",
+  "goal": "mortality",
+  "verified_utc": "2026-09-08T16:27:18.419041+00:00",
+  "status": "verified_private_review_update",
+  "source_public_revision": "735383665b012b5b2d30450735ed062fde7bd030",
+  "source_public_url": "https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/mortality/lean",
+  "source_private_package_revision": "c8716dd770b9553b7a1f96b507f528feed7e46eb",
+  "environment": "ENVIRONMENT.json",
+  "environment_instructions": "VERIFICATION_ENVIRONMENT.txt",
+  "build_log": "build.log",
+  "statement_axiom_log": "axioms_and_statements.txt",
+  "checks": {
+    "build_exit": 0,
+    "axiom_audit_exit": 0,
+    "clean_project_build": true,
+    "endpoint_count": 3,
+    "compatibility_theorems": 3,
+    "specification_exit": 0,
+    "statement_and_definition_comparison": "passed: all three original statements, using reproduced original matrixWord and finiteMortalityBound definitions, are directly proved by the refactored endpoints in Specification.lean"
+  },
+  "build_environment": {
+    "LAKE_ARTIFACT_CACHE": "false"
+  },
+  "build_command": "lake build Publication",
+  "axiom_audit_command": "lake env lean Audit.lean",
+  "permitted_endpoint_axioms": [
     "propext",
     "Classical.choice",
     "Quot.sound"
   ],
-  "editorial_republication_lean_rebuild": false,
-  "editorial_republication_check": "All packaged Lean sources and configuration remain byte-identical to the successfully verified package."
+  "counts": {
+    "before": {
+      "mathematical_modules": 102,
+      "lines": 15695,
+      "bytes": 675198,
+      "declared_theorems_definitions_abbrevs": 688
+    },
+    "after": {
+      "mathematical_modules": 7,
+      "lines": 1038,
+      "bytes": 43554,
+      "declared_theorems_definitions_abbrevs": 66
+    },
+    "method": "Counts exclude Publication.lean, Audit.lean and Specification.lean entry/support files; project mathematical modules only. Public dependency sources are not bundled."
+  },
+  "mathematical_modules": 7,
+  "source_closure": "source_closure.json",
+  "checksum_manifest": "SHA256SUMS",
+  "source_hashes_bind_current_extraction": true,
+  "no_old_project_cache_used_for_new_build": true,
+  "private_research_evidence_is_not_manuscript_attachment": true,
+  "professional_human_review": false,
+  "changes": [
+    "Extracted only 66 relevant declarations into seven mathematical modules, with consistent namespace and compressed-return/observation-letter renaming.",
+    "Replaced broad project imports by targeted Mathlib imports; explicitly imported Mathlib.Data.Real.Basic for real-specific modules and Mathlib.RingTheory.SimpleRing.Basic for scalar-extension injectivity.",
+    "Retained declaration bodies remain exactly equal under documented identifier mapping and comment/whitespace removal.",
+    "Final verification disables Lake global artifact restoration with LAKE_ARTIFACT_CACHE=false, in addition to starting with an empty project build directory."
+  ]
 }

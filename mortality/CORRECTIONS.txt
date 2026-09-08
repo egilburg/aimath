@@ -1,11 +1,15 @@
 CORRECTIONS
 
+Current manuscript/package version: 2026-09-08-r2.
+Publicly released 8 September 2026. Permanent snapshots and revision history
+are recorded in repository-root RELEASES.txt. Earlier r1 snapshot:
+https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/mortality
+
 Report a mathematical, formalization, attribution or exposition issue at:
 https://github.com/egilburg/aimath/issues
-
-Choose Correction report and identify this paper, version 2026-09-08-r1, its
-permanent commit URL, the exact theorem/page/declaration and checkable evidence.
-Reports remain allegations until assessed. No response-time promise is made.
+Choose Correction report. Identify the paper, affected version and permanent
+commit URL, exact theorem/page/declaration, and checkable evidence. A report is
+an allegation until assessed. No response-time or monitoring promise is made.
 
 Confirmed corrections will identify the affected version and evidence, credit
 substantive help when appropriate, and be recorded with a dated forward revision.
@@ -15,5 +19,7 @@ on the current landing page and affected version's correction notice. Recheck
 affected proof, prose and citations before issuing a correction. Do not treat
 unrelated results as invalid without evidence.
 
-The release record is in the repository-root RELEASES.txt. No post-release errata
-are recorded at this initial release; this is not an assertion of error-freedom.
+No confirmed mathematical erratum is recorded in this package. The r2 Lean
+extraction preserves the mathematical claims and arguments. It updates proof
+organization, naming, verification documentation and manuscript references.
+This is not an assertion of error-freedom or professional human review.

@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "old": "IndependentZeroBlocks.stationary_process_markov_cutoff_of_finite_hankel",
+      "new": "SoficMarkovOrder.stationary_process_markov_cutoff_of_finite_hankel",
+      "kind": "statement",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "75f58eb6131939e4384171900532cec685302bfb8e749105e77b9df98be909c0"
+    },
+    {
+      "old": "IndependentZeroBlocks.stationary_process_markov_cutoff_of_representation",
+      "new": "SoficMarkovOrder.stationary_process_markov_cutoff_of_representation",
+      "kind": "statement",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "f61453d900ff925eff110478b6edf9c27904fa7f4ff903ae6576ef9f6603b2fd"
+    },
+    {
+      "old": "IndependentZeroBlocks.exists_rational_sharp_sofic_process",
+      "new": "SoficMarkovOrder.exists_rational_sharp_sofic_process",
+      "kind": "statement",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "d6aafe25d2fcbcf88c6e0092670882c183c519cf404edb881f2a4c3961914180"
+    },
+    {
+      "old": "IndependentZeroBlocks.processMarkov_iff_rankOne",
+      "new": "SoficMarkovOrder.processMarkov_iff_rankOne",
+      "kind": "statement",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "76baa4a3f99ef95991d835489be4275769d07e9178a1749862f8d79477054adb"
+    },
+    {
+      "old": "IndependentZeroBlocks.digitShift",
+      "new": "SoficMarkovOrder.sequenceShift",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "5bbb3376e0cfc535a5c4ff9d12e873c185337858f1baa4c0924d17df0752cc79"
+    },
+    {
+      "old": "IndependentZeroBlocks.wordCylinder",
+      "new": "SoficMarkovOrder.wordCylinder",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "450d1bdaaf82ed3a3c33dea2cdf1dc8d63e693fb1320aed224cfee040c38c800"
+    },
+    {
+      "old": "IndependentZeroBlocks.ProcessMarkov",
+      "new": "SoficMarkovOrder.ProcessMarkov",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "e0be9ba329c7bcdd40311bc713b974165147722077f9d91f889dc8ce3b02144c"
+    },
+    {
+      "old": "IndependentZeroBlocks.wordHankelSpan",
+      "new": "SoficMarkovOrder.wordHankelSpan",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "989e2f9cdb00e5ceebc2d3c2efb32b1e5e06066720bc02b698375e01f1e20b50"
+    },
+    {
+      "old": "IndependentZeroBlocks.WordReduced",
+      "new": "SoficMarkovOrder.WordReduced",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "51f5dddfc799f9dca6da1b46a02942195cdee2a53b9ec52d6f1de47a7a84c3d4"
+    },
+    {
+      "old": "IndependentZeroBlocks.representedWord",
+      "new": "SoficMarkovOrder.representedWord",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "27d75aaad5481c009a35a59f00ace0993756be2bf58fca7af3611f44c54e0f4a"
+    },
+    {
+      "old": "IndependentZeroBlocks.linearWord",
+      "new": "SoficMarkovOrder.linearWord",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "f7dfe758af31ce8bf5fb3bb8f0a17221ddb3a2ecde4dfe03ba266c4959ae686c"
+    },
+    {
+      "old": "IndependentZeroBlocks.linearOrbit",
+      "new": "SoficMarkovOrder.linearOrbit",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "ca28198fd8bb42323c95d86f35cb4637c777572ba575110036168ece186fa4ba"
+    },
+    {
+      "old": "IndependentZeroBlocks.linearReachableSpan",
+      "new": "SoficMarkovOrder.linearReachableSpan",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "4c57b62b182f7d39b555c87354821ef03fe200eabac9fd3b24755a1960734001"
+    },
+    {
+      "old": "IndependentZeroBlocks.averageRow",
+      "new": "SoficMarkovOrder.averageRow",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "e45089b6d30a634f765442a8ad88d3c0f44a422c68ac42a621938226c79dfc5a"
+    },
+    {
+      "old": "IndependentZeroBlocks.endEntry",
+      "new": "SoficMarkovOrder.endEntry",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "052ca6656195d6dd5f151fb65258651e4c878df7c8257c449c8b64603d80a39c"
+    },
+    {
+      "old": "IndependentZeroBlocks.uniformMean",
+      "new": "SoficMarkovOrder.uniformMean",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "c57af2308e0a77945fe6f8e5f724449fc41e9de7e52c3f5a5d9fa9fcf424f6f2"
+    },
+    {
+      "old": "IndependentZeroBlocks.RationalReal",
+      "new": "SoficMarkovOrder.RationalReal",
+      "kind": "definition",
+      "result": "identical modulo explicit renaming, comments and whitespace",
+      "normalized_sha256": "153fcd9b4c09eb7f9d34aab608325d96a83433c63cc4444780001b0e1cfa219a"
+    }
+  ],
+  "count": 17
+}

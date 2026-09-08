@@ -1,16 +1,18 @@
 # Manuscript-to-proof map
 
-All declarations below are in namespace `IndependentZeroBlocks`, under `lean/SierpinskiFormal/`. Exact printed endpoint types and transitive axioms are in `verification/axioms_and_statements.txt`.
+All declarations below are in namespace `SoficMarkovOrder`, under `lean/SoficMarkovOrder/`. Exact printed endpoint types and transitive axioms are in `verification/axioms_and_statements.txt`.
 
 | Manuscript claim | Formal location / evidence | Scope |
 |---|---|---|
-| Definition 1.1, positive-history all-future-block Markovity | SoficProcessMarkov.lean: `ProcessMarkov`; StationaryWordMarkov.lean | Cylinder law on A^N, finite discrete alphabet; zero histories do not require division |
-| Theorem 1.2 upper bound | CanonicalHankelRepresentation.lean: `stationary_process_markov_cutoff_of_finite_hankel`, `stationary_process_markov_cutoff_of_representation` | Actual stationary probability law; finite real Hankel span; assumes some finite Markov order; produces choose(n,2)-step Markovity |
-| Lemma 2.1, intrinsic reduced representation | CanonicalHankelRepresentation.lean: `hankel_represents`, `hankel_reduced`; SoficHankel.lean | Internal construction, not an unproved existence assumption |
-| Proposition 2.2 rank criterion | SoficProcessMarkov.lean: `processMarkov_iff_rankOne`; StationaryWordMarkov.lean: `conditionalMarkov_iff_rankOne` | Reduced real representation, including forbidden words and k=0 |
-| Section 3 cutoff | UniformNilpotence.lean; ExteriorRankCutoff.lean: `eventual_rankOne_cutoff_choose_two` | Universal vanishing at a common length, distinct from existential mortality |
-| Theorem 1.2 sharpness and Section 4 | SoficSharpProcess.lean: `exists_rational_sharp_sofic_process`; SoficSharpLaw.lean, SoficRationalSharpness.lean, UniformSoficRealization.lean, IIDPairFactor.lean | Every n≥2, finite alphabet, rational nonnegative matrices, actual stationary process, Hankel dimension n, Markov at D and failure at every k<D |
-| Pair-chain rank mechanism | SoficPairChain.lean: `soficPairChain_rankOne_at_cutoff`, `soficPairChain_critical_rank` | Arbitrary pair enumeration; lexicographic case matches the credited old construction |
+| Definition 1.1, positive-history all-future-block Markovity | ProcessMarkov.lean: `ProcessMarkov`; StationaryWordLaw.lean | Cylinder law on A^N, finite discrete alphabet; zero histories do not require division |
+| Theorem 1.2 upper bound | CanonicalHankel.lean: `stationary_process_markov_cutoff_of_finite_hankel`, `stationary_process_markov_cutoff_of_representation` | Actual stationary probability law; finite real Hankel span; assumes some finite Markov order; produces choose(n,2)-step Markovity |
+| Lemma 2.1, intrinsic reduced representation | CanonicalHankel.lean: `hankel_represents`, `hankel_reduced`; HankelRankCriterion.lean | Internal construction, not an unproved existence assumption |
+| Proposition 2.2 rank criterion | ProcessMarkov.lean: `processMarkov_iff_rankOne`; StationaryWordLaw.lean: `conditionalMarkov_iff_rankOne` | Reduced real representation, including forbidden words and k=0 |
+| Section 3 cutoff | CommonKernel.lean; ExteriorRank.lean: `eventual_rankOne_cutoff_choose_two` | Universal vanishing at a common length, distinct from existential mortality |
+| Theorem 1.2 sharpness and Section 4 | SharpProcess.lean: `exists_rational_sharp_sofic_process`; SharpWordLaw.lean, RationalSharpness.lean, UniformRealization.lean, IIDPairFactor.lean | Every n≥2, finite alphabet, rational nonnegative matrices, actual stationary process, Hankel dimension n, Markov at D and failure at every k<D |
+| Pair-chain rank mechanism | PairChain.lean: `pairChain_rankOne_at_cutoff`, `pairChain_critical_rank` | Arbitrary pair enumeration; lexicographic case matches the credited old construction |
 | Comparison with two-sided invariant measures | Section 1.1 written extension argument | Not a separately formalized two-sided extension theorem |
 
-The formal exact-order formulation proves D-step Markovity and failure for all k<D; this gives the prose minimum. The formal construction uses D−1+n² letters, not the older row-filler count. The n=2 critical word is empty and its matrix is I₂. Public dependency software is not mathematical peer review. No global priority, fixed-alphabet optimality or first-formalization claim is in the supported result.
+The formal exact-order formulation proves D-step Markovity and failure for all k<D; this gives the prose minimum. The formal construction uses D−1+n² letters, with one single-entry residual letter for each matrix coordinate. The n=2 critical word is empty and its matrix is I₂. Public dependency software is not mathematical peer review. No global priority, fixed-alphabet optimality or first-formalization claim is in the supported result.
+
+R2 source refactor: all main theorem basenames are retained under the paper-specific namespace above. Fresh build/audit and original-statement/definition preservation are documented in README.txt and PROVENANCE.json in this directory. The extraction mapping is verification provenance, not an additional mathematical assumption.

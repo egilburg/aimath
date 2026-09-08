@@ -1,73 +1,69 @@
-theorem IndependentZeroBlocks.stationary_process_markov_cutoff_of_finite_hankel.{u_2} : ∀ {A : Type u_2} [Fintype A]
+theorem SoficMarkovOrder.stationary_process_markov_cutoff_of_finite_hankel.{u_2} : ∀ {A : Type u_2} [Fintype A]
   [inst : MeasurableSpace A] [MeasurableSingletonClass A] (μ : MeasureTheory.Measure (ℕ → A))
   [MeasureTheory.IsProbabilityMeasure μ],
-  MeasureTheory.MeasurePreserving IndependentZeroBlocks.digitShift μ μ →
-    ∀
-      [FiniteDimensional ℝ
-          ↥(IndependentZeroBlocks.wordHankelSpan fun w => μ.real (IndependentZeroBlocks.wordCylinder w))],
-      (∃ k, IndependentZeroBlocks.ProcessMarkov μ k) →
-        IndependentZeroBlocks.ProcessMarkov μ
+  MeasureTheory.MeasurePreserving SoficMarkovOrder.sequenceShift μ μ →
+    ∀ [FiniteDimensional ℝ ↥(SoficMarkovOrder.wordHankelSpan fun w => μ.real (SoficMarkovOrder.wordCylinder w))],
+      (∃ k, SoficMarkovOrder.ProcessMarkov μ k) →
+        SoficMarkovOrder.ProcessMarkov μ
           ((Module.finrank ℝ
-                ↥(IndependentZeroBlocks.wordHankelSpan fun w => μ.real (IndependentZeroBlocks.wordCylinder w))).choose
+                ↥(SoficMarkovOrder.wordHankelSpan fun w => μ.real (SoficMarkovOrder.wordCylinder w))).choose
             2) :=
 fun {A} [Fintype A] [MeasurableSpace A] [MeasurableSingletonClass A] μ [MeasureTheory.IsProbabilityMeasure μ]
     hstationary
-    [FiniteDimensional ℝ ↥(IndependentZeroBlocks.wordHankelSpan fun w => μ.real (IndependentZeroBlocks.wordCylinder w))]
+    [FiniteDimensional ℝ ↥(SoficMarkovOrder.wordHankelSpan fun w => μ.real (SoficMarkovOrder.wordCylinder w))]
     hfinite =>
-  let p := fun w => μ.real (IndependentZeroBlocks.wordCylinder w);
-  IndependentZeroBlocks.stationary_process_markov_cutoff_hankel μ hstationary (IndependentZeroBlocks.hankelLetter p)
-    (IndependentZeroBlocks.hankelRow p) (IndependentZeroBlocks.hankelInitial p)
-    (fun w => congrFun (Eq.symm (IndependentZeroBlocks.hankel_represents p)) w) (IndependentZeroBlocks.hankel_reduced p)
-    hfinite
-'IndependentZeroBlocks.stationary_process_markov_cutoff_of_finite_hankel' depends on axioms: [propext,
+  let p := fun w => μ.real (SoficMarkovOrder.wordCylinder w);
+  SoficMarkovOrder.stationary_process_markov_cutoff_hankel μ hstationary (SoficMarkovOrder.hankelLetter p)
+    (SoficMarkovOrder.hankelRow p) (SoficMarkovOrder.hankelInitial p)
+    (fun w => congrFun (Eq.symm (SoficMarkovOrder.hankel_represents p)) w) (SoficMarkovOrder.hankel_reduced p) hfinite
+'SoficMarkovOrder.stationary_process_markov_cutoff_of_finite_hankel' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-theorem IndependentZeroBlocks.stationary_process_markov_cutoff_of_representation.{u_2, u_3} : ∀ {A : Type u_2}
-  [Fintype A] [inst : MeasurableSpace A] [MeasurableSingletonClass A] (μ : MeasureTheory.Measure (ℕ → A))
+theorem SoficMarkovOrder.stationary_process_markov_cutoff_of_representation.{u_2, u_3} : ∀ {A : Type u_2} [Fintype A]
+  [inst : MeasurableSpace A] [MeasurableSingletonClass A] (μ : MeasureTheory.Measure (ℕ → A))
   [MeasureTheory.IsProbabilityMeasure μ],
-  MeasureTheory.MeasurePreserving IndependentZeroBlocks.digitShift μ μ →
+  MeasureTheory.MeasurePreserving SoficMarkovOrder.sequenceShift μ μ →
     ∀ {V : Type u_3} [inst_3 : AddCommGroup V] [inst_4 : Module ℝ V] [FiniteDimensional ℝ V] (T : A → Module.End ℝ V)
       (l : Module.Dual ℝ V) (g : V),
-      (∀ (w : List A), μ.real (IndependentZeroBlocks.wordCylinder w) = IndependentZeroBlocks.representedWord T l g w) →
-        (∃ k, IndependentZeroBlocks.ProcessMarkov μ k) →
-          IndependentZeroBlocks.ProcessMarkov μ
+      (∀ (w : List A), μ.real (SoficMarkovOrder.wordCylinder w) = SoficMarkovOrder.representedWord T l g w) →
+        (∃ k, SoficMarkovOrder.ProcessMarkov μ k) →
+          SoficMarkovOrder.ProcessMarkov μ
             ((Module.finrank ℝ
-                  ↥(IndependentZeroBlocks.wordHankelSpan fun w => μ.real (IndependentZeroBlocks.wordCylinder w))).choose
+                  ↥(SoficMarkovOrder.wordHankelSpan fun w => μ.real (SoficMarkovOrder.wordCylinder w))).choose
               2) :=
 fun {A} [Fintype A] [MeasurableSpace A] [MeasurableSingletonClass A] μ [MeasureTheory.IsProbabilityMeasure μ]
     hstationary {V} [AddCommGroup V] [Module ℝ V] [FiniteDimensional ℝ V] T l g hrep hfinite =>
-  IndependentZeroBlocks.stationary_process_markov_cutoff_of_finite_hankel μ hstationary hfinite
-'IndependentZeroBlocks.stationary_process_markov_cutoff_of_representation' depends on axioms: [propext,
+  SoficMarkovOrder.stationary_process_markov_cutoff_of_finite_hankel μ hstationary hfinite
+'SoficMarkovOrder.stationary_process_markov_cutoff_of_representation' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-theorem IndependentZeroBlocks.exists_rational_sharp_sofic_process : ∀ (n : ℕ),
+theorem SoficMarkovOrder.exists_rational_sharp_sofic_process : ∀ (n : ℕ),
   2 ≤ n →
     ∃ A x x_1,
       ∃ (_ : MeasurableSingletonClass A),
         ∃ μ T,
           MeasureTheory.IsProbabilityMeasure μ ∧
-            MeasureTheory.MeasurePreserving IndependentZeroBlocks.digitShift μ μ ∧
+            MeasureTheory.MeasurePreserving SoficMarkovOrder.sequenceShift μ μ ∧
               (∀ (w : List A),
-                  μ.real (IndependentZeroBlocks.wordCylinder w) =
-                    IndependentZeroBlocks.representedWord T IndependentZeroBlocks.averageRow (fun x => 1) w) ∧
+                  μ.real (SoficMarkovOrder.wordCylinder w) =
+                    SoficMarkovOrder.representedWord T SoficMarkovOrder.averageRow (fun x => 1) w) ∧
                 (∀ (a : A) (i j : Fin n),
-                    0 ≤ IndependentZeroBlocks.endEntry (T a) i j ∧
-                      IndependentZeroBlocks.RationalReal (IndependentZeroBlocks.endEntry (T a) i j)) ∧
-                  ∑ a, T a = IndependentZeroBlocks.uniformMean ∧
-                    (IndependentZeroBlocks.WordReduced T IndependentZeroBlocks.averageRow fun x => 1) ∧
+                    0 ≤ SoficMarkovOrder.endEntry (T a) i j ∧
+                      SoficMarkovOrder.RationalReal (SoficMarkovOrder.endEntry (T a) i j)) ∧
+                  ∑ a, T a = SoficMarkovOrder.uniformMean ∧
+                    (SoficMarkovOrder.WordReduced T SoficMarkovOrder.averageRow fun x => 1) ∧
                       Module.finrank ℝ
-                            ↥(IndependentZeroBlocks.wordHankelSpan fun w =>
-                                μ.real (IndependentZeroBlocks.wordCylinder w)) =
+                            ↥(SoficMarkovOrder.wordHankelSpan fun w => μ.real (SoficMarkovOrder.wordCylinder w)) =
                           n ∧
-                        IndependentZeroBlocks.ProcessMarkov μ (n.choose 2) ∧
-                          ∀ k < n.choose 2, ¬IndependentZeroBlocks.ProcessMarkov μ k :=
+                        SoficMarkovOrder.ProcessMarkov μ (n.choose 2) ∧
+                          ∀ k < n.choose 2, ¬SoficMarkovOrder.ProcessMarkov μ k :=
 fun n hn =>
-  let A := IndependentZeroBlocks.SharpAlphabet (Fin n) (n.choose 2);
-  let e := IndependentZeroBlocks.canonicalPairEnumeration n;
+  let A := SoficMarkovOrder.SharpAlphabet (Fin n) (n.choose 2);
+  let e := SoficMarkovOrder.canonicalPairEnumeration n;
   have hD := Nat.choose_pos hn;
-  let T := IndependentZeroBlocks.sharpLetter e;
+  let T := SoficMarkovOrder.sharpLetter e;
   have h0 := fun a i j =>
-    IndependentZeroBlocks.sharpLetter_nonneg e hD a (Pi.single j 1)
+    SoficMarkovOrder.sharpLetter_nonneg e hD a (Pi.single j 1)
       (fun k =>
         Eq.mpr (id (congrArg (LE.le 0) (Pi.single_apply j 1 k)))
           (if h : k = j then
@@ -79,10 +75,10 @@ fun n hn =>
               (Mathlib.Meta.NormNum.isNat_le_true (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_zero)
                 (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_zero) (Eq.refl true))))
       i;
-  have hsum := IndependentZeroBlocks.sum_sharpLetter e;
-  let μ := IndependentZeroBlocks.uniformSoficMeasure T h0 hsum;
-  have hstat := IndependentZeroBlocks.uniformSoficMeasure_stationary T h0 hsum;
-  have hrep := IndependentZeroBlocks.uniformSoficMeasure_cylinder T h0 hsum;
+  have hsum := SoficMarkovOrder.sum_sharpLetter e;
+  let μ := SoficMarkovOrder.uniformSoficMeasure T h0 hsum;
+  have hstat := SoficMarkovOrder.uniformSoficMeasure_stationary T h0 hsum;
+  have hrep := SoficMarkovOrder.uniformSoficMeasure_cylinder T h0 hsum;
   have hmass := funext hrep;
   have hiff := fun k =>
     id
@@ -101,13 +97,12 @@ fun n hn =>
                               (congr (congrArg HDiv.hDiv ((fun w => hrep w) (u ++ v ++ z)))
                                 ((fun w => hrep w) (u ++ v))))
                             (congr (congrArg HDiv.hDiv ((fun w => hrep w) (v ++ z))) ((fun w => hrep w) v))))))
-              (∀ (u v z : List (IndependentZeroBlocks.SharpAlphabet (Fin n) (n.choose 2))),
+              (∀ (u v z : List (SoficMarkovOrder.SharpAlphabet (Fin n) (n.choose 2))),
                 v.length = k →
-                  0 < (IndependentZeroBlocks.sharpLaw e hD).mass (u ++ v) →
-                    (IndependentZeroBlocks.sharpLaw e hD).mass (u ++ v ++ z) /
-                        (IndependentZeroBlocks.sharpLaw e hD).mass (u ++ v) =
-                      (IndependentZeroBlocks.sharpLaw e hD).mass (v ++ z) /
-                        (IndependentZeroBlocks.sharpLaw e hD).mass v)))
+                  0 < (SoficMarkovOrder.sharpLaw e hD).mass (u ++ v) →
+                    (SoficMarkovOrder.sharpLaw e hD).mass (u ++ v ++ z) /
+                        (SoficMarkovOrder.sharpLaw e hD).mass (u ++ v) =
+                      (SoficMarkovOrder.sharpLaw e hD).mass (v ++ z) / (SoficMarkovOrder.sharpLaw e hD).mass v)))
           Iff.rfl));
   Exists.intro A
     (Exists.intro inferInstance
@@ -118,48 +113,43 @@ fun n hn =>
               ⟨inferInstance,
                 ⟨hstat,
                   ⟨hrep,
-                    ⟨fun a i j => ⟨h0 a i j, IndependentZeroBlocks.sharpLetter_entry_rational e a i j⟩,
+                    ⟨fun a i j => ⟨h0 a i j, SoficMarkovOrder.sharpLetter_entry_rational e a i j⟩,
                       ⟨hsum,
-                        ⟨IndependentZeroBlocks.sharp_reduced e hD,
+                        ⟨SoficMarkovOrder.sharp_reduced e hD,
                           ⟨Eq.mpr
                               (id
-                                (congrArg (fun _a => Module.finrank ℝ ↥(IndependentZeroBlocks.wordHankelSpan _a) = n)
-                                  hmass))
+                                (congrArg (fun _a => Module.finrank ℝ ↥(SoficMarkovOrder.wordHankelSpan _a) = n) hmass))
                               (Eq.mp
                                 (congrArg
                                   (Eq
                                     (Module.finrank ℝ
-                                      ↥(IndependentZeroBlocks.wordHankelSpan
-                                          (IndependentZeroBlocks.sharpLaw e hD).mass)))
+                                      ↥(SoficMarkovOrder.wordHankelSpan (SoficMarkovOrder.sharpLaw e hD).mass)))
                                   (Fintype.card_fin n))
-                                (IndependentZeroBlocks.sharpLaw_hankel_dimension e hD)),
-                            ⟨(hiff (n.choose 2)).mpr (IndependentZeroBlocks.sharpLaw_exact_order e hD).left,
-                              fun k hk hm =>
-                              (IndependentZeroBlocks.sharpLaw_exact_order e hD).right k hk ((hiff k).mp hm)⟩⟩⟩⟩⟩⟩⟩⟩)))))
-'IndependentZeroBlocks.exists_rational_sharp_sofic_process' depends on axioms: [propext, Classical.choice, Quot.sound]
-theorem IndependentZeroBlocks.processMarkov_iff_rankOne.{u_1, u_2} : ∀ {A : Type u_1} [Fintype A]
-  [inst : MeasurableSpace A] [MeasurableSingletonClass A] (μ : MeasureTheory.Measure (ℕ → A))
-  [MeasureTheory.IsProbabilityMeasure μ],
-  MeasureTheory.MeasurePreserving IndependentZeroBlocks.digitShift μ μ →
+                                (SoficMarkovOrder.sharpLaw_hankel_dimension e hD)),
+                            ⟨(hiff (n.choose 2)).mpr (SoficMarkovOrder.sharpLaw_exact_order e hD).left, fun k hk hm =>
+                              (SoficMarkovOrder.sharpLaw_exact_order e hD).right k hk ((hiff k).mp hm)⟩⟩⟩⟩⟩⟩⟩⟩)))))
+'SoficMarkovOrder.exists_rational_sharp_sofic_process' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem SoficMarkovOrder.processMarkov_iff_rankOne.{u_1, u_2} : ∀ {A : Type u_1} [Fintype A] [inst : MeasurableSpace A]
+  [MeasurableSingletonClass A] (μ : MeasureTheory.Measure (ℕ → A)) [MeasureTheory.IsProbabilityMeasure μ],
+  MeasureTheory.MeasurePreserving SoficMarkovOrder.sequenceShift μ μ →
     ∀ {V : Type u_2} [inst_3 : AddCommGroup V] [inst_4 : Module ℝ V] [FiniteDimensional ℝ V] (T : A → Module.End ℝ V)
       (l : Module.Dual ℝ V) (g : V),
-      (∀ (w : List A), μ.real (IndependentZeroBlocks.wordCylinder w) = IndependentZeroBlocks.representedWord T l g w) →
-        IndependentZeroBlocks.WordReduced T l g →
+      (∀ (w : List A), μ.real (SoficMarkovOrder.wordCylinder w) = SoficMarkovOrder.representedWord T l g w) →
+        SoficMarkovOrder.WordReduced T l g →
           ∀ (k : ℕ),
-            IndependentZeroBlocks.ProcessMarkov μ k ↔
+            SoficMarkovOrder.ProcessMarkov μ k ↔
               ∀ (v : List A),
-                v.length = k → Module.finrank ℝ ↥(LinearMap.range (IndependentZeroBlocks.linearWord T v)) ≤ 1 :=
+                v.length = k → Module.finrank ℝ ↥(LinearMap.range (SoficMarkovOrder.linearWord T v)) ≤ 1 :=
 fun {A} [Fintype A] [MeasurableSpace A] [MeasurableSingletonClass A] μ [MeasureTheory.IsProbabilityMeasure μ]
     hstationary {V} [AddCommGroup V] [Module ℝ V] [FiniteDimensional ℝ V] T l g hrep hr k =>
-  IndependentZeroBlocks.StationaryWordLaw.conditionalMarkov_iff_rankOne
-    (IndependentZeroBlocks.stationaryCylinderLaw μ hstationary) T l g (funext hrep) hr k
-'IndependentZeroBlocks.processMarkov_iff_rankOne' depends on axioms: [propext, Classical.choice, Quot.sound]
-def IndependentZeroBlocks.ProcessMarkov.{u_1} : {A : Type u_1} →
+  SoficMarkovOrder.StationaryWordLaw.conditionalMarkov_iff_rankOne
+    (SoficMarkovOrder.stationaryCylinderLaw μ hstationary) T l g (funext hrep) hr k
+'SoficMarkovOrder.processMarkov_iff_rankOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+def SoficMarkovOrder.ProcessMarkov.{u_1} : {A : Type u_1} →
   [inst : MeasurableSpace A] → MeasureTheory.Measure (ℕ → A) → ℕ → Prop :=
 fun {A} [MeasurableSpace A] μ k =>
   ∀ (u v z : List A),
     v.length = k →
-      0 < μ.real (IndependentZeroBlocks.wordCylinder (u ++ v)) →
-        μ.real (IndependentZeroBlocks.wordCylinder (u ++ v ++ z)) /
-            μ.real (IndependentZeroBlocks.wordCylinder (u ++ v)) =
-          μ.real (IndependentZeroBlocks.wordCylinder (v ++ z)) / μ.real (IndependentZeroBlocks.wordCylinder v)
+      0 < μ.real (SoficMarkovOrder.wordCylinder (u ++ v)) →
+        μ.real (SoficMarkovOrder.wordCylinder (u ++ v ++ z)) / μ.real (SoficMarkovOrder.wordCylinder (u ++ v)) =
+          μ.real (SoficMarkovOrder.wordCylinder (v ++ z)) / μ.real (SoficMarkovOrder.wordCylinder v)

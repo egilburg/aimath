@@ -1,0 +1,22 @@
+MATCH IndependentZeroBlocks.stationary_process_markov_cutoff_of_finite_hankel -> SoficMarkovOrder.stationary_process_markov_cutoff_of_finite_hankel: type; definition body when present
+MATCH IndependentZeroBlocks.digitShift -> SoficMarkovOrder.sequenceShift: type; definition body when present
+MATCH IndependentZeroBlocks.wordHankelSpan -> SoficMarkovOrder.wordHankelSpan: type; definition body when present
+MATCH IndependentZeroBlocks.wordCylinder -> SoficMarkovOrder.wordCylinder: type; definition body when present
+MATCH IndependentZeroBlocks.wordCylinder._f -> SoficMarkovOrder.wordCylinder._f: type; definition body when present
+MATCH IndependentZeroBlocks.wordCylinder.match_1 -> SoficMarkovOrder.wordCylinder.match_1: type; definition body when present
+MATCH IndependentZeroBlocks.ProcessMarkov -> SoficMarkovOrder.ProcessMarkov: type; definition body when present
+MATCH IndependentZeroBlocks.stationary_process_markov_cutoff_of_representation -> SoficMarkovOrder.stationary_process_markov_cutoff_of_representation: type; definition body when present
+MATCH IndependentZeroBlocks.representedWord -> SoficMarkovOrder.representedWord: type; definition body when present
+MATCH IndependentZeroBlocks.linearWord -> SoficMarkovOrder.linearWord: type; definition body when present
+MATCH IndependentZeroBlocks.exists_rational_sharp_sofic_process -> SoficMarkovOrder.exists_rational_sharp_sofic_process: type; definition body when present
+MATCH IndependentZeroBlocks.averageRow -> SoficMarkovOrder.averageRow: type; definition body when present
+MATCH IndependentZeroBlocks.averageRow._proof_1 -> SoficMarkovOrder.averageRow._proof_1: type; definition body when present
+MATCH IndependentZeroBlocks.endEntry -> SoficMarkovOrder.endEntry: type; definition body when present
+MATCH IndependentZeroBlocks.RationalReal -> SoficMarkovOrder.RationalReal: type; definition body when present
+MATCH IndependentZeroBlocks.uniformMean -> SoficMarkovOrder.uniformMean: type; definition body when present
+MATCH IndependentZeroBlocks.WordReduced -> SoficMarkovOrder.WordReduced: type; definition body when present
+MATCH IndependentZeroBlocks.WordReduced.mk -> SoficMarkovOrder.WordReduced.mk: type; definition body when present
+MATCH IndependentZeroBlocks.linearReachableSpan -> SoficMarkovOrder.linearReachableSpan: type; definition body when present
+MATCH IndependentZeroBlocks.linearOrbit -> SoficMarkovOrder.linearOrbit: type; definition body when present
+MATCH IndependentZeroBlocks.processMarkov_iff_rankOne -> SoficMarkovOrder.processMarkov_iff_rankOne: type; definition body when present
+PASS: 4 endpoint types and 21 total custom declarations matched under explicit renaming.

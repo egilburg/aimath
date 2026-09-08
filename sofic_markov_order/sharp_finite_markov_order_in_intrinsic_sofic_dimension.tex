@@ -6,7 +6,7 @@
 \maketitle
 \begin{abstract}
 Let \(n\) be the real Hankel dimension of the cylinder probabilities of a stationary finite-alphabet process. If its Markov order is finite, we prove that it is at most \(\binom n2\). For every \(n\ge2\), we construct a stationary process with a nonnegative rational presentation of minimal dimension \(n\) and exact order \(\binom n2\), allowing the alphabet to grow. In the stationary sofic setting this improves the horizon \(2^{n^2-1}\) of B\'eal, Jug\'e, Mairesse and Perrin, \emph{Sofic measures} (2026), Theorem 5.1. The deterministic binomial-delay precedent is due to B\'eal and Senellart (1998); the extremal pair-chain core occurs in Trahtman's 1998 construction, which we realize stochastically. The upper proof combines Holland's rank criterion with classical exterior-square and nilpotence arguments. An accompanying Lean development proves the one-sided process theorem and rational stationary sharpness.
-This discovery was made through the use of artificial intelligence.
+Discoveries presented here were made through the use of artificial intelligence.
 \end{abstract}
 
 \section{The result and its scope}
@@ -181,9 +181,9 @@ The critical word \(a_1\cdots a_{D-1}\) has rank two and positive mass
 For \(n=2\), this is the empty word and its mass is one. If order \(k<D\) held, the length-\(k\) prefix matrix of the critical word would have rank at most one; multiplying by its remainder would contradict its rank two. This proves sharpness in Theorem \ref{thm:main}.
 
 \section{Formal verification and provenance}
-The accompanying \texttt{lean/} directory supplies the complete project-local import closure, pinned manifest, entrypoint \texttt{Publication.lean} and \texttt{Audit.lean}. The environment is Lean 4.33.1 and Mathlib commit \texttt{0df444a360eaa60ab8c11dca51a86af692955474}, credited in \cite{Lean,Mathlib}. The included \texttt{verification/} supplement supplies build logs, exact statement and axiom audits, source hashes, and verification provenance; its \texttt{README.txt} explains reproduction and \texttt{SHA256SUMS} checks the proof files. The manuscript-to-formal correspondence is recorded in \texttt{CLAIM\_MAP.txt}.
+The accompanying \texttt{lean/} directory supplies a self-contained development for this paper, its pinned manifest, entrypoint \texttt{Publication.lean} and \texttt{Audit.lean}. The environment is Lean 4.33.1 and Mathlib commit \texttt{0df444a360eaa60ab8c11dca51a86af692955474}, credited in \cite{Lean,Mathlib}. The included \texttt{verification/} supplement supplies build logs, exact statement and axiom audits, source hashes, and verification provenance; its \texttt{README.txt} explains reproduction and \texttt{SHA256SUMS} checks the proof files. The manuscript-to-formal correspondence is recorded in \texttt{CLAIM\_MAP.txt}. This revision extracts the needed lemmas into subject-specific modules; the supplement records their correspondence to the earlier proof and the fresh build checks.
 
-The principal declarations, in namespace \texttt{IndependentZeroBlocks}, are:
+The principal declarations, in namespace \texttt{SoficMarkovOrder}, are:
 \begin{itemize}
 \item \texttt{stationary\_process\_markov\_cutoff\_of\_finite\_hankel};
 \item \texttt{stationary\_process\_markov\_cutoff\_of\_representation};
