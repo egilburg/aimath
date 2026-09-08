@@ -11,8 +11,8 @@
   },
   "license": "CC-BY-4.0",
   "professional_mathematical_review": false,
-  "public_url": "https://github.com/egilburg/aimath/tree/main/sofic_markov_order",
-  "immutable_snapshot": "See repository-root RELEASES.txt; assigned by the commit introducing this revision.",
+  "public_url": "https://github.com/egilburg/aimath/tree/fff0f00fe6b7a0b81690667fdec97b86c4da816b/sofic_markov_order",
+  "immutable_snapshot": "fff0f00fe6b7a0b81690667fdec97b86c4da816b",
   "previous_public_version": {
     "version": "2026-09-08-r1",
     "commit": "735383665b012b5b2d30450735ed062fde7bd030",
@@ -46,8 +46,8 @@
     },
     {
       "path": "README.txt",
-      "bytes": 2804,
-      "sha256": "57627ddbc872415a509b46eee7f5eb72cd79bf97e21282a079cc0da3273b8b3c"
+      "bytes": 2865,
+      "sha256": "294468614f5351f83033549135a4a3ad1ffa0bb509149ca338c9ade4f228e8b6"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
@@ -66,8 +66,8 @@
     },
     {
       "path": "citation.bib",
-      "bytes": 553,
-      "sha256": "e376f1b380683ceb34f1f6741661a07c0da27065d17217f98b9a1cda54fc29d7"
+      "bytes": 648,
+      "sha256": "77315aeddecceeb8e57c87f3662e5e22dc6f00b432099118c703da4d67d85f3f"
     },
     {
       "path": "disclosure.tex",

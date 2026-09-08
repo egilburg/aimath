@@ -11,8 +11,8 @@
   },
   "license": "CC-BY-4.0",
   "professional_mathematical_review": false,
-  "public_url": "https://github.com/egilburg/aimath/tree/main/mortality",
-  "immutable_snapshot": "See repository-root RELEASES.txt; assigned by the commit introducing this revision.",
+  "public_url": "https://github.com/egilburg/aimath/tree/fff0f00fe6b7a0b81690667fdec97b86c4da816b/mortality",
+  "immutable_snapshot": "fff0f00fe6b7a0b81690667fdec97b86c4da816b",
   "previous_public_version": {
     "version": "2026-09-08-r1",
     "commit": "735383665b012b5b2d30450735ed062fde7bd030",
@@ -46,8 +46,8 @@
     },
     {
       "path": "README.txt",
-      "bytes": 2831,
-      "sha256": "e07c329de4a3aec45f031e0b8a50cdf3b22059390465fd52cb6106c2a7f6a8a9"
+      "bytes": 2883,
+      "sha256": "b9db600b299e7b0a3d09312896313756a11c512adcc55ef2a4405a636c28866a"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
@@ -66,8 +66,8 @@
     },
     {
       "path": "citation.bib",
-      "bytes": 551,
-      "sha256": "bdc79665b28fd75d89f80efabfba83446d6b5db4268f612ee2b7360e55dffb06"
+      "bytes": 637,
+      "sha256": "1b0b67bd2ee5c7c4826a22342f9c0c7907c9449547546d8725b6eb5624a6bcf3"
     },
     {
       "path": "disclosure.tex",

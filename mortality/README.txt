@@ -3,7 +3,8 @@ An Exponential Mortality Bound for Finite Real Matrix Monoids
 github.com/egilburg/aimath
 https://github.com/egilburg/aimath
 
-Revision 2026-09-08-r2. Publicly released. See repository-root RELEASES.txt for permanent version links.
+Revision 2026-09-08-r2. Publicly released.
+Permanent r2 snapshot: https://github.com/egilburg/aimath/tree/fff0f00fe6b7a0b81690667fdec97b86c4da816b/mortality
 The earlier public r1 snapshot remains at:
 https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/mortality
 

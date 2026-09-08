@@ -34,3 +34,12 @@ these Lean and verification files byte-for-byte; no new build is claimed here.
 The commit introducing this revision is its immutable payload snapshot; explicit
 links are added in the following metadata commit. No professional human review
 or new novelty assessment is claimed. Corrections use forward revisions.
+
+IMMUTABLE R2 RELEASE
+Commit: fff0f00fe6b7a0b81690667fdec97b86c4da816b
+Sofic: https://github.com/egilburg/aimath/tree/fff0f00fe6b7a0b81690667fdec97b86c4da816b/sofic_markov_order
+Mortality: https://github.com/egilburg/aimath/tree/fff0f00fe6b7a0b81690667fdec97b86c4da816b/mortality
+
+The following metadata commit supplies these exact links and citation locators.
+Manuscript PDFs/TeX, Lean source and verification bytes remain those of the
+immutable r2 snapshot. Current public file inventories are in PUBLICATION.json.
