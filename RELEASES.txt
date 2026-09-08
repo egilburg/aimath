@@ -11,3 +11,11 @@ references adjusted to this payload. Mathematical statements and Lean sources
 are unchanged from the verified proof packages. No professional human review or
 global-priority certificate is claimed. Future corrections use new forward commits
 and retain earlier snapshots; see each package's CORRECTIONS.txt.
+
+IMMUTABLE INITIAL RELEASE
+Commit: 735383665b012b5b2d30450735ed062fde7bd030
+Sofic: https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/sofic_markov_order
+Mortality: https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/mortality
+
+All 375 initial payload file Git hashes were checked against the prepared inventory.
+Lean verification provenance, build/audit logs and checksums are included in each verification/ folder.
