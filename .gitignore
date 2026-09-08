@@ -1,0 +1,4 @@
+**/.lake/
+**/recheck/
+**/render/
+__pycache__/

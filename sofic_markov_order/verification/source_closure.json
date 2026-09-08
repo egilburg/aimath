@@ -1,0 +1,1079 @@
+{
+  "source_ref": "6372f85822ed9d035df4919de385ac2a79170930",
+  "roots": [
+    "SierpinskiFormal.CanonicalHankelRepresentation",
+    "SierpinskiFormal.SoficSharpProcess"
+  ],
+  "modules": {
+    "SierpinskiFormal.SoficSharpProcess": {
+      "path": "SierpinskiFormal/SoficSharpProcess.lean",
+      "git_blob_sha": "0a5742c5d2eaea26129ced765f35439639a5ba50",
+      "sha256": "ae1f7877611f99893bf4acf03d4eb5ea77b18998474e6a98b3ce6ec5de989216"
+    },
+    "SierpinskiFormal.CanonicalHankelRepresentation": {
+      "path": "SierpinskiFormal/CanonicalHankelRepresentation.lean",
+      "git_blob_sha": "8c9a74c319d519d26d84810207319f6d5b6d7b6a",
+      "sha256": "549c1d6dbae15511dc2b57e71e06dd2a1eb420dd6cc9c2905bc8b0763aa9a260"
+    },
+    "SierpinskiFormal.SoficProcessMarkov": {
+      "path": "SierpinskiFormal/SoficProcessMarkov.lean",
+      "git_blob_sha": "80eff905ca46a045a14eb72d0a778dd3a3ab0130",
+      "sha256": "d815a5d0c6a28fd47b41dd9506e93a485e202628dc11c7993dcadafce91ef2d5"
+    },
+    "SierpinskiFormal.StationarySourceBridge": {
+      "path": "SierpinskiFormal/StationarySourceBridge.lean",
+      "git_blob_sha": "3feb9ed35ba54fad820dfeb38a487da38d5d5dc0",
+      "sha256": "af0dd4bd3196a336ad8a040b4237f387f6751b51c9b5709fd08a16cdd37a518d"
+    },
+    "SierpinskiFormal.StationaryGraphWeakCluster": {
+      "path": "SierpinskiFormal/StationaryGraphWeakCluster.lean",
+      "git_blob_sha": "49d76aa0cb26a1667d633552a463af7c91080eb4",
+      "sha256": "515e318acf34760d38acbac1eadd13c6b16e9a4d94c883879541d2ea16f89476"
+    },
+    "SierpinskiFormal.StationaryGraphTests": {
+      "path": "SierpinskiFormal/StationaryGraphTests.lean",
+      "git_blob_sha": "b541a9d5c029ba4eb6c31d0cbf4a0bfbf5afb1e9",
+      "sha256": "d63bed730971e9ea7d897a0d2720f112ba112f94e78c48c43dcad23978263126"
+    },
+    "SierpinskiFormal.StationaryCompactness": {
+      "path": "SierpinskiFormal/StationaryCompactness.lean",
+      "git_blob_sha": "bb06ac4883be798d534b9e43ae03cf655f0b929c",
+      "sha256": "5737d9b7030317aa49fc022e05675f30942e277d4d1bc29b0b8e30a5ec8da663"
+    },
+    "SierpinskiFormal.CountableWeakKrein": {
+      "path": "SierpinskiFormal/CountableWeakKrein.lean",
+      "git_blob_sha": "a0af31b56b0913b0505edcb9416b0b50b3147b65",
+      "sha256": "1cc5b68efceee13edfdcd3be5e13e2ccb08849bc6de9a1b1ac88055bdfe922bf"
+    },
+    "SierpinskiFormal.KreinWeakHullReduction": {
+      "path": "SierpinskiFormal/KreinWeakHullReduction.lean",
+      "git_blob_sha": "c0afe0d5e98cc797cfeaf2e9b3d002edb548053b",
+      "sha256": "98ce5744d8404c17825ec3bdf9d766faf3cdecf6cd57e2c8172619346771ee82"
+    },
+    "SierpinskiFormal.WeakContinuousMapConvergence": {
+      "path": "SierpinskiFormal/WeakContinuousMapConvergence.lean",
+      "git_blob_sha": "ef187a14365d0ee65c004bd6c49fb9997811acf3",
+      "sha256": "dd81e382cbf6f4645cf6bb50762a8a48c4e3d4969d82bda63fa42e32d4202744"
+    },
+    "SierpinskiFormal.StationaryFiberBarycenter": {
+      "path": "SierpinskiFormal/StationaryFiberBarycenter.lean",
+      "git_blob_sha": "5157ca57f1a04dc38aa87599d8cd5a2d2d3db2b1",
+      "sha256": "e69b71f394b2cc9973ae8a786447fb25c644b1e2a335cac0b0b31618148bfc4b"
+    },
+    "SierpinskiFormal.StationaryFiberMeasures": {
+      "path": "SierpinskiFormal/StationaryFiberMeasures.lean",
+      "git_blob_sha": "0d18e95cfe1fc387a42f96d3e4f2612c2f864a38",
+      "sha256": "056d8e1383cb7f3e2a1d195a1cf79630ab7a1ab2bd484c5a621ead434b29eab4"
+    },
+    "SierpinskiFormal.StationaryL1Duality": {
+      "path": "SierpinskiFormal/StationaryL1Duality.lean",
+      "git_blob_sha": "1946e843d8d9a9865d40301041516f388f9ef5a0",
+      "sha256": "930a57205fcb774346a67276f9edb16d4b2b319c3b475c615d8df6b5b9fa2cfc"
+    },
+    "SierpinskiFormal.StationaryCompactnessPositiveMeasure": {
+      "path": "SierpinskiFormal/StationaryCompactnessPositiveMeasure.lean",
+      "git_blob_sha": "4971f557c3faf1018542d4b9a00c93470acc16d1",
+      "sha256": "922604ed06e0c6422c463a32ab4f94e267aae4eade27299fd3d00af38b58a5bc"
+    },
+    "SierpinskiFormal.StationaryCompactnessPositive": {
+      "path": "SierpinskiFormal/StationaryCompactnessPositive.lean",
+      "git_blob_sha": "23f7f2bfa485e11757e679d4a79a556720e1aa18",
+      "sha256": "3a2f2dd434918751c357b3c422b1b7bbbc5cd7cce5a48894e6e60bd566122f93"
+    },
+    "SierpinskiFormal.StationaryDualRepresentation": {
+      "path": "SierpinskiFormal/StationaryDualRepresentation.lean",
+      "git_blob_sha": "bc9fb13aeefb8757879ad343234e588ed7f662a2",
+      "sha256": "4ae545a8f1273f6c3bf32f67ea5b635dd419bd6437b29099f0ecd875ec510fcf"
+    },
+    "SierpinskiFormal.StationaryDualPairing": {
+      "path": "SierpinskiFormal/StationaryDualPairing.lean",
+      "git_blob_sha": "b89cea909ed8d329ec894b403400fb006af9e8a2",
+      "sha256": "731176c2c39f9b4675bada38189fccb2eb4473f4e9708cc27a80447041f5f4dd"
+    },
+    "SierpinskiFormal.GroupFlowStationaryState": {
+      "path": "SierpinskiFormal/GroupFlowStationaryState.lean",
+      "git_blob_sha": "bc7f08f0c21538a78e706a3bb78df2c8ebf06a0e",
+      "sha256": "41c31aec155cb44bdb6de5e7ed39b3889228b9bc0af538be1b314f46046d6fc9"
+    },
+    "SierpinskiFormal.StationaryPairedCompacta": {
+      "path": "SierpinskiFormal/StationaryPairedCompacta.lean",
+      "git_blob_sha": "76fa33a3d010a7046e7aca03205bff8782c0acf5",
+      "sha256": "3631d550bbfae8fffb9b99a7835d354baf4356701ebebe3a2282eeb0519b3755"
+    },
+    "SierpinskiFormal.BooleanWeakCompactness": {
+      "path": "SierpinskiFormal/BooleanWeakCompactness.lean",
+      "git_blob_sha": "f7824f2f6e0ff07e276b8668b46adc94274054d8",
+      "sha256": "90e676bb688f6e42acdf974b9835aee566090f5c862e51a72e0fe2bf49b3cd18"
+    },
+    "SierpinskiFormal.PositiveFunctionalDecomposition": {
+      "path": "SierpinskiFormal/PositiveFunctionalDecomposition.lean",
+      "git_blob_sha": "fab976cfd013dd5695b738d33b1eae460b272f71",
+      "sha256": "e2ed831f0bcbd466c73d67d7bdec70d5eb40f5536db9c78e9bfee2830539f5cc"
+    },
+    "SierpinskiFormal.CountableWeakBooleanClosure": {
+      "path": "SierpinskiFormal/CountableWeakBooleanClosure.lean",
+      "git_blob_sha": "0b81c1ae73817abfb907d2815696218aec57137d",
+      "sha256": "2a4619d8784776e3e8d70a295cdfb5baae67a758114a613d5c10428784174720"
+    },
+    "SierpinskiFormal.BooleanRowCompactness": {
+      "path": "SierpinskiFormal/BooleanRowCompactness.lean",
+      "git_blob_sha": "136d2204140ced1b06f0ed2091a83bd1856a67be",
+      "sha256": "9873b43b534884f8ea4591395dd22aa1f05d65205766a8f3abc69fa2b4c9f1ce"
+    },
+    "SierpinskiFormal.DenseSequentialExtension": {
+      "path": "SierpinskiFormal/DenseSequentialExtension.lean",
+      "git_blob_sha": "bc96ffcf2f89e3669613e50437fc86c3f6b84f23",
+      "sha256": "5076352cafd1b5e2352fa9b01362c152f7996975b0d04d8c0646574dbf694b2c"
+    },
+    "SierpinskiFormal.BooleanUltrafilterExtension": {
+      "path": "SierpinskiFormal/BooleanUltrafilterExtension.lean",
+      "git_blob_sha": "4aaf5071e842729e8558bf7f013e083043218981",
+      "sha256": "e67d5658dacc05d76a60451bfc10d76faa7242d6e766c74541cb18cbf0787fec"
+    },
+    "SierpinskiFormal.BooleanFilterLimit": {
+      "path": "SierpinskiFormal/BooleanFilterLimit.lean",
+      "git_blob_sha": "c4442b89616ecca4441da1d589377a136aee1807",
+      "sha256": "ae9252d0f80bc8c143dd4856624559b5eaecb22f63a571561b763f146df1c85a"
+    },
+    "SierpinskiFormal.BooleanDoubleLimitClosure": {
+      "path": "SierpinskiFormal/BooleanDoubleLimitClosure.lean",
+      "git_blob_sha": "0b6aeeb9b186f2fe8d218d89cf5dc6c19a8d1a86",
+      "sha256": "ca9fdd856b29cba9cbf66d86fdabe1ecbd1f3f2e699c2a147f61f5bcc04f76c4"
+    },
+    "SierpinskiFormal.BooleanDoubleLimit": {
+      "path": "SierpinskiFormal/BooleanDoubleLimit.lean",
+      "git_blob_sha": "aabe3b89194e27e5609dcaefe0a2fc31ee4eea56",
+      "sha256": "8adee1f8acdb5b4404c75b3169e87e8e24dca79ee7724f80c923d9a092d67bd7"
+    },
+    "SierpinskiFormal.NoetherianStaircase": {
+      "path": "SierpinskiFormal/NoetherianStaircase.lean",
+      "git_blob_sha": "941ab0594783016e453f6ccee85eca1ebc391e72",
+      "sha256": "7450ff24e4d42203161fb221e9447f61b30de37ba03786f276c4e1fd4a4b727d"
+    },
+    "SierpinskiFormal.CommRingObservationGeometry": {
+      "path": "SierpinskiFormal/CommRingObservationGeometry.lean",
+      "git_blob_sha": "82cab0ce13fc7447865bd668b56eb5be46585c2a",
+      "sha256": "587f91c1035331a769afec6cfbc76556c3338cb7494935965b01f7f0f7c3d109"
+    },
+    "SierpinskiFormal.ObservationClassification": {
+      "path": "SierpinskiFormal/ObservationClassification.lean",
+      "git_blob_sha": "f70716bea580b23709aa62c29d0696156d88c8bc",
+      "sha256": "d4272fd150d3021ef725f6eb76cfc207ad9d83f7a31f140e4c3bf94c825f46f1"
+    },
+    "SierpinskiFormal.ObservationCertificate": {
+      "path": "SierpinskiFormal/ObservationCertificate.lean",
+      "git_blob_sha": "c9a2a802a0bc0f5f7fda38c1a58e11d9e58718e8",
+      "sha256": "e8f6340f788f67da09baadfef40445736e88de238ac6788f9ff43c4d39a86654"
+    },
+    "SierpinskiFormal.ObservableNoetherian": {
+      "path": "SierpinskiFormal/ObservableNoetherian.lean",
+      "git_blob_sha": "61a8ca34bf6f941eca2627902b7e4dc741a890b5",
+      "sha256": "bf675ecdd1da7369d26f908b9feffe0f056596df948c0b03112a07ccb7b280aa"
+    },
+    "SierpinskiFormal.ObservableSpan": {
+      "path": "SierpinskiFormal/ObservableSpan.lean",
+      "git_blob_sha": "1e86554b98ebb41420de97e1681883d4468e96ed",
+      "sha256": "7d88a9de6bf01a8705a669b4546caf1a245cc82547a394ffe255a723afb8efd7"
+    },
+    "SierpinskiFormal.LinearDigitGeometry": {
+      "path": "SierpinskiFormal/LinearDigitGeometry.lean",
+      "git_blob_sha": "da22a81f4d2ad3a18a23b7bee604e679b4a5adaa",
+      "sha256": "5d5b9a8f895be5eb4d1c84ee218ea5bb7c7c1cac0786005303ae00e742fadf7f"
+    },
+    "SierpinskiFormal.OptimalUniformClassification": {
+      "path": "SierpinskiFormal/OptimalUniformClassification.lean",
+      "git_blob_sha": "a269859f9701876cf282793c1b8e4785138e3478",
+      "sha256": "99d7dc11d89cc40a9c0c99f17e055eecd06dd89db02012bbdac315a2ec89910f"
+    },
+    "SierpinskiFormal.MissingDigitClassification": {
+      "path": "SierpinskiFormal/MissingDigitClassification.lean",
+      "git_blob_sha": "e19c9b039f2ba297da12ac61b530f224a35ff74e",
+      "sha256": "11bdb40cfaacd3b3637ac6a7422ce71dd3772fe17a3c593c04a6d06e3d9817b9"
+    },
+    "SierpinskiFormal.MissingDigitGrowth": {
+      "path": "SierpinskiFormal/MissingDigitGrowth.lean",
+      "git_blob_sha": "ce87a37ec85a3661e6675732fa02c08008dc4b61",
+      "sha256": "95a23470ca98aa4ce99dc43761fae4209bb763e1e962430ae1f68230968cddff"
+    },
+    "SierpinskiFormal.RationalRelativeHoles": {
+      "path": "SierpinskiFormal/RationalRelativeHoles.lean",
+      "git_blob_sha": "baf74d588bfbd3405cb16466901cf8e6de3a4d07",
+      "sha256": "f0c4080c931e89bd7562b772fd67161158586e8a10193d90ea3764df2b83fa2e"
+    },
+    "SierpinskiFormal.RationalSupportGrowth": {
+      "path": "SierpinskiFormal/RationalSupportGrowth.lean",
+      "git_blob_sha": "894d54c5b366ce010194da0311f7a23128b33116",
+      "sha256": "52a5b3ad5d31e060b9c0b8c27f0eb5dced7bd9bfafa24a7c2f7c8d9417fb0f3a"
+    },
+    "SierpinskiFormal.FiniteFieldDensity": {
+      "path": "SierpinskiFormal/FiniteFieldDensity.lean",
+      "git_blob_sha": "95a00c241f058dc035465337c0c9f6e9da62cbb0",
+      "sha256": "ec7b54f3d2353247b2c96731285555488d58b7119bae0a366b22fba822cf5316"
+    },
+    "SierpinskiFormal.ArbitraryRational": {
+      "path": "SierpinskiFormal/ArbitraryRational.lean",
+      "git_blob_sha": "2b83b2da0a85004a12a432e02611619c47dc9991",
+      "sha256": "720df9e7a72a6693eec361326175739bd36b9a7b64b97284ee4b63f5c9c1d3e7"
+    },
+    "SierpinskiFormal.KernelPeriodic": {
+      "path": "SierpinskiFormal/KernelPeriodic.lean",
+      "git_blob_sha": "f238e2db3331344637ec2bafc5079b4352b61546",
+      "sha256": "132053168fc6d4735964a0aadf1cd221ce94206a74271ec4b9fe551c8f3f6776"
+    },
+    "SierpinskiFormal.PeriodicConvolution": {
+      "path": "SierpinskiFormal/PeriodicConvolution.lean",
+      "git_blob_sha": "deb93d688b0bf8f18a46e5066c67d3524abfdae8",
+      "sha256": "e255c58257917abbadc41c98b3ac195e51a15d497ff0bb0c966b723221fb8147"
+    },
+    "SierpinskiFormal.SeedBlocks": {
+      "path": "SierpinskiFormal/SeedBlocks.lean",
+      "git_blob_sha": "32efc8bf7f43e24dd05814296e09009613d4f3ff",
+      "sha256": "be6d2261bfbb00710443d32ea24f595cafa59cdd80f9859c23fd549c071c06f8"
+    },
+    "SierpinskiFormal.ZeroBlocks": {
+      "path": "SierpinskiFormal/ZeroBlocks.lean",
+      "git_blob_sha": "2e299a381e9395d84b5e57d42bf2c431c0e099e4",
+      "sha256": "d53305dded9bacb68ee95e032282e9511b969211241d8e1327041a5e08139509"
+    },
+    "SierpinskiFormal.CanonicalSeries": {
+      "path": "SierpinskiFormal/CanonicalSeries.lean",
+      "git_blob_sha": "f0f5c587cfa1876ec8c6ca9ad01ee18560377912",
+      "sha256": "88773baf71ebebb1ff89f18dd673dd59afae4f1ca402b6fbf3f9d57927e3f48d"
+    },
+    "SierpinskiFormal.Lucas": {
+      "path": "SierpinskiFormal/Lucas.lean",
+      "git_blob_sha": "209129b2937697973acb2beed820b07756637583",
+      "sha256": "30b843fa06663b1935c8656bfe286896c93d54daefc716ee31d3ae7957f12aae"
+    },
+    "SierpinskiFormal.Assembly": {
+      "path": "SierpinskiFormal/Assembly.lean",
+      "git_blob_sha": "81a40920252012de6fa33d95ca188da4e3391cf4",
+      "sha256": "0c22dd0fdd1f8408b3fef8653996a4f6e5e590da536273f5765ae993744160db"
+    },
+    "SierpinskiFormal.Convolution": {
+      "path": "SierpinskiFormal/Convolution.lean",
+      "git_blob_sha": "d69a9c6466ef97e462a87a5b600c177d61eb56e7",
+      "sha256": "c832bca5fe7a9ccb73c3104586fd5cbb78a561c5f04fc42b7b3f9dae5dd6bb26"
+    },
+    "SierpinskiFormal.DigitState": {
+      "path": "SierpinskiFormal/DigitState.lean",
+      "git_blob_sha": "cb86d81a849a80c18cbd13b16d6e7f4049e763b0",
+      "sha256": "1a5649ab76e67d30c7e740209ab66c9ef082bf429df6ea0d0425da68a9b6fe01"
+    },
+    "SierpinskiFormal.KernelPrefix": {
+      "path": "SierpinskiFormal/KernelPrefix.lean",
+      "git_blob_sha": "b8887fc011b82c25229b89be7c277edd0c69ba6f",
+      "sha256": "ed595f3465456006a9bc565389258d885d07116658144827b0b749b85793dc4e"
+    },
+    "SierpinskiFormal.CommonSeed": {
+      "path": "SierpinskiFormal/CommonSeed.lean",
+      "git_blob_sha": "9321fcf97180739b2acaaaf44e4cca0d48648b3e",
+      "sha256": "78f44b7fd001403a3f0d8daa6e8117df41e0d49d5440ae9eb47d10ff283427cb"
+    },
+    "SierpinskiFormal.KernelAssembly": {
+      "path": "SierpinskiFormal/KernelAssembly.lean",
+      "git_blob_sha": "ddc34b78ba75912d99c3f1c7c51d479b9a947a97",
+      "sha256": "4ce9ee238a87bbea718352b14bf0c7605c38b52fa562a9a661330c58ce4965ba"
+    },
+    "SierpinskiFormal.FourierBridge": {
+      "path": "SierpinskiFormal/FourierBridge.lean",
+      "git_blob_sha": "6965ad334213f75bfd386d9cf7255c62367352bd",
+      "sha256": "a7b14b2b95bbd65cb0c50c8d15f0099c6a36c30c8f09095c1c8c64045535bbba"
+    },
+    "SierpinskiFormal.RationalBridge": {
+      "path": "SierpinskiFormal/RationalBridge.lean",
+      "git_blob_sha": "b241b73414b5e3816210ce8479601710c13264a8",
+      "sha256": "5a7bc9da01530c324e4cb5b57f6ec8e1054d3578f39618abcab4ae7d74a9f163"
+    },
+    "SierpinskiFormal.GeometricFilter": {
+      "path": "SierpinskiFormal/GeometricFilter.lean",
+      "git_blob_sha": "8e8095a8c529fda892067ffbe3cfbaafc0cb20b8",
+      "sha256": "4e89b9fe0b16582e44defc1d179e93d61da7e54ccecdc6aa8b095062ee14ea60"
+    },
+    "SierpinskiFormal.PrimePeriod": {
+      "path": "SierpinskiFormal/PrimePeriod.lean",
+      "git_blob_sha": "196f50094e51b7e18d7d3bf9373d03b054b28e48",
+      "sha256": "40cf8c5791eaf452f72c584e331ba18e8330f186ab94aa2ceff51bdb4b6b20fe"
+    },
+    "SierpinskiFormal.RadixExtension": {
+      "path": "SierpinskiFormal/RadixExtension.lean",
+      "git_blob_sha": "407233a7189d487d33a865b8b2e12a31ffb75fbf",
+      "sha256": "b802fb00906f2f842f1c27de96937599f0454e406c8dc936dbf78b4d14c5d25f"
+    },
+    "SierpinskiFormal.PoleEvaluation": {
+      "path": "SierpinskiFormal/PoleEvaluation.lean",
+      "git_blob_sha": "a8ae4d2631f743ba60bbcfafe21a8a586a620e22",
+      "sha256": "0f893d5d24455d2dd1fae127c42b028087d2516bc75ec529808e542b6af9626f"
+    },
+    "SierpinskiFormal.AuxiliaryField": {
+      "path": "SierpinskiFormal/AuxiliaryField.lean",
+      "git_blob_sha": "ce76818a140bbafd1f7d7e09206685f874d9cdc9",
+      "sha256": "8ea543a7fb045d2159883a432c2a04a502428a972c5d07e29055829ec209acd7"
+    },
+    "SierpinskiFormal.FiniteFieldPrefixSaturation": {
+      "path": "SierpinskiFormal/FiniteFieldPrefixSaturation.lean",
+      "git_blob_sha": "3f2caa6cae453a6c65c0be39f39818c945bb8772",
+      "sha256": "c741c9215a39123aef7f500ae950ea0ca9c8319d34f7c77bd445e256c55daccb"
+    },
+    "SierpinskiFormal.ProductPrefixes": {
+      "path": "SierpinskiFormal/ProductPrefixes.lean",
+      "git_blob_sha": "db48886d4de70cd9b81e4affaf1e1e226f9b200e",
+      "sha256": "10e442d31466d2ff8e0e29c566e33478e552950ed89bd81c5143837edecaf4a7"
+    },
+    "SierpinskiFormal.RootSupportedDenominator": {
+      "path": "SierpinskiFormal/RootSupportedDenominator.lean",
+      "git_blob_sha": "caf71cb261842d369261a1cce48e16e9c0dc9f84",
+      "sha256": "928a0efca4e45f862e76720f7e79c6742eb53242344ab028f80a11e7972efa89"
+    },
+    "SierpinskiFormal.PolynomialSaturation": {
+      "path": "SierpinskiFormal/PolynomialSaturation.lean",
+      "git_blob_sha": "260f0c1a50379c37d9cec06a2d01cb432958c2e8",
+      "sha256": "e475cbd28390451656a4a1c73840ae3daf67c6637ec762391e9573623f76f947"
+    },
+    "SierpinskiFormal.RationalDensityCriterion": {
+      "path": "SierpinskiFormal/RationalDensityCriterion.lean",
+      "git_blob_sha": "da702c2e006c8c88bf906afa131d11bc3de58a52",
+      "sha256": "08c2a42d6404e0e6dc799abc7d4fef04cc5f55d696abf417108a57289f27b1f4"
+    },
+    "SierpinskiFormal.SupportDensityBounds": {
+      "path": "SierpinskiFormal/SupportDensityBounds.lean",
+      "git_blob_sha": "121a341546f38b89dca44ba176f3585843fc5bc3",
+      "sha256": "8de18a19611ec47c7c776941b5a9de83798d8d8cca932b2f74b274edf0e3b2e4"
+    },
+    "SierpinskiFormal.SupportDensityDefs": {
+      "path": "SierpinskiFormal/SupportDensityDefs.lean",
+      "git_blob_sha": "e84f22b06e311026656581cc4031dae1d0fce10f",
+      "sha256": "5ca2b97eafaaa2eb261fafa39a42f7dcadbb410c1718e65fb350196cea23730e"
+    },
+    "SierpinskiFormal.RationalTailDensity": {
+      "path": "SierpinskiFormal/RationalTailDensity.lean",
+      "git_blob_sha": "81b8759a92e061ad9be462f647f0f637ff25e1af",
+      "sha256": "deb3ca336c4c809a4434b785197208dc380a4caccbdb4c3a94a5ab2f511155dd"
+    },
+    "SierpinskiFormal.SupportCounting": {
+      "path": "SierpinskiFormal/SupportCounting.lean",
+      "git_blob_sha": "527724bbbf95c2ed561a4d6413c7aa56e24a7602",
+      "sha256": "1ac030306b54d7fed540bb4fb537be888dae31342ec0c844423672e6cd265628"
+    },
+    "SierpinskiFormal.AbsorbedBlockForm": {
+      "path": "SierpinskiFormal/AbsorbedBlockForm.lean",
+      "git_blob_sha": "9bff43c9052d31615a3d58f0ac46270aeee4f66a",
+      "sha256": "964fb3fd93471f437ab0abb3ebefddb5ef20212dbfda1d72c6eb12d2fc85c601"
+    },
+    "SierpinskiFormal.PolynomialBlockSupport": {
+      "path": "SierpinskiFormal/PolynomialBlockSupport.lean",
+      "git_blob_sha": "81b692aa754f7daa52b24fd194abd174d9181b47",
+      "sha256": "8dcc26000f9685e1038eced7e16b95c53fc4ea78a802d1965f90e1a77749fa23"
+    },
+    "SierpinskiFormal.ExactPowerGrowth": {
+      "path": "SierpinskiFormal/ExactPowerGrowth.lean",
+      "git_blob_sha": "e50738a7c4937e9d29db85c2dd9554ccc1753e92",
+      "sha256": "6a5fbb437bdefa91a61ddc14e921ba647c0dc331741b8b5248b024a8b2bc0777"
+    },
+    "SierpinskiFormal.PowerSupportFamilies": {
+      "path": "SierpinskiFormal/PowerSupportFamilies.lean",
+      "git_blob_sha": "c0fafaf89656cb9b3e6e9370e73b02a68780164e",
+      "sha256": "bce931870b91285dffad817d0a282576a23b2bf4cde40e61d812871da48fff23"
+    },
+    "SierpinskiFormal.PowerIntervalDefs": {
+      "path": "SierpinskiFormal/PowerIntervalDefs.lean",
+      "git_blob_sha": "52a3140ec39850cfb8b75bf52d043d1d61cad989",
+      "sha256": "fd831caab682c13c204870ef51048b00928545015fcfcaca77a6fc696772b00c"
+    },
+    "SierpinskiFormal.SparseIntervalDefs": {
+      "path": "SierpinskiFormal/SparseIntervalDefs.lean",
+      "git_blob_sha": "9dd5caaea3659b3e73b42f8b59711570c209418d",
+      "sha256": "695f331f642e3e7c0e99616c645d6688030d44091a1e0bf7c212c9db55f1aacb"
+    },
+    "SierpinskiFormal.DigitSupportGrowth": {
+      "path": "SierpinskiFormal/DigitSupportGrowth.lean",
+      "git_blob_sha": "1d76cda17b7027bb727f97bc8d59bccccc485592",
+      "sha256": "e48cb518180477c5a1f6399b88d12dce80a87910e4c05dec6332c8aabad54cea"
+    },
+    "SierpinskiFormal.ExactDigitSupport": {
+      "path": "SierpinskiFormal/ExactDigitSupport.lean",
+      "git_blob_sha": "79bc287a8a765e83e234393a4af0c5d892c57225",
+      "sha256": "c5dd3705be5332d54c09083d59e8ef0e2b995a0ff397a7551e8c4fe87e35aca6"
+    },
+    "SierpinskiFormal.DigitSupportCardinality": {
+      "path": "SierpinskiFormal/DigitSupportCardinality.lean",
+      "git_blob_sha": "31b1dd8361def67e63dfbe965f45d19eeb5821ad",
+      "sha256": "e11f1190ec1f46a5568b5db2a15237d75fd18f73877c0f2bc348e06fd840e5f2"
+    },
+    "SierpinskiFormal.DigitRelativeHoles": {
+      "path": "SierpinskiFormal/DigitRelativeHoles.lean",
+      "git_blob_sha": "30e4260ba9f15b2b017342b2b511618949211a6b",
+      "sha256": "b61608fc7371cc1824ce2dce36cebc68c4a81b51f4577c96f2b132d32e896c6d"
+    },
+    "SierpinskiFormal.UniformRelativeHoles": {
+      "path": "SierpinskiFormal/UniformRelativeHoles.lean",
+      "git_blob_sha": "1ac5e76563ea00dd804ae6d937bba7fb5fe9e84b",
+      "sha256": "c21d869a81d1f330f3192ec3a0e04323a8e31b67174719fff8e924e8ac230ea7"
+    },
+    "SierpinskiFormal.PowerFilterBounds": {
+      "path": "SierpinskiFormal/PowerFilterBounds.lean",
+      "git_blob_sha": "b75491c8db60b2c9d74bbd871e6cd16c339eb9c0",
+      "sha256": "671f09652de57c8d6dc80038b02923d1a744b6f82ffaa18ac172c3ab72fbc81d"
+    },
+    "SierpinskiFormal.MissingDigitFiber": {
+      "path": "SierpinskiFormal/MissingDigitFiber.lean",
+      "git_blob_sha": "0e80c11eb777facdf7d0fe436eeec6e41a198062",
+      "sha256": "b0a8de755bda25e3f3957a2bd3986fe861f0a21c90edf7fa06b0caa471af76f8"
+    },
+    "SierpinskiFormal.MissingDigitDensity": {
+      "path": "SierpinskiFormal/MissingDigitDensity.lean",
+      "git_blob_sha": "5cdcda3826471669fd02a677e1464bb514c8a66b",
+      "sha256": "f03001ff412e3cdad2988ef34759ec105e0f3fbf0502715bad8faaa949bf12c7"
+    },
+    "SierpinskiFormal.SupportGeometryEquivalence": {
+      "path": "SierpinskiFormal/SupportGeometryEquivalence.lean",
+      "git_blob_sha": "b1b157a0c3a9bd322a2afd9db1a249abd5b5807a",
+      "sha256": "f9e4a70771ab18cf4ac92727db1039068e80629db70588a949a6a868cfd49195"
+    },
+    "SierpinskiFormal.ExactGrowthGapExamples": {
+      "path": "SierpinskiFormal/ExactGrowthGapExamples.lean",
+      "git_blob_sha": "544425b9eeefc4f84211fc98b552b0f754f063b9",
+      "sha256": "e3054d4e6469a9a9e4f99f4fc461e59b83cbc496fba445b81a0a669cb2ac21e3"
+    },
+    "SierpinskiFormal.QuantitativeGapExamples": {
+      "path": "SierpinskiFormal/QuantitativeGapExamples.lean",
+      "git_blob_sha": "86fc9b3853bd5b551962aec16b265291bb2bdbdc",
+      "sha256": "5382e8bace933fbe280005524c3a102f2a9de7eebbd6232186076cbebee0b573"
+    },
+    "SierpinskiFormal.SynchronizationBeyondCompatibility": {
+      "path": "SierpinskiFormal/SynchronizationBeyondCompatibility.lean",
+      "git_blob_sha": "e1f082a97bb7c90472c0335cd0bb37375e992a58",
+      "sha256": "15cd7db0559889e016e5a9f7a02c6a8379241b976967bd6bc93d833f6d1f7848"
+    },
+    "SierpinskiFormal.PrefixGapCriterion": {
+      "path": "SierpinskiFormal/PrefixGapCriterion.lean",
+      "git_blob_sha": "ad507975b17ebd5f3e14cbbc53de77d4c99ba589",
+      "sha256": "cfb756efb9234cc057431b84007625fda0441a8658a8a24cb9a7254ff0bef366"
+    },
+    "SierpinskiFormal.PrefixDilation": {
+      "path": "SierpinskiFormal/PrefixDilation.lean",
+      "git_blob_sha": "960f4ab39cc34fd061d5b43b1cbfd2d5e3d3fa73",
+      "sha256": "be40d9613b1f66399fbcac675b316d339309241b5b886462fd9819e7aa9d85e3"
+    },
+    "SierpinskiFormal.DilationInitialZero": {
+      "path": "SierpinskiFormal/DilationInitialZero.lean",
+      "git_blob_sha": "f6731880dd2679a71da82f1fa8a3cb9560e85534",
+      "sha256": "662260ef2e58a374ce984e9cf0bf09158f6d1353a0298b19fc0d2a1dd2055f22"
+    },
+    "SierpinskiFormal.DilationWindowThreshold": {
+      "path": "SierpinskiFormal/DilationWindowThreshold.lean",
+      "git_blob_sha": "c427d76f3600c4bde1574fb998128bc8384be64e",
+      "sha256": "81e7a45f85185dbbcc49660f0985b200c577ea21c049b0ac74d7f0378c25db45"
+    },
+    "SierpinskiFormal.PolynomialDilationGaps": {
+      "path": "SierpinskiFormal/PolynomialDilationGaps.lean",
+      "git_blob_sha": "69741b22c5b1fe81fa5e15a370eed170cf9e9e9b",
+      "sha256": "ae75e828b8083e9da3a3107dd02d8888e7432cb7ee90585de2bbf6847e1d4c73"
+    },
+    "SierpinskiFormal.PoleCompatibility": {
+      "path": "SierpinskiFormal/PoleCompatibility.lean",
+      "git_blob_sha": "02ee686761d101a74ad0d046e3b226e6dbbc1229",
+      "sha256": "bb2e3109988ed4fb0f35a47c0c8041f8d687254c194f15087d890fc3c2d509d0"
+    },
+    "SierpinskiFormal.RationalSpan": {
+      "path": "SierpinskiFormal/RationalSpan.lean",
+      "git_blob_sha": "b9f011de7f06f331e34f25fabb0e981b292ecd45",
+      "sha256": "f567963c2af70bcb27c90b959fa9529405ede54fdab4e1cb3f985438ff631bde"
+    },
+    "SierpinskiFormal.DenominatorShift": {
+      "path": "SierpinskiFormal/DenominatorShift.lean",
+      "git_blob_sha": "48040a850b15918cfa3538d8001774b8f6743b5e",
+      "sha256": "3a200afee9bb5c8970198dc9f4af64935b3c576c826147ee0fcbf0c4666536cb"
+    },
+    "SierpinskiFormal.SimultaneousRational": {
+      "path": "SierpinskiFormal/SimultaneousRational.lean",
+      "git_blob_sha": "208aa6991b35e40a0ca5069fd181126c00e41b0d",
+      "sha256": "4be15aa571581c11c70240bd257fe57c7d9b945450ce88ba9f04829f2f2fcad9"
+    },
+    "SierpinskiFormal.SeedFamilies": {
+      "path": "SierpinskiFormal/SeedFamilies.lean",
+      "git_blob_sha": "f4d8eb3499de42dd6a3d55e63322ddc38e49c8e8",
+      "sha256": "2efd911c6e9e6a106c75b5cf6b143ec08413a6a66e1c06f023bc2dcc7991821f"
+    },
+    "SierpinskiFormal.UniversalRational": {
+      "path": "SierpinskiFormal/UniversalRational.lean",
+      "git_blob_sha": "d392b5659df59b3e58c795c2ec1dacfc4d2936bd",
+      "sha256": "0cab95e01b2be6aea7e3c6db056e852c249bf4f49d505edfe16948b77e141862"
+    },
+    "SierpinskiFormal.UniversalAuxiliaryField": {
+      "path": "SierpinskiFormal/UniversalAuxiliaryField.lean",
+      "git_blob_sha": "d485cc21bcdca9c8083b45124f9551f088e5e840",
+      "sha256": "046dd87203ab898f3e45db7d0c5a0581ffab52e1e3154b808ff8bf61b95e7e2c"
+    },
+    "SierpinskiFormal.CompatibleKernels": {
+      "path": "SierpinskiFormal/CompatibleKernels.lean",
+      "git_blob_sha": "48de0eb6ecfc070e8562c9add8ac405f15dc28dd",
+      "sha256": "da0ba6260646901e03c1edd4eca66e50cef3c8a42a6c97558c420fecc2c9ae8e"
+    },
+    "SierpinskiFormal.QuantitativeSynchronization": {
+      "path": "SierpinskiFormal/QuantitativeSynchronization.lean",
+      "git_blob_sha": "d99f42e07262bc1fd26bd611487e01cd854278bc",
+      "sha256": "8e595e0b216ccc35b3a75c9e7a17f059a8f1b4418610acc4b8502f7896e455c0"
+    },
+    "SierpinskiFormal.SparseIntervalBridges": {
+      "path": "SierpinskiFormal/SparseIntervalBridges.lean",
+      "git_blob_sha": "e120c5f15598d63443bf9102e4369a9ea2ed32e2",
+      "sha256": "af1025c6294e5962a7ea8a25583312b9c68258946fdf19c8842ed08a6ffcb1a0"
+    },
+    "SierpinskiFormal.PowerExceptionalGaps": {
+      "path": "SierpinskiFormal/PowerExceptionalGaps.lean",
+      "git_blob_sha": "a7f8bfe6d6f50da791d6ac3cef982ee923a4908f",
+      "sha256": "4dafeea5ccd25a4edfad1f7bf3fdae53a1370c9deaa0dc95cc933eacece2a3f2"
+    },
+    "SierpinskiFormal.FiniteExceptionalGaps": {
+      "path": "SierpinskiFormal/FiniteExceptionalGaps.lean",
+      "git_blob_sha": "9307ecd30d0f80f0126d37b7c591888857f32431",
+      "sha256": "e653473e9be3c14262c1a5f62c1532e1b6ba260afbb4e8198c7d9e135fd1d21a"
+    },
+    "SierpinskiFormal.RelativeHoleSynchronization": {
+      "path": "SierpinskiFormal/RelativeHoleSynchronization.lean",
+      "git_blob_sha": "203aa8c5dd7efcd3f4319df409d3d031401c255f",
+      "sha256": "ee0867550f394593aff4416b4fff99130544b359ca6a474aff4bea80a2fb8941"
+    },
+    "SierpinskiFormal.SublinearAbsorption": {
+      "path": "SierpinskiFormal/SublinearAbsorption.lean",
+      "git_blob_sha": "c419f5d281b8076e526c641566c1c8683de0c5b5",
+      "sha256": "bff82c65012d77eba67c95dad1407d5a76760b7a005ee79b84b419aab59fb444"
+    },
+    "SierpinskiFormal.PowerDensityBridge": {
+      "path": "SierpinskiFormal/PowerDensityBridge.lean",
+      "git_blob_sha": "ae37dc821a3faa8be8f51e7dd4d299266a1527e6",
+      "sha256": "f50aed6cb8dd5a385f991865b57cdd8d7dc548d516cd8553fe9a3dcd4ca2260d"
+    },
+    "SierpinskiFormal.PorousSupportBounds": {
+      "path": "SierpinskiFormal/PorousSupportBounds.lean",
+      "git_blob_sha": "f024a6bde27d279624269ae96fa9c345b2799542",
+      "sha256": "3f453c4e48dc08380484b4bfc20d730eb1a59c7acb2c2474668a96a68a8040cc"
+    },
+    "SierpinskiFormal.RationalPrefixTransfer": {
+      "path": "SierpinskiFormal/RationalPrefixTransfer.lean",
+      "git_blob_sha": "9a36b2c2f14b22c10c6c0ecef17143ae9414034a",
+      "sha256": "b435b7aebae5ee95bc0397bb4d0938ae1d3a8a3c30e5550fc0e902c043583fd4"
+    },
+    "SierpinskiFormal.MissingDigitPrefixes": {
+      "path": "SierpinskiFormal/MissingDigitPrefixes.lean",
+      "git_blob_sha": "4a12e16f56bf862debe6e3c61df7562a81e59d1c",
+      "sha256": "c9381b8cc1f7771d4c4656960f6689313a7943e2c5937de247ff9a55ec6cc35e"
+    },
+    "SierpinskiFormal.UniformPowerClosure": {
+      "path": "SierpinskiFormal/UniformPowerClosure.lean",
+      "git_blob_sha": "c4fc268f974fd18c47fe77ce0c12d240df7ebf34",
+      "sha256": "76e803d5003a2397b034c9772f880a3bcbd6d3bd53a093e95d2bcae303e4dcde"
+    },
+    "SierpinskiFormal.UniformDigitGrowth": {
+      "path": "SierpinskiFormal/UniformDigitGrowth.lean",
+      "git_blob_sha": "73bddfcb6d6923e154624b94a3d6bb8c84df1eda",
+      "sha256": "1124c9bdb2ffc2cfaa0b7da80b3eb97a790de3446da132580feaf312a056f4fb"
+    },
+    "SierpinskiFormal.ZeroCylinderGeometry": {
+      "path": "SierpinskiFormal/ZeroCylinderGeometry.lean",
+      "git_blob_sha": "c23224ca65dfae119f8db7528b0f7e56ed6a8b3d",
+      "sha256": "8d09a7fc5547bd5941ab6320bf5113135a21840cdad0bb953a25494afa5e9751"
+    },
+    "SierpinskiFormal.LinearDigitRepresentation": {
+      "path": "SierpinskiFormal/LinearDigitRepresentation.lean",
+      "git_blob_sha": "1cb7f76ea42cd667760152184c97c2e4a1f65bb9",
+      "sha256": "620617417912092d35687a9de0fcdaf40c07948eb67fa298a8dfba209eb42f46"
+    },
+    "SierpinskiFormal.ImmortalConeDensity": {
+      "path": "SierpinskiFormal/ImmortalConeDensity.lean",
+      "git_blob_sha": "4eb83633be36e7dc55a52f04dfb5988a69e8965a",
+      "sha256": "01ba2e076fd04c1aee7d50c036688c9f3153477d4e818f4c85346e5e9da6d4d3"
+    },
+    "SierpinskiFormal.ReachableSpanMortality": {
+      "path": "SierpinskiFormal/ReachableSpanMortality.lean",
+      "git_blob_sha": "9e335c8b00cb2899b370f664423f4ee28770f1db",
+      "sha256": "ff057799fbf959b9dec493a487ca78363e18f38e4c2a466bc6ec9f8c95459ff7"
+    },
+    "SierpinskiFormal.ScalarObservationGeometry": {
+      "path": "SierpinskiFormal/ScalarObservationGeometry.lean",
+      "git_blob_sha": "0599130928f91e54d61d0223d2a5d98d47deac65",
+      "sha256": "70519d73c5d39e7d0b924d5e007ec3b4f228857f620c473dd7f7c4804f9943c3"
+    },
+    "SierpinskiFormal.MatrixCertificateTransfer": {
+      "path": "SierpinskiFormal/MatrixCertificateTransfer.lean",
+      "git_blob_sha": "5de37b35fae9f81079da7d58cd6ccb27777b696b",
+      "sha256": "8c04060b0550c890e3daef6e2979ad342ae9fef58a47688b14a540ef55e0b964"
+    },
+    "SierpinskiFormal.MatrixSparseGeometry": {
+      "path": "SierpinskiFormal/MatrixSparseGeometry.lean",
+      "git_blob_sha": "06203c28331f06ab18270a00372c8f322e171ca3",
+      "sha256": "7a85eb0a1c0da8719be8338c5618f3718598bde94eb5b5ddf4e301116d42048f"
+    },
+    "SierpinskiFormal.FiniteWindowSupport": {
+      "path": "SierpinskiFormal/FiniteWindowSupport.lean",
+      "git_blob_sha": "7aafc0558a1d0fe6413d1dc1f20ef8afc2ca5665",
+      "sha256": "d653f3b08c119820ca4b637dec1f41c3c5d3b3b45dcd30ce3300e621233d6b0c"
+    },
+    "SierpinskiFormal.MatrixWindowLift": {
+      "path": "SierpinskiFormal/MatrixWindowLift.lean",
+      "git_blob_sha": "ffb0b98001aa48583e14b356e72ae5d629cfee5a",
+      "sha256": "0e6f8c631fe043d462d43ce58afda75382129ec95825c2c6599884971d01395f"
+    },
+    "SierpinskiFormal.AffinePredicateDensity": {
+      "path": "SierpinskiFormal/AffinePredicateDensity.lean",
+      "git_blob_sha": "456508bf3dc13ae1d29aa08b9822ba4cabaffc8e",
+      "sha256": "6521b64dfcd75be404e32af60c91e781abc51e16586768a24df00280fe5c4425"
+    },
+    "SierpinskiFormal.LinearObservationDescent": {
+      "path": "SierpinskiFormal/LinearObservationDescent.lean",
+      "git_blob_sha": "08caccd18a2f55f5b8cbd54e75bad4ddbc5eb223",
+      "sha256": "d5de84a0dbe1fcaa53efc946994ed1649774a1190b68fe12944c01e1c7d23ac0"
+    },
+    "SierpinskiFormal.GroupBooleanFlow": {
+      "path": "SierpinskiFormal/GroupBooleanFlow.lean",
+      "git_blob_sha": "3dd47bc9636b9e6d7a673dbde12ddcf53a1a2c17",
+      "sha256": "6f7983aa9d5be9c82087d9a5cac0c214ebaa60944e1ef8309daadfdaa06bb282"
+    },
+    "SierpinskiFormal.GroupBooleanTranslations": {
+      "path": "SierpinskiFormal/GroupBooleanTranslations.lean",
+      "git_blob_sha": "d6ec4d84d21f57f995b75d92e495d484dc3c10da",
+      "sha256": "088e1c1fe643b92ce6b65ad629cab825543ce1ceb5fc359f199ef9ac535f83f9"
+    },
+    "SierpinskiFormal.CommutingConvexAverages": {
+      "path": "SierpinskiFormal/CommutingConvexAverages.lean",
+      "git_blob_sha": "7451e04c3eae898722d84c4f159250fb77b271d4",
+      "sha256": "ea6f8ebefb4a11ed04481f3b413e01e2c1bed70cd8073490fecabed55840cece"
+    },
+    "SierpinskiFormal.IidCompactWordAverages": {
+      "path": "SierpinskiFormal/IidCompactWordAverages.lean",
+      "git_blob_sha": "c9e1cd8df370971f210d62762f5b9c1985b9a37e",
+      "sha256": "f056899359a839980e6925fe832740a9e6b08985d482801cb6d6a45c53ccb4e3"
+    },
+    "SierpinskiFormal.WeakMeanErgodic": {
+      "path": "SierpinskiFormal/WeakMeanErgodic.lean",
+      "git_blob_sha": "8c584128c81edf85409cd028c1f08912266aef33",
+      "sha256": "8497953c4b4246f83d29562e48782da9bffb00278cea4954fc65dff2436ef6f5"
+    },
+    "SierpinskiFormal.BooleanWordCesaro": {
+      "path": "SierpinskiFormal/BooleanWordCesaro.lean",
+      "git_blob_sha": "dd80cc9ccd8e78ebfbdae4139e1e884596197a58",
+      "sha256": "8d717a256ccea7591d21fd60a9d3dd14ca2f44b74d385432a6c561eb04239862"
+    },
+    "SierpinskiFormal.StationaryMean": {
+      "path": "SierpinskiFormal/StationaryMean.lean",
+      "git_blob_sha": "f4fde7feeca3193962a85ef406465e8ea34b7ab1",
+      "sha256": "2b152a6097b8fc19034e0881edc47a03661b563c9bf1de599e60fbdbe6ff531a"
+    },
+    "SierpinskiFormal.RecognizableSupportCompactness": {
+      "path": "SierpinskiFormal/RecognizableSupportCompactness.lean",
+      "git_blob_sha": "627bcaaca2ed44e629f535c70d3f4431fd9d7c41",
+      "sha256": "b6b299864f32973ad38e1c55158216ea154491e437e58a4739665046ed1af646"
+    },
+    "SierpinskiFormal.SupportLogDensityExistence": {
+      "path": "SierpinskiFormal/SupportLogDensityExistence.lean",
+      "git_blob_sha": "477123d6c783f66b33d9f9c72d732d8f00a0b2b3",
+      "sha256": "1eea66a59c7b3bf15ca24a5db5437673383f4f6b1c34c74c02367a2adba0cc8b"
+    },
+    "SierpinskiFormal.LogDensityClassification": {
+      "path": "SierpinskiFormal/LogDensityClassification.lean",
+      "git_blob_sha": "3a0cd1798400af61bc1b98fcbd81ce7a32188e28",
+      "sha256": "001b24ef4712cf991eedb4874913acbdfc651bea71fa9c18919f871cd658eabc"
+    },
+    "SierpinskiFormal.PolynomialObservedSupport": {
+      "path": "SierpinskiFormal/PolynomialObservedSupport.lean",
+      "git_blob_sha": "b3b919428c60dc5bcaba017441eac46dc9281b1b",
+      "sha256": "18a9d6078e7e294de0d15906ad371ef9056cbba223e6abe86c74bbfaa537e65e"
+    },
+    "SierpinskiFormal.RegularSupportApplications": {
+      "path": "SierpinskiFormal/RegularSupportApplications.lean",
+      "git_blob_sha": "63419c068d48fccd17337c06c7a2cfb4a8f23600",
+      "sha256": "1590a835cd4cd4c8b0fdc267b3dde5f6f1f5e07268bbee7f94dca2880ec3b112"
+    },
+    "SierpinskiFormal.UnifiedObservationTheorem": {
+      "path": "SierpinskiFormal/UnifiedObservationTheorem.lean",
+      "git_blob_sha": "8b7ffc9867bee759ece3f60c45a9b30b468c433f",
+      "sha256": "7a45834a95f6de9b76a7e672c11504ed44437c38ff1a1f5a5873cf1ad7d727cf"
+    },
+    "SierpinskiFormal.CommRingMatrixGeometry": {
+      "path": "SierpinskiFormal/CommRingMatrixGeometry.lean",
+      "git_blob_sha": "b9115e5e50a7e2dab8bb8617b72eec97a5f344d7",
+      "sha256": "c2a49e390ba2877cbba6403afc7679262563ee99ccdc409c48024c34a819fb91"
+    },
+    "SierpinskiFormal.MatrixCoefficientDescent": {
+      "path": "SierpinskiFormal/MatrixCoefficientDescent.lean",
+      "git_blob_sha": "da1229bc77f544fccb3436b60e74002509565f4e",
+      "sha256": "53bbf15f822f6069b6ab0f068a0735672da7579b63707e8e6ec1e27241ce883a"
+    },
+    "SierpinskiFormal.PolynomialMatrixObservation": {
+      "path": "SierpinskiFormal/PolynomialMatrixObservation.lean",
+      "git_blob_sha": "b0c50e50cb56d08bfa360f839903235235d70369",
+      "sha256": "08b6500a5fbc4fbeb3a55c4ca3a890e45d314ad83dd89d16284058b9f8e3ef32"
+    },
+    "SierpinskiFormal.CommRingObservationFamilies": {
+      "path": "SierpinskiFormal/CommRingObservationFamilies.lean",
+      "git_blob_sha": "8be256002ee02641e01ecb0fe58d73d6975b49f0",
+      "sha256": "da3a16182e60acf7044892e89f5d77da877c0a070f721c68e75fb3e136a826ed"
+    },
+    "SierpinskiFormal.ObservationFamilies": {
+      "path": "SierpinskiFormal/ObservationFamilies.lean",
+      "git_blob_sha": "4bc4fe39b757cbdca596a83b0d30132384e12496",
+      "sha256": "03e42b5e8553d210176fda0f65f7aa27a96a9a0c07b7ed9078e9f7be59e0994a"
+    },
+    "SierpinskiFormal.MatrixRadixRegularity": {
+      "path": "SierpinskiFormal/MatrixRadixRegularity.lean",
+      "git_blob_sha": "11db8b398bebbbee474e2a423ccc1f5496117373",
+      "sha256": "fb0cd49e717e8448865d79172a709440edbdcada4a6d0bb21941ccb5cd131c9b"
+    },
+    "SierpinskiFormal.RadixRegularRepresentation": {
+      "path": "SierpinskiFormal/RadixRegularRepresentation.lean",
+      "git_blob_sha": "c976a3d8f945cf4e963597a7a9a487901519a6cf",
+      "sha256": "f02347ee5a3625e9153a7c378b5bc3928fb9624f6198441b0690ac8cf8a602c7"
+    },
+    "SierpinskiFormal.RegularSupportClassification": {
+      "path": "SierpinskiFormal/RegularSupportClassification.lean",
+      "git_blob_sha": "30dd4e61179b4eca9a5dcf7d2d6011ae136f1ece",
+      "sha256": "ffdeb11a3338a2d6474a6eb357f5e0fefd8682b73f1716b93a472d8d62c13991"
+    },
+    "SierpinskiFormal.ForbiddenWordGeometry": {
+      "path": "SierpinskiFormal/ForbiddenWordGeometry.lean",
+      "git_blob_sha": "2007b07e86cc90d45e0b71c7610bae5cce44faa7",
+      "sha256": "75f19ddd5b16f0111224b08c132b81af532ee9c59327b208ca2db14dc76fe814"
+    },
+    "SierpinskiFormal.ZeroCylinderCounting": {
+      "path": "SierpinskiFormal/ZeroCylinderCounting.lean",
+      "git_blob_sha": "921ca66826965d11c8f0caf2a8f7488da80fd510",
+      "sha256": "9709bec62bb2f5803fea7ffc46c5017fd11efd6aaa1d7d0e85c6d485b670e447"
+    },
+    "SierpinskiFormal.MortalWordCounting": {
+      "path": "SierpinskiFormal/MortalWordCounting.lean",
+      "git_blob_sha": "ba8a9a9dc0daac77047cf7db55a2db4a7e3d8044",
+      "sha256": "ece11b182cf32996381629fec2988c28022b50f3a29cb5a34e62df308e85b2e2"
+    },
+    "SierpinskiFormal.MonoidDigitProduct": {
+      "path": "SierpinskiFormal/MonoidDigitProduct.lean",
+      "git_blob_sha": "296c7ce53b6cadd06de5dfc476d8cc23488976e0",
+      "sha256": "dda8dd04bd6e715ff5454e5854660ac70f97ff9764b835d7d08c6d6842660f07"
+    },
+    "SierpinskiFormal.RegularSequenceRing": {
+      "path": "SierpinskiFormal/RegularSequenceRing.lean",
+      "git_blob_sha": "6a224785d0561eaeff04b953a28e1835cd5c9c7f",
+      "sha256": "8912647c319e4623a46521571146322e31ac6afc95fd589e14b196827edc86fb"
+    },
+    "SierpinskiFormal.PredicateLogDensity": {
+      "path": "SierpinskiFormal/PredicateLogDensity.lean",
+      "git_blob_sha": "9fec9cb7efd58eb6230cf192ee4a7f70fb5783e2",
+      "sha256": "e87c00a377117763c585cd73320e65a03c583db8ace18c92c476979cc913684b"
+    },
+    "SierpinskiFormal.MatrixWordLogDensityBridge": {
+      "path": "SierpinskiFormal/MatrixWordLogDensityBridge.lean",
+      "git_blob_sha": "15b1ccbba821c43d6bbb5bcec2cceece9facd5b3",
+      "sha256": "f9f42023bfd2a7239b966cac307098bd2f88b094f216dbd350d53a7e7b448f7b"
+    },
+    "SierpinskiFormal.RadixLogDensityTransfer": {
+      "path": "SierpinskiFormal/RadixLogDensityTransfer.lean",
+      "git_blob_sha": "9ac77bef3ff63ecf3db1285d961fac72b7bcd782",
+      "sha256": "de91dbae517e709defc6301efbf3d7979d809464ca6dedd10f20b1db2f197990"
+    },
+    "SierpinskiFormal.CesaroSqueeze": {
+      "path": "SierpinskiFormal/CesaroSqueeze.lean",
+      "git_blob_sha": "2924130de0fb7e0515124ce26493763c0040a327",
+      "sha256": "5bf2fd2d797252f9e745243d1c5bc17ef65a21cd5516521a265cb918e0999c44"
+    },
+    "SierpinskiFormal.LogDensityNormalization": {
+      "path": "SierpinskiFormal/LogDensityNormalization.lean",
+      "git_blob_sha": "d6f6c1be9227e036ea2404fe42fda9db2fc98219",
+      "sha256": "8031e0d42cb96e0e22462474061f1df67ab4fd260206af491f51b66a14a07772"
+    },
+    "SierpinskiFormal.StationaryL1Skew": {
+      "path": "SierpinskiFormal/StationaryL1Skew.lean",
+      "git_blob_sha": "fb91b63a955a6eb63c2ea4716281a1a21d89f505",
+      "sha256": "3c2fbd7fb0e456f10578f1bebc525b6719adabdf84630e597d39df36d02f4a30"
+    },
+    "SierpinskiFormal.StationarySkew": {
+      "path": "SierpinskiFormal/StationarySkew.lean",
+      "git_blob_sha": "eb35d6329116deb26f4bfbb97d9083e4cb865e36",
+      "sha256": "b43f6e4dd9c5244e725c46f23634fe1e810a242902580bf48711b41c811a066a"
+    },
+    "SierpinskiFormal.StationaryWordMarkov": {
+      "path": "SierpinskiFormal/StationaryWordMarkov.lean",
+      "git_blob_sha": "138c81625fc1486b1c08b1920eca15aa67bf6531",
+      "sha256": "87b46c0f24df8d6cdf6b01536a069c88e1ce885731a7a0ba1be0b638cf95ccf7"
+    },
+    "SierpinskiFormal.SoficHankel": {
+      "path": "SierpinskiFormal/SoficHankel.lean",
+      "git_blob_sha": "106d624133875ff81c803a1824b3e64b3e5c465d",
+      "sha256": "f382b6e06a6f63941af0b0dcc8fd02af694a8fc858d12fb1539d6fe348ef4367"
+    },
+    "SierpinskiFormal.ExteriorRankCutoff": {
+      "path": "SierpinskiFormal/ExteriorRankCutoff.lean",
+      "git_blob_sha": "d5bed72c3cb63f64f9413da4ecae394c7d293ca9",
+      "sha256": "a124c479f5c31cb0fc19c67625caed8685b9b07ca22deaa85b2c8a8a3ed15370"
+    },
+    "SierpinskiFormal.UniformNilpotence": {
+      "path": "SierpinskiFormal/UniformNilpotence.lean",
+      "git_blob_sha": "6eddd5865ab5ac8f156cdf3e8c9aa08515141150",
+      "sha256": "c6ffbeae4441048dc4fc1b3f58590c0a0fa75722d59bc69f47ad76cb9a09cf95"
+    },
+    "SierpinskiFormal.UniformSoficRealization": {
+      "path": "SierpinskiFormal/UniformSoficRealization.lean",
+      "git_blob_sha": "23c9f7db6670022b5486077338385f9214c36bf3",
+      "sha256": "a1827b65754ebdb38ee0df1d7e82c717f35978cd756f09afff80141ed873b075"
+    },
+    "SierpinskiFormal.FiniteStateSourceProbability": {
+      "path": "SierpinskiFormal/FiniteStateSourceProbability.lean",
+      "git_blob_sha": "a7904598fdd7360d226681605b61402bc0c3c27b",
+      "sha256": "fcdde47520b6e84b20b656e3c4f0306d1dbac482f99b5d4e9f6919e23b706146"
+    },
+    "SierpinskiFormal.StationaryBooleanFrequency": {
+      "path": "SierpinskiFormal/StationaryBooleanFrequency.lean",
+      "git_blob_sha": "87f34a828240b170068b3bd494377aa3af98b1d8",
+      "sha256": "870aa7363b8fc2785ca825c986cb88af0c8f02754d7b69524ee1e9bf5e730ac5"
+    },
+    "SierpinskiFormal.CommonContextLogDensity": {
+      "path": "SierpinskiFormal/CommonContextLogDensity.lean",
+      "git_blob_sha": "8d65e67d455ed85af0f005965519b72a22e69a11",
+      "sha256": "65912cbf45093f255e5dd763c25b1e1f25225ee9bee32065c37def4d4543202c"
+    },
+    "SierpinskiFormal.StationaryBooleanMean": {
+      "path": "SierpinskiFormal/StationaryBooleanMean.lean",
+      "git_blob_sha": "9c4d65c4b3afee746eabf49e784beeb953598547",
+      "sha256": "7a611c224fb774ab104e78639d6e053ad1f75a5c0568c2dd1f25cd9841516710"
+    },
+    "SierpinskiFormal.StationaryMeanConvergence": {
+      "path": "SierpinskiFormal/StationaryMeanConvergence.lean",
+      "git_blob_sha": "9eabdeb33ab39b3477b75a1dae64bc34470867b2",
+      "sha256": "cc0c2ed70c49e043aadd9632af9a1b0e38546f5bacd89937747bfc5da014567c"
+    },
+    "SierpinskiFormal.StationaryAlgebraicApplications": {
+      "path": "SierpinskiFormal/StationaryAlgebraicApplications.lean",
+      "git_blob_sha": "326fe7f103cd9f650f34ad647f25e28dc3e15ad8",
+      "sha256": "95676141131752d106bd8e4dc80ad5f29b1d1a994ac7bbdadf4dd334f569f831"
+    },
+    "SierpinskiFormal.BooleanRegularLogDensity": {
+      "path": "SierpinskiFormal/BooleanRegularLogDensity.lean",
+      "git_blob_sha": "523c6f5531f3dc2d4f691fd1043f9cb4eded2aaf",
+      "sha256": "9511fc4f326a15ec2b10b2d4762d04b30ca07106ca795bc7090831958614d94f"
+    },
+    "SierpinskiFormal.PaddedStableLogDensity": {
+      "path": "SierpinskiFormal/PaddedStableLogDensity.lean",
+      "git_blob_sha": "5e9a72adb8f81e3d30b6fe7b5912da76c64f24ce",
+      "sha256": "263e1452b32d20dd7a93ffdd53846132815b28a6026b10d81f39078f0f331f64"
+    },
+    "SierpinskiFormal.StationaryBooleanConvergence": {
+      "path": "SierpinskiFormal/StationaryBooleanConvergence.lean",
+      "git_blob_sha": "5b8943dcd161b1b02ad6493292092fc17a425a5f",
+      "sha256": "c0553944142c4de9dae476362c377e7f33989b51e1237a59b8068ddd1139ac9f"
+    },
+    "SierpinskiFormal.StationaryPointwise": {
+      "path": "SierpinskiFormal/StationaryPointwise.lean",
+      "git_blob_sha": "0e328e2b92562f1fed989d0f316979b57a917321",
+      "sha256": "772ce8f3cbbc2225b5118ed779787f8afc35cfe3c758d5a3d2eb95422fe1ac50"
+    },
+    "SierpinskiFormal.StationaryMaximal": {
+      "path": "SierpinskiFormal/StationaryMaximal.lean",
+      "git_blob_sha": "d569753636df0eb8954aee46c9a1568603feb05c",
+      "sha256": "aa576915d57c1b269e4c97e1339a44cf654c443befcd76fb0b8cad23652cc091"
+    },
+    "SierpinskiFormal.StationaryBooleanWeakCluster": {
+      "path": "SierpinskiFormal/StationaryBooleanWeakCluster.lean",
+      "git_blob_sha": "18ad9e4af20054824b2db032227d339ca61e3a76",
+      "sha256": "ce65e8808e8c0ff53edfa183d8c7453b6c3623ba2dbe2741e2b948f6a99b486e"
+    },
+    "SierpinskiFormal.StationaryBooleanDuality": {
+      "path": "SierpinskiFormal/StationaryBooleanDuality.lean",
+      "git_blob_sha": "438566c1ac54d75a5d4bdb92eed9e69797c6afe3",
+      "sha256": "8e01dd9a28d54492992d25c0484493a47feb565f179a03e478f00bdc94c4a441"
+    },
+    "SierpinskiFormal.FiniteStateSourceLaw": {
+      "path": "SierpinskiFormal/FiniteStateSourceLaw.lean",
+      "git_blob_sha": "3bfd42d3bd4dcb3b3b0318f490ba89cee2d2ccd2",
+      "sha256": "0a04cd7b92cf4ece2e72767ca0266f508b6375c804960b3a1ebbc3fe9dde9c43"
+    },
+    "SierpinskiFormal.WeightedWordEnumeration": {
+      "path": "SierpinskiFormal/WeightedWordEnumeration.lean",
+      "git_blob_sha": "40add0345924236f9e6310d7a9e9c2794e219557",
+      "sha256": "d94733b965f93ef3cca00c006c726d9f7d636deb9d1ae8e8d6057d2b7f2734ea"
+    },
+    "SierpinskiFormal.RenewalWordDecomposition": {
+      "path": "SierpinskiFormal/RenewalWordDecomposition.lean",
+      "git_blob_sha": "380deba32956c4af6b93d0d7fd2fa412bdf62724",
+      "sha256": "69e9c8164ec1d79905a1da5f9d84b7f32810d319b44d6d98ef6b43426129022e"
+    },
+    "SierpinskiFormal.MinimalRankCompression": {
+      "path": "SierpinskiFormal/MinimalRankCompression.lean",
+      "git_blob_sha": "8bb1801e58fee08c93ad7a6af8e1b03fb8467450",
+      "sha256": "de311c3e466e9febe55d42abc4048eeef8e1de129b8e2a64a4c9fc8e9e35acf7"
+    },
+    "SierpinskiFormal.WeightedWordCesaro": {
+      "path": "SierpinskiFormal/WeightedWordCesaro.lean",
+      "git_blob_sha": "6a77d9e9751cd409c076001f75b495981b17de0f",
+      "sha256": "fb2108710fc34924c0a275c4f998a2336000f5530380da37dc0b213202846663"
+    },
+    "SierpinskiFormal.FiniteSourceAnalyticWeights": {
+      "path": "SierpinskiFormal/FiniteSourceAnalyticWeights.lean",
+      "git_blob_sha": "203ac951e0ddf99871798fe8b123aa2d21b9db68",
+      "sha256": "933ba6aeecc621da7f0c18db79b096116be947fd569b7f594f7083b77c74473a"
+    },
+    "SierpinskiFormal.BernoulliWeightNormalization": {
+      "path": "SierpinskiFormal/BernoulliWeightNormalization.lean",
+      "git_blob_sha": "24712567036be1c06ca6462420a7bbe0ef5eccbd",
+      "sha256": "62be0a497ee356dddff89192714b885c7cbdbaea2ec771a3e618d17adda1af03"
+    },
+    "SierpinskiFormal.FiniteStateTransducer": {
+      "path": "SierpinskiFormal/FiniteStateTransducer.lean",
+      "git_blob_sha": "f8bfe7979d0ffef72e12a9449b371a205a1cee5f",
+      "sha256": "8b990e35edb110299564b975da109412cd79c2db80ef67e6a90fdc68ad35b46e"
+    },
+    "SierpinskiFormal.FiniteIIDWordLaw": {
+      "path": "SierpinskiFormal/FiniteIIDWordLaw.lean",
+      "git_blob_sha": "a6d3e88d5ce7b0de75d2f7972fcab43138370443",
+      "sha256": "ee32861d6d675022d72df58965f9fe939e2952f2ce742ea80ecb34673bfd6c0a"
+    },
+    "SierpinskiFormal.FiniteIIDMeasure": {
+      "path": "SierpinskiFormal/FiniteIIDMeasure.lean",
+      "git_blob_sha": "c2e545deeed175205867e17144a20933667b15cf",
+      "sha256": "21b37bc4ce840451e284df7ebe76e28b876d435652ed1b9afdc4d345cbb43f14"
+    },
+    "SierpinskiFormal.SoficPositiveCompletion": {
+      "path": "SierpinskiFormal/SoficPositiveCompletion.lean",
+      "git_blob_sha": "50c9c185910eb633c20c513dde5c3570f4116ed1",
+      "sha256": "37bbe2cb56dad09bf1c2aed11fad871622c6eb35e5faa8dab9fc7096023e95d6"
+    },
+    "SierpinskiFormal.SoficPairChain": {
+      "path": "SierpinskiFormal/SoficPairChain.lean",
+      "git_blob_sha": "0047f9d58db405cb2b1f907265a6ca639f8a6e70",
+      "sha256": "969a7b9c9e6c07acd75ff65780810661a1c1d8264f4fd0379e9f866a50b9bcda"
+    },
+    "SierpinskiFormal.BasisChain": {
+      "path": "SierpinskiFormal/BasisChain.lean",
+      "git_blob_sha": "b388a5c4170d101c438ebc7067d7bc6e78382389",
+      "sha256": "b99c9382dcbff2b7334b200eccb4cfd0c54d061f182c7622c81a72eedc3ba5e6"
+    },
+    "SierpinskiFormal.ExteriorPairMaps": {
+      "path": "SierpinskiFormal/ExteriorPairMaps.lean",
+      "git_blob_sha": "f160e98d9a173ab4f199021ca136c0641bb50151",
+      "sha256": "ea07adb68bc3c1acb5e2dedd21e45990789cc91b9bd5c6ef70e9c1d627de0e5c"
+    },
+    "SierpinskiFormal.IIDPairFactor": {
+      "path": "SierpinskiFormal/IIDPairFactor.lean",
+      "git_blob_sha": "5fcfb2e22b73d17a56e3c824f6d80397daa5119a",
+      "sha256": "2ebd51ab47b719c0f4451f3348f6c151cfff8533c75d1a42bb3686d7c52bee39"
+    },
+    "SierpinskiFormal.SoficRationalSharpness": {
+      "path": "SierpinskiFormal/SoficRationalSharpness.lean",
+      "git_blob_sha": "c0d0aaa4b05accf586986f99103550871021a404",
+      "sha256": "1b145b75d3719c63dc7cff13d00bb1db9fb2198899145195447eb69c9ccce5f4"
+    },
+    "SierpinskiFormal.SoficSharpLaw": {
+      "path": "SierpinskiFormal/SoficSharpLaw.lean",
+      "git_blob_sha": "a8eccf93255ef0a429ce9735e276da423c586ec9",
+      "sha256": "8453493b01c2a5658b3c2842e66a6a43997782b771ea011ed1deafd2dd3f6df3"
+    }
+  },
+  "public_imports": [
+    "Lean.Elab.Tactic.Omega",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Algebra.BigOperators.Group.List.Basic",
+    "Mathlib.Algebra.BigOperators.Module",
+    "Mathlib.Algebra.BigOperators.Ring.List",
+    "Mathlib.Algebra.CharP.Lemmas",
+    "Mathlib.Algebra.Field.GeomSum",
+    "Mathlib.Algebra.Field.ZMod",
+    "Mathlib.Algebra.GroupWithZero.Basic",
+    "Mathlib.Algebra.MvPolynomial.Eval",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Algebra.Polynomial.BigOperators",
+    "Mathlib.Algebra.Polynomial.Coeff",
+    "Mathlib.Algebra.Polynomial.Degree.TrailingDegree",
+    "Mathlib.Algebra.Polynomial.Div",
+    "Mathlib.Algebra.Polynomial.Eval.Defs",
+    "Mathlib.Analysis.Analytic.Constructions",
+    "Mathlib.Analysis.Asymptotics.SpecificAsymptotics",
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Analysis.Convex.Combination",
+    "Mathlib.Analysis.Convex.Cone.Extension",
+    "Mathlib.Analysis.Convex.Integral",
+    "Mathlib.Analysis.Convex.Topology",
+    "Mathlib.Analysis.InnerProductSpace.Dual",
+    "Mathlib.Analysis.InnerProductSpace.MeanErgodic",
+    "Mathlib.Analysis.LocallyConvex.WeakSpace",
+    "Mathlib.Analysis.Normed.Module.DoubleDual",
+    "Mathlib.Analysis.Normed.Module.Dual",
+    "Mathlib.Analysis.Normed.Module.HahnBanach",
+    "Mathlib.Analysis.Normed.Module.WeakDual",
+    "Mathlib.Analysis.Normed.Operator.LinearIsometry",
+    "Mathlib.Analysis.PSeries",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Analysis.SpecificLimits.Basic",
+    "Mathlib.Data.Fintype.Units",
+    "Mathlib.Data.List.OfFn",
+    "Mathlib.Data.List.SplitOn",
+    "Mathlib.Data.Matrix.Block",
+    "Mathlib.Data.Nat.Digits.Lemmas",
+    "Mathlib.Data.Nat.Factorization.Basic",
+    "Mathlib.Data.Nat.Log",
+    "Mathlib.Data.Nat.Periodic",
+    "Mathlib.Data.Real.Basic",
+    "Mathlib.Dynamics.BirkhoffSum.Average",
+    "Mathlib.FieldTheory.Finite.Basic",
+    "Mathlib.FieldTheory.SplittingField.Construction",
+    "Mathlib.GroupTheory.OrderOfElement",
+    "Mathlib.LinearAlgebra.Alternating.Curry",
+    "Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankCondition",
+    "Mathlib.LinearAlgebra.Dual.Lemmas",
+    "Mathlib.LinearAlgebra.ExteriorPower.Basis",
+    "Mathlib.LinearAlgebra.FiniteDimensional.Basic",
+    "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+    "Mathlib.LinearAlgebra.Finsupp.LinearCombination",
+    "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+    "Mathlib.LinearAlgebra.Matrix.Rank",
+    "Mathlib.LinearAlgebra.Matrix.ToLin",
+    "Mathlib.LinearAlgebra.StdBasis",
+    "Mathlib.MeasureTheory.Constructions.Pi",
+    "Mathlib.MeasureTheory.Function.ContinuousMapDense",
+    "Mathlib.MeasureTheory.Function.Holder",
+    "Mathlib.MeasureTheory.Function.LpSpace.Indicator",
+    "Mathlib.MeasureTheory.Function.SimpleFuncDenseLp",
+    "Mathlib.MeasureTheory.Function.UniformIntegrable",
+    "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+    "Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap",
+    "Mathlib.MeasureTheory.Integral.Bochner.L1",
+    "Mathlib.MeasureTheory.Integral.Bochner.Set",
+    "Mathlib.MeasureTheory.Integral.Bochner.SumMeasure",
+    "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+    "Mathlib.MeasureTheory.Integral.RieszMarkovKakutani.Real",
+    "Mathlib.MeasureTheory.Measure.Decomposition.RadonNikodym",
+    "Mathlib.MeasureTheory.Measure.HasOuterApproxClosed",
+    "Mathlib.MeasureTheory.Measure.Prod",
+    "Mathlib.MeasureTheory.Measure.Real",
+    "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+    "Mathlib.MeasureTheory.OuterMeasure.BorelCantelli",
+    "Mathlib.NumberTheory.Cyclotomic.Basic",
+    "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+    "Mathlib.Order.Filter.AtTopBot.Field",
+    "Mathlib.Probability.Independence.InfinitePi",
+    "Mathlib.RingTheory.Adjoin.FG",
+    "Mathlib.RingTheory.AdjoinRoot",
+    "Mathlib.RingTheory.Finiteness.Cardinality",
+    "Mathlib.RingTheory.Polynomial.UniqueFactorization",
+    "Mathlib.RingTheory.PowerSeries.Basic",
+    "Mathlib.RingTheory.PowerSeries.Inverse",
+    "Mathlib.RingTheory.PowerSeries.NoZeroDivisors",
+    "Mathlib.RingTheory.PowerSeries.Trunc",
+    "Mathlib.RingTheory.PowerSeries.WellKnown",
+    "Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Module",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Topology.Algebra.Module.Basic",
+    "Mathlib.Topology.Algebra.MulAction",
+    "Mathlib.Topology.CompactOpen",
+    "Mathlib.Topology.Compactification.StoneCech",
+    "Mathlib.Topology.ContinuousMap.Bounded.Normed",
+    "Mathlib.Topology.ContinuousMap.Compact",
+    "Mathlib.Topology.DenseEmbedding",
+    "Mathlib.Topology.Instances.Real.Lemmas",
+    "Mathlib.Topology.List",
+    "Mathlib.Topology.Metrizable.Urysohn",
+    "Mathlib.Topology.Sequences",
+    "Mathlib.Topology.UniformSpace.Real"
+  ]
+}

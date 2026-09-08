@@ -1,0 +1,14 @@
+name = "IndependentZeroBlocks"
+version = "0.35.0"
+defaultTargets = ["Publication"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.33.1"
+
+[[lean_lib]]
+name = "SierpinskiFormal"
+
+[[lean_lib]]
+name = "Publication"

@@ -1,0 +1,19 @@
+CORRECTIONS
+
+Report a mathematical, formalization, attribution or exposition issue at:
+https://github.com/egilburg/aimath/issues
+
+Choose Correction report and identify this paper, version 2026-09-08-r1, its
+permanent commit URL, the exact theorem/page/declaration and checkable evidence.
+Reports remain allegations until assessed. No response-time promise is made.
+
+Confirmed corrections will identify the affected version and evidence, credit
+substantive help when appropriate, and be recorded with a dated forward revision.
+Previous commits remain accessible; updated PDFs must not silently replace an
+immutable version. A failed central claim should be marked unreliable or withdrawn
+on the current landing page and affected version's correction notice. Recheck
+affected proof, prose and citations before issuing a correction. Do not treat
+unrelated results as invalid without evidence.
+
+The release record is in the repository-root RELEASES.txt. No post-release errata
+are recorded at this initial release; this is not an assertion of error-freedom.

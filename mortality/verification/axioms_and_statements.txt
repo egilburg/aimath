@@ -1,0 +1,196 @@
+theorem IndependentZeroBlocks.exists_short_zero_word_of_finite_real_monoid.{u_1} : ∀ {A : Type u_1} {n : ℕ},
+  0 < n →
+    ∀ (M : A → Matrix (Fin n) (Fin n) ℝ),
+      (Set.range (IndependentZeroBlocks.matrixWord M)).Finite →
+        (∃ z, IndependentZeroBlocks.matrixWord M z = 0) →
+          ∃ z, IndependentZeroBlocks.matrixWord M z = 0 ∧ z.length ≤ IndependentZeroBlocks.finiteMortalityBound n :=
+fun {A} {n} hn M hfinite hzero =>
+  have hdrop := IndependentZeroBlocks.exists_short_rank_decreasing_sandwich_of_finite M hfinite hzero;
+  Exists.casesOn (IndependentZeroBlocks.exists_zero_word_bound_of_short_sandwich M (n * (n + 1) / 2) hzero hdrop)
+    fun z h =>
+    And.casesOn h fun hz hl =>
+      Exists.intro z
+        ⟨hz,
+          id
+            (Eq.mp
+              (congrArg (LE.le z.length)
+                (congr
+                  (congrArg HAdd.hAdd (congrArg (HPow.hPow 2) (congrFun' (congrArg HSub.hSub (Fintype.card_fin n)) 1)))
+                  (congrFun'
+                    (congrArg HMul.hMul
+                      (congrFun'
+                        (congrArg HSub.hSub
+                          (congrArg (HPow.hPow 2) (congrFun' (congrArg HSub.hSub (Fintype.card_fin n)) 1)))
+                        1))
+                    (n * (n + 1) / 2))))
+              hl)⟩
+'IndependentZeroBlocks.exists_short_zero_word_of_finite_real_monoid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem IndependentZeroBlocks.exists_short_zero_word_of_finite_rational_monoid.{u_1} : ∀ {A : Type u_1} {n : ℕ},
+  0 < n →
+    ∀ (M : A → Matrix (Fin n) (Fin n) ℚ),
+      (Set.range (IndependentZeroBlocks.matrixWord M)).Finite →
+        (∃ z, IndependentZeroBlocks.matrixWord M z = 0) →
+          ∃ z, IndependentZeroBlocks.matrixWord M z = 0 ∧ z.length ≤ IndependentZeroBlocks.finiteMortalityBound n :=
+fun {A} {n} hn M hfinite hzero =>
+  let f := Rat.castHom ℝ;
+  let MR := fun a => (M a).map ⇑f;
+  have hRfinite := IndependentZeroBlocks.finite_matrixWord_range_map f M hfinite;
+  have hRzero :=
+    Exists.casesOn hzero fun z hz => Exists.intro z ((IndependentZeroBlocks.matrixWord_map_eq_zero_iff f M z).mpr hz);
+  Exists.casesOn (IndependentZeroBlocks.exists_short_zero_word_of_finite_real_monoid hn MR hRfinite hRzero) fun z h =>
+    And.casesOn h fun hz hl => Exists.intro z ⟨(IndependentZeroBlocks.matrixWord_map_eq_zero_iff f M z).mp hz, hl⟩
+'IndependentZeroBlocks.exists_short_zero_word_of_finite_rational_monoid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem IndependentZeroBlocks.exists_short_rank_decreasing_sandwich_of_finite.{u_1} : ∀ {A : Type u_1} {n : ℕ}
+  (M : A → Matrix (Fin n) (Fin n) ℝ),
+  (Set.range (IndependentZeroBlocks.matrixWord M)).Finite →
+    (∃ z, IndependentZeroBlocks.matrixWord M z = 0) →
+      ∀ (h : List A),
+        IndependentZeroBlocks.matrixWord M h ≠ 0 →
+          ∃ w,
+            w.length ≤ n * (n + 1) / 2 ∧
+              (IndependentZeroBlocks.matrixWord M (h ++ w ++ h)).rank < (IndependentZeroBlocks.matrixWord M h).rank :=
+fun {A} {n} M hfinite hzero h hh =>
+  Exists.casesOn (IndependentZeroBlocks.exists_rankFactorization (IndependentZeroBlocks.matrixWord M h)) fun U h_1 =>
+    Exists.casesOn h_1 fun V hfac =>
+      Exists.casesOn
+        (IndependentZeroBlocks.exists_invariant_quadraticForm_returnMatrix_of_finite
+          (IndependentZeroBlocks.rank_pos_of_ne_zero (IndependentZeroBlocks.matrixWord M h) hh) M h U V hfac hfinite)
+        fun Q h_2 =>
+        And.casesOn h_2 fun hQsymm right =>
+          And.casesOn right fun hQtrace hQinv =>
+            let B := U * Q * U.transpose;
+            have hB :=
+              id
+                (Eq.mpr
+                  (id
+                    (congrFun'
+                      (congrArg Eq
+                        (Eq.trans (Matrix.transpose_mul (U * Q) U.transpose)
+                          (congr (congrArg HMul.hMul (Matrix.transpose_transpose U))
+                            (Eq.trans (Matrix.transpose_mul U Q) (congrFun' (congrArg HMul.hMul hQsymm) U.transpose)))))
+                      (U * Q * U.transpose)))
+                  (of_eq_true
+                    (Eq.trans (congrArg (Eq (U * (Q * U.transpose))) (Matrix.mul_assoc U Q U.transpose))
+                      (eq_self (U * (Q * U.transpose))))));
+            let ell := IndependentZeroBlocks.traceSandwichMatrixDual V;
+            have heval := fun w =>
+              of_eq_true
+                (Eq.trans
+                  (congr
+                    (congrArg Eq
+                      (Eq.trans
+                        (congrArg (⇑(IndependentZeroBlocks.traceSandwichMatrixDual V))
+                          (Eq.trans
+                            (Eq.trans
+                              (congrFun'
+                                (congrArg HMul.hMul
+                                  (congrArg (HMul.hMul (IndependentZeroBlocks.matrixWord M w))
+                                    (Matrix.mul_assoc U Q U.transpose)))
+                                (IndependentZeroBlocks.matrixWord M w).transpose)
+                              (Matrix.mul_assoc (IndependentZeroBlocks.matrixWord M w) (U * (Q * U.transpose))
+                                (IndependentZeroBlocks.matrixWord M w).transpose))
+                            (congrArg (HMul.hMul (IndependentZeroBlocks.matrixWord M w))
+                              (Eq.trans
+                                (Matrix.mul_assoc U (Q * U.transpose) (IndependentZeroBlocks.matrixWord M w).transpose)
+                                (congrArg (HMul.hMul U)
+                                  (Matrix.mul_assoc Q U.transpose (IndependentZeroBlocks.matrixWord M w).transpose))))))
+                        (congrArg Matrix.trace
+                          (Eq.trans
+                            (Matrix.mul_assoc V
+                              (IndependentZeroBlocks.matrixWord M w *
+                                (U * (Q * (U.transpose * (IndependentZeroBlocks.matrixWord M w).transpose))))
+                              V.transpose)
+                            (congrArg (HMul.hMul V)
+                              (Eq.trans
+                                (Matrix.mul_assoc (IndependentZeroBlocks.matrixWord M w)
+                                  (U * (Q * (U.transpose * (IndependentZeroBlocks.matrixWord M w).transpose)))
+                                  V.transpose)
+                                (congrArg (HMul.hMul (IndependentZeroBlocks.matrixWord M w))
+                                  (Eq.trans
+                                    (Matrix.mul_assoc U
+                                      (Q * (U.transpose * (IndependentZeroBlocks.matrixWord M w).transpose))
+                                      V.transpose)
+                                    (congrArg (HMul.hMul U)
+                                      (Eq.trans
+                                        (Matrix.mul_assoc Q
+                                          (U.transpose * (IndependentZeroBlocks.matrixWord M w).transpose) V.transpose)
+                                        (congrArg (HMul.hMul Q)
+                                          (Matrix.mul_assoc U.transpose (IndependentZeroBlocks.matrixWord M w).transpose
+                                            V.transpose))))))))))))
+                    (congrArg Matrix.trace
+                      (Eq.trans
+                        (Eq.trans
+                          (congr
+                            (congrArg HMul.hMul
+                              (Eq.trans
+                                (Eq.trans
+                                  (congrFun'
+                                    (congrArg HMul.hMul (Matrix.mul_assoc V (IndependentZeroBlocks.matrixWord M w) U))
+                                    Q)
+                                  (Matrix.mul_assoc V (IndependentZeroBlocks.matrixWord M w * U) Q))
+                                (congrArg (HMul.hMul V) (Matrix.mul_assoc (IndependentZeroBlocks.matrixWord M w) U Q))))
+                            (Eq.trans
+                              (Eq.trans
+                                (congrArg Matrix.transpose
+                                  (Matrix.mul_assoc V (IndependentZeroBlocks.matrixWord M w) U))
+                                (Matrix.transpose_mul V (IndependentZeroBlocks.matrixWord M w * U)))
+                              (Eq.trans
+                                (congrFun'
+                                  (congrArg HMul.hMul (Matrix.transpose_mul (IndependentZeroBlocks.matrixWord M w) U))
+                                  V.transpose)
+                                (Matrix.mul_assoc U.transpose (IndependentZeroBlocks.matrixWord M w).transpose
+                                  V.transpose))))
+                          (Matrix.mul_assoc V (IndependentZeroBlocks.matrixWord M w * (U * Q))
+                            (U.transpose * ((IndependentZeroBlocks.matrixWord M w).transpose * V.transpose))))
+                        (congrArg (HMul.hMul V)
+                          (Eq.trans
+                            (Matrix.mul_assoc (IndependentZeroBlocks.matrixWord M w) (U * Q)
+                              (U.transpose * ((IndependentZeroBlocks.matrixWord M w).transpose * V.transpose)))
+                            (congrArg (HMul.hMul (IndependentZeroBlocks.matrixWord M w))
+                              (Matrix.mul_assoc U Q
+                                (U.transpose * ((IndependentZeroBlocks.matrixWord M w).transpose * V.transpose)))))))))
+                  (eq_self
+                    (V *
+                        (IndependentZeroBlocks.matrixWord M w *
+                          (U *
+                            (Q *
+                              (U.transpose *
+                                ((IndependentZeroBlocks.matrixWord M w).transpose * V.transpose)))))).trace));
+            have hsignal :=
+              Exists.casesOn hzero fun z hz =>
+                Exists.intro z
+                  (Eq.mpr
+                    (id
+                      (congrFun'
+                        (congrArg Ne
+                          (Eq.trans
+                            (congrArg (HSub.hSub Q.trace)
+                              (Eq.trans
+                                (congrArg (⇑ell)
+                                  (Eq.trans
+                                    (congr
+                                      (congrArg HMul.hMul (Eq.trans (congrFun' (congrArg HMul.hMul hz) B) (zero_mul B)))
+                                      (congrArg Matrix.transpose hz))
+                                    (mul_zero 0)))
+                                (map_zero ell)))
+                            (sub_zero Q.trace)))
+                        0))
+                    (LT.lt.ne' hQtrace));
+            Exists.casesOn
+              (IndependentZeroBlocks.exists_short_quadratic_observation_matrixDual_ne_zero M B hB ell Q.trace hsignal)
+              fun w h_3 =>
+              And.casesOn h_3 fun hwlen hw =>
+                Exists.intro w
+                  ⟨hwlen,
+                    IndependentZeroBlocks.rank_resetSandwich_lt_of_invariantTraceDefect_ne_zero M h w U V hfac Q
+                      (hQinv w)
+                      (id (Eq.mp (congrFun' (congrArg Ne (congrArg (HSub.hSub Q.trace) ((fun w => heval w) w))) 0) hw))⟩
+'IndependentZeroBlocks.exists_short_rank_decreasing_sandwich_of_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+def IndependentZeroBlocks.finiteMortalityBound : ℕ → ℕ :=
+fun n => 2 ^ (n - 1) + (2 ^ (n - 1) - 1) * (n * (n + 1) / 2)

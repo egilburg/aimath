@@ -1,0 +1,204 @@
+\input{preamble}
+\newcommand{\sourcecredit}{\href{https://github.com/egilburg/aimath}{github.com/egilburg/aimath}}
+\title{Sharp Finite Markov Order\\in Intrinsic Sofic Dimension}
+\hypersetup{pdftitle={Sharp Finite Markov Order in Intrinsic Sofic Dimension}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let \(n\) be the real Hankel dimension of the cylinder probabilities of a stationary finite-alphabet process. If its Markov order is finite, we prove that it is at most \(\binom n2\). For every \(n\ge2\), we construct a stationary process with a nonnegative rational presentation of minimal dimension \(n\) and exact order \(\binom n2\), allowing the alphabet to grow. In the stationary sofic setting this improves the horizon \(2^{n^2-1}\) of B\'eal, Jug\'e, Mairesse and Perrin, \emph{Sofic measures} (2026), Theorem 5.1. The deterministic binomial-delay precedent is due to B\'eal and Senellart (1998); the extremal pair-chain core occurs in Trahtman's 1998 construction, which we realize stochastically. The upper proof combines Holland's rank criterion with classical exterior-square and nilpotence arguments. An accompanying Lean development proves the one-sided process theorem and rational stationary sharpness.
+This discovery was made through the use of artificial intelligence.
+\end{abstract}
+
+\section{The result and its scope}
+Finite memory is a property of the output law, whereas a hidden-state presentation can contain redundant states. A representation-independent bound should therefore use the dimension of the word Hankel span. Our upper theorem applies to every stationary law with finite real Hankel dimension. The sharp examples have nonnegative rational presentations and are sofic in the usual finite-state sense.
+
+Let \(A\) be a finite alphabet and \(\mu\) a shift-invariant probability measure on \(A^{\mathbb N}\), with its discrete product measurable structure. For a finite word \(w\), put
+\[
+ p(w)=\mu\{x:x_0x_1\cdots x_{|w|-1}=w\},\qquad p(\epsilon)=1.
+\]
+Write \(uv\) for concatenation and \(\epsilon\) for the empty word. Cylinder probabilities satisfy
+\begin{equation}\label{eq:consistency}
+ p(w)\ge0,\qquad \sum_{a\in A}p(wa)=p(w)=\sum_{a\in A}p(aw).
+\end{equation}
+The last equality uses stationarity.
+
+\begin{definition}
+The law is \(k\)-step Markov, for \(k\ge0\), if, for all words \(u,v,z\) with \(|v|=k\) and \(p(uv)>0\),
+\begin{equation}\label{eq:conditional}
+ \frac{p(uvz)}{p(uv)}=\frac{p(vz)}{p(v)}.
+\end{equation}
+Its finite Markov order is the least such \(k\), if one exists. Order zero means that the law is IID.
+\end{definition}
+Left consistency implies \(p(v)>0\) whenever \(p(uv)>0\). This definition compares all finite future blocks; it makes no reference to matrix ranks.
+
+For \(w\in A^*\), let \(c_w(u)=p(uw)\), and define
+\[
+ \mathcal H_p=\Span_{\R}\{c_w:w\in A^*\},\qquad n=\dim_{\R}\mathcal H_p.
+\]
+\begin{theorem}\label{thm:main}
+If \(\mu\) is stationary, \(n<\infty\), and \(\mu\) has finite Markov order, then
+\[
+ \ord(\mu)\le\binom n2.
+\]
+For every \(n\ge2\), there is a stationary sofic law with a nonnegative rational presentation, real Hankel dimension \(n\), and exact Markov order \(\binom n2\). One construction uses \(\binom n2-1+n^2\) output letters.
+\end{theorem}
+No fixed-alphabet optimum is asserted. A probability law has \(n\ge1\); when \(n=1\), the formula gives order zero.
+
+\subsection{Prior work and conventions}
+B\'eal--Jug\'e--Mairesse--Perrin \cite[Theorem 5.1]{BJMP2026} give the horizon \(2^{n^2-1}\) in the same minimal real representation dimension for invariant sofic measures. Their Theorem 4.4 attributes the rank criterion to Holland \cite{Holland1968}. The original Holland scan was unavailable in the recorded check; the later reproduction was inspected. The needed word-law criterion is proved below.
+
+B\'eal--Senellart \cite[Proposition 3]{BS1998} already obtained the deterministic local-automaton delay \(N(N-1)/2\), with \(N\) counting presentation states. Their Proposition 9 gives a binary quadratic-delay family. Trahtman's construction \cite[Section 6]{Trahtman1998} contains the lexicographic rank-two pair chain used in our sharpness proof. Neither the deterministic binomial phenomenon nor this combinatorial core is claimed as an invention of the project. The contribution considered here is the joined intrinsic stochastic theorem, rational stationary realization, minimality and exact order.
+
+The source \cite{BJMP2026} uses two-sided invariant measures. Restriction to nonnegative coordinates preserves all word probabilities, Hankel dimension and \eqref{eq:conditional}. Conversely, \eqref{eq:consistency} gives consistent probabilities on finite intervals of \(\mathbb Z\); the finite-alphabet extension theorem gives a stationary two-sided law with those word probabilities. The conditional-block convention is preserved. This standard extension explains the comparison; the Lean endpoints themselves are on \(\mathbb N\), and no separately formalized two-sided extension is claimed.
+
+\section{Minimal representations and the rank criterion}
+A finite real representation consists of a finite-dimensional space \(V\), operators \(T_a\), a vector \(g\), and a functional \(l\), such that
+\[
+ p(w)=lT_wg,\quad T_{a_1\cdots a_m}=T_{a_1}\cdots T_{a_m},\quad T_\epsilon=I.
+\]
+It is reduced if the \(T_wg\) span \(V\) and the \(lT_u\) separate its points. In finite dimension the latter condition says that the rows span \(V^*\).
+
+\begin{lemma}\label{lem:hankel}
+The finite-dimensional space \(\mathcal H_p\) supplies a reduced representation. Every finite representation has dimension at least \(n\), and every reduced one has dimension \(n\).
+\end{lemma}
+\begin{proof}
+On functions of words let \((T_af)(u)=f(ua)\). Since \(T_ac_w=c_{aw}\), these maps preserve \(\mathcal H_p\). Take \(g=c_\epsilon\) and \(l(f)=f(\epsilon)\). Then \(T_wg=c_w\) and \(lT_wg=p(w)\). Reachability follows, and \(lT_uf=f(u)\) proves observability.
+
+For any representation, the map \(x\mapsto(u\mapsto lT_ux)\) sends \(T_wg\) to \(c_w\). Its restriction to the reachable space is onto \(\mathcal H_p\), giving the dimension lower bound. In a reduced representation it is also injective, hence an isomorphism.
+\end{proof}
+
+\begin{proposition}[Holland's rank criterion]\label{prop:rank}
+For a reduced representation of a stationary word law, \eqref{eq:conditional} holds at order \(k\) if and only if every length-\(k\) matrix \(T_v\) has rank at most one.
+\end{proposition}
+\begin{proof}
+Suppose \eqref{eq:conditional} holds and \(|v|=k\). If \(p(v)=0\), consistency and nonnegativity give \(p(uvz)=0\) for all \(u,z\). Spanning rows and columns imply \(T_v=0\).
+
+If \(p(v)>0\), the Markov identity gives
+\[
+ p(v)p(uvz)=p(uv)p(vz).
+\]
+It remains true when \(p(uv)=0\), since right consistency forces \(p(uvz)=0\). Spanning the rows and columns gives
+\[
+ p(v)T_v=(T_vg)(lT_v),
+\]
+so \(T_v\) has rank at most one.
+
+Conversely, write a rank-one matrix as \(T_v=xy\), with \(x\) a column and \(y\) a row. Commuting the resulting scalar factors gives
+\[
+ (lT_uT_vT_zg)(lT_vg)=(lT_uT_vg)(lT_vT_zg).
+\]
+For a positive-mass history \(uv\), also \(p(v)>0\), and division proves \eqref{eq:conditional}. A zero \(T_v\) admits no such history.
+\end{proof}
+This includes forbidden words and \(k=0\). No entrywise positivity of a reduced real representation is required.
+
+\section{The exterior-square cutoff}
+\begin{lemma}[Uniform nilpotence]\label{lem:nilpotence}
+Let \(\mathcal T\) be a family of endomorphisms of a \(d\)-dimensional vector space. If every product of some fixed length is zero, then every product of length \(d\) is zero.
+\end{lemma}
+\begin{proof}
+Let \(K_j\) be the common kernel of all length-\(j\) products, with \(K_0=0\). Then
+\[
+ K_j\subseteq K_{j+1},\qquad
+ K_{j+1}=\bigcap_{T\in\mathcal T}T^{-1}(K_j).
+\]
+A plateau is therefore permanent. Since some \(K_m\) is the full space, the chain cannot stabilize at a proper subspace. There are at most \(d\) strict dimension increases from zero, so \(K_d=V\).
+\end{proof}
+This elementary instance of classical nilpotent linear-semigroup theory is included for its precise dimension mechanism; it is not claimed as a new nilpotence principle.
+
+\begin{proof}[Upper bound in Theorem \ref{thm:main}]
+Use Lemma \ref{lem:hankel}. Put \(W=\Lambda^2V\), \(D=\dim W=\binom n2\), and \(S_a=\Lambda^2T_a\). Classical exterior-power identities give
+\[
+ \Lambda^2(AB)=(\Lambda^2A)(\Lambda^2B),\qquad
+ \Lambda^2A=0\ \Longleftrightarrow\ \rank A\le1.
+\]
+Finite Markov order and Proposition \ref{prop:rank} make every product of some fixed length in the \(S_a\)'s zero. Lemma \ref{lem:nilpotence} then makes every length-\(D\) product zero. The exterior criterion and Proposition \ref{prop:rank} imply \(D\)-step Markovity.
+\end{proof}
+The hypothesis is universal over words of a given length. It is distinct from the existential zero-word condition of matrix mortality.
+
+\section{Rational stationary sharpness}
+Fix \(n\ge2\), put \(D=\binom n2\), and enumerate all two-subsets as \(I_1,\ldots,I_D\). For consecutive pairs \(I_s=\{i<j\}\), \(I_{s+1}=\{k<l\}\), set
+\[
+ A_s=E_{i,k}+E_{j,l}\qquad(1\le s<D).
+\]
+This maps the coordinate pair \(I_{s+1}\) to \(I_s\) and kills all other coordinate vectors.
+
+\paragraph{The inherited construction.}
+For lexicographic enumeration, these are exactly the numerical rank-two transition matrices in Trahtman's Section 6 \cite{Trahtman1998}, under its source-row convention. Column action reverses the description of direction. His Lemma 6.2 exhibits the path through all \(D\) unordered pairs. The local-testability order there is a different predicate from Markov order here. Our identification uses the explicit letters; it does not import that paper's entire local-testability theorem chain.
+
+In the exterior basis indexed by the \(I_s\)'s,
+\[
+ \Lambda^2A_s=E_{s,s+1},\qquad
+ \Lambda^2(A_1\cdots A_{D-1})=E_{1,D}\ne0.
+\]
+Every product of \(D\) adjacent matrix units vanishes. Thus all length-\(D\) chain products have rank at most one, while the critical ordered product has rank two. When \(n=2\), there are no \(A_s\)'s and the critical product is \(I_2\), again of rank two.
+
+\subsection{Positive completion and minimality}
+Let
+\[
+ P=\frac1nJ_n,\qquad \eps=\frac1{2nD},\qquad
+ R=P-\eps\sum_{s=1}^{D-1}A_s.
+\]
+Every entry of the sum is at most \(D-1\), so
+\[
+ R_{ij}\ge\frac1n-\frac{D-1}{2nD}=\frac{D+1}{2nD}>0.
+\]
+Use letters \(a_s\), \(s<D\), and \(b_{ij}\), \(1\le i,j\le n\), with
+\[
+ T_{a_s}=\eps A_s,\qquad T_{b_{ij}}=R_{ij}E_{ij}.
+\]
+The entries are nonnegative rational and \(\sum_aT_a=P\). Take
+\[
+ l=\tfrac1n(1,\ldots,1),\qquad g=\one.
+\]
+Since \(lP=l\), \(Pg=g\), and \(lg=1\), the resulting \(p(w)=lT_wg\) satisfies \eqref{eq:consistency}. The single-entry fillers give
+\[
+ T_{b_{ij}}g=R_{ij}e_i,\qquad
+ lT_{b_{ij}}=\frac{R_{ij}}n e_j^{\mathsf T}.
+\]
+Their positive coefficients prove reachability and observability, including \(n=2\). Thus the Hankel dimension is exactly \(n\). These fillers agree with the formal construction.
+
+\subsection{An actual stationary process}
+For every state pair \((i,j)\), set \(\pi_{ij}(a)=n(T_a)_{ij}\); this is a probability distribution. Choose a random function \(F:\{1,\ldots,n\}^2\to A\) with independent coordinates having those distributions. Let \(Z_t=(Q_t,F_t)\) be IID, with \(Q_t\) uniform and independent of \(F_t\). Define
+\[
+ X_t=F_t(Q_t,Q_{t+1}).
+\]
+This two-block factor of a finite IID source is stationary. It is sofic because \((Z_t,Z_{t+1})\) is a finite-state Markov chain and \(X_t\) is a deterministic function of its state. For \(w=a_1\cdots a_m\), conditioning on \(Q_0,\ldots,Q_m\) yields
+\[
+ \Pr(X_0\cdots X_{m-1}=w)
+ =\sum_{q_0,\ldots,q_m}\frac1{n^{m+1}}
+   \prod_{t=1}^{m}n(T_{a_t})_{q_{t-1},q_t}
+ =lT_wg.
+\]
+This supplies an actual probability process with the stated cylinders.
+
+\subsection{Exact order}
+Any word containing a filler has rank at most one. Pure chain words have rank at most one at length \(D\). The rank criterion therefore gives \(D\)-step Markovity.
+
+The critical word \(a_1\cdots a_{D-1}\) has rank two and positive mass
+\[
+ \frac2n\eps^{D-1}.
+\]
+For \(n=2\), this is the empty word and its mass is one. If order \(k<D\) held, the length-\(k\) prefix matrix of the critical word would have rank at most one; multiplying by its remainder would contradict its rank two. This proves sharpness in Theorem \ref{thm:main}.
+
+\section{Formal verification and provenance}
+The accompanying \texttt{lean/} directory supplies the complete project-local import closure, pinned manifest, entrypoint \texttt{Publication.lean} and \texttt{Audit.lean}. The environment is Lean 4.33.1 and Mathlib commit \texttt{0df444a360eaa60ab8c11dca51a86af692955474}, credited in \cite{Lean,Mathlib}. The included \texttt{verification/} supplement supplies build logs, exact statement and axiom audits, source hashes, and verification provenance; its \texttt{README.txt} explains reproduction and \texttt{SHA256SUMS} checks the proof files. The manuscript-to-formal correspondence is recorded in \texttt{CLAIM\_MAP.txt}.
+
+The principal declarations, in namespace \texttt{IndependentZeroBlocks}, are:
+\begin{itemize}
+\item \texttt{stationary\_process\_markov\_cutoff\_of\_finite\_hankel};
+\item \texttt{stationary\_process\_markov\_cutoff\_of\_representation};
+\item \texttt{exists\_rational\_sharp\_sofic\_process};
+\item \texttt{processMarkov\_iff\_rankOne}.
+\end{itemize}
+The endpoint axioms are limited to \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}. The upper endpoint constructs a reduced representation internally. The Trahtman comparison and two-sided extension explanation are manuscript-level arguments, not separately formalized Lean theorems.
+
+\paragraph{Documented research process.}
+The AI investigation reformulated rank collapse on the exterior square, then exposed the uniform-nilpotence argument through common-kernel stabilization. Exact small-dimensional computations preceded the all-dimensional formal proof. Formalization replaced row fillers by single-entry residual letters and used a two-block IID construction for actual process semantics. Later primary-source inspection identified Trahtman's matching pair-chain core and narrowed the originality account.
+
+Formal checking and the focused literature search do not certify global priority. No fixed-alphabet classification or efficiency claim for large constructions is asserted. Corrections should identify the version and affected statement through the route in the accompanying \texttt{CORRECTIONS.txt}.
+
+\input{disclosure}
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+\end{document}

@@ -1,0 +1,13 @@
+PUBLIC RELEASES
+
+2026-09-08-r1 — 8 September 2026
+Initial public release of the sofic Markov-order and finite-monoid mortality papers.
+Each package has PUBLICATION.json with its public file inventory. The commit
+introducing this entry is the immutable initial snapshot. Its explicit permanent
+links will be recorded in a following release-index update.
+
+Public export retains manuscript/Lean/license/public-use files, with attachment
+references adjusted to this payload. Mathematical statements and Lean sources
+are unchanged from the verified proof packages. No professional human review or
+global-priority certificate is claimed. Future corrections use new forward commits
+and retain earlier snapshots; see each package's CORRECTIONS.txt.

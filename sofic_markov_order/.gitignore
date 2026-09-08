@@ -1,0 +1,5 @@
+lean/.lake/
+render/
+recheck/
+render-build.log
+__pycache__/

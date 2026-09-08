@@ -1,0 +1,36 @@
+{
+  "verification_date": "2026-09-08",
+  "proof_source_commit": "6372f85822ed9d035df4919de385ac2a79170930",
+  "proof_source_root": "proofs/lean/word_density/",
+  "source_identity": "source_closure.json",
+  "lean_version": "4.33.1",
+  "lean_compiler_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+  "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "dependency_pins": "../lean/lake-manifest.json",
+  "environment": "Linux x86_64; official compiler; own-process executable-path LD_PRELOAD wrapper documented in README.txt",
+  "project_modules": 192,
+  "clean_project_build": true,
+  "public_dependency_caches_reused": true,
+  "commands": [
+    {
+      "cwd": "lean",
+      "command": "lake build Publication",
+      "exit_status": 0,
+      "output": "build.log"
+    },
+    {
+      "cwd": "lean",
+      "command": "lake env lean Audit.lean",
+      "exit_status": 0,
+      "output": "axioms_and_statements.txt"
+    }
+  ],
+  "endpoint_count": 4,
+  "endpoint_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "editorial_republication_lean_rebuild": false,
+  "editorial_republication_check": "All packaged Lean sources and configuration remain byte-identical to the successfully verified package."
+}

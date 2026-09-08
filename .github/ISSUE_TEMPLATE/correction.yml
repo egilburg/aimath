@@ -1,0 +1,31 @@
+name: Correction report
+description: Report a mathematical, proof, attribution or exposition issue.
+title: "[Correction] "
+body:
+  - type: dropdown
+    id: paper
+    attributes:
+      label: Publication
+      options:
+        - Sofic Markov order
+        - Finite-monoid mortality
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version and permanent commit URL
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Exact affected statement and evidence
+      description: Give the theorem, page or Lean declaration and a checkable argument, source or reproduction.
+    validations:
+      required: true
+  - type: input
+    id: credit
+    attributes:
+      label: Preferred correction credit (optional)
+      description: State if you prefer no named credit.

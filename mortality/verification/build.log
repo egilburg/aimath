@@ -1,0 +1,896 @@
+✔ [2780/2826] Built SierpinskiFormal.ZeroBlocks (1.4s)
+✔ [2784/2886] Built SierpinskiFormal.LinearObservationDescent (3.4s)
+✔ [2785/2886] Built SierpinskiFormal.Lucas (3.7s)
+ℹ [2786/2886] Built SierpinskiFormal.PoleEvaluation (3.4s)
+info: SierpinskiFormal/PoleEvaluation.lean:75:0: 'SierpinskiFormal.kernel_eval_zero_or_one_of_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/PoleEvaluation.lean:76:0: 'SierpinskiFormal.card_sub_one_dvd_of_finite_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2787/2886] Built SierpinskiFormal.Convolution (3.1s)
+info: SierpinskiFormal/Convolution.lean:137:0: 'SierpinskiFormal.Convolution.weighted_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/Convolution.lean:138:0: 'SierpinskiFormal.Convolution.weighted_zero_of_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2788/2886] Built SierpinskiFormal.PolynomialSaturation (3.5s)
+⚠ [2789/2886] Built SierpinskiFormal.ReachableSpanMortality (3.9s)
+warning: SierpinskiFormal/ReachableSpanMortality.lean:181:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+ℹ [2790/2886] Built SierpinskiFormal.PrimePeriod (3.6s)
+info: SierpinskiFormal/PrimePeriod.lean:78:0: 'SierpinskiFormal.exists_finiteField_primePower_coprime_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/PrimePeriod.lean:79:0: 'SierpinskiFormal.divisibility_indicator_period_cardPow' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2791/2886] Built SierpinskiFormal.DigitState (3.7s)
+warning: SierpinskiFormal/DigitState.lean:42:29: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [transition, Finset.sum_range_succ, pow_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/DigitState.lean:44:29: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [transition, pow_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/DigitState.lean:75:24: This simp argument is unused:
+  hpzero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.cast_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: SierpinskiFormal/DigitState.lean:210:0: 'SierpinskiFormal.DigitState.common_geometric_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/DigitState.lean:211:0: 'SierpinskiFormal.DigitState.extension_common_seed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/DigitState.lean:212:0: 'SierpinskiFormal.DigitState.finite_field_common_seed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/DigitState.lean:213:0: 'SierpinskiFormal.DigitState.sequence_extension_seed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/DigitState.lean:214:0: 'SierpinskiFormal.DigitState.word_absorbs' depends on axioms: [propext]
+ℹ [2792/2886] Built SierpinskiFormal.GeometricFilter (1.7s)
+info: SierpinskiFormal/GeometricFilter.lean:64:0: 'SierpinskiFormal.coeff_poleSeries_mul_eq_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/GeometricFilter.lean:65:0: 'SierpinskiFormal.one_sub_C_mul_X_mul_poleSeries' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2793/2886] Built SierpinskiFormal.CanonicalSeries (2.5s)
+info: SierpinskiFormal/CanonicalSeries.lean:162:0: 'IndependentZeroBlocks.canonicalSeries_dilation_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/CanonicalSeries.lean:163:0: 'IndependentZeroBlocks.exists_normalized_dilation_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/CanonicalSeries.lean:164:0: 'IndependentZeroBlocks.existsUnique_normalized_dilation_series' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/CanonicalSeries.lean:165:0: 'IndependentZeroBlocks.canonicalSeries_finiteField_branch' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2794/2886] Built SierpinskiFormal.PolynomialDilationGaps (2.9s)
+warning: SierpinskiFormal/PolynomialDilationGaps.lean:45:15: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Prod.snd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/PolynomialDilationGaps.lean:45:25: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Prod.fst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: SierpinskiFormal/PolynomialDilationGaps.lean:220:0: 'IndependentZeroBlocks.polynomial_dilation_matrix_descendants' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/PolynomialDilationGaps.lean:221:0: 'IndependentZeroBlocks.polynomial_dilation_matrix_zeroBlocks_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/PolynomialDilationGaps.lean:222:0: 'IndependentZeroBlocks.polynomial_dilation_family_descendants' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/PolynomialDilationGaps.lean:223:0: 'IndependentZeroBlocks.polynomial_dilation_family_zeroBlocks_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [2795/2886] Built SierpinskiFormal.Assembly (2.4s)
+warning: SierpinskiFormal/Assembly.lean:30:51: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [prefixState, DigitState.transition]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: SierpinskiFormal/Assembly.lean:95:0: 'SierpinskiFormal.weighted_zeroBlocks_of_lucas' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2796/2886] Built SierpinskiFormal.AuxiliaryField (3.3s)
+warning: SierpinskiFormal/AuxiliaryField.lean:51:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:52:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:53:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:54:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:55:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:56:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:153:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:154:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:156:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:157:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:158:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:161:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:171:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:172:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:173:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:174:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:175:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:199:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:200:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/AuxiliaryField.lean:201:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: SierpinskiFormal/AuxiliaryField.lean:216:0: 'IndependentZeroBlocks.exists_finite_powerRoot_tower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/AuxiliaryField.lean:217:0: 'IndependentZeroBlocks.eq_zero_or_pow_cardSubOne_div_eq_one_of_powerRoot' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/AuxiliaryField.lean:218:0: 'IndependentZeroBlocks.exists_auxiliary_field' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/AuxiliaryField.lean:219:0: 'IndependentZeroBlocks.exists_auxiliary_field_with_eval_zero_or_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [2797/2886] Built SierpinskiFormal.SeedBlocks (2.4s)
+ℹ [2798/2886] Built SierpinskiFormal.RadixExtension (2.4s)
+info: SierpinskiFormal/RadixExtension.lean:193:0: 'IndependentZeroBlocks.map_canonicalSeries_radixExtension_dilation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/RadixExtension.lean:194:0: 'IndependentZeroBlocks.natDegree_radixExtensionKernel_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/RadixExtension.lean:195:0: 'IndependentZeroBlocks.coeff_radixExtensionKernel_of_lt_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/RadixExtension.lean:196:0: 'IndependentZeroBlocks.radixExtensionKernel_degree_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/RadixExtension.lean:197:0: 'IndependentZeroBlocks.mapped_canonicalSeries_radixExtension_data' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [2799/2886] Built SierpinskiFormal.RationalBridge (3.4s)
+warning: SierpinskiFormal/RationalBridge.lean:1:0: 'Mathlib.Data.Fintype.Units' has been deprecated: please replace this import by
+
+import Mathlib.Algebra.GroupWithZero.Units.Fintype
+warning: SierpinskiFormal/RationalBridge.lean:37:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/RationalBridge.lean:38:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/RationalBridge.lean:123:22: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: SierpinskiFormal/RationalBridge.lean:240:0: 'SierpinskiFormal.exists_dvd_X_pow_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/RationalBridge.lean:241:0: 'SierpinskiFormal.exists_rational_multiplier_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2800/2886] Built SierpinskiFormal.KernelAssembly (2.5s)
+info: SierpinskiFormal/KernelAssembly.lean:201:0: 'SierpinskiFormal.weighted_zeroBlocks_of_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/KernelAssembly.lean:202:0: 'SierpinskiFormal.exists_common_kernel_seed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/KernelAssembly.lean:203:0: 'SierpinskiFormal.exists_common_seed_of_branch' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2801/2886] Built SierpinskiFormal.DilationWindowThreshold (2.8s)
+info: SierpinskiFormal/DilationWindowThreshold.lean:113:0: 'IndependentZeroBlocks.polynomialDilationMatrixDegree_le_threshold_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/DilationWindowThreshold.lean:114:0: 'IndependentZeroBlocks.polynomialDilationWindowThreshold_minimal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/DilationWindowThreshold.lean:115:0: 'IndependentZeroBlocks.polynomial_dilation_matrix_zeroBlocks_iff_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [2802/2886] Built SierpinskiFormal.UniversalAuxiliaryField (2.7s)
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:38:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:39:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:41:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:42:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:43:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:46:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:56:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:57:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:58:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:59:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:60:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:91:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:92:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalAuxiliaryField.lean:93:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: SierpinskiFormal/UniversalAuxiliaryField.lean:108:0: 'IndependentZeroBlocks.exists_universal_auxiliary_field_with_powerRoots' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/UniversalAuxiliaryField.lean:109:0: 'IndependentZeroBlocks.exists_universal_auxiliary_field' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2803/2886] Built SierpinskiFormal.DenominatorShift (2.2s)
+info: SierpinskiFormal/DenominatorShift.lean:95:0: 'IndependentZeroBlocks.exists_eq_X_pow_mul_coeff_zero_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/DenominatorShift.lean:96:0: 'IndependentZeroBlocks.hasArbitrarilyLongZeroBlocks_of_X_pow_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/DenominatorShift.lean:97:0: 'IndependentZeroBlocks.exists_shift_rationalMultiple_of_denominator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [2804/2886] Built SierpinskiFormal.SupportDensityDefs (2.2s)
+ℹ [2805/2886] Built SierpinskiFormal.SeedFamilies (3.1s)
+info: SierpinskiFormal/SeedFamilies.lean:186:0: 'IndependentZeroBlocks.exists_common_seedBlock_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/SeedFamilies.lean:187:0: 'IndependentZeroBlocks.has_simultaneous_zeroBlocks' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/SeedFamilies.lean:188:0: 'IndependentZeroBlocks.rationalMultiple_eq_commonDenominator' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/SeedFamilies.lean:189:0: 'IndependentZeroBlocks.exists_common_denominator_numerators' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2806/2886] Built SierpinskiFormal.RootSupportedDenominator (3.1s)
+info: SierpinskiFormal/RootSupportedDenominator.lean:146:0: 'IndependentZeroBlocks.HasSeedBlocks.dilate_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/RootSupportedDenominator.lean:147:0: 'IndependentZeroBlocks.power_card_pow_eq_dilate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/RootSupportedDenominator.lean:148:0: 'IndependentZeroBlocks.HasSeedBlocks.rationalMultiple_of_dvd_kernel_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [2807/2886] Built SierpinskiFormal.PeriodicConvolution (3.1s)
+info: SierpinskiFormal/PeriodicConvolution.lean:368:0: 'SierpinskiFormal.PeriodicConvolution.weighted_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/PeriodicConvolution.lean:369:0: 'SierpinskiFormal.PeriodicConvolution.weighted_zero_of_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/PeriodicConvolution.lean:370:0: 'SierpinskiFormal.PeriodicConvolution.lucas_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/PeriodicConvolution.lean:371:0: 'SierpinskiFormal.PeriodicConvolution.weighted_zero_on_seed_descendants_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/PeriodicConvolution.lean:372:0: 'SierpinskiFormal.PeriodicConvolution.poleWeight_periodic_prime_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/PeriodicConvolution.lean:373:0: 'SierpinskiFormal.PeriodicConvolution.coeff_repeatedPoleSeries_mul_eq_weighted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/PeriodicConvolution.lean:374:0: 'SierpinskiFormal.PeriodicConvolution.coeff_weightedSeries_mul_eq_weighted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/PeriodicConvolution.lean:375:0: 'SierpinskiFormal.PeriodicConvolution.weightedSeries_mul_hasSeedBlocks_of_prefix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [2808/2886] Built SierpinskiFormal.CommonSeed (3.0s)
+info: SierpinskiFormal/CommonSeed.lean:157:0: 'SierpinskiFormal.commonSeed_descendants_of_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/CommonSeed.lean:158:0: 'SierpinskiFormal.exists_commonSeed_for_indexed_kernels' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2809/2886] Built SierpinskiFormal.DilationInitialZero (3.2s)
+warning: SierpinskiFormal/DilationInitialZero.lean:41:19: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Prod.snd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/DilationInitialZero.lean:41:29: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Prod.fst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: SierpinskiFormal/DilationInitialZero.lean:159:0: 'IndependentZeroBlocks.polynomial_dilation_matrix_eq_zero_of_constant_coeff_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/DilationInitialZero.lean:160:0: 'IndependentZeroBlocks.polynomial_dilation_family_eq_zero_of_constant_coeff_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/DilationInitialZero.lean:161:0: 'IndependentZeroBlocks.polynomial_dilation_matrix_zeroBlocks_iff_any_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/DilationInitialZero.lean:162:0: 'IndependentZeroBlocks.polynomial_dilation_family_zeroBlocks_iff_any_window' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [2810/2886] Built SierpinskiFormal.MatrixWindowLift (4.0s)
+warning: SierpinskiFormal/MatrixWindowLift.lean:70:15: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Prod.snd, Polynomial.coeff_coe]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/MatrixWindowLift.lean:70:25: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Prod.fst, Polynomial.coeff_coe]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/MatrixWindowLift.lean:142:22: This simp argument is unused:
+  q
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hp.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/MatrixWindowLift.lean:142:25: This simp argument is unused:
+  hp.1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [q]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/MatrixWindowLift.lean:186:12: This simp argument is unused:
+  q
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hp.1, hindex, Nat.sub_sub_self hp.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/MatrixWindowLift.lean:186:15: This simp argument is unused:
+  hp.1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [q, hindex, Nat.sub_sub_self hp.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/MatrixWindowLift.lean:198:17: This simp argument is unused:
+  matrixWindowState
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hts, Nat.not_le.mpr hsn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: SierpinskiFormal/MatrixWindowLift.lean:279:0: 'IndependentZeroBlocks.coeff_polynomial_mul_dilate_eq_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/MatrixWindowLift.lean:280:0: 'IndependentZeroBlocks.matrixWindowState_digit_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/MatrixWindowLift.lean:281:0: 'IndependentZeroBlocks.polynomialDilationMatrix_exists_windowDigitRecurrence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [2811/2886] Built SierpinskiFormal.SparseIntervalDefs (3.0s)
+⚠ [2812/2886] Built SierpinskiFormal.RationalTailDensity (3.5s)
+warning: SierpinskiFormal/RationalTailDensity.lean:51:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2813/2886] Built SierpinskiFormal.FourierBridge (2.7s)
+warning: SierpinskiFormal/FourierBridge.lean:141:13: This simp argument is unused:
+  map_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [PowerSeries.coeff_C_mul, map_sum, PeriodicConvolution.coeff_weightedSeries]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: SierpinskiFormal/FourierBridge.lean:164:0: 'SierpinskiFormal.coprime_mul_fourier_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/FourierBridge.lean:165:0: 'SierpinskiFormal.coeff_stepGeometric_mul_eq_fourier' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/FourierBridge.lean:166:0: 'SierpinskiFormal.stepGeometric_mul_eq_sum_weightedSeries' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SierpinskiFormal/FourierBridge.lean:167:0: 'SierpinskiFormal.stepGeometric_mul_eq_sum_weightedSeries_of_isPrimitiveRoot' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [2814/2886] Built SierpinskiFormal.SupportDensityBounds (4.2s)
+⚠ [2815/2886] Built SierpinskiFormal.ProductPrefixes (3.4s)
+warning: SierpinskiFormal/ProductPrefixes.lean:112:32: This simp argument is unused:
+  T
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [kernelPrefix, dilate_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [2816/2886] Built SierpinskiFormal.KernelPrefix (2.8s)
+⚠ [2817/2886] Built SierpinskiFormal.SupportCounting (3.7s)
+warning: SierpinskiFormal/SupportCounting.lean:30:13: This simp argument is unused:
+  supportCount
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, Finset.mem_range] at hn ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/SupportCounting.lean:148:36: This simp argument is unused:
+  Nat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [l, Nat.cast_pow, pow_succ, div_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/SupportCounting.lean:217:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [2818/2886] Built SierpinskiFormal.PowerIntervalDefs (2.9s)
+✔ [2819/2886] Built SierpinskiFormal.FiniteExceptionalGaps (3.2s)
+✔ [2820/2886] Built SierpinskiFormal.FiniteFieldPrefixSaturation (2.6s)
+✔ [2821/2886] Built SierpinskiFormal.KernelPeriodic (2.6s)
+⚠ [2822/2886] Built SierpinskiFormal.SparseIntervalBridges (3.9s)
+warning: SierpinskiFormal/SparseIntervalBridges.lean:49:16: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+✔ [2823/2886] Built SierpinskiFormal.PrefixDilation (2.0s)
+✔ [2824/2886] Built SierpinskiFormal.PolynomialBlockSupport (3.4s)
+⚠ [2825/2886] Built SierpinskiFormal.MissingDigitPrefixes (4.0s)
+warning: SierpinskiFormal/MissingDigitPrefixes.lean:113:39: This simp argument is unused:
+  Polynomial.coeff_monomial
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [firstSupportedDigitPrefix, Polynomial.coeff_one, hk.ne']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/MissingDigitPrefixes.lean:140:14: This simp argument is unused:
+  hz
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hkq, hk.ne']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/MissingDigitPrefixes.lean:300:68: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.coe_add, Polynomial.coe_mul, hcoeone]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [2826/2886] Built SierpinskiFormal.PowerSupportFamilies (2.9s)
+✔ [2827/2886] Built SierpinskiFormal.DigitSupportGrowth (3.1s)
+✔ [2828/2886] Built SierpinskiFormal.CompatibleKernels (2.1s)
+⚠ [2829/2886] Built SierpinskiFormal.RationalDensityCriterion (4.7s)
+warning: SierpinskiFormal/RationalDensityCriterion.lean:102:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [2830/2886] Built SierpinskiFormal.PrefixGapCriterion (2.5s)
+⚠ [2831/2886] Built SierpinskiFormal.ArbitraryRational (3.8s)
+warning: SierpinskiFormal/ArbitraryRational.lean:36:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/ArbitraryRational.lean:37:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/ArbitraryRational.lean:38:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/ArbitraryRational.lean:39:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: SierpinskiFormal/ArbitraryRational.lean:179:0: 'IndependentZeroBlocks.arbitrary_rational_multiplier_zeroBlocks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SierpinskiFormal/ArbitraryRational.lean:180:0: 'IndependentZeroBlocks.rational_multiplier_zeroBlocks_of_equations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [2832/2886] Built SierpinskiFormal.PowerExceptionalGaps (4.9s)
+✔ [2833/2886] Built SierpinskiFormal.ExactPowerGrowth (3.5s)
+✔ [2834/2886] Built SierpinskiFormal.PowerDensityBridge (3.9s)
+⚠ [2835/2886] Built SierpinskiFormal.DigitSupportCardinality (3.0s)
+warning: SierpinskiFormal/DigitSupportCardinality.lean:34:8: This simp argument is unused:
+  radixDigitSupportCount
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hb, hA0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [2836/2886] Built SierpinskiFormal.RationalPrefixTransfer (3.9s)
+✔ [2837/2886] Built SierpinskiFormal.AbsorbedBlockForm (4.7s)
+✔ [2838/2886] Built SierpinskiFormal.FiniteFieldDensity (3.4s)
+⚠ [2839/2886] Built SierpinskiFormal.UniversalRational (3.8s)
+warning: SierpinskiFormal/UniversalRational.lean:28:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalRational.lean:29:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalRational.lean:30:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SierpinskiFormal/UniversalRational.lean:31:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [2840/2886] Built SierpinskiFormal.UniformRelativeHoles (5.4s)
+✔ [2841/2886] Built SierpinskiFormal.QuantitativeSynchronization (3.3s)
+⚠ [2842/2886] Built SierpinskiFormal.PowerFilterBounds (3.4s)
+warning: SierpinskiFormal/PowerFilterBounds.lean:62:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [2843/2886] Built SierpinskiFormal.ExactDigitSupport (3.2s)
+✔ [2844/2886] Built SierpinskiFormal.RelativeHoleSynchronization (2.9s)
+✔ [2845/2886] Built SierpinskiFormal.SimultaneousRational (3.0s)
+ℹ [2846/2886] Built SierpinskiFormal.ZeroCylinderGeometry (3.4s)
+info: SierpinskiFormal/ZeroCylinderGeometry.lean:103:0: 'IndependentZeroBlocks.hasUniformRelativeHoles_of_radix_zeroCylinder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [2847/2886] Built SierpinskiFormal.PorousSupportBounds (3.6s)
+✔ [2848/2886] Built SierpinskiFormal.DigitRelativeHoles (2.9s)
+✔ [2849/2886] Built SierpinskiFormal.RationalSupportGrowth (2.9s)
+✔ [2850/2886] Built SierpinskiFormal.RationalSpan (2.9s)
+✔ [2851/2886] Built SierpinskiFormal.MissingDigitFiber (4.4s)
+⚠ [2852/2886] Built SierpinskiFormal.ImmortalConeDensity (2.9s)
+warning: SierpinskiFormal/ImmortalConeDensity.lean:76:44: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: SierpinskiFormal/ImmortalConeDensity.lean:139:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [2853/2886] Built SierpinskiFormal.SublinearAbsorption (2.7s)
+✔ [2854/2886] Built SierpinskiFormal.RationalRelativeHoles (2.9s)
+⚠ [2855/2886] Built SierpinskiFormal.PoleCompatibility (2.5s)
+warning: SierpinskiFormal/PoleCompatibility.lean:30:30: This simp argument is unused:
+  hA0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Polynomial.coeff_mul, hD0] at heq
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/PoleCompatibility.lean:73:37: This simp argument is unused:
+  mul_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [geometricDenominator, sub_mul, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [2856/2886] Built SierpinskiFormal.LinearDigitRepresentation (2.3s)
+✔ [2857/2886] Built SierpinskiFormal.MissingDigitGrowth (2.4s)
+⚠ [2858/2886] Built SierpinskiFormal.SynchronizationBeyondCompatibility (3.2s)
+warning: SierpinskiFormal/SynchronizationBeyondCompatibility.lean:41:67: This simp argument is unused:
+  show n ≠ 1 by omega
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [separatedPrefixKernel, Polynomial.coeff_X_pow, show n ≠ 0 by omega, Polynomial.coeff_one,
+    Polynomial.coeff_X, show 1 ≠ n by omega, show n ≠ 2 by omega, show n ≠ 4 by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/SynchronizationBeyondCompatibility.lean:71:86: This simp argument is unused:
+  Polynomial.coeff_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hj1, separatedPrefixKernel, Polynomial.coeff_X_pow, Polynomial.coeff_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/SynchronizationBeyondCompatibility.lean:138:33: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_range_succ, h1, h2, h3, separatedPrefixKernel, Polynomial.coeff_X_pow, Polynomial.coeff_one,
+    Polynomial.coeff_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/SynchronizationBeyondCompatibility.lean:138:37: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_range_succ, h0, h2, h3, separatedPrefixKernel, Polynomial.coeff_X_pow, Polynomial.coeff_one,
+    Polynomial.coeff_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/SynchronizationBeyondCompatibility.lean:138:41: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_range_succ, h0, h1, h3, separatedPrefixKernel, Polynomial.coeff_X_pow, Polynomial.coeff_one,
+    Polynomial.coeff_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SierpinskiFormal/SynchronizationBeyondCompatibility.lean:138:45: This simp argument is unused:
+  h3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_range_succ, h0, h1, h2, separatedPrefixKernel, Polynomial.coeff_X_pow, Polynomial.coeff_one,
+    Polynomial.coeff_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [2859/2886] Built SierpinskiFormal.UniformDigitGrowth (3.3s)
+✔ [2860/2886] Built SierpinskiFormal.QuantitativeGapExamples (2.7s)
+✔ [2861/2886] Built SierpinskiFormal.UniformPowerClosure (3.1s)
+✔ [2862/2886] Built SierpinskiFormal.ExactGrowthGapExamples (2.6s)
+⚠ [2863/2886] Built SierpinskiFormal.FiniteWindowSupport (2.6s)
+warning: SierpinskiFormal/FiniteWindowSupport.lean:109:45: This simp argument is unused:
+  Nat.mul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [2864/2886] Built SierpinskiFormal.SupportGeometryEquivalence (2.9s)
+✔ [2865/2886] Built SierpinskiFormal.MissingDigitDensity (3.0s)
+✔ [2866/2886] Built SierpinskiFormal.AffinePredicateDensity (4.4s)
+✔ [2867/2886] Built SierpinskiFormal.MissingDigitClassification (2.7s)
+✔ [2868/2886] Built SierpinskiFormal.OptimalUniformClassification (2.6s)
+⚠ [2869/2886] Built SierpinskiFormal.LinearDigitGeometry (2.6s)
+warning: SierpinskiFormal/LinearDigitGeometry.lean:86:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2870/2886] Built SierpinskiFormal.MatrixSparseGeometry (2.7s)
+warning: SierpinskiFormal/MatrixSparseGeometry.lean:29:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [2871/2886] Built SierpinskiFormal.ObservableSpan (3.2s)
+✔ [2872/2886] Built SierpinskiFormal.MatrixCertificateTransfer (2.2s)
+✔ [2873/2886] Built SierpinskiFormal.ObservableNoetherian (2.6s)
+⚠ [2874/2886] Built SierpinskiFormal.ScalarObservationGeometry (2.5s)
+warning: SierpinskiFormal/ScalarObservationGeometry.lean:55:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: SierpinskiFormal/ScalarObservationGeometry.lean:184:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
