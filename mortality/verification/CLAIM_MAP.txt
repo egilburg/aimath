@@ -6,7 +6,7 @@ Declarations are in namespace `FiniteMonoidMortality`, under `lean/FiniteMonoidM
 |---|---|---|
 | Theorem 1.1 real bound | Main.lean: `exists_short_zero_word_of_finite_real_monoid`, `finiteMortalityBound` | n>0; arbitrary index type A; finite range of all matrix words; existence of zero word |
 | Lemma 2.1, Corollary 2.2 short observation | QuadraticObservation.lean: `exists_short_quadratic_observation_ne_zero`, `exists_short_quadratic_observation_matrixDual_ne_zero` and their imports | Affine scalar observation encoded linearly on R⊕Sym_n; bound n(n+1)/2 |
-| Lemma 3.1 finite-group average | InvariantForms.lean: `exists_invariant_quadraticForm_of_finite_mul_mem`, `exists_invariant_quadraticForm_returnMatrix_of_finite` | Symmetry, positive trace and invariance suffice; no inverse in final signal |
+| Lemma 3.1 finite-group average | InvariantForms.lean: `exists_invariant_quadraticForm_of_finite_mul_mem`, `exists_invariant_quadraticForm_compressedReturn_of_finite` | Symmetry, positive trace and invariance suffice; no inverse in final signal |
 | Proposition 4.1 short sandwich | Main.lean: `exists_short_rank_decreasing_sandwich_of_finite` | Middle word length ≤n(n+1)/2 in original ambient dimension n; both copies of h remain |
 | Section 5 recurrence | Descent.lean: `exists_zero_word_bound_of_short_sandwich` | Starts with a singular letter; L_next≤2L+n(n+1)/2; at most n−1 descents |
 | Corollary 5.1 rational specialization | Main.lean: `exists_short_zero_word_of_finite_rational_monoid` | Entrywise Q→R embedding preserves zero and witness length |

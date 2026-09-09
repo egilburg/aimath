@@ -1,100 +1,22 @@
-Sharp Finite Markov Order in Intrinsic Sofic Dimension
-Lean development
+PROOF STRUCTURE AND PUBLIC VERSION CORRESPONDENCE
 
-Build and audit
----------------
-Install the toolchain pinned by lean-toolchain, then run:
+The mathematical module guide and ordinary build instructions are in
+../lean/README.txt. CLAIM_MAP.txt maps manuscript claims to current
+declarations. README.txt in this directory explains the recorded checks.
 
-  lake exe cache get
-  LAKE_ARTIFACT_CACHE=false lake build Publication
-  lake env lean Audit.lean
+This r2 proof preserves the published r1 statements and assumptions.
+The earlier public proof is available at:
+https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/sofic_markov_order/lean
 
-verify.sh runs the build and endpoint axiom audit, placing fresh logs in
-../recheck/. The accompanying verification/ directory records the verification
-environment, hashes and the comparison with the previous public proof.
-The script disables Lake's global artifact cache. For a full source rebuild,
-also remove the current project's .lake/build directory before running it;
-the pinned external dependency cache can be reused.
+REFACTOR_MAP.json records the old-to-new declaration correspondence.
+PROVENANCE.json records comparison scope, source reduction counts and
+results. Source-text matching is supplementary evidence; it does not
+replace compiled checks of theorem statements and their definitions.
 
-For the optional historical compatibility check, build the previous public
-Lean package from commit 735383665b012b5b2d30450735ed062fde7bd030 of
-https://github.com/egilburg/aimath, then run:
+SemanticComparison.lean checks the four endpoint types and their custom
+definition closure under explicit renaming. The optional verify.sh
+--compare mode uses a separately built copy of the earlier public proof;
+the current proof build does not require that historical package.
 
-  ./verify.sh --compare /path/to/previous/sofic_markov_order/lean
-
-That optional audit compares all four endpoint types and their custom
-definition dependencies under the recorded renaming. The previous package
-is not needed by the current proof's ordinary build or axiom audit.
-
-Entry points
-------------
-Publication.lean imports the two final theorem modules. All paper declarations
-are in the namespace SoficMarkovOrder.
-
-  stationary_process_markov_cutoff_of_finite_hankel
-    A stationary finite-alphabet probability process with finite real Hankel
-    dimension n and some finite Markov order has Markov order at most n.choose 2.
-
-  stationary_process_markov_cutoff_of_representation
-    A finite linear presentation supplies the finite-Hankel hypothesis; the
-    bound uses intrinsic dimension and requires no minimality assumption.
-
-  exists_rational_sharp_sofic_process
-    For every n >= 2, an actual stationary probability process has a nonnegative
-    rational n-dimensional presentation, intrinsic Hankel dimension n and exact
-    Markov order n.choose 2. The alphabet can depend on n. Its total transition
-    is the uniform mean. The theorem includes the n = 2 boundary case.
-
-  processMarkov_iff_rankOne
-    For a reduced presentation of a stationary probability law, the finite-
-    history conditional-probability Markov condition is equivalent to rank at
-    most one for all products of the specified length, including forbidden
-    words and order zero.
-
-The ProcessMarkov definition uses cylinder events and conditional probabilities;
-it does not define Markov order by matrix rank. sequenceShift is the usual left
-shift on one-sided sequences. Word products act on column vectors, so the
-rightmost letter in a product acts first.
-
-Proof organization
-------------------
-Upper bound:
-  WordProducts         Word products, reachable columns and their span.
-  CommonKernel         Dimension cutoff for eventual universal nilpotence.
-  ExteriorRank         Exterior-square rank detection and binomial cutoff.
-  HankelRankCriterion  Reduced representations, Hankel dimension and rank test.
-  StationaryWordLaw    Cylinder consistency and positive-history Markovity.
-  SequenceSpace        One-sided shift and finite prefixes.
-  ProcessMarkov        Actual process laws and stochastic rank criterion.
-  CanonicalHankel      Canonical reduced representation and intrinsic theorem.
-
-Sharpness:
-  ExteriorPairs        Two-coordinate maps and their exterior operators.
-  BasisChain           Consecutive matrix units and the surviving critical word.
-  PairChain            Pair-chain rank delay, with explicit prior attribution.
-  PositiveCompletion   Small scaling and positive single-entry residual letters.
-  SharpWordLaw         Consistency, reducedness, exact order and exact dimension.
-  RationalSharpness    Rational entries and the all-dimensional word-law theorem.
-  FiniteWords          Word weights and finite tuple decomposition.
-  IIDMeasure           Finite probability weights and their infinite product law.
-  IIDWordLaw           Exact finite-word expectation for the IID law.
-  IIDPairFactor        Stationary two-block IID factors and cylinder probabilities.
-  SelectorWeights     Finite product normalization and coordinate marginals.
-  UniformRealization  Concrete probability realization of the sharp matrices.
-  SharpProcess        Joined rational stationary sharpness theorem.
-
-Attribution and scope
----------------------
-The word-level rank criterion is Holland's criterion, with source attribution
-and the inspected reproduction specified in the manuscript. The pair-chain
-core is Trahtman's 1998 construction, Section 6, in column-action convention;
-Beal and Senellart (1998) provide the deterministic binomial-delay precedent.
-The manuscript contains complete bibliographic information and distinguishes
-these ingredients from the joined intrinsic stochastic result.
-
-The two-sided extension comparison and historical identification of the
-Trahtman matrices are manuscript arguments, not separate Lean endpoints.
-The formal endpoints concern one-sided stationary processes. No optimal
-fixed-alphabet size or computational efficiency claim is made.
-
-Source reduction: 192 to 21 mathematical modules; 31613 to 2186 lines. See REFACTOR_MAP.json for retained declarations and source correspondence. The four endpoint types and their full custom statement-definition closure (21 declarations including endpoints) matched as compiled Lean expressions under explicit renaming.
+This is evidence about published versions, not an additional mathematical
+assumption or a claim of professional human review or new novelty.

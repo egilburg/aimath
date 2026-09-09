@@ -21,11 +21,9 @@
   "changes": "Paper-specific Lean extraction and naming; unchanged mathematical claims and arguments; updated manuscript formal references and current version metadata.",
   "verification": {
     "status": "passed",
-    "source_build": "Fresh extracted-project build recorded in verification/; reused for byte-identical public proof export.",
-    "new_build_during_public_transfer": false,
+    "source_build": "Recorded successful build and audits of the unchanged r2 proof sources; no new build claimed for supporting-documentation maintenance.",
     "provenance": "verification/PROVENANCE.json",
-    "checksums": "verification/SHA256SUMS",
-    "historical_record_status": "The verified_private_review_update status in build provenance records the verification stage; this publication metadata records its subsequent release."
+    "checksums": "verification/SHA256SUMS"
   },
   "inventory_algorithm": "SHA-256 of every public package file except PUBLICATION.json itself; no private research archive included.",
   "files": [
@@ -221,8 +219,8 @@
     },
     {
       "path": "verification/CLAIM_MAP.txt",
-      "bytes": 2486,
-      "sha256": "26fdc49c24ae59df6420fcdf6a854093edaf049253502d5954bd4c531d3c0543"
+      "bytes": 2490,
+      "sha256": "360a39a3572b29343fa446e0e820e064ef980311ef6322178e8adb2cfd81656e"
     },
     {
       "path": "verification/ENVIRONMENT.json",
@@ -231,18 +229,18 @@
     },
     {
       "path": "verification/PROVENANCE.json",
-      "bytes": 2776,
-      "sha256": "434cca374f08410b0b0e96d0b8777cd567a1ef57ca3b9679cac72b0a2942ae84"
+      "bytes": 2613,
+      "sha256": "9d9b7a0773d7b6439c125f4f38b81e515e8c7a00ab826e11b2b967108ada5acb"
     },
     {
       "path": "verification/README.txt",
-      "bytes": 2482,
-      "sha256": "01019be4876a0a4fa2bcda4b914bec0093c63c262904f66e1c4d5b9651ddf1b2"
+      "bytes": 2874,
+      "sha256": "bfbb05df678c1f7d8c5fd5f2e3c4c279778f77a69f8401aed5dd21c7def59ad0"
     },
     {
       "path": "verification/REFACTOR.txt",
-      "bytes": 3497,
-      "sha256": "b6a03409db3928fa1133cb1038c5ff4d4edd3ed775bd335f0cc759111d664e11"
+      "bytes": 1101,
+      "sha256": "d39e7ac0bc6604284d53993b8c6ab0191212620cab6d70cb930259fc4072e396"
     },
     {
       "path": "verification/REFACTOR_MAP.json",
@@ -250,19 +248,9 @@
       "sha256": "98c4c6742d9c24172c522132594750191e293376ae0237ecbe3594cdf2f4a015"
     },
     {
-      "path": "verification/REPRODUCE_EXTRACTION.txt",
-      "bytes": 2020,
-      "sha256": "274a73d8494990093b829fe01c1b19a1642d1567e5a08bf44e4cfd162a61386e"
-    },
-    {
-      "path": "verification/REVIEW_NOTES.txt",
-      "bytes": 930,
-      "sha256": "cb25e2af1284413be95660e91d8f0a5c366ec3a8160df9b6c6f75a8e48889679"
-    },
-    {
       "path": "verification/SHA256SUMS",
-      "bytes": 3632,
-      "sha256": "fcd4078b4ef3ca4060be9b4125d059918a50b65e433c42cef67b0c8a92b16b88"
+      "bytes": 3023,
+      "sha256": "9b3500034682f9e9f01bd467ca4c51b656698e681aeb91e7ae87e2cf7932e546"
     },
     {
       "path": "verification/VERIFICATION_ENVIRONMENT.txt",
@@ -285,34 +273,14 @@
       "sha256": "eb825eeb6b0fd72111f369c14b77e59501f5e2933c6b17ffe91f8b49238d5c42"
     },
     {
-      "path": "verification/extract.py",
-      "bytes": 7560,
-      "sha256": "bb15986188f3688ee2e53da42c6b1d755a46c55dcde104ef48fd05baf302755d"
-    },
-    {
-      "path": "verification/extraction_reproduction.json",
-      "bytes": 703,
-      "sha256": "31dfdce3ecdc444582ec20eca6e8fbdc30db091942d1f158ab5fe2353c1b9614"
-    },
-    {
       "path": "verification/lean-version.txt",
       "bytes": 106,
       "sha256": "63f3e16bf0258e2cc0ab3010eb1830723df9bb85097b7b72b0137b9be25a78e9"
     },
     {
-      "path": "verification/make_specification.py",
-      "bytes": 1804,
-      "sha256": "ff89a1aee855d50d30ae4e61544835c92db64ec2e4edca962627407aaf31c351"
-    },
-    {
       "path": "verification/manuscript-build.log",
       "bytes": 27997,
       "sha256": "60c856b1d9d6de6127b7aca2c7fd1f284da83ed47a502192436dff03ee6f2dfd"
-    },
-    {
-      "path": "verification/manuscript_correspondence.json",
-      "bytes": 251,
-      "sha256": "32e065cc18f4e65d962b9650a8a1c83463498c50d94a9a74d7b39f0191f59a82"
     },
     {
       "path": "verification/runtime-self-exe.c",
@@ -334,5 +302,10 @@
       "bytes": 400,
       "sha256": "957fc842dfe4b55eaa7690e3948e635b622f45d8e71a8bf0aac63e14139a320c"
     }
-  ]
+  ],
+  "supporting_documentation": {
+    "revision": "2026-09-09",
+    "scope": "Public documentation and inventory cleanup; manuscript and formal proof revision remain r2.",
+    "identity": "The containing Git commit identifies the current supporting files; immutable_snapshot identifies the original r2 publication."
+  }
 }
