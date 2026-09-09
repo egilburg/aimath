@@ -1,7 +1,7 @@
 VERIFICATION OF REVISION 2026-09-08-r2
 
-This supplement verifies the extracted SoficMarkovOrder development. The earlier
-r1 master-library build is not used as a substitute for these new checks.
+This supplement verifies the extracted SoficMarkovOrder development. The recorded build and audits apply to the current
+proof sources; this documentation cleanup does not claim a new build.
 
 RESULTS
 Fresh build from empty project output with LAKE_ARTIFACT_CACHE=false: exit 0.
@@ -17,7 +17,8 @@ dependency revisions, cache/source-build provenance and runtime compatibility wr
 source_closure.json records the current module graph and hashes.
 SHA256SUMS covers the current lean/ and verification/ files, except itself.
 From the package root, run sha256sum -c verification/SHA256SUMS.
-Then follow ../README.txt and ../lean/README.txt to run sh verify.sh in lean/.
+From the package root, follow README.txt and lean/README.txt to run
+sh verify.sh in lean/.
 Fresh replay output goes to recheck/, preserving the recorded successful logs.
 
 READING THE PROOF
@@ -38,5 +39,4 @@ current proof build. source_comparison.py/json provide a supplementary source ch
 These checks concern formal mathematical statements and their specified assumptions.
 They do not establish global priority or constitute professional human review.
 The build logs retain ordinary linter warnings. No error or unproved project axiom
-supports the advertised endpoints. Historical research records are retained privately;
-they are not required to read or build this paper's current proof.
+supports the advertised endpoints. The current proof builds from this package and its pinned public dependencies.

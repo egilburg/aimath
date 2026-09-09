@@ -43,3 +43,15 @@ Mortality: https://github.com/egilburg/aimath/tree/fff0f00fe6b7a0b81690667fdec97
 The following metadata commit supplies these exact links and citation locators.
 Manuscript PDFs/TeX, Lean source and verification bytes remain those of the
 immutable r2 snapshot. Current public file inventories are in PUBLICATION.json.
+
+2026-09-09 — Supporting documentation maintenance for r2
+Removed proof-generation scripts and internal review/editing receipts.
+Public provenance now identifies publications and recorded verification
+without private package revisions or internal lifecycle labels. Consolidated
+the proof guide and corrected one mortality claim-map declaration name and
+the documented sofic historical-comparison path. Refreshed file inventories
+and verification checksums. Manuscripts, Lean sources/configuration, executable
+verification tools and original build/audit/runtime records are unchanged.
+No new compilation or mathematical verification is claimed. Mathematical
+revision and immutable r1/r2 snapshots above remain unchanged. The containing
+Git commit identifies this supporting-documentation revision.

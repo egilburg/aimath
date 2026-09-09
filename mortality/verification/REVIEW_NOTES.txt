@@ -1,7 +1,0 @@
-AI source-review scope for the paper-specific extraction
-
-A separate review inspected the current endpoint statements, risk-bearing definitions and proof structure against the earlier source. This was AI review, not professional human mathematical review. Source inspection complements the fresh Lean build and recorded statement-preservation checks.
-
-Mortality: arbitrary generator type; finiteness of the entire product monoid; exact numeric bound; singular first letter; both outer words charged at every descent; n=1 case retained.
-
-The source review found genuine extraction rather than a renamed master-library copy. Normalized source-text comparison is supplementary provenance and does not by itself check section-variable contexts or typeclass elaboration; the compiled compatibility/specification checks address the formal statement semantics. Exposition-only manuscript bridges remain labeled as such in CLAIM_MAP.txt.

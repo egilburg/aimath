@@ -1,11 +1,9 @@
 {
   "revision": "2026-09-08-r2",
-  "goal": "sofic_markov_order",
   "verified_utc": "2026-09-08T16:31:04.993902+00:00",
-  "status": "verified_private_review_update",
+  "status": "passed",
   "source_public_revision": "735383665b012b5b2d30450735ed062fde7bd030",
   "source_public_url": "https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/sofic_markov_order/lean",
-  "source_private_package_revision": "c8716dd770b9553b7a1f96b507f528feed7e46eb",
   "environment": "ENVIRONMENT.json",
   "environment_instructions": "VERIFICATION_ENVIRONMENT.txt",
   "build_log": "build.log",
@@ -17,7 +15,7 @@
     "lake_jobs": 3051,
     "endpoint_count": 4,
     "statement_and_definition_comparison": {
-      "command": "lake env sh -c 'LEAN_PATH=\"$1/.lake/build/lib/lean:$LEAN_PATH\"; export LEAN_PATH; lean ../SemanticComparison.lean' sh OLD_LEAN_DIRECTORY",
+      "command": "lake env sh -c 'LEAN_PATH=\"$1/.lake/build/lib/lean:$LEAN_PATH\"; export LEAN_PATH; lean ../verification/SemanticComparison.lean' sh OLD_LEAN_DIRECTORY",
       "exit_code": 0,
       "result": "PASS",
       "endpoint_types": 4,
@@ -56,9 +54,7 @@
   "mathematical_modules": 21,
   "source_closure": "source_closure.json",
   "checksum_manifest": "SHA256SUMS",
-  "source_hashes_bind_current_extraction": true,
   "no_old_project_cache_used_for_new_build": true,
-  "private_research_evidence_is_not_manuscript_attachment": true,
   "professional_human_review": false,
   "changes": [
     "Extracted only required word products/reachable-span definitions from the mortality ancestor.",
@@ -67,5 +63,7 @@
     "Retained focused algebraic and stochastic proof components under coherent module names and SoficMarkovOrder namespace.",
     "Replaced digitShift/digitHead/stationaryPrefix names by sequenceShift/sequenceHead/orbitPrefix; renamed soficPairChain to pairChain.",
     "Preserved Holland/Beal-Senellart/Trahtman credit in proof-facing documentation."
-  ]
+  ],
+  "publication_id": "sofic_markov_order",
+  "source_hashes_bind_verified_sources": true
 }

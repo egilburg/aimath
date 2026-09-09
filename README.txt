@@ -18,7 +18,10 @@ Each folder contains the PDF, editable TeX, references, complete project-local
 Lean sources, pinned dependencies, build instructions, citation and license files.
 The verification/ folders include build logs, statement/axiom audits, proof-source
 provenance, manuscript correspondence and verification hashes.
-Research evidence/history archives are not part of these public releases.
+This repository is a publication archive. Its contents support reading,
+citation, licensing and independent verification of the published results.
+Research planning, proof-generation workflows and production records are
+outside the public archive.
 
 Self-published; not professionally peer reviewed. Original mathematical
 contributions and exposition were produced by AI; prior work is credited.
