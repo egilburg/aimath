@@ -31,7 +31,7 @@ Formal proof checking and historical novelty are distinct questions.
 CC-BY-4.0 applies only to rights that can be granted; full text is in LICENSE.txt.
 Third-party notices and license exceptions are preserved in each package.
 
-Versions and permanent links: RELEASES.txt.
+Versions, permanent links and edition-tag backfill status: RELEASES.txt.
 Corrections: https://github.com/egilburg/aimath/issues (Correction report form).
 
 

@@ -55,3 +55,25 @@ verification tools and original build/audit/runtime records are unchanged.
 No new compilation or mathematical verification is claimed. Mathematical
 revision and immutable r1/r2 snapshots above remain unchanged. The containing
 Git commit identifies this supporting-documentation revision.
+
+
+EDITION TAGS — historical aliases prepared 9 September 2026
+
+Tag creation is pending. The verified existing commit links above remain usable.
+The proposed aliases identify the original editions, not today's supporting files:
+
+  mortality-r1           735383665b012b5b2d30450735ed062fde7bd030
+  mortality-r2           fff0f00fe6b7a0b81690667fdec97b86c4da816b
+  sofic_markov_order-r1  735383665b012b5b2d30450735ed062fde7bd030
+  sofic_markov_order-r2  fff0f00fe6b7a0b81690667fdec97b86c4da816b
+
+After creation, an edition folder is reachable using:
+https://github.com/egilburg/aimath/tree/<edition-tag>/<paper-folder>
+
+Published edition tags are retained without moving or reusing them. Each paper
+has its own revision sequence. The current branch may contain later supporting
+documentation; an edition tag retrieves the originally archived package.
+Historical snapshots retain the files that were distributed at that time.
+Tag backfill changes no manuscript, proof, release date or verification claim.
+Future manuscript editions include a compact revision/date/Archived edition line,
+with the archive hyperlink separate from the source-credit link.
