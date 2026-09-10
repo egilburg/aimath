@@ -42,3 +42,5 @@ Mortality: 2026-09-10-r3; 25 mathematical Lean modules.
 Sofic Markov order: 2026-09-08-r2; 21 mathematical Lean modules.
 Frozen prior editions and exact snapshot links are in RELEASES.txt.
 The mortality-r3 tag is pending; use its exact public commit locator there.
+
+- analytic_prefix_frequency_laws/ — Analytic laws for recognizable prefix frequencies (r1)

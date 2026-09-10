@@ -1,0 +1,431 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,margin=29mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array}
+\usepackage[numbers,square]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\usepackage{xcolor}
+\hypersetup{pdftitle={Analytic laws for recognizable prefix frequencies},pdfauthor={}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb N_0}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Qq}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Law}{\operatorname{Law}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\ev}{\operatorname{ev}}
+\newcommand{\Gap}{\mathcal G}
+\newcommand{\F}{\mathcal F}
+\newcommand{\code}[1]{{\small\nolinkurl{#1}}}
+\DeclareMathOperator{\End}{End}
+\author{}
+\date{}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Analytic laws for recognizable\\[3pt] prefix frequencies\par}
+\vspace{7pt}
+{\large Machine-generated mathematical report\par}
+\vspace{7pt}
+Revision r1 $\cdot$ 10 September 2026\par
+\vspace{3pt}
+Repository maintainer: \href{https://github.com/egilburg/aimath}{github.com/egilburg/aimath}\par
+\end{center}
+
+\medskip
+\noindent\textbf{Document status.}
+This report is a machine-generated mathematical artifact maintained for readable exposition, education, reproducibility, and inspection. It is released as a project record and makes no claim of peer review or expert endorsement. Mathematical claims should be assessed through the arguments, cited sources, and identified formal-verification evidence. The archived edition is maintained with the public repository release.
+
+\begin{abstract}
+Consider Boolean combinations of polynomial zero tests of finitely represented scalar word functions over a commutative ring. Along a finite-state labelled source, the frequency of the event among chronological prefixes can converge to a random value. We identify that value from a finite initial boundary: on an independent-selector realization of the source, it is determined by the word preceding the first occurrence of a fixed aligned marker. The marker is common to all positive edge weights on a fixed source support. The limiting law is consequently a countable mixture whose weights and branch values are real analytic in those weights. The same boundary represents finite joint laws; all mixed moments are analytic, and the joint exponential transform is locally holomorphic in complexified source parameters and entire in its transform variables. No irreducibility, stationary start, field hypothesis, or invertibility of the original matrices is required. A four-dimensional integer example has infinitely many distinct limiting values, separating this conclusion from finite-state occupation laws. The argument combines finite-module compression, stable group means, and an exact initial-boundary identification; a Lean development verifies the core law and analytic-transform statements.
+\end{abstract}
+
+\section{Introduction}
+Let a random source emit letters $X_1,X_2,\ldots$, and let $F(w)\in\{0,1\}$ be a property of finite words. We study
+\begin{equation}\label{eq:frequency}
+ C_N=\frac1N\sum_{n=0}^{N-1}F(X_1\cdots X_n),\qquad N\geq1.
+\end{equation}
+These are frequencies of prefixes growing from a fixed origin. They are not frequencies of a fixed sliding window. Information in the first few letters can therefore influence the limit forever, even when the letters are independent.
+
+For a regular language and a finite-state source, the product of the recognizing automaton with the source is a finite Markov chain. Its occupation limit is determined by the closed class eventually reached. On fixed positive transition support, hitting probabilities and stationary probabilities solve finite linear systems; the resulting finite-mixture weights and values are rational, hence analytic, functions of the transition parameters. Thus neither random limiting frequencies nor analytic finite-mixture formulas are peculiar to the setting considered here.
+
+Finite linear representations allow a different phenomenon. Their coefficients can cancel, and an exact zero test can recognize a nonregular language. A finite-state source does not make the resulting observation process a finite-state Markov chain. We show that a countable version of finite initial determination nevertheless survives, uniformly at the level of the analytic formulas. The central assertion is the identity
+\begin{equation}\label{eq:central-intro}
+ L=D_U(p)\quad\text{almost surely},
+ \qquad \Law_p(L)=\sum_{u\in\Gap}w_u(p)\,\delta_{D_u(p)}.
+\end{equation}
+Here $U$ is determined after an almost surely finite number of selector letters, and the countable index set, marker and analytic functions can be fixed before the positive source parameters $p$. Knowing only $\E[L]$, or even $\E[L\mid U]$, would not establish this identity.
+
+\paragraph{Relation to earlier work.}
+Finite linear representations and their sum, product and transducer constructions are classical in weighted automata and rational-series theory; see Sch\"utzenberger~\cite{Schutzenberger1961}. The compactness and mean-ergodic background is weak almost periodicity~\cite{Eberlein1949,Grothendieck1952,Sine1974WAP}. Stable-group invariant means supply the parameter-independent rational coefficients used below~\cite[Corollary 4.15]{Conant2021Stability}. We attribute these ingredients separately from the identification of the full law.
+
+Berth\'e, Goulet-Ouellet and Perrin~\cite[Theorem 20]{BertheGouletOuelletPerrin2025Density} prove probability-Ces\`aro density results for rational languages under invariant measures. Their source scope is broader in one direction; the present theorem concerns finite-state sources, nonregular algebraic observations and a random pathwise limit. Block Gorman and Perrin~\cite{BlockGormanPerrin2026Sequential} treat sequential densities for varying source laws. Pointwise analytic dependence in our theorem does not by itself give their varying-law conclusions.
+
+Michaliszyn and Otop~\cite{MichaliszynOtop2019Markov} study a different weighted-automaton semantics based on optimized additive run averages. That model should not be identified with a scalar matrix coefficient followed by a zero test. Likewise, infinite sets of frequency values occur in nearby probabilistic counter models~\cite{Kucera2015Existence}; our example is a separation within finite-dimensional recognizable observations, not a claim that infinite atomic laws are a new general phenomenon. Product-form word weights in reset and semaphore constructions also have established precedents~\cite{RhodesSchillingSilva2016Semaphore}.
+
+The result presented here is the joined finite-boundary theorem in the stated ring, observation and source scope. We make no first-priority claim for its individual ingredients. The theorem provides analytic branches, moments and exponential transforms; it does not assert analyticity of the law in total variation, an effective algorithm for the branches, or a rate of convergence in~\eqref{eq:frequency}.
+
+\paragraph{Organization.}
+Section~\ref{sec:main} states the result and its quantifiers. Sections~\ref{sec:algebra}--\ref{sec:marker} give the compression and one-marker argument. Sections~\ref{sec:blocks} and~\ref{sec:analytic} complete the source transfer and analytic law. Section~\ref{sec:examples} gives examples and limitations. Section~\ref{sec:formal} records the exact relationship with the Lean proof.
+
+\section{Observations, sources and the main theorem}\label{sec:main}
+\subsection{Recognizable Boolean observations}
+Let $R$ be a commutative ring with identity, and let $A$ be an alphabet. A scalar word function $f:A^*\to R$ is \emph{recognizable} if it has a finite linear representation
+\[
+ f(a_1\cdots a_n)=\lambda M_{a_1}\cdots M_{a_n}\gamma.
+\]
+Products are in chronological order; the empty product is the identity. Different functions may have different representation dimensions. No positivity or invertibility of the matrices is assumed.
+
+Fix finitely many recognizable functions $f_i$ and polynomials $P_j\in R[Z_1,\ldots,Z_m]$. For a Boolean operation $\beta:\{0,1\}^k\to\{0,1\}$, put
+\begin{equation}\label{eq:event}
+ F(w)=\beta\bigl(\one_{P_j(f_1(w),\ldots,f_m(w))\ne0}:1\leq j\leq k\bigr).
+\end{equation}
+Equalities are included by Boolean complementation. Comparisons using order, such as strict positivity of a real coefficient, are not included. Direct sums and tensor products realize each polynomial expression as another scalar recognizable function, so the proof can work with a finite family of nonzero tests.
+
+\subsection{Finite-state labelled sources}
+A source consists of a finite nonempty state set $Q$, a finite nonempty outgoing edge set $E(q)$ at each state, a target map and an output letter for every edge. Choose an initial state $q_0$. For raw edge weights
+\[
+ p\in\mathcal P:=\prod_{q\in Q}(0,\infty)^{E(q)},
+\]
+the transition probability at $q$ is
+\[
+ \pi_p(e\mid q)=\frac{p(q,e)}{\sum_{e'\in E(q)}p(q,e')}.
+\]
+The source support, target map and output labels stay fixed while $p$ varies. The chain may be reducible or periodic. Only finitely many letters are emitted, even if the ambient alphabet $A$ is infinite.
+
+For precise common-boundary statements, use the finite \emph{selector alphabet}
+\[
+ \Sigma=\prod_{q\in Q}E(q),\qquad
+ a_p(\sigma)=\prod_{q\in Q}\pi_p(\sigma(q)\mid q).
+\]
+Independent selectors with law $a_p$ generate the source by using, at each time, only the edge selected at the current state. This gives exactly the prescribed edge-recursive path law. Unused selector entries are latent randomness.
+
+\begin{theorem}[Common analytic boundary law]\label{thm:main}
+Fix the represented functions, the polynomials and the source support above. There is a nonempty word $h\in\Sigma^\ell$, chosen before $\beta$, $q_0$ and $p$, with the following properties. Set
+\[
+ \mathcal B=\Sigma^\ell,\quad e=h,\quad
+ \Gap=(\mathcal B\setminus\{e\})^*,\quad
+ P_p(b)=\prod_{r=1}^{\ell}a_p(b_r),\quad q_p=P_p(e).
+\]
+Let $U$ be the block word before the first $e$ in the aligned IID block sequence. For each fixed $\beta$ and $q_0$, there are functions $D_u:\mathcal P\to[0,1]$, $u\in\Gap$, such that:
+\begin{enumerate}
+\item For every $p\in\mathcal P$, $C_N\to D_U(p)$ almost surely and in $L^1$ for the actual source-prefix frequency~\eqref{eq:frequency}.
+\item The law is
+\begin{equation}\label{eq:mainlaw}
+ \Law_p(L)=\sum_{u\in\Gap}q_pP_p(u)\,\delta_{D_u(p)},
+ \qquad P_p(u)=\prod_{b\text{ in }u}P_p(b).
+\end{equation}
+Every displayed weight is positive, and their sum is one. Distinct boundary labels may represent the same atom.
+\item Every $D_u$ and every weight in~\eqref{eq:mainlaw} is real analytic on $\mathcal P$.
+\item Any fixed finite family of these observations and starting states can use the same $h$ and $U$. Writing its branch vector as $\mathbf D_u(p)\in[0,1]^r$, its joint law is the vector version of~\eqref{eq:mainlaw}. Every mixed moment is real analytic in $p$.
+\item The joint exponential transform
+\begin{equation}\label{eq:transform}
+ H(p,t)=\E_p e^{\langle t,\mathbf L\rangle}
+       =\sum_{u\in\Gap}q_pP_p(u)e^{\langle t,\mathbf D_u(p)\rangle}
+\end{equation}
+has a jointly holomorphic extension near each positive real $p$ and every complex $t$. At fixed $p$ it is entire in $t\in\C^r$.
+\end{enumerate}
+For each fixed source law, the probability-one statements can be made simultaneous over the selected finite family. A probability-one event common to uncountably many parameter values is not asserted.
+\end{theorem}
+
+The marker can be chosen after combining the finitely many polynomial realizations. We do not assert that it is chosen before all possible polynomial families or degrees. The initial boundary is a selector boundary: it need not be reconstructible from the emitted output prefix. Equality in law transfers to any realization of the same source path distribution.
+
+The proof gives more than abstract existence of analytic functions. Its coefficients are fixed rational numbers $m_{s,\xi,u,v}\in[0,1]$, independent of $p$, and
+\begin{equation}\label{eq:fullbranch}
+ D_u(p)=\frac1\ell\sum_{s=0}^{\ell-1}\ \sum_{\xi\in\Sigma^s}
+ a_p(\xi)\left(q_p\sum_{v\in\Gap}P_p(v)m_{s,\xi,u,v}\right).
+\end{equation}
+The dependence on the observation and starting state is suppressed. Rational coefficients in this convergent series do not imply rational branch values or rational functions of the parameters.
+
+\section{Algebraic preparation and stable return means}\label{sec:algebra}
+We describe the finite-module facts needed by the probability argument. Their role is to replace a possibly singular matrix action by invertible returns after a common word. The reduction preserves zero tests, including nilpotent information.
+
+\begin{lemma}[Faithful finite coefficient reduction]\label{lem:ring}
+The finitely many represented observations on the finite emitted alphabet can be realized over a commutative Artinian ring without changing any scalar zero test.
+\end{lemma}
+\begin{proof}
+All entries and polynomial coefficients lie in a finitely generated coefficient subring $R_0\subseteq R$. It is an image of a polynomial ring over $\mathbb Z$, and hence Noetherian. By Lasker--Noether primary decomposition, write $0=\bigcap_i Q_i$ with finitely many primary ideals. The ring $R_0$ embeds in $\prod_i R_0/Q_i$.
+
+In $S_i=R_0/Q_i$, the zero ideal is primary. Its radical $\mathfrak p_i$ is the nilradical. Every element outside $\mathfrak p_i$ is a non-zero-divisor: if $sx=0$ and $x\ne0$, primaryness forces $s$ to be nilpotent. Therefore localization gives an injection
+\[
+ S_i\hookrightarrow (S_i)_{\mathfrak p_i}.
+\]
+The latter ring is Noetherian and zero-dimensional, and thus Artinian. Taking the finite product gives a faithful Artinian target. Applying this injective ring map entrywise preserves every represented coefficient and whether it vanishes. Quotienting by primary ideals \emph{before} localization is essential to this argument. No flatness assertion or preservation of original module images is needed.
+\end{proof}
+
+After direct-sum assembly, let $X$ be the resulting finite free module and let $T_a\in\End_R(X)$ be the common action. It has finite length, by the standard Artinian finite-length theorem~\cite[Tag 00JB]{Stacks}. The observation is a Boolean combination of coefficients $\lambda_jT_w\gamma$.
+
+\begin{lemma}[Common compression]\label{lem:compression}
+There are a nonempty word $h$, a finite-length module $B$, and maps
+$U:B\to X$, $V:X\to B$ such that $T_h=UV$ and
+\[
+ R_g=VT_gU\in\Aut_R(B)\qquad(g\in A^*).
+\]
+They can be chosen from the action before the rows, seed and Boolean operation.
+\end{lemma}
+\begin{proof}
+Choose a nonempty product $T_h$ whose image has minimal composition length among nonempty products. Set $B=\operatorname{im}T_h$, let $U$ be the inclusion, and let $V$ be $T_h$ with codomain restricted to $B$.
+For every $g$, the image of $T_hT_gT_h$ is contained in $B$ and has length at least that of $B$ by minimality. The lengths are equal, so that image is $B$. Equivalently, $VT_gU$ is onto $B$. A surjective endomorphism of a finite-length module is injective, proving the claim. This also covers $B=0$.
+\end{proof}
+
+For now suppose the marker is a single letter $e$; blocking will supply this situation. Put $A_0=A\setminus\{e\}$ and $\Gap=A_0^*$. Let $G$ be the countable group generated by the automorphisms $R_g$, $g\in\Gap$. For fixed boundary words $u,v$, define
+\begin{equation}\label{eq:Q}
+ Q_{u,v}(x)=\beta\bigl(\one_{\lambda_jT_uU\,x\,VT_v\gamma\ne0}:j\bigr),
+ \qquad x\in G.
+\end{equation}
+The factorization is exact:
+\begin{equation}\label{eq:factor}
+ F(u e g_1 e\cdots g_j e v)=Q_{u,v}(R_{g_1}\cdots R_{g_j}).
+\end{equation}
+
+\begin{lemma}[Stable coordinate means]\label{lem:means}
+For every $u,v$, there is a rational number $m_{u,v}\in[0,1]$, independent of a positive probability law on the gap generators, such that their chronological random walk $Z_j$ satisfies
+\[
+ \frac1J\sum_{j=0}^{J-1}Q_{u,v}(Z_j)\longrightarrow m_{u,v}
+ \quad\text{almost surely}.
+\]
+The same mean is obtained after any fixed group translation of the starting coordinate. For each law the conclusion holds simultaneously over countably many pairs $u,v$.
+\end{lemma}
+\begin{proof}
+We recall why the stable-group machinery applies and why a stationary measure need not be unique. For a finite-length module, neither its column span nor its dual admits an infinite strictly ascending chain of submodules. A triangular zero/nonzero pattern for a coefficient pairing would create such a chain, by a row separating a new column from the preceding span, or by the dual argument. Thus the coefficient relation has the Boolean double-limit property. Finite Boolean combinations preserve this property.
+
+The translation-orbit closure of $Q_{u,v}$ is compact metrizable in $\{0,1\}^G$ and is countable. One functional-analytic explanation uses the double-limit compactness criterion~\cite{Grothendieck1952}: the weak closure of the countable set of Boolean rows lies in their norm-separable closed linear span, while distinct Boolean rows have sup-norm distance one. The stable-group invariant mean is unique on the stable-set algebra, and its value on a stable set is rational~\cite[Corollary 4.15]{Conant2021Stability}. In particular, every invariant probability on this orbit closure has the same coordinate barycenter $m_{u,v}$. This is uniqueness of the relevant mean, not uniqueness of the probability measure.
+
+For completeness, the probabilistic step can be seen directly. The random-walk operator is Feller: its countable weighted sum of continuous translations converges uniformly. The martingale identity for a countable dense collection of continuous tests shows that every weak cluster point of empirical measures is stationary; compare the classical sample-path method in~\cite{JamisonSine1974Sample}. On a countable space acted on by bijections, a stationary probability for a positive generating law is invariant. Indeed, its finite set of maximal-mass atoms is invariant under every generator, by the stationarity equation and injectivity. Remove that invariant restriction and repeat. Every positive atom is reached after finitely many steps, since only finitely many atoms can have mass at least its own. The masses are therefore constant along all generator orbits.
+
+All empirical cluster measures consequently have coordinate integral $m_{u,v}$, proving convergence of that coordinate average. Fixed translations have the same invariant mean. For chronological right products, apply the flow argument to $x\mapsto Q_{u,v}(x^{-1})$ and the inverse states $Z_j^{-1}$, which evolve by left multiplication. This avoids changing the actual path by an invalid product reversal. Countable intersection gives the final assertion.
+\end{proof}
+
+\section{The initial marker determines the limit}\label{sec:marker}
+Let letters be IID with a strictly positive normalized law $p$. Write $p(w)$ for the product of its letter probabilities and $q=p(e)>0$. Let $U_0\in\Gap$ be the word before the first marker. Then
+\begin{equation}\label{eq:gapweight}
+ \PP(U_0=u)=q p(u),\qquad
+ \sum_{u\in\Gap}q p(u)=1.
+\end{equation}
+Define
+\begin{equation}\label{eq:branch}
+ D_u(p)=q\sum_{v\in\Gap}p(v)m_{u,v}.
+\end{equation}
+Since $\sum_vp(v)=1/q$ and $0\leq m_{u,v}\leq1$, this converges and belongs to $[0,1]$.
+
+\begin{proposition}[One-marker law]\label{prop:one}
+With the compression and observation of Section~\ref{sec:algebra},
+\[
+ C_N\longrightarrow D_{U_0}(p)\quad\text{almost surely and in }L^1,
+ \qquad
+ \Law_p(L)=\sum_{u\in\Gap}q p(u)\delta_{D_u(p)}.
+\]
+\end{proposition}
+\begin{proof}
+Condition on $U_0=u$. After the first marker the successive marker-free gaps $G_j$ are IID, with law $\PP(G_j=g)=q p(g)$. Their cycle lengths $\tau_j=|G_j|+1$ have mean $1/q$ and finite second moment. Let $Z_j$ be the return-group state just after the marker starting cycle $j$.
+
+Assign to that cycle the reward at its starting marker and after each marker-free prefix of $G_j$, but not the next marker. Thus
+\[
+ R_j=\sum_{t=0}^{|G_j|}Q_{u,G_j[1:t]}(Z_j).
+\]
+For $v\in\Gap$, the probability that the next gap begins with $v$ is $p(v)$, not $q p(v)$. Independence of the next gap from the past gives
+\begin{equation}\label{eq:reward}
+ \E[R_j\mid\text{past}]=\psi_u(Z_j),\qquad
+ \psi_u(x)=\sum_{v\in\Gap}p(v)Q_{u,v}(x).
+\end{equation}
+The series is uniformly convergent, with tail after length $K$ bounded by $(1-q)^{K+1}/q$. Lemma~\ref{lem:means}, first for finitely many $v$ and then by this tail bound, gives
+\[
+ \frac1J\sum_{j<J}\psi_u(Z_j)\longrightarrow
+ \sum_{v\in\Gap}p(v)m_{u,v}\quad\text{almost surely}.
+\]
+The centered rewards in~\eqref{eq:reward} are martingale differences with uniformly bounded second moments, since $0\leq R_j\leq\tau_j$. Their Ces\`aro average tends to zero: apply martingale convergence to their series divided by $j+1$, whose squared increments are summable, and then Kronecker's lemma~\cite[Theorems 4.4.6 and 2.5.9]{Durrett2019}.
+
+The IID strong law gives $J^{-1}\sum_{j<J}\tau_j\to1/q$. The incomplete final cycle is negligible because the geometric tails imply $\tau_j/j\to0$ almost surely. The initial word is finite. Dividing the accumulated reward by physical time yields~\eqref{eq:branch}. There are countably many possible $u$, so the conditional conclusions combine into the asserted pathwise identity. Bounded convergence gives $L^1$ convergence, and~\eqref{eq:gapweight} gives the law.
+\end{proof}
+
+\subsection{A conditional-expectation identification}
+The formal proof uses a shorter route once qualitative prefix convergence and the annealed continuation formulas are available. We record it because it isolates the additional identification required beyond an expectation theorem.
+
+\begin{lemma}[Finite-prefix determination]\label{lem:conditional}
+Let $C_N\to L$ in $L^1$ on an IID path space, with $0\leq C_N\leq1$. Let $\F_n$ be the first-$n$-letter filtration. Suppose that after every prefix $u e t$, with $u$ marker-free, the limiting expected continuation frequency is $D_u$. Then $L=D_{U_0}$ almost surely.
+\end{lemma}
+\begin{proof}
+Conditional expectation is an $L^1$ contraction, so
+$\E[C_N\mid\F_n]\to\E[L\mid\F_n]$ in $L^1$. On each finite-prefix cylinder of positive probability containing the first marker, its assumed limit is $D_{U_0}$: a fixed finite prefix changes the frequency average by a vanishing amount. Thus $\E[L\mid\F_n]=D_{U_0}$ on the event that the marker has occurred by time $n$. Almost every path eventually lies in all these events. The prefix filtration generates the full path sigma-algebra, and L\'evy's upward theorem~\cite[Theorem 4.6.8]{Durrett2019} gives $\E[L\mid\F_n]\to L$ almost surely. The two limits agree.
+\end{proof}
+
+The required continuation formula really is unchanged by the completed suffix $t$. In the exact boundary factorization, all returns already completed after the first marker translate the same group coordinate in~\eqref{eq:Q}. Lemma~\ref{lem:means} gives the same $m_{u,v}$ after that translation; boundary summation yields $D_u(p)$, with no dependence on $t$. One can obtain the annealed continuation formula either by bounded convergence from the reward argument or by the direct two-boundary summation used in the formal development. In the latter route, the existing weakly almost periodic prefix theorem supplies qualitative $L^1$ convergence. Neither route assumes that $L$ is already deterministic conditional on $U_0$.
+
+\section{Block markers and the exact source transfer}\label{sec:blocks}
+\subsection{Recovering every prefix length}
+Let the compression word $h$ have length $\ell\geq1$. Work temporarily with an IID finite alphabet $A$. Group letters into independent blocks $\mathcal B=A^\ell$ and regard $e=h$ as a single block letter. Its law is $P(b)=p(b)$, with $q=P(e)>0$. The first marker-free block word $U$ is now fixed for all residue classes.
+
+For $0\leq s<\ell$ and $\xi\in A^s$, define the block observation
+\[
+ F_\xi(w)=F(\operatorname{flatten}(w)\xi).
+\]
+This changes only the terminal seed to $T_\xi\gamma$, so Lemma~\ref{lem:compression} supplies the same marker and returns. Proposition~\ref{prop:one} gives
+\[
+ D_{u,\xi}(P)=q\sum_{v\in\Gap}P(v)m_{s,\xi,u,v}
+\]
+for a finite family of suffix observations and a common $U$.
+
+Let $B_1,B_2,\ldots$ be the IID blocks. The actual event at length $k\ell+s$ uses the first $s$ letters of $B_{k+1}$. Given the first $k$ complete blocks, its conditional expectation is
+\[
+ W_{k,s}=\sum_{\xi\in A^s}p(\xi)F_\xi(B_1\cdots B_k).
+\]
+The difference between the actual event and $W_{k,s}$ is a bounded martingale difference for the block filtration. Its Ces\`aro average vanishes. It follows that the frequency on residue $s$ tends to
+\[
+ \sum_{\xi\in A^s}p(\xi)D_{U,\xi}(P).
+\]
+Averaging over all $\ell$ residues gives~\eqref{eq:fullbranch}. An incomplete terminal block contributes at most $\ell/N$. This step is necessary: a theorem about aligned block endpoints alone would not identify the frequency of all chronological prefixes.
+
+\subsection{Finite-state sources}
+The selector construction of Section~\ref{sec:main} is an exact coupling. At time $n$, the current state is determined by earlier selectors and is independent of the new one; the selected edge at that state has distribution $\pi_p(\cdot\mid q)$. Induction therefore proves equality of every finite source-path distribution.
+
+For each selector $\sigma$, the state-by-observation matrix sends the component at state $q$ through the observation matrix for the letter emitted by $\sigma(q)$ and places it at the target state. Multiplying these lifted matrices reproduces the emitted word coefficient exactly. Initial rows record the starting state. Finite direct sums assemble the finitely many observations; the action can be fixed before those rows and the Boolean operation. Apply Lemmas~\ref{lem:ring} and~\ref{lem:compression} on this finite selector alphabet, followed by the block argument.
+
+The map $p\mapsto a_p$ is analytic on $\mathcal P$, because its coordinates are products of row-normalized positive weights. The block law and finite suffix probabilities are polynomial in $a_p$. This proves the pathwise and law parts of Theorem~\ref{thm:main}, including arbitrary starts. Section~\ref{sec:analytic} supplies the remaining analytic conclusions.
+
+\section{Uniform analytic branches, moments and transforms}\label{sec:analytic}
+The analytic argument depends only on bounded coefficients and geometric word weights. It does not require regularity of the recognized language or effective access to the rational means.
+
+\begin{lemma}[Uniform branch series]\label{lem:analytic}
+Let $A=A_0\sqcup\{e\}$ be finite and let $m_{u,v}\in[0,1]$ be fixed. Near every positive normalized $p$, the functions
+\[
+ D_u(z)=z_e\sum_{v\in A_0^*}z(v)m_{u,v}
+\]
+are holomorphic, with a locally uniform bound independent of $u$. The geometric weighting functional
+$b\mapsto\sum_u z_e z(u)b_u$ is locally holomorphic as a bounded linear functional on bounded families $(b_u)$.
+\end{lemma}
+\begin{proof}
+Choose a complex neighborhood on which $\rho(z)=\sum_{a\in A_0}|z_a|<1$. On compact subsets, $\rho(z)\leq r<1$, and
+\[
+ \sum_{|v|=n}|z(v)|=\rho(z)^n,\qquad
+ |D_u(z)|\leq\frac{|z_e|}{1-\rho(z)}.
+\]
+The homogeneous polynomial series converges normally, uniformly in $u$. The same estimate applies to the weighting functional in operator norm. Equivalently, the branch family is a holomorphic map into the Banach space of bounded functions on the discrete countable gap set.
+\end{proof}
+
+\begin{proof}[Completion of Theorem~\ref{thm:main}]
+For a block marker, apply Lemma~\ref{lem:analytic} on the block alphabet. At a positive real selector law,
+$\sum_{b\ne e}P(b)=1-P(e)<1$, so the required complex neighborhood exists. Formula~\eqref{eq:fullbranch} is a finite suffix-weighted average of those branch series. It preserves their uniform local bounds. Analytic row normalization and the polynomial selector/block maps then give the claimed functions on $\mathcal P$.
+
+For a finite branch vector $\mathbf D_u$, each coordinate is uniformly bounded on sufficiently small complex neighborhoods. Consequently, for every multi-index $\alpha\in\mathbb N_0^r$ the series
+\begin{equation}\label{eq:moments}
+ M_\alpha(p)=\sum_{u\in\Gap}q_pP_p(u)
+                 \prod_{j=1}^r D_{u,j}(p)^{\alpha_j}
+\end{equation}
+converges normally there. On real positive parameters it equals the actual mixed moment by the joint law and boundedness. For $t$ in a compact subset of $\C^r$, the exponential factor in~\eqref{eq:transform} is also uniformly bounded in $u$. The same geometric estimate proves joint local holomorphy. At fixed real $p$, the bound $\mathbf D_u(p)\in[0,1]^r$ gives normal convergence on every compact $t$-set, proving entireness.
+
+The outer weights themselves are finite word products and are positive. Summing by gap length gives $\sum_uq_pP_p(u)=1$. Countably many labels define a countably atomic probability even when branches coincide. Finally, countable intersection for the labels and finite intersection for the observations give the stated simultaneous events for each fixed $p$.
+\end{proof}
+
+In particular, expectation, variance and covariance are analytic functions of the positive edge weights. The first moment of the one-marker law recovers the two-boundary expression
+\[
+ \E_pL=q^2\sum_{u,v\in\Gap}p(u)p(v)m_{u,v}.
+\]
+The extra information is which one-boundary expression occurs on the sampled path; the moment formulas then follow by normally convergent summation.
+
+\section{Examples and precise limitations}\label{sec:examples}
+The examples in this section are written arguments accompanying the core theorem. They are not separately certified by the present Lean receipt.
+
+\begin{example}[A random limit under an IID source]
+If $F(w)$ records whether the first letter of a nonempty word is $1$, then $C_N\to\one_{X_1=1}$. An ergodic source therefore does not force a deterministic prefix-frequency limit. This observation concerns the fixed-origin convention in~\eqref{eq:frequency}.
+\end{example}
+
+\begin{example}[Four integer registers and infinitely many atoms]\label{ex:infinite}
+Use letters $a,e$ with $\PP(e)=q\in(0,1)$. On column registers $(c,t,z,1)$, initially $(0,0,1,1)$, use
+\[
+ T_a=\begin{pmatrix}1&0&1&0\\0&1&0&1\\0&0&1&0\\0&0&0&1\end{pmatrix},
+ \qquad
+ T_e=\begin{pmatrix}1&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&0&1\end{pmatrix}.
+\]
+The event is $(c-t=0)\wedge(z=0)$. Before the first $e$, the register $c$ counts the initial run of $a$'s. Afterward it is frozen at that length $K$, while $t$ counts the current trailing run. Thus, conditionally on $K=k$, the event has limiting frequency $q(1-q)^k$: after the initial segment it is the cylinder pattern consisting of an $e$ followed by exactly the current $k$ trailing $a$'s. The usual IID block-frequency law gives the asserted value.
+
+The initial run has $\PP(K=k)=q(1-q)^k$, and hence
+\begin{equation}\label{eq:infinite}
+ \Law(L)=\sum_{k=0}^\infty q(1-q)^k\delta_{q(1-q)^k},\qquad
+ \E L^r=\frac{q^{r+1}}{1-(1-q)^{r+1}}\quad(r\geq1).
+\end{equation}
+All atom values are distinct; for example $\E L=q/(2-q)$. The recognized language is nonregular, because its intersection with $a^*ea^*$ is $\{a^kea^k:k\geq0\}$. For chronological row-product convention, use $M_a=T_a^\mathsf T$, $M_e=T_e^\mathsf T$, the initial register vector as a row, and the corresponding coordinate columns. This is a genuine four-dimensional integer representation. The infinitely many limiting values are carried by the finite initial word, not by an infinite list of representation states.
+\end{example}
+
+\begin{example}[Moving atoms obstruct stronger analytic claims]
+For the regular event that the last letter is $1$ under Bernoulli parameter $p$, the limiting frequency is $p$ and its law is $\delta_p$. All moments are analytic, but the laws are discontinuous in total variation as $p$ moves; threshold probabilities jump. Theorem~\ref{thm:main} must therefore be read as a theorem about analytic branches and analytic tests, not measure-valued analyticity in total variation.
+\end{example}
+
+Two elementary consequences further clarify what the boundary representation measures. First, at a fixed positive law, every boundary label has positive probability, so the limit is deterministic exactly when all its branch values agree. Second, if $U$ is measured in blocks, then
+\[
+ \PP_p(|U|>K)=(1-q_p)^{K+1}.
+\]
+Discarding these labels and placing their mass at any point of $[0,1]^r$ approximates the law in total variation by at most this quantity, under the supremum-over-events convention. This is an outer-mixture truncation bound. It is not a procedure for computing the retained branch values, nor a rate for the original frequency averages.
+
+The theorem is confined to a fixed positive source support. It gives no continuation across an edge disappearing, no uniform pathwise event over all parameters, and no general theorem for arbitrary stationary sources. It also gives no dimension, intersection or sumset theorem for integer supports: those questions concern a different scale of information and are outside this report.
+
+\section{Formal verification and correspondence}\label{sec:formal}
+The core result is formalized in Lean 4.33.1, using the pinned mathlib revision recorded in the accompanying statement map. Lean and mathlib are verification infrastructure, not sources of originality for the mathematical statement~\cite{Lean4,Mathlib}. That map gives exact source and receipt locators, assumptions and reproduction commands. The release package includes the report together with its report-specific Lean proof and verification materials as recorded in the accompanying package metadata.
+
+The final source module is \code{SourceFullAtomicLaw.lean}. Its namespace is
+\begin{center}
+\code{IndependentZeroBlocks.FiniteStateSource}.
+\end{center}
+The endpoint
+\begin{center}
+\code{exists_commonReset_source_polynomialWord_analytic_atomic_law}
+\end{center}
+constructs the law record from the supplied source and scalar representations. A law record is not assumed as a premise of that endpoint. The separate moment and transform declarations identify the analytic functions with integrals against the actual selector-path measure.
+
+\begin{center}\small
+\begin{tabular}{p{0.34\linewidth}p{0.57\linewidth}}
+\toprule
+Mathematical obligation & Formal module or interface \\
+\midrule
+Actual initial marker and gap law & \code{InitialMarkerGap} \\
+One-marker pathwise law & \code{ModuleOneMarkerAtomicLaw} \\
+All physical prefix lengths & \code{ModuleBlockAtomicLaw} \\
+Ring and scalar realization & \code{ScalarWordAtomicLaw} \\
+Actual source path convention & \code{SourceScalarWordAtomicLaw} \\
+Analytic weights and branches & \code{SourceInitialGapWeights},\newline \code{SourceAtomicAnalytic} \\
+Mixed moments and exponential tests & \code{SourceAtomicAnalytic},\newline \code{SourceAtomicTransform} \\
+\bottomrule
+\end{tabular}\end{center}
+
+The retained build passed the complete affected \code{WordDensityDynamics} target, with 32 newly compiled project modules in a 350-module source closure. Seventeen transitive axiom checks reported only \code{propext}, \code{Classical.choice} and \code{Quot.sound}; no proof holes or new project axioms support the checked endpoints. These are properties of the pinned source and its recorded build, not counts of mathematical contributions. The merger preserved those Lean source bytes.
+
+The formal proof is not a line-by-line translation of the reward exposition in Sections~\ref{sec:algebra}--\ref{sec:blocks}. It uses the existing stable prefix-convergence theorem, exact finite-prefix conditioning, the common translated return means, and Lemma~\ref{lem:conditional}. For blocks it combines aligned-prefix conditioning with exact residue expectation identities. The analytic part uses Banach-valued word series and the geometric weighting functional. This distinction keeps the narrative proof, its formal alternative and the statement correspondence separate.
+
+The core pathwise law, arbitrary-ring/source transfer, common finite joint laws, positive analytic weights, analytic branches, mixed moments and exponential-transform identities are covered by the receipt. The examples, outer-tail observation, prior-art discussion and the prose of this report are not separately kernel-certified. The formal receipt includes a same-worker statement review; it does not record an independent expert review of this report or a global priority determination.
+
+\section*{Provenance and verification status}
+This is a machine-generated mathematical report. All original mathematical contributions and discoveries presented here were produced through artificial-intelligence systems; established results are credited to their cited sources. OpenAI systems were used in the documented research, proof development, formalization, literature assessment and drafting. The repository-maintainer-supplied default model attribution is GPT-6 Astra; exact runtime model provenance for the relevant stages was not retained or could not be recovered, so this is not a runtime-verified attribution. Lean checking is a separate activity with the scope described above.
+
+The documented investigation began from the prefix-frequency convergence and analytic-mean theorem, then identified the stronger initial-boundary law. The written argument required careful chronological group orientation and completion over every block residue. Formalization subsequently used finite-prefix conditioning to identify the same limit, followed by uniform analytic word series. Literature comparisons led to presenting the complete boundary synthesis, while treating atomicity, moment summation and nearby finite-state results as established context. Proposed support-geometry additions were deferred from this report.
+
+The repository maintainer selected and organized tasks and report-release preparation, does not claim subject-matter expertise, and has not professionally reviewed the mathematics. This report is supplied as-is, without an assurance of correctness, completeness or originality from the repository maintainer. Its claims should not be accepted at face value; readers should undertake the independent mathematical and computational verification needed before relying on them. Formal verification concerns the encoded statements and assumptions, not every aspect of the exposition or its novelty.
+
+\paragraph{Artifact and verification locators.}
+The report source, exact theorem-to-formal correspondence, attribution map, and verification receipt are maintained together with the release package. The pinned revisions are:
+\begin{center}\small
+\begin{tabular}{@{}p{0.24\linewidth}p{0.66\linewidth}@{}}
+Mathematical source & \code{7e21b43e34aa0bedc79b4e46b72bcc182cf9a653}\\
+Verified Lean source & \code{73edf1d96438cde89dbac16c70106003b35d2f06}\\
+Formal receipt & \code{cfdc9de0f7d6ea8a08530027c814db959d68c850}
+\end{tabular}
+\end{center}
+No peer review, independent expert review, or global priority determination is claimed by this release.
+
+\bibliographystyle{plainnat}
+\bibliography{bibliography,bibliography_foundations}
+\end{document}

@@ -1,0 +1,50 @@
+# Manuscript / formal statement correspondence
+
+Checked 2026-09-10 by the drafting assistant. This is a same-worker correspondence review, not an independent proof review or new Lean build.
+
+## Immutable sources
+
+- [Merged mathematical baseline](https://github.com/egilburg/vibemath/tree/7e21b43e34aa0bedc79b4e46b72bcc182cf9a653).
+- [Written theorem and full proof](https://github.com/egilburg/vibemath/blob/7e21b43e34aa0bedc79b4e46b72bcc182cf9a653/research/word_density/partial_results/central_opportunities/20260908/ATOMIC_LIMIT_LAW.md).
+- [Earlier independent written audit](https://github.com/egilburg/vibemath/blob/7e21b43e34aa0bedc79b4e46b72bcc182cf9a653/research/word_density/partial_results/central_opportunities/20260908/ATOMIC_LIMIT_AUDIT.md). Its historical “not formalized” wording describes the September 8 state; PR33 subsequently formalized the core.
+- [Exact formal source](https://github.com/egilburg/vibemath/tree/73edf1d96438cde89dbac16c70106003b35d2f06/proofs/word_density/lean).
+- [Formal verification and statement receipt](https://github.com/egilburg/vibemath/blob/cfdc9de0f7d6ea8a08530027c814db959d68c850/verification/word_density/full_law_recovery/VERIFICATION.md).
+- [Source manifest](https://github.com/egilburg/vibemath/blob/cfdc9de0f7d6ea8a08530027c814db959d68c850/verification/word_density/full_law_recovery/SOURCE_MANIFEST.json), [build results](https://github.com/egilburg/vibemath/blob/cfdc9de0f7d6ea8a08530027c814db959d68c850/verification/word_density/full_law_recovery/BUILD_RESULTS.json), [axiom output](https://github.com/egilburg/vibemath/blob/cfdc9de0f7d6ea8a08530027c814db959d68c850/verification/word_density/full_law_recovery/full-law-final-axioms.log).
+
+## Exact coverage
+
+Module paths below are relative to `proofs/word_density/lean/SierpinskiFormal` at the exact formal source. Most declarations are in `IndependentZeroBlocks`; source endpoints are in `IndependentZeroBlocks.FiniteStateSource`.
+
+| Manuscript | Exact declaration or checked interface | Correspondence and status |
+|---|---|---|
+| Theorem 2.1, scalar/ring/source scope | `SourceFullAtomicLaw.exists_commonReset_source_polynomialWord_analytic_atomic_law` | Constructed law record and analytic branches; marker after the polynomial family, before Boolean operation, initial state and parameters |
+| Theorem 2.1, physical prefix limit | `SourceScalarWordAtomicLaw.source_atomicLaw_pathwise` | Actual source path; empty prefix included; a.s. and L1 limit; no stationary-start assumption |
+| Theorem 2.1, common finite family | `SourceFullAtomicLaw.source_atomic_family_simultaneous`; `BlockGapExpectation.joint_initialBlockGap_law` | Same selector boundary for finite observations and starts, one full-measure event per fixed law |
+| Weights in (4) | `SourceInitialGapWeights.sourceInitialGapWeight_probability`, `sourceInitialGapWeight_pos`, `hasSum_sourceInitialGapWeight`, `analyticAt_sourceInitialGapWeight` | Positive analytic probabilities of actual initial block gaps; exact normalization |
+| Formula (6) | `ModuleBlockResetBranch.blockMarkerBranch`; `SourceAtomicAnalytic.sourceBlockBranch_eq` | Average all physical residues and suffix choices; rational means independent of source parameters |
+| Lemma 3.1 | `NoetherianArtinianEmbedding.exists_faithfulArtinianTarget`; `MatrixFamilyArtinianRealization` | Finite coefficient subring, primary quotient before localization, injective Artinian target; no flatness assumption |
+| Lemma 3.2 | Accepted common-reset Artinian module machinery, used by `ModuleBlockAtomicLaw.exists_commonReset_moduleBoolean_atomic_law` | Finite-length image compression; original matrices need not be invertible |
+| Lemma 3.3 / continuation means | `ModuleTranslatedReturnMean.exists_rational_forall_translated_moduleBooleanCentralReturnCesaro`; `ResetOneBoundaryMean.exists_explicit_postReset_branch` | Formal source establishes common rational annealed means and invariance after completed return translations; the empirical-measure proof in the manuscript is the written proof route, not separately asserted as this exact formal declaration |
+| Proposition 4.1 | `ModuleOneMarkerAtomicLaw.exists_module_oneMarker_atomic_law` | Actual one-marker law, branch bounds, a.s./L1 convergence and measure sum |
+| Lemma 4.2 | `ConditionalLimitIdentification.conditional_limit_identification`, `pathwise_limit_of_conditional_averages`; `IIDResetAtomicLaw.iid_frequency_limit_eq_initialGap` | Conditional averages identify the existing actual limit; determinism is a conclusion |
+| Section 5 | `IIDBlockPath`, `ModuleBlockAtomicLaw.IIDBlockAtomicLaw`, `ScalarWordAtomicLaw`, `SourceFullAtomicLaw` | Exact block and source transfer; manuscript uses the audited residue martingale exposition, formal route uses aligned-prefix conditional averages |
+| Lemma 6.1 / uniform analytic control | `BanachWordSeries.analyticAt_banachWordSeries`; `UniformBlockBranchAnalytic.analyticAt_uniformBlockBranch` | Banach-valued bounded-coefficient word series; local geometric bound uniform in boundary label |
+| Mixed moments (12) | `SourceAtomicAnalytic.analyticAt_sourceBlockMixedMoment`, `sourceBlockMixedMoment_eq_integral` | Actual finite joint moments, not only abstract coefficient formulas |
+| Transform (5) | `SourceAtomicTransform.analyticAt_sourceComplexExpTransform`, `sourceComplexExpTransform_entire`, `sourceComplexExpTransform_eq_integral` | Joint local holomorphy and entire transform variables, tied to actual path integrals |
+| Section 7 examples and outer-tail observation | Written ATOMIC_LIMIT_LAW.md Sections 5.2/5.3/5.4 and elementary deductions | Not separately formalized by the core receipt; no new kernel-certification claim |
+| Introduction / prior art | Final novelty assessment and attribution map | Literature comparisons, not formal theorem evidence |
+
+The endpoint types and displayed assumptions were reread in the exact local source. In particular, polynomial compilation is performed before marker choice; the PDF does not claim a marker uniform over all polynomial degrees. The initial gap is latent in the selector model. Rational means do not imply rational atoms. Analyticity concerns branches/tests within positive fixed support.
+
+## Reproduction and limits
+
+The retained build used Lean 4.33.1, commit `819816b2e0a3bf405af45ae5c7af2491d8f5bee6`, and mathlib `0df444a360eaa60ab8c11dca51a86af692955474`. From a checkout at the source commit, in `proofs/word_density/lean`:
+
+```bash
+lake build WordDensityDynamics
+lake env lean ../../../verification/word_density/full_law_recovery/FullLawFinalAudit.lean
+```
+
+The recovered runtime additionally used pinned local dependency locations and the process-local executable-locator shim documented in [ENVIRONMENT.md](https://github.com/egilburg/vibemath/blob/cfdc9de0f7d6ea8a08530027c814db959d68c850/verification/word_density/full_law_recovery/ENVIRONMENT.md). Official compiler/kernel code was unchanged. The receipt covers the exact 350-module source closure, all 32 new modules, a passing full affected integration target and 17 standard-axiom checks.
+
+PR merges introduced no Lean source difference from the checked formalization head. This manuscript task changed no Lean files and reused the accurately bound receipt. An eventual paper-specific extracted Lean project requires its own clean build and declaration correspondence check; the original build cannot certify a future extraction. This manuscript PR is not labelled a completed publication package.

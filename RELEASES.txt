@@ -102,3 +102,5 @@ Commit: 34599405f739d5b5ee59c913727db2844a55e2c7
 Mortality: https://github.com/egilburg/aimath/tree/34599405f739d5b5ee59c913727db2844a55e2c7/mortality
 All 68 package paths, modes and content blobs verified against the export.
 Pending tag: mortality-r3 must point to 34599405f739d5b5ee59c913727db2844a55e2c7; never retarget earlier tags.
+
+analytic_prefix_frequency_laws-r1 | 2026-09-10 | Analytic laws for recognizable prefix frequencies | machine-generated mathematical report | Lean-verified release package

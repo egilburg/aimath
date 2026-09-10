@@ -1,0 +1,20 @@
+Analytic laws for recognizable prefix frequencies — r1 release verification
+Date: 2026-09-10
+Document type: machine-generated mathematical report
+Repository maintainer: github.com/egilburg/aimath
+
+Approved report-source SHA-256: 7454906cbcae639b71457f84845d8ba9a6a02bd46a17b9cfd8c47e9db9ac4ab4
+Rendered PDF SHA-256: 6b0f61be845514156767c091ca87b16f565ee3d5bd9b0f4b360123465d6ff712
+Exact formal source: 73edf1d96438cde89dbac16c70106003b35d2f06
+Exact formal receipt: cfdc9de0f7d6ea8a08530027c814db959d68c850
+Extracted project-local Lean modules: 270
+Mathlib: 0df444a360eaa60ab8c11dca51a86af692955474
+
+Fresh release checks:
+- exact approved TeX source hash matched;
+- report-specific transitive local import closure extracted from SourceFullAtomicLaw.lean;
+- lake build ReportProof passed;
+- endpoint checks and transitive axiom prints passed;
+- final LaTeX/BibTeX build passed without reported LaTeX, overfull/underfull, citation, or reference warnings.
+
+Formal verification applies to encoded statements and assumptions, not peer review, expert endorsement, prose correctness, or global novelty/priority.

@@ -1,0 +1,135 @@
+warning: manifest out of date: git revision of dependency 'mathlib' changed; use `lake update mathlib` to update it
+IndependentZeroBlocks.FiniteStateSource.exists_commonReset_source_polynomialWord_analytic_atomic_law.{u_1, u_2, u_3,
+    u_4, u_5, u_6}
+  {R : Type u_1} {A : Type u_2} {Q : Type u_3} {J : Type u_4} [CommRing R] [Fintype Q] [DecidableEq Q] [Fintype J]
+  (S : IndependentZeroBlocks.FiniteStateSource Q A) {I : Type u_5} {f : I → List A → R}
+  (D : (i : I) → IndependentZeroBlocks.ScalarWordRepresentation R A (f i)) (P : J → MvPolynomial I R) :
+  ∃ h,
+    h ≠ [] ∧
+      ∀ (op : (J → Bool) → Bool),
+        ∃ m,
+          ∃ (hm :
+            ∀ (q : Q) (s : Fin h.length) (ξ : Fin ↑s → S.Selector) (u v : List (Fin h.length → S.Selector)),
+              ↑(m q s ξ u v) ∈ Set.Icc 0 1),
+            ∀ (q : Q) (p : (r : Q) → S.Edge r → ℝ) (hp : ∀ (r : Q) (e : S.Edge r), 0 < p r e),
+              (∀ (u : IndependentZeroBlocks.GapWords (IndependentZeroBlocks.endoMarkerBlock h)),
+                  AnalyticAt ℝ (fun z => S.sourceBlockBranch h (m q) ⋯ z u) p) ∧
+                IndependentZeroBlocks.IIDBlockAtomicLaw (S.normalizedSelectorLaw p hp) h.length
+                  (IndependentZeroBlocks.endoMarkerBlock h)
+                  (fun w =>
+                    IndependentZeroBlocks.scalarWordBooleanPredicate op
+                      (fun j w => (MvPolynomial.eval fun i => f i w) (P j)) (S.transducer.outputWord q w))
+                  (S.sourceBlockBranch h (m q) ⋯ p)
+IndependentZeroBlocks.FiniteStateSource.source_atomic_family_simultaneous.{u_2, u_3, u_5, u_6} {A : Type u_2}
+  {Q : Type u_3} [Fintype Q] [DecidableEq Q] {K : Type u_5} [Fintype K]
+  (S : IndependentZeroBlocks.FiniteStateSource Q A) (p : (r : Q) → S.Edge r → ℝ)
+  (hp : ∀ (r : Q) (e : S.Edge r), 0 < p r e) (ell : ℕ) (e : Fin ell → S.Selector) (q : K → Q)
+  (event : K → List A → Bool) (B : K → IndependentZeroBlocks.GapWords e → ℝ)
+  (h :
+    ∀ (k : K),
+      IndependentZeroBlocks.IIDBlockAtomicLaw (S.normalizedSelectorLaw p hp) ell e
+        (fun w => event k (S.transducer.outputWord (q k) w)) (B k)) :
+  ∀ᵐ (ω : ℕ → S.Selector) ∂(S.normalizedSelectorLaw p hp).iidMeasure,
+    ∀ (k : K),
+      Filter.Tendsto (fun N => S.pathFrequency (q k) (event k) N ω) Filter.atTop
+        (nhds (B k (IndependentZeroBlocks.initialMarkerGap e (IndependentZeroBlocks.iidBlockPath ell ω))))
+IndependentZeroBlocks.FiniteStateSource.source_atomicLaw_pathwise.{u_2, u_3, u_5} {A : Type u_2} {Q : Type u_3}
+  [Fintype Q] [DecidableEq Q] (S : IndependentZeroBlocks.FiniteStateSource Q A) (p : (r : Q) → S.Edge r → ℝ)
+  (hp : ∀ (r : Q) (e : S.Edge r), 0 < p r e) (ell : ℕ) (e : Fin ell → S.Selector) (q : Q) (event : List A → Bool)
+  (D : IndependentZeroBlocks.GapWords e → ℝ)
+  (h :
+    IndependentZeroBlocks.IIDBlockAtomicLaw (S.normalizedSelectorLaw p hp) ell e
+      (fun w => event (S.transducer.outputWord q w)) D) :
+  (∀ᵐ (ω : ℕ → S.Selector) ∂(S.normalizedSelectorLaw p hp).iidMeasure,
+      Filter.Tendsto (fun N => S.pathFrequency q event N ω) Filter.atTop
+        (nhds (D (IndependentZeroBlocks.initialMarkerGap e (IndependentZeroBlocks.iidBlockPath ell ω))))) ∧
+    Filter.Tendsto
+      (fun N =>
+        ∫ (ω : ℕ → S.Selector),
+          ‖S.pathFrequency q event N ω -
+              D
+                (IndependentZeroBlocks.initialMarkerGap e
+                  (IndependentZeroBlocks.iidBlockPath ell ω))‖ ∂(S.normalizedSelectorLaw p hp).iidMeasure)
+      Filter.atTop (nhds 0)
+IndependentZeroBlocks.FiniteStateSource.analyticAt_sourceBlockMixedMoment.{u_1, u_2, u_3, u_4} {Q : Type u_1}
+  {A : Type u_2} {J : Type u_3} [Fintype Q] [DecidableEq Q] [Fintype J]
+  (S : IndependentZeroBlocks.FiniteStateSource Q A) (h : List S.Selector)
+  (m : J → IndependentZeroBlocks.BlockBranchCoefficients h)
+  (hm :
+    ∀ (j : J) (s : Fin h.length) (ξ : Fin ↑s → S.Selector) (u v : List (Fin h.length → S.Selector)),
+      ↑(m j s ξ u v) ∈ Set.Icc 0 1)
+  (k : J → ℕ) (p : (r : Q) → S.Edge r → ℝ) (hp : ∀ (r : Q) (e : S.Edge r), 0 < p r e) :
+  AnalyticAt ℝ (S.sourceBlockMixedMoment h m hm k) p
+IndependentZeroBlocks.FiniteStateSource.sourceBlockMixedMoment_eq_integral.{u_1, u_2, u_3, u_4} {Q : Type u_1}
+  {A : Type u_2} {J : Type u_3} [Fintype Q] [DecidableEq Q] [Fintype J]
+  (S : IndependentZeroBlocks.FiniteStateSource Q A) (h : List S.Selector) (hh : h ≠ [])
+  (m : J → IndependentZeroBlocks.BlockBranchCoefficients h)
+  (hm :
+    ∀ (j : J) (s : Fin h.length) (ξ : Fin ↑s → S.Selector) (u v : List (Fin h.length → S.Selector)),
+      ↑(m j s ξ u v) ∈ Set.Icc 0 1)
+  (k : J → ℕ) (p : (r : Q) → S.Edge r → ℝ) (hp : ∀ (r : Q) (e : S.Edge r), 0 < p r e) :
+  S.sourceBlockMixedMoment h m hm k p =
+    ∫ (ω : ℕ → S.Selector),
+      ∏ j,
+        S.sourceBlockBranch h (m j) ⋯ p
+            (IndependentZeroBlocks.initialMarkerGap (IndependentZeroBlocks.endoMarkerBlock h)
+              (IndependentZeroBlocks.iidBlockPath h.length ω)) ^
+          k j ∂(S.normalizedSelectorLaw p hp).iidMeasure
+IndependentZeroBlocks.FiniteStateSource.analyticAt_sourceComplexExpTransform.{u_1, u_2, u_3, u_4} {Q : Type u_1}
+  {A : Type u_2} {J : Type u_3} [Fintype Q] [DecidableEq Q] [Fintype J]
+  (S : IndependentZeroBlocks.FiniteStateSource Q A) (h : List S.Selector)
+  (m : J → IndependentZeroBlocks.BlockBranchCoefficients h)
+  (hm :
+    ∀ (j : J) (s : Fin h.length) (ξ : Fin ↑s → S.Selector) (u v : List (Fin h.length → S.Selector)),
+      ↑(m j s ξ u v) ∈ Set.Icc 0 1)
+  (p : (r : Q) → S.Edge r → ℝ) (hp : ∀ (r : Q) (e : S.Edge r), 0 < p r e) (t : J → ℂ) :
+  AnalyticAt ℂ (fun zt => S.sourceComplexExpTransform h m hm zt.1 zt.2) (S.complexifySourceWeights p, t)
+IndependentZeroBlocks.FiniteStateSource.sourceComplexExpTransform_entire.{u_1, u_2, u_3, u_4} {Q : Type u_1}
+  {A : Type u_2} {J : Type u_3} [Fintype Q] [DecidableEq Q] [Fintype J]
+  (S : IndependentZeroBlocks.FiniteStateSource Q A) (h : List S.Selector)
+  (m : J → IndependentZeroBlocks.BlockBranchCoefficients h)
+  (hm :
+    ∀ (j : J) (s : Fin h.length) (ξ : Fin ↑s → S.Selector) (u v : List (Fin h.length → S.Selector)),
+      ↑(m j s ξ u v) ∈ Set.Icc 0 1)
+  (p : (r : Q) → S.Edge r → ℝ) (hp : ∀ (r : Q) (e : S.Edge r), 0 < p r e) (t : J → ℂ) :
+  AnalyticAt ℂ (S.sourceComplexExpTransform h m hm (S.complexifySourceWeights p)) t
+IndependentZeroBlocks.FiniteStateSource.sourceComplexExpTransform_eq_integral.{u_1, u_2, u_3, u_4} {Q : Type u_1}
+  {A : Type u_2} {J : Type u_3} [Fintype Q] [DecidableEq Q] [Fintype J]
+  (S : IndependentZeroBlocks.FiniteStateSource Q A) (h : List S.Selector) (hh : h ≠ [])
+  (m : J → IndependentZeroBlocks.BlockBranchCoefficients h)
+  (hm :
+    ∀ (j : J) (s : Fin h.length) (ξ : Fin ↑s → S.Selector) (u v : List (Fin h.length → S.Selector)),
+      ↑(m j s ξ u v) ∈ Set.Icc 0 1)
+  (p : (r : Q) → S.Edge r → ℝ) (hp : ∀ (r : Q) (e : S.Edge r), 0 < p r e) (t : J → ℂ) :
+  S.sourceComplexExpTransform h m hm (S.complexifySourceWeights p) t =
+    ∫ (ω : ℕ → S.Selector),
+      Complex.exp
+        (∑ j,
+          t j *
+            ↑(S.sourceBlockBranch h (m j) ⋯ p
+                (IndependentZeroBlocks.initialMarkerGap (IndependentZeroBlocks.endoMarkerBlock h)
+                  (IndependentZeroBlocks.iidBlockPath h.length ω)))) ∂(S.normalizedSelectorLaw p hp).iidMeasure
+'IndependentZeroBlocks.FiniteStateSource.exists_commonReset_source_polynomialWord_analytic_atomic_law' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IndependentZeroBlocks.FiniteStateSource.source_atomic_family_simultaneous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IndependentZeroBlocks.FiniteStateSource.source_atomicLaw_pathwise' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IndependentZeroBlocks.FiniteStateSource.analyticAt_sourceBlockMixedMoment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IndependentZeroBlocks.FiniteStateSource.sourceBlockMixedMoment_eq_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IndependentZeroBlocks.FiniteStateSource.analyticAt_sourceComplexExpTransform' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IndependentZeroBlocks.FiniteStateSource.sourceComplexExpTransform_entire' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IndependentZeroBlocks.FiniteStateSource.sourceComplexExpTransform_eq_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
