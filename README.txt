@@ -1,6 +1,13 @@
 https://github.com/egilburg/aimath
 
-Mathematical manuscripts with reproducible Lean proofs.
+AI-generated mathematical reports with reproducible Lean proofs.
+
+ANALYTIC PREFIX FREQUENCY LAWS
+Analytic laws for recognizable prefix frequencies
+https://github.com/egilburg/aimath/tree/main/analytic_prefix_frequency_laws
+Boolean combinations of recognizable word-function zero tests along finite-state
+sources have a common initial-boundary description with analytic branch laws,
+moments, and exponential transforms.
 
 SOFIC MARKOV ORDER
 Sharp Finite Markov Order in Intrinsic Sofic Dimension
@@ -13,34 +20,23 @@ Minimum-Rank and Mortality Bounds for Finite Real Matrix Monoids
 https://github.com/egilburg/aimath/tree/main/mortality
 For a finite entire real matrix monoid of dimension n and minimum rank s,
 a word attains s within n*2^(n-s)-n(n+1)/2+s(s-1)/2 letters.
-At s=0 the new order n*2^n improves r2 by a factor of order n.
-Includes sharp planar and small-factor results and cubic-size SLP existence.
+At s=0 the order n*2^n improves the earlier r2 bound by a factor of order n.
 
-Each folder contains the PDF, editable TeX, references, complete project-local
-Lean sources, pinned dependencies, build instructions, citation and license files.
-The verification/ folders include build logs, statement/axiom audits, proof-source
-provenance, manuscript correspondence and verification hashes.
-This repository is a publication archive. Its contents support reading,
-citation, licensing and independent verification of the published results.
-Research planning, proof-generation workflows and production records are
-outside the public archive.
-
-Self-published; not professionally peer reviewed. Original mathematical
-contributions and exposition were produced by AI; prior work is credited.
-Read each paper's disclosure, exact assumptions, formalization scope and limits.
-Formal proof checking and historical novelty are distinct questions.
+Each folder contains a report PDF and editable TeX, references, focused Lean
+sources, pinned dependencies, build instructions, citation/license material, and
+verification records. The reports are project artifacts, not academic manuscripts.
+Each begins with its Document status and AI disclosure section; established work
+is credited in the report and bibliography. Formal verification applies to the
+encoded propositions and assumptions described by each report and its verification
+material, not automatically to prose, literature coverage, novelty, or significance.
 
 CC-BY-4.0 applies only to rights that can be granted; full text is in LICENSE.txt.
 Third-party notices and license exceptions are preserved in each package.
-
-Versions, permanent links and edition-tag backfill status: RELEASES.txt.
-Corrections: https://github.com/egilburg/aimath/issues (Correction report form).
-
+Corrections: https://github.com/egilburg/aimath/issues
+Versions and immutable release information: RELEASES.txt
 
 CURRENT EDITIONS
-Mortality: 2026-09-10-r3; 25 mathematical Lean modules.
-Sofic Markov order: 2026-09-08-r2; 21 mathematical Lean modules.
-Frozen prior editions and exact snapshot links are in RELEASES.txt.
-The mortality-r3 tag is pending; use its exact public commit locator there.
-
-- analytic_prefix_frequency_laws/ — Analytic laws for recognizable prefix frequencies (r1)
+Analytic prefix-frequency laws: r2.
+Mortality: 2026-09-10-r4.
+Sofic Markov order: 2026-09-10-r3.
+Earlier editions remain available through the release history and edition tags.
