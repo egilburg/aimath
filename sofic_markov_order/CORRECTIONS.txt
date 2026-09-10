@@ -1,25 +1,16 @@
 CORRECTIONS
 
-Current manuscript/package version: 2026-09-08-r2.
-Publicly released 8 September 2026. Permanent snapshots and revision history
-are recorded in repository-root RELEASES.txt. Earlier r1 snapshot:
-https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/sofic_markov_order
+Current report version: 2026-09-10-r3. Publicly released 10 September 2026. Earlier editions and permanent snapshots are recorded in repository-root RELEASES.txt.
 
 Report a mathematical, formalization, attribution or exposition issue at:
 https://github.com/egilburg/aimath/issues
-Choose Correction report. Identify the paper, affected version and permanent
-commit URL, exact theorem/page/declaration, and checkable evidence. A report is
-an allegation until assessed. No response-time or monitoring promise is made.
+Choose Correction report. Identify the report, affected version and permanent
+commit URL, exact theorem/page/declaration, and checkable evidence. An issue report
+is an allegation until assessed. No response-time or monitoring promise is made.
 
 Confirmed corrections will identify the affected version and evidence, credit
 substantive help when appropriate, and be recorded with a dated forward revision.
 Previous commits remain accessible; updated PDFs must not silently replace an
-immutable version. A failed central claim should be marked unreliable or withdrawn
-on the current landing page and affected version's correction notice. Recheck
-affected proof, prose and citations before issuing a correction. Do not treat
-unrelated results as invalid without evidence.
+immutable version. Recheck affected proof, prose and citations before issuing a correction.
 
-No confirmed mathematical erratum is recorded in this package. The r2 Lean
-extraction preserves the mathematical claims and arguments. It updates proof
-organization, naming, verification documentation and manuscript references.
-This is not an assertion of error-freedom or professional human review.
+No confirmed mathematical erratum is recorded in this package. R3 changes presentation and disclosure only; its mathematical claims and Lean proof are unchanged from r2. This is not an assertion of error-freedom or professional human review.
