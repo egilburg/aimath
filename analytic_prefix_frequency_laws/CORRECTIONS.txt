@@ -1,8 +1,6 @@
-Corrections for analytic_prefix_frequency_laws-r1
+Corrections for analytic_prefix_frequency_laws-r2
 
 Report suspected mathematical, formalization, attribution, or packaging errors at:
 https://github.com/egilburg/aimath/issues
 
-Please identify the affected release/version and the specific claim or file. An issue report is
-not itself a confirmed error. Corrections, if required, will use a new forward commit/version;
-this archived r1 snapshot remains historically identifiable.
+Please identify the affected release/version and the specific claim or file. An issue report is not itself a confirmed error. Corrections, if required, will use a new forward commit/version; earlier archived editions remain historically identifiable.
