@@ -17,397 +17,331 @@
   "files": [
     {
       "path": "CHANGES.txt",
-      "category": "reader instructions",
       "bytes": 1326,
       "sha256": "6fca4cabd9cfaa7a0a2f933442b231a04c44eb93d9b978b16be23eae21f471dc"
     },
     {
       "path": "CORRECTIONS.txt",
-      "category": "reader instructions",
-      "bytes": 946,
-      "sha256": "1b7006b8867d34dc1dc8e87549042419254e01e1b61ffaf0e4e3470a7fc5c8a2"
+      "bytes": 945,
+      "sha256": "504b14502ce8ebabe58521475816a3345e3c32227f65811e2218aa22cb85cd50"
     },
     {
       "path": "LICENSE.txt",
-      "category": "license/citation",
       "bytes": 17023,
       "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
     },
     {
       "path": "README.txt",
-      "category": "reader instructions",
-      "bytes": 2063,
-      "sha256": "fcc9cf927a006ebb713a17984099946da5cd2ead2cea2d7672ed4099c71fbfb4"
+      "bytes": 1776,
+      "sha256": "1e16a427d4f4a3abac23794d5a200441a424e58454e862b56f55867bae7c9db0"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
-      "category": "license/citation",
-      "bytes": 3138,
-      "sha256": "082c1dadfaeb8ca1ff11a15d4221d7535deb75a7e2c16f94d9b5055b29becece"
+      "bytes": 3116,
+      "sha256": "a0a5f2dd0c50e4ca1c2ba158f274e2230c54c7a98730a9c82bfabd677aeb9cfd"
     },
     {
       "path": "bibliography.bib",
-      "category": "manuscript/source",
       "bytes": 3011,
       "sha256": "07854c649d9788f5e34f86d2b85136ff55b8da7a89a02747f3d61142de25967e"
     },
     {
       "path": "build_report.sh",
       "bytes": 321,
-      "sha256": "daa97c0b499585a68cf390dcf33e2136771b46058792feb76352eabf37b02b25",
-      "category": "report/source"
+      "sha256": "daa97c0b499585a68cf390dcf33e2136771b46058792feb76352eabf37b02b25"
     },
     {
       "path": "citation.bib",
-      "category": "license/citation",
-      "bytes": 383,
-      "sha256": "58f50a37047d446870b1623a1eba73f875e9ac03a9785e19c6b8c6f15169f39e"
+      "bytes": 423,
+      "sha256": "d331ee60539bb8ef6f781ccc4d04841eba8a4f3fdad5c2a3a3d54e4d374e6be7"
     },
     {
       "path": "disclosure.tex",
-      "category": "manuscript/source",
       "bytes": 1013,
       "sha256": "685da440ae534ed499b0a4f438f383b701508041b5d24698f1471d335de2fc32"
     },
     {
       "path": "exponential_mortality_bound_for_finite_real_matrix_monoids.pdf",
-      "category": "manuscript/source",
       "bytes": 338871,
       "sha256": "86fe525229c6e7ce8df0673eb6feed58177af987c4473417ecb5b9df852b6408"
     },
     {
       "path": "exponential_mortality_bound_for_finite_real_matrix_monoids.tex",
-      "category": "manuscript/source",
       "bytes": 21197,
       "sha256": "9ed0438f68bc9b074001cbe9305e4439416fdbf534d7d44ddd3bdd9ebb1dc368"
     },
     {
       "path": "lean/Audit.lean",
-      "category": "proof/dependency",
       "bytes": 3127,
       "sha256": "d33b010491a3559b54569afd385cf5ece1a70ca257b65174c23440fb1569955e"
     },
     {
       "path": "lean/FiniteMonoidMortality/BlockMortality.lean",
-      "category": "proof/dependency",
       "bytes": 4899,
       "sha256": "9042c28ae0d854b463af952a102c0c596a54dbc6006822d59ae8cc537804f695"
     },
     {
       "path": "lean/FiniteMonoidMortality/BoundedMortality.lean",
-      "category": "proof/dependency",
       "bytes": 7251,
       "sha256": "6503c3d5cd00237d788cddae851c4c7ead184db3876214ad72353f6212a873d9"
     },
     {
       "path": "lean/FiniteMonoidMortality/FiniteDimensionDetection.lean",
-      "category": "proof/dependency",
       "bytes": 2408,
       "sha256": "7651505ab76607e97ef45538d1cb2b6e38257d43f99458c365ab95b496e103be"
     },
     {
       "path": "lean/FiniteMonoidMortality/FiniteMortalityCompression.lean",
-      "category": "proof/dependency",
       "bytes": 10641,
       "sha256": "6815efe4ab65b2b94beac42b0f79dd1b7c395cef39c4f26d14cd46a02a104129"
     },
     {
       "path": "lean/FiniteMonoidMortality/FlagMortality.lean",
-      "category": "proof/dependency",
       "bytes": 1525,
       "sha256": "15efbe934d7dfa2b379545b66ef3678e135b73e63b835a79b2f42347c7409060"
     },
     {
       "path": "lean/FiniteMonoidMortality/FlagQuotientMortality.lean",
-      "category": "proof/dependency",
       "bytes": 9192,
       "sha256": "88ca563eff942c758ceae3f88318d779ed690d06bde25bc2e5320d041a23e10d"
     },
     {
       "path": "lean/FiniteMonoidMortality/ImprovedMortalityBound.lean",
-      "category": "proof/dependency",
       "bytes": 3349,
       "sha256": "cc611044a59a9b8a5a60b4f50d68acdc886e6604cbeeaaebc93b524b172f93fd"
     },
     {
       "path": "lean/FiniteMonoidMortality/LinearMortality.lean",
-      "category": "proof/dependency",
       "bytes": 2915,
       "sha256": "f5b295b7f0337100a6feb7441946d543a49d742b80bf531c24c889554bf21b9d"
     },
     {
       "path": "lean/FiniteMonoidMortality/MatrixRankScalarExtension.lean",
-      "category": "proof/dependency",
       "bytes": 1643,
       "sha256": "7506de19fc93ae358720fbd7c20747848407e4073b7ff6671bb2de791173b5fd"
     },
     {
       "path": "lean/FiniteMonoidMortality/MatrixWordScalarExtension.lean",
-      "category": "proof/dependency",
       "bytes": 1326,
       "sha256": "f6d0b3b01f1741060e79c2032a0392125af2de228b769dff1415d0800705de2d"
     },
     {
       "path": "lean/FiniteMonoidMortality/MinimalRankCompression.lean",
-      "category": "proof/dependency",
       "bytes": 4058,
       "sha256": "7a0d8f4790b1a6bbbf16e084a9b1d4ec1ab00fe21526e353a26356e2fb207836"
     },
     {
       "path": "lean/FiniteMonoidMortality/MinimumRankBound.lean",
-      "category": "proof/dependency",
       "bytes": 8391,
       "sha256": "311b3beb27defa7a6ecb0671bf950a91c1bc0fd0a0ce468d37ebe7171231b925"
     },
     {
       "path": "lean/FiniteMonoidMortality/MortalityBudget.lean",
-      "category": "proof/dependency",
       "bytes": 2988,
       "sha256": "4ce883374ca42e399eb1e71d15309cfee229d99877075784788e496a91839a33"
     },
     {
       "path": "lean/FiniteMonoidMortality/MortalityExtremizer.lean",
-      "category": "proof/dependency",
       "bytes": 2473,
       "sha256": "9230b7681bf7d37aa4f0ca0d5c0f750c3d226ec91bc631298d423459ab281e62"
     },
     {
       "path": "lean/FiniteMonoidMortality/MortalitySLP.lean",
-      "category": "proof/dependency",
       "bytes": 10117,
       "sha256": "ef6471b39d9d8be29e018a96d65df2efd525bf81a7b8d2172494c461da4d2f71"
     },
     {
       "path": "lean/FiniteMonoidMortality/PlaneEllipse.lean",
-      "category": "proof/dependency",
       "bytes": 8932,
       "sha256": "231c98119da2caea248cab6819583da9c91f88a222f1656d3a8d9f6a6f17511e"
     },
     {
       "path": "lean/FiniteMonoidMortality/PlaneInvariantForm.lean",
-      "category": "proof/dependency",
       "bytes": 2137,
       "sha256": "10727a3bda7b9387a3a7794f710fc4f4816b34a2e932756b27cb21161032bef6"
     },
     {
       "path": "lean/FiniteMonoidMortality/RankOneSandwich.lean",
-      "category": "proof/dependency",
       "bytes": 2652,
       "sha256": "f0350a8a30e13c5ecdaafb919468033bd102d1550f948ba3793294dcbc7f1dbf"
     },
     {
       "path": "lean/FiniteMonoidMortality/RankOneTrace.lean",
-      "category": "proof/dependency",
       "bytes": 1742,
       "sha256": "4844d8749e48a9da994f95159761668370add4fe681d284fcc6a0eee7d5c4e21"
     },
     {
       "path": "lean/FiniteMonoidMortality/RankSensitiveMortality.lean",
-      "category": "proof/dependency",
       "bytes": 5563,
       "sha256": "c14e64f4a58d815358b20405a07956227266b0dc9157ac89822e570a7a1c915d"
     },
     {
       "path": "lean/FiniteMonoidMortality/ReachableSpanMortality.lean",
-      "category": "proof/dependency",
       "bytes": 1204,
       "sha256": "1519ed7c223b488892c8f911145c5699cd383a62d836dfe6b061ae34f4779c7b"
     },
     {
       "path": "lean/FiniteMonoidMortality/SharpFactorExamples.lean",
-      "category": "proof/dependency",
       "bytes": 4931,
       "sha256": "97508dcf98faf936ef64788c32c6386c3a4a851f17ed81d8704edfe7383b0686"
     },
     {
       "path": "lean/FiniteMonoidMortality/ShortQuadraticObservation.lean",
-      "category": "proof/dependency",
       "bytes": 4364,
       "sha256": "18126d1012137b5ab83935fba152208fa959082730bb361a00821785944c6886"
     },
     {
       "path": "lean/FiniteMonoidMortality/SubspaceEscape.lean",
-      "category": "proof/dependency",
       "bytes": 1638,
       "sha256": "aa766f7f12401e4a7598a5f8bc4365a83754930f20786134a7f1a8fea9d104d8"
     },
     {
       "path": "lean/FiniteMonoidMortality/TwoDimensionalMortality.lean",
-      "category": "proof/dependency",
       "bytes": 9344,
       "sha256": "4452d39fed2d782dfb5a7ab2e10138299080113c9cda46eaea23f37564968bf6"
     },
     {
       "path": "lean/Publication.lean",
-      "category": "proof/dependency",
       "bytes": 1217,
       "sha256": "fb8bb3aaf8f2617794c9adb97d99f81c704f18ffb8ade08b9cd7bd513025836e"
     },
     {
       "path": "lean/README.txt",
-      "category": "proof/dependency",
       "bytes": 2967,
       "sha256": "e02cd13a6a9ab18755b3e191e734a199a46b2c1dfca439031ec51d6e54601532"
     },
     {
       "path": "lean/Specification.lean",
-      "category": "proof/dependency",
       "bytes": 10935,
       "sha256": "f5586972d9c61039b13f1b37c7537cf21553f87f6458dfeb00348b714f3817c9"
     },
     {
       "path": "lean/lake-manifest.json",
-      "category": "proof/dependency",
       "bytes": 3555,
       "sha256": "c74f3e536187abe70756b1cf4749abf5ca3495cc11f0e422e1bd1488eaa62ebe"
     },
     {
       "path": "lean/lakefile.toml",
-      "category": "proof/dependency",
       "bytes": 302,
       "sha256": "1d1719c7f690165b7c10c7a12856041125060c9cad1bfe18a338dc9e2806b0f5"
     },
     {
       "path": "lean/lean-toolchain",
-      "category": "proof/dependency",
       "bytes": 25,
       "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
     },
     {
       "path": "lean/verify.sh",
-      "category": "proof/dependency",
       "bytes": 664,
       "sha256": "ea0aa7a39b90bef5f5cfb23c75f4cc2110f79ec15725e2cd16b8023a21e125cf"
     },
     {
       "path": "preamble.tex",
-      "category": "manuscript/source",
       "bytes": 1202,
       "sha256": "93b2b2609ac7c172648b18a39b9770ac5e817b8fce3ed610988fe53c37f61bec"
     },
     {
       "path": "third_party_licenses/Cli.txt",
-      "category": "license/citation",
       "bytes": 1062,
       "sha256": "f7e95706807e931782b6efd9a9d2789508a52423ad67b56ee7e5e324362d4aac"
     },
     {
       "path": "third_party_licenses/Lean-LICENSE.txt",
-      "category": "license/citation",
       "bytes": 9160,
       "sha256": "8b28515ffffc5c0fe2807d8ae3735b00b324d9b7ce807dd63ff6ac8922fbce7e"
     },
     {
       "path": "third_party_licenses/Lean-LICENSES.txt",
-      "category": "license/citation",
       "bytes": 81854,
       "sha256": "00cce2ac071f63d470a287438a7c6bbc4334706be244384e9af4fc9ead11cdce"
     },
     {
       "path": "third_party_licenses/LeanSearchClient.txt",
-      "category": "license/citation",
       "bytes": 11357,
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
       "path": "third_party_licenses/Qq.txt",
-      "category": "license/citation",
       "bytes": 11357,
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
       "path": "third_party_licenses/aesop.txt",
-      "category": "license/citation",
       "bytes": 11357,
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
       "path": "third_party_licenses/batteries.txt",
-      "category": "license/citation",
       "bytes": 11357,
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
       "path": "third_party_licenses/importGraph.txt",
-      "category": "license/citation",
       "bytes": 11357,
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
       "path": "third_party_licenses/mathlib.txt",
-      "category": "license/citation",
       "bytes": 11357,
       "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
     },
     {
       "path": "third_party_licenses/plausible.txt",
-      "category": "license/citation",
       "bytes": 11357,
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
       "path": "third_party_licenses/proofwidgets.txt",
-      "category": "license/citation",
       "bytes": 11357,
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
       "path": "verification/CLAIM_MAP.txt",
-      "category": "artifact verification",
       "bytes": 3133,
       "sha256": "d408048406f91fd03e98f2c05680ae7f9dcaa11f5c150dfc8c4b4987e20e3feb"
     },
     {
       "path": "verification/ENVIRONMENT.json",
-      "category": "artifact verification",
       "bytes": 2734,
       "sha256": "904024008a1a84072c039afa8eebbfc2a4ed08b8ac959872040b4d57d8549d1b"
     },
     {
       "path": "verification/PROVENANCE.json",
-      "category": "artifact verification",
       "bytes": 811,
       "sha256": "587884840e4b2971ce82caae7409e8d25e074204326438f474f0b200dec69e36"
     },
     {
       "path": "verification/README.txt",
-      "category": "artifact verification",
       "bytes": 1483,
       "sha256": "d4c6dc033f687546b8242f2556f5f3a12431c6847dedd33e2b79962a7d4a8545"
     },
     {
       "path": "verification/VERIFICATION_ENVIRONMENT.txt",
-      "category": "artifact verification",
       "bytes": 1077,
       "sha256": "989f0b8c09058c1a53ff3fbd4742a240e526226a9dbfd0f26d593ff95b3470b5"
     },
     {
       "path": "verification/axioms_and_statements.txt",
-      "category": "artifact verification",
       "bytes": 12637,
       "sha256": "6778332a5d651371ecbf77cb1f8f693a7f12a9ca733c693437592c8f08793a85"
     },
     {
       "path": "verification/build.log",
-      "category": "artifact verification",
       "bytes": 5234,
       "sha256": "e28e1282201b3d8af0dbc289049a6baad428bdcb8c1f3e21a65da055e4bcf516"
     },
     {
       "path": "verification/lean-version.txt",
-      "category": "artifact verification",
       "bytes": 106,
       "sha256": "63f3e16bf0258e2cc0ab3010eb1830723df9bb85097b7b72b0137b9be25a78e9"
     },
     {
       "path": "verification/runtime-self-exe.c",
-      "category": "artifact verification",
       "bytes": 561,
       "sha256": "f64110a42b9e5f76677af0b5cd9823ee87c9b7a735dc22a44e02338443caa783"
     },
     {
       "path": "verification/specification.log",
-      "category": "artifact verification",
       "bytes": 13611,
       "sha256": "b00ca9e9843df499b1ca72322b32aa0504fa4ad0b868949f452ff770d794e273"
     }
