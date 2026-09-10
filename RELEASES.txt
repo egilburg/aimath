@@ -96,3 +96,9 @@ Its explicit commit link is added by a subsequent supporting-index commit.
 The mortality-r3 edition tag is pending because release tooling cannot create
 tags; the PDF's Archived edition link will resolve after that remaining action.
 Sofic r2 and all earlier mortality snapshots/tags remain unchanged.
+
+IMMUTABLE MORTALITY R3 RELEASE
+Commit: 34599405f739d5b5ee59c913727db2844a55e2c7
+Mortality: https://github.com/egilburg/aimath/tree/34599405f739d5b5ee59c913727db2844a55e2c7/mortality
+All 68 package paths, modes and content blobs verified against the export.
+Pending tag: mortality-r3 must point to 34599405f739d5b5ee59c913727db2844a55e2c7; never retarget earlier tags.
