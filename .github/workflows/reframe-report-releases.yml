@@ -1,0 +1,137 @@
+name: Reframe public report releases
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/reframe-report-releases.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  reframe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release/report-format-r2-r4-r3
+          fetch-depth: 0
+      - name: Install TeX tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq latexmk texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-science poppler-utils
+      - name: Reframe and rebuild public reports
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, hashlib, subprocess
+
+          disclosure = "\\section{Document status and AI disclosure}\nThis report is an AI-generated mathematical artifact maintained for readable exposition, inspection, and reproducibility. It is not an academic manuscript. The original mathematical contributions presented here were produced by AI; established results are credited to their cited sources. GPT-6 Astra performed the final review of the report, including its mathematical, attribution, verification, and release claims.\n\nThe report does not claim mathematical authorship, academic credit, subject-matter expertise, peer review, or independent expert validation. It should be assessed from its arguments, cited literature, and accompanying verification evidence rather than treated as guaranteed correct, complete, original, significant, or novel. Lean verification establishes only the encoded propositions from their encoded assumptions in the recorded environment; it does not by itself verify the prose, interpretation, literature coverage, novelty, or significance.\n\n"
+          specs={
+            'analytic_prefix_frequency_laws':('r2','analytic_prefix_frequency_laws-r2','analytic_laws_for_recognizable_prefix_frequencies.tex','analytic_laws_for_recognizable_prefix_frequencies.pdf'),
+            'mortality':('r4','mortality-r4','exponential_mortality_bound_for_finite_real_matrix_monoids.tex','exponential_mortality_bound_for_finite_real_matrix_monoids.pdf'),
+            'sofic_markov_order':('r3','sofic_markov_order-r3','sharp_finite_markov_order_in_intrinsic_sofic_dimension.tex','sharp_finite_markov_order_in_intrinsic_sofic_dimension.pdf')}
+          def must(s,o,n,w):
+              if o not in s: raise SystemExit(f'missing fragment in {w}: {o[:80]}')
+              return s.replace(o,n)
+          def h(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+          lean_before={k:subprocess.check_output(['git','rev-parse',f'HEAD:{k}/lean']).decode().strip() for k in specs}
+
+          d=Path('analytic_prefix_frequency_laws'); p=d/specs[d.name][2]; s=p.read_text()
+          s=must(s,'Revision r1 $\\cdot$ 10 September 2026','Revision r2 $\\cdot$ 10 September 2026',p)
+          s=must(s,'Repository maintainer: \\href{https://github.com/egilburg/aimath}{github.com/egilburg/aimath}','Source: \\href{https://github.com/egilburg/aimath}{github.com/egilburg/aimath}',p)
+          s=s.replace('{\\large Machine-generated mathematical report\\par}','{\\large AI-generated mathematical report\\par}')
+          old='\\medskip\n\\noindent\\textbf{Document status.}\nThis report is a machine-generated mathematical artifact maintained for readable exposition, education, reproducibility, and inspection. It is released as a project record and makes no claim of peer review or expert endorsement. Mathematical claims should be assessed through the arguments, cited sources, and identified formal-verification evidence. The archived edition is maintained with the public repository release.\n\n'
+          s=must(s,old,disclosure,p)
+          a=s.find('\\section*{Provenance and verification status}'); b=s.find('\\bibliographystyle',a)
+          if a<0 or b<0: raise SystemExit('analytic tail disclosure not found')
+          locator='\\paragraph{Verification artifacts.}\nThe exact theorem-to-formal correspondence, source hashes, build receipt, and reproduction instructions are included with the release package. The verified Lean source is \\code{73edf1d96438cde89dbac16c70106003b35d2f06}; the retained formal receipt is \\code{cfdc9de0f7d6ea8a08530027c814db959d68c850}. No global priority determination is supplied by formal verification.\n\n'
+          p.write_text(s[:a]+locator+s[b:])
+
+          for name in ['mortality','sofic_markov_order']:
+              version,tag,texname,pdfname=specs[name]; d=Path(name)
+              pre=d/'preamble.tex'; s=pre.read_text()
+              if '\\renewcommand{\\familydefault}{\\sfdefault}' not in s: s=must(s,'\\usepackage{lmodern,microtype}\n','\\usepackage{lmodern,microtype}\n\\renewcommand{\\familydefault}{\\sfdefault}\n',pre)
+              s=s.replace('Manuscript revision','Report revision')
+              if name=='mortality': s=s.replace('2026-09-10-r3','2026-09-10-r4').replace('mortality-r3','mortality-r4')
+              else:
+                  s=s.replace('8 September 2026','10 September 2026').replace('2026-09-08-r2','2026-09-10-r3')
+                  s=s.replace('\\small Report revision 2026-09-10-r3}', '\\small Report revision 2026-09-10-r3\\quad\\textperiodcentered\\quad\\href{https://github.com/egilburg/aimath/tree/sofic_markov_order-r3/sofic_markov_order}{Archived edition}}')
+              pre.write_text(s)
+              p=d/texname; s=p.read_text()
+              s=must(s,'\\newcommand{\\sourcecredit}{\\href{https://github.com/egilburg/aimath}{github.com/egilburg/aimath}}','\\newcommand{\\sourcecredit}{Source: \\href{https://github.com/egilburg/aimath}{github.com/egilburg/aimath}}',p)
+              s=s.replace('\nDiscoveries presented here were made through the use of artificial intelligence.\n','\n').replace('\\input{disclosure}\n','')
+              s=must(s,'\\maketitle\n','\\maketitle\n\\input{disclosure}\n',p)
+              for x,y in [('revision r2 of this manuscript','revision r2 of this report'),('this manuscript','this report'),('this paper','this report'),('manuscript-to-formal','report-to-formal'),('manuscript-level','report-level')]: s=s.replace(x,y)
+              if name=='mortality': s=s.replace('\\subsection{What changes from the previous edition}\nRevision r2','\\subsection{Mathematical changes from r2 to r3}\nRevision r4 changes presentation and disclosure only; its mathematical content and Lean proof are unchanged from r3. The mathematical comparison below is the change introduced from r2 to r3.\n\nRevision r2')
+              p.write_text(s); (d/'disclosure.tex').write_text(disclosure)
+              old=d/'build_manuscript.sh'; new=d/'build_report.sh'
+              if old.exists() and not new.exists(): old.rename(new)
+
+          for name,(version,tag,texname,pdfname) in specs.items():
+              d=Path(name)
+              rp=d/'README.txt'
+              if rp.exists():
+                  s=rp.read_text()
+                  if name=='analytic_prefix_frequency_laws': s=s.replace('revision r1','revision r2').replace('Repository maintainer: https://github.com/egilburg/aimath','Source: https://github.com/egilburg/aimath')
+                  elif name=='mortality': s=s.replace('2026-09-10-r3','2026-09-10-r4').replace('mortality-r3','mortality-r4')
+                  else: s=s.replace('2026-09-08-r2','2026-09-10-r3').replace('sofic_markov_order-r2','sofic_markov_order-r3')
+                  s=s.replace('build_manuscript.sh','build_report.sh').replace('Build the manuscript','Build the report').replace('REBUILD THE MANUSCRIPT','REBUILD THE REPORT').replace('Manuscript revision','Report revision').replace('MANUSCRIPT\n','REPORT\n').replace('PAPER-SPECIFIC FORMAL PROOF','REPORT-SPECIFIC FORMAL PROOF').replace('paper-specific','report-specific').replace('manuscript claims','report claims').replace("The full AI disclosure is above the references.","The full AI disclosure is the report's first numbered section.").replace('The publisher does not claim subject expertise or professional review.','The report does not claim subject-matter expertise, peer review, or independent expert validation.').replace('Source credit: https://github.com/egilburg/aimath','Source: https://github.com/egilburg/aimath')
+                  rp.write_text(s)
+              cp=d/'CHANGES.txt'
+              entry=f"\n2026-09-10 {version}: Presentation/disclosure-only report edition. Mathematics and Lean sources are unchanged from the preceding edition. Uses the canonical opening AI disclosure, Source line, sans-serif report styling, and removes the generic AI sentence from the abstract.\n"
+              if cp.exists() and f'2026-09-10 {version}:' not in cp.read_text(): cp.write_text(cp.read_text().rstrip()+entry+'\n')
+              jp=d/'PUBLICATION.json'
+              if jp.exists():
+                  data=json.loads(jp.read_text()); data['document_type']='AI-generated mathematical report'; data['date']='2026-09-10'
+                  if name=='analytic_prefix_frequency_laws': data['version']='r2'; data.pop('repository_maintainer',None); data['source']='https://github.com/egilburg/aimath'
+                  elif name=='mortality': data['version']='2026-09-10-r4'; data['edition_tag']={'name':'mortality-r4','status':'pending_creation'}
+                  else:
+                      data['version']='2026-09-10-r3'; data['release_date']='2026-09-10'; data['source_credit']={'text':'Source: github.com/egilburg/aimath','url':'https://github.com/egilburg/aimath','role':None}; data['changes']='Presentation/disclosure-only report edition; mathematical claims and Lean sources unchanged from r2.'; data['edition_tag']={'name':'sofic_markov_order-r3','status':'pending_creation'}
+                  data['edition_change_class']='presentation_and_disclosure_only'; data['mathematics_changed']=False; data['lean_changed']=False
+                  jp.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n')
+
+          for name,(version,tag,texname,pdfname) in specs.items():
+              d=Path(name); subprocess.run(['latexmk','-pdf','-interaction=nonstopmode','-halt-on-error',texname],cwd=d,check=True)
+              pdf=d/pdfname; info=subprocess.check_output(['pdfinfo',str(pdf)]).decode(errors='ignore'); print(name,[x for x in info.splitlines() if x.startswith('Pages:')][0])
+              log=d/texname.replace('.tex','.log')
+              if log.exists() and 'undefined references' in log.read_text(errors='ignore').lower(): raise SystemExit(f'undefined references: {log}')
+              for ext in ['aux','bbl','blg','fdb_latexmk','fls','log','out','toc']:
+                  q=d/texname.replace('.tex','.'+ext)
+                  if q.exists(): q.unlink()
+
+          lean_after={k:subprocess.check_output(['git','rev-parse',f'HEAD:{k}/lean']).decode().strip() for k in specs}
+          if lean_before!=lean_after: raise SystemExit('Lean tree changed unexpectedly')
+
+          # Refresh public inventories/checksums without changing verification evidence.
+          for name,(version,tag,texname,pdfname) in specs.items():
+              d=Path(name); jp=d/'PUBLICATION.json'
+              if jp.exists():
+                  data=json.loads(jp.read_text()); old={x.get('path'):x for x in data.get('files',[]) if isinstance(x,dict)}; entries=[]
+                  for f in sorted(x for x in d.rglob('*') if x.is_file()):
+                      rel=f.relative_to(d).as_posix()
+                      if rel in {'PUBLICATION.json','SHA256SUMS'} or rel.startswith('recheck/'): continue
+                      item=dict(old.get(rel,{})); item.pop('git_blob',None); item.update({'path':rel,'bytes':f.stat().st_size,'sha256':h(f)})
+                      if 'category' not in item:
+                          item['category']='proof/dependency' if rel.startswith('lean/') else ('artifact verification' if rel.startswith('verification/') else ('license/citation' if rel.endswith('.bib') or 'LICENSE' in rel or 'NOTICE' in rel else ('report/source' if rel.endswith(('.tex','.pdf')) or rel=='build_report.sh' else 'reader instructions')))
+                      entries.append(item)
+                  if data.get('files') is not None: data['files']=entries
+                  jp.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n')
+              files=[]
+              for f in sorted(x for x in d.rglob('*') if x.is_file()):
+                  rel=f.relative_to(d).as_posix()
+                  if rel=='SHA256SUMS' or rel.startswith('recheck/'): continue
+                  files.append(f'{h(f)}  {rel}')
+              (d/'SHA256SUMS').write_text('\n'.join(files)+'\n')
+
+          rel=Path('RELEASES.txt'); s=rel.read_text().rstrip()
+          block='''\n\n2026-09-10 — REPORT-FORMAT EDITIONS\nAnalytic prefix-frequency laws r2, mortality r4, and sofic Markov order r3.\nThese editions change presentation and disclosure only. Mathematical claims and\nLean sources are unchanged from analytic r1, mortality r3, and sofic r2,\nrespectively. Each report now uses the canonical opening Document status and AI\ndisclosure section, Source line, sans-serif presentation, and no generic AI\nsentence at the end of the abstract. Formal verification receipts remain those\nof the unchanged proof sources.\n\nPending edition tags:\n  analytic_prefix_frequency_laws-r2\n  mortality-r4\n  sofic_markov_order-r3\n'''
+          if '2026-09-10 — REPORT-FORMAT EDITIONS' not in s: rel.write_text(s+block+'\n')
+          PY
+          git status --short
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git commit -m 'Release report-format editions r2 r4 r3'
+          git push origin HEAD:release/report-format-r2-r4-r3
