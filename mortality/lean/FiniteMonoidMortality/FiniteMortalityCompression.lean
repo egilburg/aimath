@@ -1,16 +1,11 @@
-import Mathlib.Data.Real.Basic
-import FiniteMonoidMortality.Compression
+import FiniteMonoidMortality.MinimalRankCompression
+import Mathlib.Algebra.Order.Star.Real
 import Mathlib.GroupTheory.OrderOfElement
+import Mathlib.LinearAlgebra.Matrix.PosDef
 import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.Tactic.NoncommRing
 
 set_option autoImplicit false
-
-/-!
-# Invariant forms and a rank-drop certificate
-
-Average g gᵀ over the invertible members of a finite matrix semigroup. The resulting positive-trace form detects rank loss through a scalar trace defect.
--/
 
 noncomputable section
 
@@ -90,9 +85,6 @@ private theorem unit_inv_mem_of_finite_mul_mem {M : Type*} [Monoid M]
   rw [← Units.val_pow_eq_pow_val, heq] at hp
   exact hp
 
-/-- The invertible members of a finite multiplicatively closed subset of a
-monoid form a finite subgroup of the unit group, as soon as one such member
-exists. -/
 private def invertibleSubgroup {M : Type*} [Monoid M]
     (R : Set M) (hfinite : R.Finite)
     (hmul : ∀ ⦃x y : M⦄, x ∈ R → y ∈ R → x * y ∈ R)
@@ -112,22 +104,12 @@ private theorem invertibleSubgroup_finite {M : Type*} [Monoid M]
   let f : G → R := fun g => ⟨(g.1 : M), g.2⟩
   exact Finite.of_injective f (fun a b hab => Subtype.ext (Units.ext (congrArg Subtype.val hab)))
 
-private theorem trace_mul_transpose_nonneg {n : Type*} [Fintype n]
-    (A : Matrix n n ℝ) : 0 ≤ Matrix.trace (A * A.transpose) := by
-  classical
-  simp only [Matrix.trace]
-  exact Finset.sum_nonneg fun i _ => Finset.sum_nonneg fun j _ => mul_self_nonneg (A i j)
-
-/-- A finite multiplicatively closed set of real square matrices admits a
-symmetric form of positive trace which is invariant under all its invertible
-members.  The positive dimension hypothesis is used only to make the trace
-strictly positive. -/
-theorem exists_invariant_quadraticForm_of_finite_mul_mem
+theorem exists_invariant_posDef_of_finite_mul_mem
     {n : Type*} [Fintype n] [DecidableEq n] [Nonempty n]
     (R : Set (Matrix n n ℝ)) (hfinite : R.Finite)
     (hmul : ∀ ⦃x y : Matrix n n ℝ⦄, x ∈ R → y ∈ R → x * y ∈ R) :
     ∃ Q : Matrix n n ℝ,
-      Q.transpose = Q ∧ 0 < Matrix.trace Q ∧
+      Q.transpose = Q ∧ Q.PosDef ∧
         ∀ k ∈ R, IsUnit k → k * Q * k.transpose = Q := by
   classical
   by_cases hex : ∃ k ∈ R, IsUnit k
@@ -145,28 +127,12 @@ theorem exists_invariant_quadraticForm_of_finite_mul_mem
       apply Finset.sum_congr rfl
       intro a _
       exact mul_comm _ _
-    · have hle : Matrix.trace ((1 : Matrix n n ℝ) * (1 : Matrix n n ℝ).transpose) ≤
-          Matrix.trace Q := by
-        calc
-          Matrix.trace ((1 : Matrix n n ℝ) * (1 : Matrix n n ℝ).transpose) ≤
-              ∑ g : G, Matrix.trace ((g.1 : Matrix n n ℝ) *
-                (g.1 : Matrix n n ℝ).transpose) := by
-                  have hs := Finset.single_le_sum
-                    (s := Finset.univ)
-                    (f := fun g : G => Matrix.trace ((g.1 : Matrix n n ℝ) *
-                      (g.1 : Matrix n n ℝ).transpose))
-                    (fun g _ => trace_mul_transpose_nonneg
-                      (g.1 : Matrix n n ℝ))
-                    (Finset.mem_univ (1 : G))
-                  simpa only [Subgroup.coe_one, Units.val_one] using hs
-          _ = Matrix.trace Q := by
-            simp only [Q, Matrix.trace_sum]
-      have hcard : (0 : ℝ) < Fintype.card n := by exact_mod_cast Fintype.card_pos
-      have honeTrace : Matrix.trace ((1 : Matrix n n ℝ) *
-          (1 : Matrix n n ℝ).transpose) = Fintype.card n := by
-        rw [Matrix.transpose_one, mul_one, Matrix.trace_one]
-      rw [honeTrace] at hle
-      exact hcard.trans_le hle
+    · apply Matrix.posDef_sum Finset.univ_nonempty
+      intro g _
+      have hp := (Matrix.IsUnit.posDef_star_right_conjugate_iff
+        (x := (1 : Matrix n n ℝ)) (Units.isUnit g.1)).2 Matrix.PosDef.one
+      simpa only [mul_one, Matrix.star_eq_conjTranspose,
+        Matrix.conjTranspose_eq_transpose_of_trivial] using hp
     · intro k hkR hkunit
       let kg : G := ⟨hkunit.unit, by
         change (hkunit.unit : Matrix n n ℝ) ∈ R
@@ -196,15 +162,20 @@ theorem exists_invariant_quadraticForm_of_finite_mul_mem
         _ = ∑ g : G, ((g.1 : Matrix n n ℝ) * (g.1 : Matrix n n ℝ).transpose) :=
           Equiv.sum_comp (Equiv.mulLeft kg)
             (fun g : G => (g.1 : Matrix n n ℝ) * (g.1 : Matrix n n ℝ).transpose)
-  · refine ⟨1, by simp, ?_, ?_⟩
-    · simpa using (show (0 : ℝ) < Fintype.card n by exact_mod_cast Fintype.card_pos)
-    · intro k hkR hkunit
-      exact (hex ⟨k, hkR, hkunit⟩).elim
+  · refine ⟨1, by simp, Matrix.PosDef.one, ?_⟩
+    intro k hkR hkunit
+    exact (hex ⟨k, hkR, hkunit⟩).elim
 
-/-- The compressed returns associated to a factorization `matrixWord M h = U V`
-form a finite multiplicative semigroup whenever the whole word monoid is
-finite.  Consequently they admit one common invariant form of positive trace.
--/
+theorem exists_invariant_quadraticForm_of_finite_mul_mem
+    {n : Type*} [Fintype n] [DecidableEq n] [Nonempty n]
+    (R : Set (Matrix n n ℝ)) (hfinite : R.Finite)
+    (hmul : ∀ ⦃x y : Matrix n n ℝ⦄, x ∈ R → y ∈ R → x * y ∈ R) :
+    ∃ Q : Matrix n n ℝ,
+      Q.transpose = Q ∧ 0 < Matrix.trace Q ∧
+        ∀ k ∈ R, IsUnit k → k * Q * k.transpose = Q := by
+  obtain ⟨Q, hs, hp, hi⟩ := exists_invariant_posDef_of_finite_mul_mem R hfinite hmul
+  exact ⟨Q, hs, hp.trace_pos, hi⟩
+
 theorem exists_invariant_quadraticForm_compressedReturn_of_finite
     {A ι : Type*} [Fintype ι] [DecidableEq ι] {r : ℕ} (hr : 0 < r)
     (M : A → Matrix ι ι ℝ) (h : List A)
@@ -232,51 +203,31 @@ theorem exists_invariant_quadraticForm_compressedReturn_of_finite
     exists_invariant_quadraticForm_of_finite_mul_mem R hRfinite hRmul
   exact ⟨Q, hQsymm, hQtrace, fun y hy => hQinv _ ⟨y, rfl⟩ hy⟩
 
-/-- The scalar quadratic defect attached to an invariant form.  This version
-uses no inverse of `Q`: it is enough that it vanish on invertible compressed
-returns and be nonzero at the zero return. -/
-def invariantTraceDefect {n : Type*} [Fintype n]
-    (Q K : Matrix n n ℝ) : ℝ :=
-  Matrix.trace Q - Matrix.trace (K * Q * K.transpose)
-
-theorem invariantTraceDefect_eq_zero_of_invariant
-    {n : Type*} [Fintype n]
-    {Q K : Matrix n n ℝ} (hinvariant : K * Q * K.transpose = Q) :
-    invariantTraceDefect Q K = 0 := by
-  simp [invariantTraceDefect, hinvariant]
-
-/-- A nonzero invariant-trace defect certifies a strict rank drop in a
-sandwich.  This is the contrapositive use of the full-rank compressed-return
-lemma and avoids any separate injectivity/surjectivity proof for `U` and `V`.
--/
-theorem rank_sandwich_lt_of_invariantTraceDefect_ne_zero
-    {ι : Type*} [Fintype ι] [DecidableEq ι] {r : ℕ}
-    (U : Matrix ι (Fin r) ℝ) (V : Matrix (Fin r) ι ℝ)
-    (H Y : Matrix ι ι ℝ) (hfac : H = U * V)
-    (Q : Matrix (Fin r) (Fin r) ℝ)
-    (hinvariant : IsUnit (V * Y * U) →
-      (V * Y * U) * Q * (V * Y * U).transpose = Q)
-    (hdefect : invariantTraceDefect Q (V * Y * U) ≠ 0) :
-    (H * Y * H).rank < r := by
-  apply Nat.lt_of_not_ge
-  intro hlower
-  have hunit : IsUnit (V * Y * U) :=
-    sandwich_isUnit_of_rank_lower_bound U V H Y hfac hlower
-  exact hdefect (invariantTraceDefect_eq_zero_of_invariant (hinvariant hunit))
-
-/-- Word-level specialization of the preceding strict rank-drop certificate. -/
-theorem rank_wordSandwich_lt_of_invariantTraceDefect_ne_zero
-    {A ι : Type*} [Fintype ι] [DecidableEq ι] {r : ℕ}
-    (M : A → Matrix ι ι ℝ) (h y : List A)
+theorem exists_invariant_posDef_compressedReturn_of_finite
+    {A ι : Type*} [Fintype ι] [DecidableEq ι] {r : ℕ} (hr : 0 < r)
+    (M : A → Matrix ι ι ℝ) (h : List A)
     (U : Matrix ι (Fin r) ℝ) (V : Matrix (Fin r) ι ℝ)
     (hfac : matrixWord M h = U * V)
-    (Q : Matrix (Fin r) (Fin r) ℝ)
-    (hinvariant : IsUnit (compressedReturn M U V y) →
-      compressedReturn M U V y * Q * (compressedReturn M U V y).transpose = Q)
-    (hdefect : invariantTraceDefect Q (compressedReturn M U V y) ≠ 0) :
-    (matrixWord M (h ++ y ++ h)).rank < r := by
-  simpa only [matrixWord_append, compressedReturn] using
-    rank_sandwich_lt_of_invariantTraceDefect_ne_zero U V
-      (matrixWord M h) (matrixWord M y) hfac Q hinvariant hdefect
+    (hfinite : (Set.range (matrixWord M)).Finite) :
+    ∃ Q : Matrix (Fin r) (Fin r) ℝ,
+      Q.transpose = Q ∧ Q.PosDef ∧
+        ∀ y : List A, IsUnit (compressedReturn M U V y) →
+          compressedReturn M U V y * Q * (compressedReturn M U V y).transpose = Q := by
+  let _ : Nonempty (Fin r) := Fin.pos_iff_nonempty.mp hr
+  let compress : Matrix ι ι ℝ → Matrix (Fin r) (Fin r) ℝ := fun X => V * X * U
+  let R : Set (Matrix (Fin r) (Fin r) ℝ) := Set.range (compressedReturn M U V)
+  have hRfinite : R.Finite := by
+    have hrange : R = compress '' Set.range (matrixWord M) := by
+      rw [← Set.range_comp]
+      rfl
+    rw [hrange]
+    exact hfinite.image compress
+  have hRmul : ∀ ⦃K L : Matrix (Fin r) (Fin r) ℝ⦄,
+      K ∈ R → L ∈ R → K * L ∈ R := by
+    rintro K L ⟨y, rfl⟩ ⟨z, rfl⟩
+    exact ⟨y ++ h ++ z, (compressedReturn_mul M h U V hfac y z).symm⟩
+  obtain ⟨Q, hQsymm, hQtrace, hQinv⟩ :=
+    exists_invariant_posDef_of_finite_mul_mem R hRfinite hRmul
+  exact ⟨Q, hQsymm, hQtrace, fun y hy => hQinv _ ⟨y, rfl⟩ hy⟩
 
 end FiniteMonoidMortality

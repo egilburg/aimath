@@ -1,196 +1,183 @@
-theorem FiniteMonoidMortality.exists_short_zero_word_of_finite_real_monoid.{u_1} : ∀ {A : Type u_1} {n : ℕ},
-  0 < n →
-    ∀ (M : A → Matrix (Fin n) (Fin n) ℝ),
-      (Set.range (FiniteMonoidMortality.matrixWord M)).Finite →
-        (∃ z, FiniteMonoidMortality.matrixWord M z = 0) →
-          ∃ z, FiniteMonoidMortality.matrixWord M z = 0 ∧ z.length ≤ FiniteMonoidMortality.finiteMortalityBound n :=
-fun {A} {n} hn M hfinite hzero =>
-  have hdrop := FiniteMonoidMortality.exists_short_rank_decreasing_sandwich_of_finite M hfinite hzero;
-  Exists.casesOn (FiniteMonoidMortality.exists_zero_word_bound_of_short_sandwich M (n * (n + 1) / 2) hzero hdrop)
-    fun z h =>
-    And.casesOn h fun hz hl =>
-      Exists.intro z
-        ⟨hz,
-          id
-            (Eq.mp
-              (congrArg (LE.le z.length)
-                (congr
-                  (congrArg HAdd.hAdd (congrArg (HPow.hPow 2) (congrFun' (congrArg HSub.hSub (Fintype.card_fin n)) 1)))
-                  (congrFun'
-                    (congrArg HMul.hMul
-                      (congrFun'
-                        (congrArg HSub.hSub
-                          (congrArg (HPow.hPow 2) (congrFun' (congrArg HSub.hSub (Fintype.card_fin n)) 1)))
-                        1))
-                    (n * (n + 1) / 2))))
-              hl)⟩
-'FiniteMonoidMortality.exists_short_zero_word_of_finite_real_monoid' depends on axioms: [propext,
+FiniteMonoidMortality.exists_minimum_rank_word_real_of_finite.{u_1} {A : Type u_1} {n : ℕ}
+  (M : A → Matrix (Fin n) (Fin n) ℝ) (hfinite : (Set.range (FiniteMonoidMortality.matrixWord M)).Finite) :
+  ∃ w,
+    (∀ (v : List A), (FiniteMonoidMortality.matrixWord M w).rank ≤ (FiniteMonoidMortality.matrixWord M v).rank) ∧
+      w.length ≤ FiniteMonoidMortality.minimumRankBound n (FiniteMonoidMortality.matrixWord M w).rank
+'FiniteMonoidMortality.exists_minimum_rank_word_real_of_finite' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-theorem FiniteMonoidMortality.exists_short_zero_word_of_finite_rational_monoid.{u_1} : ∀ {A : Type u_1} {n : ℕ},
-  0 < n →
-    ∀ (M : A → Matrix (Fin n) (Fin n) ℚ),
-      (Set.range (FiniteMonoidMortality.matrixWord M)).Finite →
-        (∃ z, FiniteMonoidMortality.matrixWord M z = 0) →
-          ∃ z, FiniteMonoidMortality.matrixWord M z = 0 ∧ z.length ≤ FiniteMonoidMortality.finiteMortalityBound n :=
-fun {A} {n} hn M hfinite hzero =>
-  let f := Rat.castHom ℝ;
-  let MR := fun a => (M a).map ⇑f;
-  have hRfinite := FiniteMonoidMortality.finite_matrixWord_range_map f M hfinite;
-  have hRzero :=
-    Exists.casesOn hzero fun z hz => Exists.intro z ((FiniteMonoidMortality.matrixWord_map_eq_zero_iff f M z).mpr hz);
-  Exists.casesOn (FiniteMonoidMortality.exists_short_zero_word_of_finite_real_monoid hn MR hRfinite hRzero) fun z h =>
-    And.casesOn h fun hz hl => Exists.intro z ⟨(FiniteMonoidMortality.matrixWord_map_eq_zero_iff f M z).mp hz, hl⟩
-'FiniteMonoidMortality.exists_short_zero_word_of_finite_rational_monoid' depends on axioms: [propext,
+FiniteMonoidMortality.exists_minimum_rank_word_rational_of_finite.{u_1} {A : Type u_1} {n : ℕ}
+  (M : A → Matrix (Fin n) (Fin n) ℚ) (hfinite : (Set.range (FiniteMonoidMortality.matrixWord M)).Finite) :
+  ∃ w,
+    (∀ (v : List A), (FiniteMonoidMortality.matrixWord M w).rank ≤ (FiniteMonoidMortality.matrixWord M v).rank) ∧
+      w.length ≤ FiniteMonoidMortality.minimumRankBound n (FiniteMonoidMortality.matrixWord M w).rank
+'FiniteMonoidMortality.exists_minimum_rank_word_rational_of_finite' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-theorem FiniteMonoidMortality.exists_short_rank_decreasing_sandwich_of_finite.{u_1} : ∀ {A : Type u_1} {n : ℕ}
-  (M : A → Matrix (Fin n) (Fin n) ℝ),
-  (Set.range (FiniteMonoidMortality.matrixWord M)).Finite →
-    (∃ z, FiniteMonoidMortality.matrixWord M z = 0) →
-      ∀ (h : List A),
-        FiniteMonoidMortality.matrixWord M h ≠ 0 →
-          ∃ w,
-            w.length ≤ n * (n + 1) / 2 ∧
-              (FiniteMonoidMortality.matrixWord M (h ++ w ++ h)).rank < (FiniteMonoidMortality.matrixWord M h).rank :=
-fun {A} {n} M hfinite hzero h hh =>
-  Exists.casesOn (FiniteMonoidMortality.exists_rankFactorization (FiniteMonoidMortality.matrixWord M h)) fun U h_1 =>
-    Exists.casesOn h_1 fun V hfac =>
-      Exists.casesOn
-        (FiniteMonoidMortality.exists_invariant_quadraticForm_compressedReturn_of_finite
-          (FiniteMonoidMortality.rank_pos_of_ne_zero (FiniteMonoidMortality.matrixWord M h) hh) M h U V hfac hfinite)
-        fun Q h_2 =>
-        And.casesOn h_2 fun hQsymm right =>
-          And.casesOn right fun hQtrace hQinv =>
-            let B := U * Q * U.transpose;
-            have hB :=
-              id
-                (Eq.mpr
-                  (id
-                    (congrFun'
-                      (congrArg Eq
-                        (Eq.trans (Matrix.transpose_mul (U * Q) U.transpose)
-                          (congr (congrArg HMul.hMul (Matrix.transpose_transpose U))
-                            (Eq.trans (Matrix.transpose_mul U Q) (congrFun' (congrArg HMul.hMul hQsymm) U.transpose)))))
-                      (U * Q * U.transpose)))
-                  (of_eq_true
-                    (Eq.trans (congrArg (Eq (U * (Q * U.transpose))) (Matrix.mul_assoc U Q U.transpose))
-                      (eq_self (U * (Q * U.transpose))))));
-            let ell := FiniteMonoidMortality.traceSandwichMatrixDual V;
-            have heval := fun w =>
-              of_eq_true
-                (Eq.trans
-                  (congr
-                    (congrArg Eq
-                      (Eq.trans
-                        (congrArg (⇑(FiniteMonoidMortality.traceSandwichMatrixDual V))
-                          (Eq.trans
-                            (Eq.trans
-                              (congrFun'
-                                (congrArg HMul.hMul
-                                  (congrArg (HMul.hMul (FiniteMonoidMortality.matrixWord M w))
-                                    (Matrix.mul_assoc U Q U.transpose)))
-                                (FiniteMonoidMortality.matrixWord M w).transpose)
-                              (Matrix.mul_assoc (FiniteMonoidMortality.matrixWord M w) (U * (Q * U.transpose))
-                                (FiniteMonoidMortality.matrixWord M w).transpose))
-                            (congrArg (HMul.hMul (FiniteMonoidMortality.matrixWord M w))
-                              (Eq.trans
-                                (Matrix.mul_assoc U (Q * U.transpose) (FiniteMonoidMortality.matrixWord M w).transpose)
-                                (congrArg (HMul.hMul U)
-                                  (Matrix.mul_assoc Q U.transpose (FiniteMonoidMortality.matrixWord M w).transpose))))))
-                        (congrArg Matrix.trace
-                          (Eq.trans
-                            (Matrix.mul_assoc V
-                              (FiniteMonoidMortality.matrixWord M w *
-                                (U * (Q * (U.transpose * (FiniteMonoidMortality.matrixWord M w).transpose))))
-                              V.transpose)
-                            (congrArg (HMul.hMul V)
-                              (Eq.trans
-                                (Matrix.mul_assoc (FiniteMonoidMortality.matrixWord M w)
-                                  (U * (Q * (U.transpose * (FiniteMonoidMortality.matrixWord M w).transpose)))
-                                  V.transpose)
-                                (congrArg (HMul.hMul (FiniteMonoidMortality.matrixWord M w))
-                                  (Eq.trans
-                                    (Matrix.mul_assoc U
-                                      (Q * (U.transpose * (FiniteMonoidMortality.matrixWord M w).transpose))
-                                      V.transpose)
-                                    (congrArg (HMul.hMul U)
-                                      (Eq.trans
-                                        (Matrix.mul_assoc Q
-                                          (U.transpose * (FiniteMonoidMortality.matrixWord M w).transpose) V.transpose)
-                                        (congrArg (HMul.hMul Q)
-                                          (Matrix.mul_assoc U.transpose (FiniteMonoidMortality.matrixWord M w).transpose
-                                            V.transpose))))))))))))
-                    (congrArg Matrix.trace
-                      (Eq.trans
-                        (Eq.trans
-                          (congr
-                            (congrArg HMul.hMul
-                              (Eq.trans
-                                (Eq.trans
-                                  (congrFun'
-                                    (congrArg HMul.hMul (Matrix.mul_assoc V (FiniteMonoidMortality.matrixWord M w) U))
-                                    Q)
-                                  (Matrix.mul_assoc V (FiniteMonoidMortality.matrixWord M w * U) Q))
-                                (congrArg (HMul.hMul V) (Matrix.mul_assoc (FiniteMonoidMortality.matrixWord M w) U Q))))
-                            (Eq.trans
-                              (Eq.trans
-                                (congrArg Matrix.transpose
-                                  (Matrix.mul_assoc V (FiniteMonoidMortality.matrixWord M w) U))
-                                (Matrix.transpose_mul V (FiniteMonoidMortality.matrixWord M w * U)))
-                              (Eq.trans
-                                (congrFun'
-                                  (congrArg HMul.hMul (Matrix.transpose_mul (FiniteMonoidMortality.matrixWord M w) U))
-                                  V.transpose)
-                                (Matrix.mul_assoc U.transpose (FiniteMonoidMortality.matrixWord M w).transpose
-                                  V.transpose))))
-                          (Matrix.mul_assoc V (FiniteMonoidMortality.matrixWord M w * (U * Q))
-                            (U.transpose * ((FiniteMonoidMortality.matrixWord M w).transpose * V.transpose))))
-                        (congrArg (HMul.hMul V)
-                          (Eq.trans
-                            (Matrix.mul_assoc (FiniteMonoidMortality.matrixWord M w) (U * Q)
-                              (U.transpose * ((FiniteMonoidMortality.matrixWord M w).transpose * V.transpose)))
-                            (congrArg (HMul.hMul (FiniteMonoidMortality.matrixWord M w))
-                              (Matrix.mul_assoc U Q
-                                (U.transpose * ((FiniteMonoidMortality.matrixWord M w).transpose * V.transpose)))))))))
-                  (eq_self
-                    (V *
-                        (FiniteMonoidMortality.matrixWord M w *
-                          (U *
-                            (Q *
-                              (U.transpose *
-                                ((FiniteMonoidMortality.matrixWord M w).transpose * V.transpose)))))).trace));
-            have hsignal :=
-              Exists.casesOn hzero fun z hz =>
-                Exists.intro z
-                  (Eq.mpr
-                    (id
-                      (congrFun'
-                        (congrArg Ne
-                          (Eq.trans
-                            (congrArg (HSub.hSub Q.trace)
-                              (Eq.trans
-                                (congrArg (⇑ell)
-                                  (Eq.trans
-                                    (congr
-                                      (congrArg HMul.hMul (Eq.trans (congrFun' (congrArg HMul.hMul hz) B) (zero_mul B)))
-                                      (congrArg Matrix.transpose hz))
-                                    (mul_zero 0)))
-                                (map_zero ell)))
-                            (sub_zero Q.trace)))
-                        0))
-                    (LT.lt.ne' hQtrace));
-            Exists.casesOn
-              (FiniteMonoidMortality.exists_short_quadratic_observation_matrixDual_ne_zero M B hB ell Q.trace hsignal)
-              fun w h_3 =>
-              And.casesOn h_3 fun hwlen hw =>
-                Exists.intro w
-                  ⟨hwlen,
-                    FiniteMonoidMortality.rank_wordSandwich_lt_of_invariantTraceDefect_ne_zero M h w U V hfac Q
-                      (hQinv w)
-                      (id (Eq.mp (congrFun' (congrArg Ne (congrArg (HSub.hSub Q.trace) ((fun w => heval w) w))) 0) hw))⟩
-'FiniteMonoidMortality.exists_short_rank_decreasing_sandwich_of_finite' depends on axioms: [propext,
+FiniteMonoidMortality.exists_improved_short_zero_word_of_finite_real_monoid.{u_1} {A : Type u_1} {n : ℕ}
+  (M : A → Matrix (Fin n) (Fin n) ℝ) (hfinite : (Set.range (FiniteMonoidMortality.matrixWord M)).Finite)
+  (hzero : ∃ z, FiniteMonoidMortality.matrixWord M z = 0) :
+  ∃ z, FiniteMonoidMortality.matrixWord M z = 0 ∧ z.length ≤ FiniteMonoidMortality.improvedMortalityBound n
+'FiniteMonoidMortality.exists_improved_short_zero_word_of_finite_real_monoid' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-def FiniteMonoidMortality.finiteMortalityBound : ℕ → ℕ :=
-fun n => 2 ^ (n - 1) + (2 ^ (n - 1) - 1) * (n * (n + 1) / 2)
+FiniteMonoidMortality.exists_improved_short_zero_word_of_finite_rational_monoid.{u_1} {A : Type u_1} {n : ℕ}
+  (M : A → Matrix (Fin n) (Fin n) ℚ) (hfinite : (Set.range (FiniteMonoidMortality.matrixWord M)).Finite)
+  (hzero : ∃ z, FiniteMonoidMortality.matrixWord M z = 0) :
+  ∃ z, FiniteMonoidMortality.matrixWord M z = 0 ∧ z.length ≤ FiniteMonoidMortality.improvedMortalityBound n
+'FiniteMonoidMortality.exists_improved_short_zero_word_of_finite_rational_monoid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+FiniteMonoidMortality.exists_zero_word_length_le_four_real.{u_1} {Alphabet : Type u_1}
+  (M : Alphabet → Matrix (Fin 2) (Fin 2) ℝ) (hf : (Set.range (FiniteMonoidMortality.matrixWord M)).Finite)
+  (hzero : ∃ w, FiniteMonoidMortality.matrixWord M w = 0) : ∃ w, FiniteMonoidMortality.matrixWord M w = 0 ∧ w.length ≤ 4
+'FiniteMonoidMortality.exists_zero_word_length_le_four_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteMonoidMortality.exists_zero_word_length_le_four_rational.{u_1} {Alphabet : Type u_1}
+  (M : Alphabet → Matrix (Fin 2) (Fin 2) ℚ) (hf : (Set.range (FiniteMonoidMortality.matrixWord M)).Finite)
+  (hzero : ∃ w, FiniteMonoidMortality.matrixWord M w = 0) : ∃ w, FiniteMonoidMortality.matrixWord M w = 0 ∧ w.length ≤ 4
+'FiniteMonoidMortality.exists_zero_word_length_le_four_rational' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+FiniteMonoidMortality.mortalityExample_threshold_four :
+  (Set.range (FiniteMonoidMortality.matrixWord FiniteMonoidMortality.mortalityExample)).Finite ∧
+    (∃ w, FiniteMonoidMortality.matrixWord FiniteMonoidMortality.mortalityExample w = 0 ∧ w.length = 4) ∧
+      ∀ (w : List Bool), FiniteMonoidMortality.matrixWord FiniteMonoidMortality.mortalityExample w = 0 → 4 ≤ w.length
+'FiniteMonoidMortality.mortalityExample_threshold_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteMonoidMortality.exists_zero_word_of_invariant_flag.{u_1, u_2} {E : Type u_1} {A : Type u_2} [AddCommGroup E]
+  [Module ℝ E] [FiniteDimensional ℝ E] (T : A → Module.End ℝ E) (V : ℕ → Submodule ℝ E) (n : ℕ) (hbot : V 0 = ⊥)
+  (htop : V n = ⊤) (hV : ∀ (a : A), ∀ i ≤ n, ∀ x ∈ V i, (T a) x ∈ V i)
+  (hf : (Set.range (FiniteMonoidMortality.endWord T)).Finite) (hz : ∃ w, FiniteMonoidMortality.endWord T w = 0) :
+  ∃ w,
+    FiniteMonoidMortality.endWord T w = 0 ∧
+      w.length ≤
+        (List.map
+            (fun i =>
+              FiniteMonoidMortality.factorMortalityBound
+                (Module.finrank ℝ (FiniteMonoidMortality.flagSection (V (i + 1)) (V i))))
+            (List.range n)).sum
+'FiniteMonoidMortality.exists_zero_word_of_invariant_flag' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteMonoidMortality.exists_zero_word_prescribed_small_factors.{u_1, u_2} {E : Type u_1} {A : Type u_2}
+  [AddCommGroup E] [Module ℝ E] [FiniteDimensional ℝ E] (T : A → Module.End ℝ E) (V : ℕ → Submodule ℝ E) (n k1 k2 : ℕ)
+  (hbot : V 0 = ⊥) (htop : V n = ⊤)
+  (hsmall :
+    ∀ i < n,
+      Module.finrank ℝ (FiniteMonoidMortality.flagSection (V (i + 1)) (V i)) = 1 ∨
+        Module.finrank ℝ (FiniteMonoidMortality.flagSection (V (i + 1)) (V i)) = 2)
+  (hk1 :
+    List.count 1
+        (List.map (fun i => Module.finrank ℝ (FiniteMonoidMortality.flagSection (V (i + 1)) (V i))) (List.range n)) =
+      k1)
+  (hk2 :
+    List.count 2
+        (List.map (fun i => Module.finrank ℝ (FiniteMonoidMortality.flagSection (V (i + 1)) (V i))) (List.range n)) =
+      k2)
+  (hV : ∀ (a : A), ∀ i ≤ n, ∀ x ∈ V i, (T a) x ∈ V i) (hf : (Set.range (FiniteMonoidMortality.endWord T)).Finite)
+  (hz : ∃ w, FiniteMonoidMortality.endWord T w = 0) :
+  ∃ w, FiniteMonoidMortality.endWord T w = 0 ∧ w.length ≤ k1 + 4 * k2
+'FiniteMonoidMortality.exists_zero_word_prescribed_small_factors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+FiniteMonoidMortality.exists_zero_word_linear_bound_of_small_factors.{u_1, u_2} {E : Type u_1} {A : Type u_2}
+  [AddCommGroup E] [Module ℝ E] [FiniteDimensional ℝ E] (T : A → Module.End ℝ E) (V : ℕ → Submodule ℝ E) (n : ℕ)
+  (hbot : V 0 = ⊥) (htop : V n = ⊤) (hmono : ∀ i < n, V i ≤ V (i + 1))
+  (hsmall :
+    ∀ i < n,
+      Module.finrank ℝ (FiniteMonoidMortality.flagSection (V (i + 1)) (V i)) = 1 ∨
+        Module.finrank ℝ (FiniteMonoidMortality.flagSection (V (i + 1)) (V i)) = 2)
+  (hV : ∀ (a : A), ∀ i ≤ n, ∀ x ∈ V i, (T a) x ∈ V i) (hf : (Set.range (FiniteMonoidMortality.endWord T)).Finite)
+  (hz : ∃ w, FiniteMonoidMortality.endWord T w = 0) :
+  ∃ w, FiniteMonoidMortality.endWord T w = 0 ∧ w.length ≤ 2 * Module.finrank ℝ E
+'FiniteMonoidMortality.exists_zero_word_linear_bound_of_small_factors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+FiniteMonoidMortality.sharp_small_block_threshold (k1 k2 : ℕ) :
+  Fintype.card ((i : FiniteMonoidMortality.smallBlockIndex k1 k2) × Fin (FiniteMonoidMortality.smallBlockDim i)) =
+      k1 + 2 * k2 ∧
+    (Set.range
+          (FiniteMonoidMortality.matrixWord
+            (FiniteMonoidMortality.blockMortalityDigit FiniteMonoidMortality.smallBlockDim
+              FiniteMonoidMortality.smallBlockDigit))).Finite ∧
+      (∃ w,
+          FiniteMonoidMortality.matrixWord
+                (FiniteMonoidMortality.blockMortalityDigit FiniteMonoidMortality.smallBlockDim
+                  FiniteMonoidMortality.smallBlockDigit)
+                w =
+              0 ∧
+            w.length = k1 + 4 * k2) ∧
+        ∀ (w : List (FiniteMonoidMortality.smallBlockIndex k1 k2 × Bool)),
+          FiniteMonoidMortality.matrixWord
+                (FiniteMonoidMortality.blockMortalityDigit FiniteMonoidMortality.smallBlockDim
+                  FiniteMonoidMortality.smallBlockDigit)
+                w =
+              0 →
+            k1 + 4 * k2 ≤ w.length
+'FiniteMonoidMortality.sharp_small_block_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteMonoidMortality.mortalityRotation_irreducible (U : Submodule ℝ (Fin 2 → ℝ))
+  (hU : ∀ x ∈ U, (FiniteMonoidMortality.mortalityRotation.map ⇑(Int.castRingHom ℝ)).mulVec x ∈ U) : U = ⊥ ∨ U = ⊤
+'FiniteMonoidMortality.mortalityRotation_irreducible' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteMonoidMortality.bounded_periodic_mortality_no_uniform_bound (N : ℕ) :
+  Module.finrank ℝ ℂ = 2 ∧
+    ∃ T,
+      Bornology.IsBounded (Set.range (FiniteMonoidMortality.continuousWord T)) ∧
+        (∀ (a : Bool), (Set.range fun k => T a ^ k).Finite) ∧
+          (∃ w, FiniteMonoidMortality.continuousWord T w = 0) ∧
+            ∀ (w : List Bool), w.length ≤ N → FiniteMonoidMortality.continuousWord T w ≠ 0
+'FiniteMonoidMortality.bounded_periodic_mortality_no_uniform_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+FiniteMonoidMortality.exists_minimum_rank_slp_real_of_finite.{u_1} {A : Type u_1} {n : ℕ}
+  (M : A → Matrix (Fin n) (Fin n) ℝ) (hf : (Set.range (FiniteMonoidMortality.matrixWord M)).Finite) :
+  ∃ p,
+    FiniteMonoidMortality.wordProgramValid p ∧
+      0 < p.length ∧
+        (∀ (v : List A),
+            (FiniteMonoidMortality.matrixWord M (FiniteMonoidMortality.wordProgramRoot p)).rank ≤
+              (FiniteMonoidMortality.matrixWord M v).rank) ∧
+          (FiniteMonoidMortality.wordProgramRoot p).length ≤
+              FiniteMonoidMortality.minimumRankBound n
+                (FiniteMonoidMortality.matrixWord M (FiniteMonoidMortality.wordProgramRoot p)).rank ∧
+            p.length ≤ FiniteMonoidMortality.mortalitySLPGateBound n
+'FiniteMonoidMortality.exists_minimum_rank_slp_real_of_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+FiniteMonoidMortality.exists_minimum_rank_slp_rational_of_finite.{u_1} {A : Type u_1} {n : ℕ}
+  (M : A → Matrix (Fin n) (Fin n) ℚ) (hf : (Set.range (FiniteMonoidMortality.matrixWord M)).Finite) :
+  ∃ p,
+    FiniteMonoidMortality.wordProgramValid p ∧
+      0 < p.length ∧
+        (∀ (v : List A),
+            (FiniteMonoidMortality.matrixWord M (FiniteMonoidMortality.wordProgramRoot p)).rank ≤
+              (FiniteMonoidMortality.matrixWord M v).rank) ∧
+          (FiniteMonoidMortality.wordProgramRoot p).length ≤
+              FiniteMonoidMortality.minimumRankBound n
+                (FiniteMonoidMortality.matrixWord M (FiniteMonoidMortality.wordProgramRoot p)).rank ∧
+            p.length ≤ FiniteMonoidMortality.mortalitySLPGateBound n
+'FiniteMonoidMortality.exists_minimum_rank_slp_rational_of_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+FiniteMonoidMortality.wordProgramValue_correct.{u_1, u_2} {A : Type u_1} {R : Type u_2} [Monoid R] (M : A → R)
+  (p : List (FiniteMonoidMortality.WordGate A)) :
+  FiniteMonoidMortality.wordProgramValue M p = (List.map M (FiniteMonoidMortality.wordProgramRoot p)).prod
+'FiniteMonoidMortality.wordProgramValue_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteMonoidMortality.mortalitySLPGateBound_le_cubic (n : ℕ) :
+  FiniteMonoidMortality.mortalitySLPGateBound n ≤ n ^ 3 + n ^ 2 + 3 * n + 1
+'FiniteMonoidMortality.mortalitySLPGateBound_le_cubic' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteMonoidMortality.minimumRankBound_full (n : ℕ) : FiniteMonoidMortality.minimumRankBound n n = 0
+'FiniteMonoidMortality.minimumRankBound_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteMonoidMortality.minimumRankBound_zero (n : ℕ) :
+  FiniteMonoidMortality.minimumRankBound n 0 = n * 2 ^ n - n * (n + 1) / 2
+'FiniteMonoidMortality.minimumRankBound_zero' depends on axioms: [propext]
+FiniteMonoidMortality.mortalityBudget_comparison (n : ℕ) (hn : 2 ≤ n) :
+  2 ^ (n - 1) + (2 ^ (n - 1) - 1) * (n * (n + 1) / 2) =
+    FiniteMonoidMortality.mortalityBudget n n + 2 ^ (n - 2) * (n - 1) * (n - 2)
+'FiniteMonoidMortality.mortalityBudget_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteMonoidMortality.linearWord_nil.{u_1, u_2, u_3} {K : Type u_1} {V : Type u_2} {ι : Type u_3} [Semiring K]
+  [AddCommMonoid V] [Module K V] (T : ι → Module.End K V) : FiniteMonoidMortality.linearWord T [] = 1
+'FiniteMonoidMortality.linearWord_nil' depends on axioms: [propext, Quot.sound]
+FiniteMonoidMortality.factorMortalityBound_one : FiniteMonoidMortality.factorMortalityBound 1 = 1
+'FiniteMonoidMortality.factorMortalityBound_one' depends on axioms: [propext]
+FiniteMonoidMortality.extendProgramLetter_root.{u_1} {A : Type u_1} (p : List (FiniteMonoidMortality.WordGate A))
+  (a : A) :
+  FiniteMonoidMortality.wordProgramRoot (FiniteMonoidMortality.extendProgramLetter p a) =
+    FiniteMonoidMortality.wordProgramRoot p ++ [a]
+'FiniteMonoidMortality.extendProgramLetter_root' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,49 +1,10 @@
-VERIFICATION OF REVISION 2026-09-08-r2
+Verification — 2026-09-10-r3
 
-This supplement verifies the extracted FiniteMonoidMortality development. The recorded build and audits apply to the current
-proof sources; this documentation cleanup does not claim a new build.
+The extracted project was rebuilt from an empty project .lake/build with LAKE_ARTIFACT_CACHE=false. All 25 local mathematical modules compiled; lake reported 2329 jobs including pinned public dependencies. Specification.lean kernel-checks 20 exact source statements under the identifier mapping. Audit.lean checks endpoint types and transitive axioms, including three additional helper lemmas. Only propext, Classical.choice and Quot.sound occur. No sorry/admit or project axiom is present.
 
-RESULTS
-Fresh build from empty project output with LAKE_ARTIFACT_CACHE=false: exit 0.
-Exact endpoint statement and transitive-axiom audit: exit 0.
-Statement/definition preservation checks against the earlier proof: passed.
-All advertised endpoints use only propext, Classical.choice and Quot.sound.
-The package contains 7 mathematical modules, all reachable from Publication.
+Use lean/verify.sh for independent reproduction on a standard Lean 4.33.1 installation. Install the pinned public dependencies; do not reuse this project's compiled outputs. Actual successful logs: build.log, specification.log, axioms_and_statements.txt, lean-version.txt. The environment adaptation used here is described in VERIFICATION_ENVIRONMENT.txt and runtime-self-exe.c; it affects locating the compiler executable, not the proof kernel.
 
-PROVENANCE AND REPLAY
-PROVENANCE.json records exact checks, original proof source, counts and scope.
-ENVIRONMENT.json and VERIFICATION_ENVIRONMENT.txt identify the actual compiler,
-dependency revisions, cache/source-build provenance and runtime compatibility wrapper.
-source_closure.json records the current module graph and hashes.
-SHA256SUMS covers the current lean/ and verification/ files, except itself.
-From the package root, run sha256sum -c verification/SHA256SUMS.
-From the package root, follow README.txt and lean/README.txt to run
-sh verify.sh in lean/.
-Fresh replay output goes to recheck/, preserving the recorded successful logs.
+CLAIM_MAP.txt distinguishes formal endpoints from elementary scalar-extension/representation interpretations and historical comparisons. The manuscript uses an explicit invariant flag and explicit integer examples, not an unformalized general composition-series construction. The SLP theorem asserts small witness existence and correct evaluation.
 
-READING THE PROOF
-REFACTOR.txt explains the mathematical module sequence and the extraction.
-REFACTOR_MAP.json maps retained declarations to the earlier source.
-CLAIM_MAP.txt connects the manuscript to current Lean declarations and separates
-exposition-level bridges from separately named formal endpoints.
-The manuscript retains the main mathematical arguments directly.
-
-COMPATIBILITY
-specification.log records three kernel-checked compatibility theorems from
-lean/Specification.lean, using the original endpoint statements and transparent
-matrixWord/finiteMortalityBound definitions. verify.sh runs this check normally.
-source_equivalence.json and check_source_equivalence.py record a supplementary
-comparison of retained declaration source bodies. The optional source comparison uses the earlier public Lean package at
-commit 735383665b012b5b2d30450735ed062fde7bd030 of
-https://github.com/egilburg/aimath. From this verification/ directory run:
-
-    python3 check_source_equivalence.py ORIGINAL_LEAN CURRENT_LEAN \
-      --mapping REFACTOR_MAP.json --output reproduced_source_equivalence.json
-
-ORIGINAL_LEAN and CURRENT_LEAN are paths to the old and current mortality/lean
-folders. This read-only comparison is not needed to build the current proof.
-
-These checks concern formal mathematical statements and their specified assumptions.
-They do not establish global priority or constitute professional human review.
-The build logs retain ordinary linter warnings. No error or unproved project axiom
-supports the advertised endpoints. The current proof builds from this package and its pinned public dependencies.
+PUBLICATION.json identifies the distributed files; SHA256SUMS binds their bytes.
+PROVENANCE.json and ENVIRONMENT.json describe the recorded check and environment.

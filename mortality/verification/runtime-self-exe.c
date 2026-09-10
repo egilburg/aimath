@@ -12,3 +12,4 @@ ssize_t readlink(const char *path, char *buf, size_t size) {
     snprintf(own, sizeof own, "/proc/%d/exe", (int)getpid());
     return original(strcmp(path, own) == 0 ? "/proc/self/exe" : path, buf, size);
 }
+

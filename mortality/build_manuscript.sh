@@ -1,6 +1,8 @@
-#!/bin/sh
-set -eu
+#!/usr/bin/env bash
+set -euo pipefail
 cd "$(dirname "$0")"
-mkdir -p recheck/tex
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=recheck/tex exponential_mortality_bound_for_finite_real_matrix_monoids.tex
-printf '%s\n' 'Rendered PDF is in recheck/tex; retained release PDF is unchanged.'
+stem=exponential_mortality_bound_for_finite_real_matrix_monoids
+pdflatex -interaction=nonstopmode -halt-on-error "$stem.tex"
+bibtex "$stem"
+pdflatex -interaction=nonstopmode -halt-on-error "$stem.tex"
+pdflatex -interaction=nonstopmode -halt-on-error "$stem.tex"

@@ -1,11 +1,48 @@
-✔ [1849/1857] Built FiniteMonoidMortality.MatrixWords (1.0s)
-✔ [1850/1857] Built FiniteMonoidMortality.ReachableSpans (2.2s)
-✔ [1851/1857] Built FiniteMonoidMortality.Compression (1.0s)
-✔ [1852/1857] Built FiniteMonoidMortality.QuadraticObservation (2.3s)
-✔ [1853/1857] Built FiniteMonoidMortality.InvariantForms (2.3s)
-✔ [1854/1857] Built FiniteMonoidMortality.Descent (2.5s)
-⚠ [1855/1857] Built FiniteMonoidMortality.Main (1.7s)
-warning: FiniteMonoidMortality/Main.lean:68:2: Try this: 
+✔ [2303/2329] Built FiniteMonoidMortality.ReachableSpanMortality (2.6s)
+⚠ [2304/2329] Built FiniteMonoidMortality.BoundedMortality (3.5s)
+warning: FiniteMonoidMortality/BoundedMortality.lean:79:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteMonoidMortality/BoundedMortality.lean:155:23: This simp argument is unused:
+  Real.cos_pi_div_two
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Complex.mul_re]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [2305/2329] Built FiniteMonoidMortality.FiniteDimensionDetection (2.3s)
+✔ [2306/2329] Built FiniteMonoidMortality.MinimalRankCompression (2.8s)
+✔ [2307/2329] Built FiniteMonoidMortality.SubspaceEscape (1.8s)
+✔ [2308/2329] Built FiniteMonoidMortality.MortalityBudget (7.5s)
+✔ [2309/2329] Built FiniteMonoidMortality.MatrixWordScalarExtension (2.6s)
+✔ [2310/2329] Built FiniteMonoidMortality.ShortQuadraticObservation (2.8s)
+✔ [2311/2329] Built FiniteMonoidMortality.FiniteMortalityCompression (2.7s)
+✔ [2312/2329] Built FiniteMonoidMortality.RankOneTrace (2.4s)
+✔ [2313/2329] Built FiniteMonoidMortality.MatrixRankScalarExtension (2.9s)
+✔ [2314/2329] Built FiniteMonoidMortality.RankSensitiveMortality (3.7s)
+✔ [2315/2329] Built FiniteMonoidMortality.PlaneEllipse (5.9s)
+✔ [2316/2329] Built FiniteMonoidMortality.ImprovedMortalityBound (2.8s)
+✔ [2317/2329] Built FiniteMonoidMortality.MinimumRankBound (4.3s)
+⚠ [2318/2329] Built FiniteMonoidMortality.RankOneSandwich (2.6s)
+warning: FiniteMonoidMortality/RankOneSandwich.lean:26:28: This simp argument is unused:
+  Fin.sum_univ_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.mul_apply, Matrix.vecMulVec]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2319/2329] Built FiniteMonoidMortality.FlagMortality (3.3s)
+warning: FiniteMonoidMortality/FlagMortality.lean:16:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [2320/2329] Built FiniteMonoidMortality.PlaneInvariantForm (2.5s)
+✔ [2321/2329] Built FiniteMonoidMortality.MortalitySLP (3.6s)
+⚠ [2322/2329] Built FiniteMonoidMortality.MortalityExtremizer (5.2s)
+warning: FiniteMonoidMortality/MortalityExtremizer.lean:50:31: Try `simp at hw` instead of `simpa using hw`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [2323/2329] Built FiniteMonoidMortality.BlockMortality (2.6s)
+warning: FiniteMonoidMortality/BlockMortality.lean:57:2: Try this: 
   letI̵
 
 The goal is a proposition, so `let` is preferred over `letI`.
@@ -13,5 +50,48 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-✔ [1856/1857] Built Publication (2.1s)
-Build completed successfully (1857 jobs).
+warning: FiniteMonoidMortality/BlockMortality.lean:89:0: automatically included section variable(s) unused in theorem `FiniteMonoidMortality.projectBlockWord_embed`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteMonoidMortality/BlockMortality.lean:117:47: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [tagged, projectBlockWord_embed]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [2324/2329] Built FiniteMonoidMortality.TwoDimensionalMortality (3.6s)
+⚠ [2325/2329] Built FiniteMonoidMortality.LinearMortality (2.3s)
+warning: FiniteMonoidMortality/LinearMortality.lean:61:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2326/2329] Built FiniteMonoidMortality.SharpFactorExamples (2.5s)
+warning: FiniteMonoidMortality/SharpFactorExamples.lean:91:40: This simp argument is unused:
+  Fin.sum_univ_two
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mortalityRotation, Matrix.mulVec] at h0 h1
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteMonoidMortality/SharpFactorExamples.lean:110:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2327/2329] Built FiniteMonoidMortality.FlagQuotientMortality (2.7s)
+warning: FiniteMonoidMortality/FlagQuotientMortality.lean:19:11: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [2328/2329] Built Publication (2.1s)
+Build completed successfully (2329 jobs).

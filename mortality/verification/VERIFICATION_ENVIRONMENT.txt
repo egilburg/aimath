@@ -1,40 +1,7 @@
-Formal-verification environment
-===============================
+Current verification: manuscript/package 2026-09-10-r3.
+Lean 4.33.1, compiler commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6.
+All dependency Git HEADs were checked against lean/lake-manifest.json; see ENVIRONMENT.json.
 
-The proof projects use the official Lean 4.33.1 Linux release, compiler commit
-819816b2e0a3bf405af45ae5c7af2491d8f5bee6. The observed version strings, release
-archive SHA-256, compiler executable/library SHA-256 values, and the verified
-Git revisions of Mathlib and its eight dependencies are in ENVIRONMENT.json.
-The project's lean-toolchain and lake-manifest.json pin the reproducible inputs.
+This managed environment required an LD_PRELOAD shim that redirects readlink of the current process /proc/<pid>/exe to /proc/self/exe so Lean can locate its installation. The unchanged C source is runtime-self-exe.c. Compile only if needed: cc -shared -fPIC runtime-self-exe.c -ldl -o runtime-self-exe.so; set LD_PRELOAD to that shared library. This is an executable-location adaptation, not a compiler or kernel modification. A normal Lean installation needs no shim.
 
-Dependency binaries were obtained from Mathlib's official public master cache,
-selected by the official cache tool using the pinned source content. Some
-dependency modules were also compiled from those pinned sources during
-early setup/development attempts or following import adjustments. The package
-build logs identify actual compilation jobs; Lake's aggregate job count also
-includes reused targets. The paper-specific modules are separately rebuilt
-and audited, with the actual results in the build and statement/axiom logs.
-
-Normal reproduction from lean/:
-
-  lake exe cache get
-  lake build Publication
-  lake env lean Audit.lean
-
-For a clean project rebuild, remove only the project's .lake/build directory
-before lake build Publication, retaining or downloading public dependencies.
-
-The recorded environment required the accompanying runtime-self-exe.c wrapper:
-
-  cc -shared -fPIC runtime-self-exe.c -ldl -o runtime-self-exe.so
-  export LD_PRELOAD=/absolute/path/to/runtime-self-exe.so
-
-It redirects readlink of the current process's own /proc/<getpid()>/exe path to
-/proc/self/exe because this runtime exposes only the latter. It changes no Lean
-compiler or kernel source, no proof terms, and no other process's paths. This
-compatibility adjustment is unnecessary on normal Linux systems. The wrapper
-source hash and command are recorded alongside the compiler identity.
-
-Verification establishes the checked formal statements under the listed axioms
-and toolchain trust assumptions. Separate claim mapping documents connect the
-formal statements to the manuscript and identify any exposition-only material.
+Before the final check, all local project build outputs were moved outside the project. bash lean/verify.sh ran with LAKE_ARTIFACT_CACHE=false. The resulting build compiled every one of the 25 local mathematical modules; public dependency artifacts were reused at their verified pins. Fresh build, 20 source-statement checks and endpoint axiom audit all exited zero. Logs are included.

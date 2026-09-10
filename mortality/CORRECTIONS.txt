@@ -1,25 +1,16 @@
-CORRECTIONS
+Corrections — mortality, manuscript revision 2026-09-10-r3
 
-Current manuscript/package version: 2026-09-08-r2.
-Publicly released 8 September 2026. Permanent snapshots and revision history
-are recorded in repository-root RELEASES.txt. Earlier r1 snapshot:
-https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/mortality
+Report an error or missing attribution through the Correction report form at
+https://github.com/egilburg/aimath/issues . Include the immutable edition/commit,
+theorem/page or Lean declaration, the proposed correction and checkable evidence.
+The publisher handles reports; no monitoring or response-time promise is made.
 
-Report a mathematical, formalization, attribution or exposition issue at:
-https://github.com/egilburg/aimath/issues
-Choose Correction report. Identify the paper, affected version and permanent
-commit URL, exact theorem/page/declaration, and checkable evidence. A report is
-an allegation until assessed. No response-time or monitoring promise is made.
+Reports are assessed against the written statement, formal encoding and cited
+literature. A successful Lean build alone cannot dismiss a scope or attribution
+error. Confirmed corrections receive a public notice and forward revision,
+crediting substantive contributions as appropriate. Earlier editions and tags
+are retained. A central claim found unreliable is identified as such while
+investigated; unaffected claims are distinguished. No professional review is
+implied by public release.
 
-Confirmed corrections will identify the affected version and evidence, credit
-substantive help when appropriate, and be recorded with a dated forward revision.
-Previous commits remain accessible; updated PDFs must not silently replace an
-immutable version. A failed central claim should be marked unreliable or withdrawn
-on the current landing page and affected version's correction notice. Recheck
-affected proof, prose and citations before issuing a correction. Do not treat
-unrelated results as invalid without evidence.
-
-No confirmed mathematical erratum is recorded in this package. The r2 Lean
-extraction preserves the mathematical claims and arguments. It updates proof
-organization, naming, verification documentation and manuscript references.
-This is not an assertion of error-freedom or professional human review.
+R3 improves the earlier theorem; it is not an erratum. See CHANGES.txt.

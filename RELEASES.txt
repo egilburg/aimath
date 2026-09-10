@@ -59,15 +59,15 @@ Git commit identifies this supporting-documentation revision.
 
 EDITION TAGS — historical aliases prepared 9 September 2026
 
-Tag creation is pending. The verified existing commit links above remain usable.
-The proposed aliases identify the original editions, not today's supporting files:
+The four historical aliases below were verified live on 10 September 2026.
+They identify the original editions, not later supporting files:
 
   mortality-r1           735383665b012b5b2d30450735ed062fde7bd030
   mortality-r2           fff0f00fe6b7a0b81690667fdec97b86c4da816b
   sofic_markov_order-r1  735383665b012b5b2d30450735ed062fde7bd030
   sofic_markov_order-r2  fff0f00fe6b7a0b81690667fdec97b86c4da816b
 
-After creation, an edition folder is reachable using:
+An archived edition folder is reachable using:
 https://github.com/egilburg/aimath/tree/<edition-tag>/<paper-folder>
 
 Published edition tags are retained without moving or reusing them. Each paper
@@ -77,3 +77,22 @@ Historical snapshots retain the files that were distributed at that time.
 Tag backfill changes no manuscript, proof, release date or verification claim.
 Future manuscript editions include a compact revision/date/Archived edition line,
 with the archive hyperlink separate from the source-credit link.
+
+
+2026-09-10-r3 — Mortality mathematical improvement
+Minimum-Rank and Mortality Bounds for Finite Real Matrix Monoids.
+B(n,s)=n*2^(n-s)-n(n+1)/2+s(s-1)/2 attains minimum rank s in any finite
+entire real matrix monoid. Mortality improves from order n^2*2^n to n*2^n.
+Sharp dimension-two threshold four; invariant-flag bounds and sharp independent
+small blocks; boundedness/individual-periodicity boundary; cubic-size valid SLP
+existence and evaluator correctness. No polynomial-time synthesis is asserted.
+
+The 25-module supplement's fresh build (2329 jobs), 20 exact statement checks
+and endpoint axiom audits passed. Public transfer preserves the checked source,
+PDF and successful logs; no new Lean build is claimed during transfer.
+Professional mathematical review has not been performed.
+The commit introducing this entry is the immutable r3 payload snapshot.
+Its explicit commit link is added by a subsequent supporting-index commit.
+The mortality-r3 edition tag is pending because release tooling cannot create
+tags; the PDF's Archived edition link will resolve after that remaining action.
+Sofic r2 and all earlier mortality snapshots/tags remain unchanged.

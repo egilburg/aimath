@@ -1,123 +1,68 @@
 {
-  "prepared_utc": "2026-09-08T16:11:42.814087+00:00",
+  "verified_utc": "2026-09-10T01:25:25.432608+00:00",
   "lean_release": "4.33.1",
   "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
-  "download_url": "https://github.com/leanprover/lean4/releases/download/v4.33.1/lean-4.33.1-linux.tar.zst",
-  "download_sha256": "890afd185370f85666025b883914ab4f4b339136f8c96167b69cfb62aecaf235",
-  "runtime_wrapper": {
-    "file": "runtime-self-exe.c",
-    "sha256": "a41c81f0c36f54833593352e95384deccd01145c3f2df07fcf9911fd62eb06b9",
-    "purpose": "Redirect readlink of this process own /proc/<getpid()>/exe to /proc/self/exe; no compiler or kernel source changes.",
-    "compile_command": "cc -shared -fPIC runtime-self-exe.c -ldl -o runtime-self-exe.so",
-    "activation": "LD_PRELOAD=<absolute-path-to>/runtime-self-exe.so; needed only in this execution environment."
-  },
   "dependencies": [
     {
       "name": "mathlib",
       "url": "https://github.com/leanprover-community/mathlib4.git",
-      "expected": "0df444a360eaa60ab8c11dca51a86af692955474",
-      "actual": "0df444a360eaa60ab8c11dca51a86af692955474"
+      "revision": "0df444a360eaa60ab8c11dca51a86af692955474"
     },
     {
       "name": "plausible",
       "url": "https://github.com/leanprover-community/plausible",
-      "expected": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
-      "actual": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+      "revision": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
     },
     {
       "name": "LeanSearchClient",
       "url": "https://github.com/leanprover-community/LeanSearchClient",
-      "expected": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
-      "actual": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+      "revision": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
     },
     {
       "name": "importGraph",
       "url": "https://github.com/leanprover-community/import-graph",
-      "expected": "16f02aa7642864af59f1ff0e384a015994db9118",
-      "actual": "16f02aa7642864af59f1ff0e384a015994db9118"
+      "revision": "16f02aa7642864af59f1ff0e384a015994db9118"
     },
     {
       "name": "proofwidgets",
       "url": "https://github.com/leanprover-community/ProofWidgets4",
-      "expected": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
-      "actual": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+      "revision": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
     },
     {
       "name": "aesop",
       "url": "https://github.com/leanprover-community/aesop",
-      "expected": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
-      "actual": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+      "revision": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
     },
     {
       "name": "Qq",
       "url": "https://github.com/leanprover-community/quote4",
-      "expected": "92c15be17b7caf78c2ad767ec40f89052d908d81",
-      "actual": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+      "revision": "92c15be17b7caf78c2ad767ec40f89052d908d81"
     },
     {
       "name": "batteries",
       "url": "https://github.com/leanprover-community/batteries",
-      "expected": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
-      "actual": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      "revision": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
     },
     {
       "name": "Cli",
       "url": "https://github.com/leanprover/lean4-cli",
-      "expected": "6130a47896ce867c6a4a55373441e59e565bad0f",
-      "actual": "6130a47896ce867c6a4a55373441e59e565bad0f"
+      "revision": "6130a47896ce867c6a4a55373441e59e565bad0f"
     }
   ],
-  "cache_source": "https://lakecache.blob.core.windows.net/mathlib4-master",
-  "cache_scope": "Official default master cache; no fork scope overrides.",
-  "status": "Official Lean/Lake and all nine source pins validated. Dependency caches for the refactored projects and original compiled-statement comparison restored; both final official cache checks exited 0 with no missing files. Actual paper builds/audits are recorded separately.",
-  "lean_version_output": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
-  "lake_version_output": "Lake version 5.0.0-src+819816b (Lean version 4.33.1)",
-  "compiler_binary_hashes": {
-    "bin/lean": {
-      "sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
-      "bytes": 9024
-    },
-    "bin/lake": {
-      "sha256": "60330ab6f07dce20f3fa9ebb08e8b984ea9549eac172afeb15d9d2227060e2b3",
-      "bytes": 13840
-    },
-    "lib/lean/libleanshared.so": {
-      "sha256": "23d636cac1cadcba37beac30eff9b9b20d66cee726cf5defb4ae39f1284a3e5a",
-      "bytes": 230925168
-    },
-    "lib/lean/libleanshared_1.so": {
-      "sha256": "2f96493ac9046f64ec7bcb78102a4c1e7cd9a7042487f246af45eda8a96667f5",
-      "bytes": 6232
-    },
-    "lib/lean/libleanshared_2.so": {
-      "sha256": "2f96493ac9046f64ec7bcb78102a4c1e7cd9a7042487f246af45eda8a96667f5",
-      "bytes": 6232
-    }
+  "runtime_wrapper": {
+    "file": "runtime-self-exe.c",
+    "sha256": "f64110a42b9e5f76677af0b5cd9823ee87c9b7a735dc22a44e02338443caa783",
+    "purpose": "Redirect readlink of this process own /proc/<getpid()>/exe to /proc/self/exe; no compiler or kernel source changes.",
+    "compile_command": "cc -shared -fPIC runtime-self-exe.c -ldl -o runtime-self-exe.so",
+    "activation": "LD_PRELOAD=<absolute-path-to>/runtime-self-exe.so; needed only in this execution environment.",
+    "recorded_compilation_source_sha256": "a41c81f0c36f54833593352e95384deccd01145c3f2df07fcf9911fd62eb06b9",
+    "packaging_note": "Distributed source has one additional trailing newline relative to the recorded compilation-source hash. Removing only that blank line reproduces the recorded hash; executable C tokens are identical."
   },
-  "cache_reuse": "Official public dependency cache was reused. Early setup/development attempts also compiled some dependency modules from pinned sources; package build logs distinguish actual Built jobs from reused Lake targets. Clean paper-specific rebuilds exclude old project artifacts but may reuse these pinned dependency binaries.",
-  "standard_commands": [
-    "lean --version",
-    "lake --version",
-    "lake exe cache get <required-public-imports>",
-    "lake build Publication",
-    "lake env lean Audit.lean"
-  ],
-  "cache_check": {
-    "command": "lake exe cache get <union of 28 public imports>",
-    "exit_code": 0,
-    "required_cached_modules": 3014,
-    "download_missing_after_restoration": 0
-  },
-  "supplemental_cache_check": {
-    "purpose": "Compare renamed proofs against original compiled publication endpoint statements",
-    "command": "lake exe cache get <110 original public imports>",
-    "exit_code": 0,
-    "required_cached_modules": 3471,
-    "download_missing_after_restoration": 0
-  },
-  "source_pin_recheck": {
-    "dependencies": 9,
-    "all_heads_match_manifest": true,
-    "all_tracked_working_trees_clean": true
-  }
+  "project_artifact_cache": false,
+  "fresh_project_build": true,
+  "public_dependency_artifacts_reused": true,
+  "commands": [
+    "Set the recorded environment adaptation if needed; see VERIFICATION_ENVIRONMENT.txt.",
+    "bash lean/verify.sh"
+  ]
 }

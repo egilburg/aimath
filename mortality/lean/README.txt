@@ -1,42 +1,19 @@
-FINITE MONOID MORTALITY: REBUILD AND AUDIT
+FiniteMonoidMortality — manuscript revision 2026-09-10-r3
 
-This is a self-contained, paper-focused Lean source package. Its seven
-mathematical modules use the namespace FiniteMonoidMortality. Publication.lean
-imports Main; no parent research library is required.
+Install Lean 4.33.1 using elan. In lean/, run `lake exe cache get` for pinned public mathlib dependencies if desired, then `bash verify.sh` with no lean/.lake/build directory. The script disables Lake artifact restoration for this project's clean build and writes build, statement and axiom logs in ../verification. Existing pinned public dependency artifacts are permitted. The Lake manifest pins all dependency commits; no private repository is needed.
 
-Install Git and Elan from https://github.com/leanprover/elan and run here:
+Entrypoint: Publication.lean. Exact statements: Specification.lean. Endpoint/type/axiom audit: Audit.lean. The only permitted transitive axioms are propext, Classical.choice and Quot.sound. No project axiom or admitted proof is present.
 
-    elan toolchain install leanprover/lean4:v4.33.1
-    lake exe cache get
-    sh verify.sh
+Module sequence and mathematical roles:
+- MinimalRankCompression: matrix words, rank factorization, compressed returns and rank inequalities. MatrixWordScalarExtension and MatrixRankScalarExtension: field embeddings preserve products, zero and rank.
+- ReachableSpanMortality, FiniteDimensionDetection, SubspaceEscape: bounded orbit spans and the dimension-of-subspace escape lemma. Only the short-orbit route is retained.
+- ShortQuadraticObservation: symmetric coordinates, conjugation and affine lift. FiniteMortalityCompression: finite compressed-return group and positive-definite invariant form.
+- RankSensitiveMortality, MortalityBudget, ImprovedMortalityBound, MinimumRankBound: surjective matrix defect, exact recurrence, mortality and positive minimum rank. Old uniform scalar-observation/descent routes are omitted.
+- RankOneTrace, PlaneEllipse, RankOneSandwich, PlaneInvariantForm, TwoDimensionalMortality: trace quantization, three projective directions and shortening length five to four.
+- MortalityExtremizer: the classical Černý C3 zero-sum-plane pair, with explicit finite closure and exact threshold; it is not claimed as a new lower construction.
+- FlagMortality, LinearMortality, FlagQuotientMortality: invariant-subspace concatenation, basis transport, actual quotient actions, one/two-dimensional bounds. The concatenation method follows Almeida–Steinberg (2009), Lemma 2.4 and Proposition 2.5.
+- BlockMortality, SharpFactorExamples: independent blocks and exact summed thresholds; local planar irreducibility.
+- BoundedMortality: real-linear operators on the complex plane, contraction bounds, finite generator powers, mortality and exclusion of all words of a specified short length.
+- MortalitySLP: valid acyclic relative references, word expansion, monoid evaluation, sandwich sharing and cubic gate bound. No synthesis-time/bit-complexity theorem.
 
-The dependency cache download is optional for correctness. Preserve the
-supplied lake-manifest.json; do not run lake update to change its revisions.
-The required compiler is Lean 4.33.1, official commit
-819816b2e0a3bf405af45ae5c7af2491d8f5bee6. Mathlib is pinned at
-0df444a360eaa60ab8c11dca51a86af692955474; the manifest pins all nine public
-dependencies. No compiler binaries, dependency copies or project build cache
-are distributed.
-
-verify.sh disables Lake's global artifact restoration with
-LAKE_ARTIFACT_CACHE=false, compiles Publication, prints the three exact endpoint statements
-and transitive axiom lists using Audit.lean, and checks Specification.lean.
-The latter reproduces the original published claims and the two transparent
-custom definitions in their statement closure; each claim is proved directly
-by the refactored endpoint. The script requires every audited theorem to
-use only propext, Classical.choice and Quot.sound, and rejects sorryAx.
-Fresh output is written to ../recheck/ and does not overwrite the recorded
-verification supplement in ../verification/.
-
-Reading order: MatrixWords; ReachableSpans; Compression; InvariantForms;
-QuadraticObservation; Descent; Main. The first two introduce only the word
-and finite-dimensional orbit operations needed by the mortality argument.
-The next three construct a short trace-defect witness. Descent pays for both
-outside copies of each sandwich. Main proves the real bound and its rational
-specialization, without assuming a finite generator indexing type.
-
-The retained verification supplement describes the preparation environment,
-source/configuration hashes, compiler/dependency pins, successful build and
-axiom output, and the theorem mapping. The compatibility shim used by the
-preparation runtime is documented there; normal Elan installations do not
-need it.
+Storage conventions: matrix words multiply in list order. Operators act on column vectors from right to left. SLP output is the first stored gate, with dependencies in its tail; references are relative indices. An empty-word gate counts toward size. The alphabet can be infinite; finiteness is required of the entire product monoid.

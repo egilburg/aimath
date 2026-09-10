@@ -1,0 +1,17 @@
+Mortality edition history
+
+r1 — 8 September 2026: initial exponential mortality bound over real/rational
+finite entire product monoids containing zero.
+r2 — 8 September 2026: focused Lean refactor and synchronized manuscript
+references; mathematical conclusions retained.
+r3 — 10 September 2026: replaces the main bound by B(n,s), including positive
+minimum rank. The zero-bound improvement equals 2^(n-2)(n-1)(n-2), is strict
+for n>=3, and vanishes at n=1,2. Adds sharp dimension two, invariant flags and
+independent small-block sharpness, the boundedness boundary, and cubic-size
+SLP existence/evaluator correctness. No polynomial-time synthesis is claimed.
+The title is broadened; the publication ID and filename stem remain stable.
+The focused 25-module proof project received a fresh build and exact statement/
+axiom audits. Public transfer reuses those verified bytes and recorded results.
+
+Earlier editions: ../RELEASES.txt and the frozen mortality-r1/mortality-r2 tags.
+The r3 tag is pending; use the exact public snapshot in ../RELEASES.txt.

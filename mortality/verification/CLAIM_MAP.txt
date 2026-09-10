@@ -1,17 +1,17 @@
-# Manuscript-to-proof map
+Manuscript-to-formal claim map
+Current manuscript/package version: 2026-09-10-r3.
+All names below are in FiniteMonoidMortality.
 
-Declarations are in namespace `FiniteMonoidMortality`, under `lean/FiniteMonoidMortality/`. Full endpoint types and transitive axioms are retained in `verification/axioms_and_statements.txt`.
+Theorem 1.1: exists_minimum_rank_word_real_of_finite, exists_minimum_rank_word_rational_of_finite; exists_improved_short_zero_word_of_finite_real_monoid and rational counterpart. Custom definitions: matrixWord, minimumRankBound, improvedMortalityBound. Empty word/full-rank boundary: minimumRankBound_full; rank-zero formula: minimumRankBound_zero.
+Equation (1): mortalityBudget_comparison (n>=2). Strict improvement for n>=3 follows since the displayed positive term is positive; equality at n=1,2 is explicit arithmetic.
+Lemma 2.1: exists_short_linearWord_not_mem. Its subspace is arbitrary; no finite-alphabet assumption.
+Lemma 3.1: exists_invariant_posDef_of_finite_mul_mem.
+Lemma 3.2: exists_rank_sensitive_sandwich_below_word. Positive-definite Q, actual compression, onto matrix defect and kernel dimension are retained definitions/lemmas.
+Equation (2) and main proof: mortalityBudget_identity, mortalityBudget_at_minimum, exists_minimum_rank_word_of_minimizer. Skipped ranks use mortalityBudget_mono.
+Theorem 5.1: exists_zero_word_length_le_four_real and rational counterpart; mortalityExample_threshold_four gives the explicit INTEGER example, finite entire monoid, a length-four zero word, and lower bound for every zero word. Its interpretation over R/Q is scalar-extension prose using the same explicit matrices. The historical Černý identification is bibliography/source-adapter work, not a theorem proved by Lean.
+Theorem 6.1: exists_zero_word_of_invariant_flag; exists_zero_word_prescribed_small_factors; exists_zero_word_linear_bound_of_small_factors. flagSection U V is U/(V comap U.subtype), i.e. U/(U intersect V). The general formal endpoint permits arbitrary successive subquotients; the manuscript specializes to a nested invariant flag. No composition-series existence is claimed.
+Proposition 6.2: sharp_small_block_threshold provides explicit integer construction, dimension, finite range, exact witness and universal lower bound. mortalityRotation_irreducible proves the real planar component irreducible. One-dimensional irreducibility and scalar extension of the block example are elementary prose consequences; no general Jordan–Hölder adapter is advertised.
+Proposition 7.1: bounded_periodic_mortality_no_uniform_bound. Real dimension of C is formally two. The entire product set is bounded and each generator has finite powers; no uniform length bound exists. It does not assert exact threshold m+2 or finite powers of every product.
+Theorem 8.1: exists_minimum_rank_slp_real_of_finite and rational counterpart; wordProgramValue_correct; mortalitySLPGateBound_le_cubic. wordProgramValid and explicit wordProgramRoot preserve the acyclic/expanded-word meaning. Only existence and evaluator correctness, not efficient discovery or bit complexity.
 
-| Manuscript claim | Formal location / evidence | Scope |
-|---|---|---|
-| Theorem 1.1 real bound | Main.lean: `exists_short_zero_word_of_finite_real_monoid`, `finiteMortalityBound` | n>0; arbitrary index type A; finite range of all matrix words; existence of zero word |
-| Lemma 2.1, Corollary 2.2 short observation | QuadraticObservation.lean: `exists_short_quadratic_observation_ne_zero`, `exists_short_quadratic_observation_matrixDual_ne_zero` and their imports | Affine scalar observation encoded linearly on R⊕Sym_n; bound n(n+1)/2 |
-| Lemma 3.1 finite-group average | InvariantForms.lean: `exists_invariant_quadraticForm_of_finite_mul_mem`, `exists_invariant_quadraticForm_compressedReturn_of_finite` | Symmetry, positive trace and invariance suffice; no inverse in final signal |
-| Proposition 4.1 short sandwich | Main.lean: `exists_short_rank_decreasing_sandwich_of_finite` | Middle word length ≤n(n+1)/2 in original ambient dimension n; both copies of h remain |
-| Section 5 recurrence | Descent.lean: `exists_zero_word_bound_of_short_sandwich` | Starts with a singular letter; L_next≤2L+n(n+1)/2; at most n−1 descents |
-| Corollary 5.1 rational specialization | Main.lean: `exists_short_zero_word_of_finite_rational_monoid` | Entrywise Q→R embedding preserves zero and witness length |
-| Corollary 5.2 universal mortality function | Written application of Corollary 5.1 to a finite monoid representation image, compared with Almeida–Steinberg Definitions 2.1/5.1 | Exposition-level corollary, not a separately named Lean theorem |
-
-Finiteness of the generator set alone is insufficient. The empty product is the identity, which is nonzero for n>0. Adding identity aligns finite-semigroup comparisons with the formal word-monoid convention. The claim concerns zero, not arbitrary minimum-rank witnesses, full monoid diameter, or algorithmic running time. The as-is disclosure does not replace these proof obligations.
-
-R2 source refactor: all main theorem basenames are retained under the paper-specific namespace above. Fresh build/audit and original-statement/definition preservation are documented in README.txt and PROVENANCE.json in this directory. The extraction mapping is verification provenance, not an additional mathematical assumption.
+Historical comparisons, priority claims, and the finite-representation-image interpretation in section 1 are not separate formal endpoints. The manuscript contains no unsupported universal sharpness or algorithmic theorem.

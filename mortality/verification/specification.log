@@ -1,9 +1,246 @@
-'PublishedSpecification.exists_short_zero_word_of_finite_real_monoid' depends on axioms: [propext,
+Specification.lean:12:5: warning: Variable name `hfinite` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hfinite
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:20:5: warning: Variable name `hfinite` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hfinite
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:28:5: warning: Variable name `hfinite` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hfinite
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:29:5: warning: Variable name `hzero` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hzero
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:35:5: warning: Variable name `hfinite` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hfinite
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:36:5: warning: Variable name `hzero` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hzero
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:42:5: warning: Variable name `hf` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hf
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:43:5: warning: Variable name `hzero` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hzero
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:49:5: warning: Variable name `hf` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hf
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:50:5: warning: Variable name `hzero` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hzero
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:62:13: warning: Variable name `hbot` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hbot
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:62:28: warning: Variable name `htop` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htop
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:63:5: warning: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:64:5: warning: Variable name `hf` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hf
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:64:43: warning: Variable name `hz` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hz
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:72:19: warning: Variable name `hbot` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hbot
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:72:34: warning: Variable name `htop` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htop
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:73:5: warning: Variable name `hsmall` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hsmall
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:75:5: warning: Variable name `hk1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:76:5: warning: Variable name `hk2` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk2
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:77:5: warning: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:78:5: warning: Variable name `hf` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hf
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:78:43: warning: Variable name `hz` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hz
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:84:13: warning: Variable name `hbot` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hbot
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:84:28: warning: Variable name `htop` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htop
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:85:5: warning: Variable name `hmono` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmono
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:86:5: warning: Variable name `hsmall` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hsmall
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:88:5: warning: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:89:5: warning: Variable name `hf` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hf
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:89:43: warning: Variable name `hz` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hz
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:106:5: warning: Variable name `hU` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hU
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:122:5: warning: Variable name `hf` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hf
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:131:5: warning: Variable name `hf` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hf
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Specification.lean:160:48: warning: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'ManuscriptSpecification.exists_minimum_rank_word_real_of_finite' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-'PublishedSpecification.exists_short_zero_word_of_finite_rational_monoid' depends on axioms: [propext,
+'ManuscriptSpecification.exists_minimum_rank_word_rational_of_finite' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-'PublishedSpecification.exists_short_rank_decreasing_sandwich_of_finite' depends on axioms: [propext,
+'ManuscriptSpecification.exists_improved_short_zero_word_of_finite_real_monoid' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'ManuscriptSpecification.exists_improved_short_zero_word_of_finite_rational_monoid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ManuscriptSpecification.exists_zero_word_length_le_four_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ManuscriptSpecification.exists_zero_word_length_le_four_rational' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ManuscriptSpecification.mortalityExample_threshold_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManuscriptSpecification.exists_zero_word_of_invariant_flag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManuscriptSpecification.exists_zero_word_prescribed_small_factors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ManuscriptSpecification.exists_zero_word_linear_bound_of_small_factors' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ManuscriptSpecification.sharp_small_block_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManuscriptSpecification.mortalityRotation_irreducible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManuscriptSpecification.bounded_periodic_mortality_no_uniform_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ManuscriptSpecification.exists_minimum_rank_slp_real_of_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ManuscriptSpecification.exists_minimum_rank_slp_rational_of_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ManuscriptSpecification.wordProgramValue_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManuscriptSpecification.mortalitySLPGateBound_le_cubic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManuscriptSpecification.minimumRankBound_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ManuscriptSpecification.minimumRankBound_zero' depends on axioms: [propext]
+'ManuscriptSpecification.mortalityBudget_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]

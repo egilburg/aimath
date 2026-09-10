@@ -9,10 +9,12 @@ The finite Markov-order bound is n(n-1)/2 in intrinsic real Hankel dimension n,
 with stationary rational sharpness for every n >= 2 and a growing alphabet.
 
 FINITE-MONOID MORTALITY
-An Exponential Mortality Bound for Finite Real Matrix Monoids
+Minimum-Rank and Mortality Bounds for Finite Real Matrix Monoids
 https://github.com/egilburg/aimath/tree/main/mortality
-For n > 0, a finite entire generated real matrix monoid containing zero has a
-zero word of length at most 2^(n-1)+(2^(n-1)-1)n(n+1)/2; also over the rationals.
+For a finite entire real matrix monoid of dimension n and minimum rank s,
+a word attains s within n*2^(n-s)-n(n+1)/2+s(s-1)/2 letters.
+At s=0 the new order n*2^n improves r2 by a factor of order n.
+Includes sharp planar and small-factor results and cubic-size SLP existence.
 
 Each folder contains the PDF, editable TeX, references, complete project-local
 Lean sources, pinned dependencies, build instructions, citation and license files.
@@ -35,8 +37,8 @@ Versions, permanent links and edition-tag backfill status: RELEASES.txt.
 Corrections: https://github.com/egilburg/aimath/issues (Correction report form).
 
 
-CURRENT REVISION: 2026-09-08-r2 (8 September 2026).
-The focused proof libraries have 21 sofic and 7 mortality mathematical modules.
-Their claims and mathematical arguments are unchanged from r1; formal names,
-proof organization and verification references are updated. Earlier versions
-remain accessible through the immutable links in RELEASES.txt.
+CURRENT EDITIONS
+Mortality: 2026-09-10-r3; 25 mathematical Lean modules.
+Sofic Markov order: 2026-09-08-r2; 21 mathematical Lean modules.
+Frozen prior editions and exact snapshot links are in RELEASES.txt.
+The mortality-r3 tag is pending; use its exact public commit locator there.
