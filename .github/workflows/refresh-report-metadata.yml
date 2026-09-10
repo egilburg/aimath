@@ -1,0 +1,47 @@
+name: Refresh public report metadata
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/refresh-report-metadata.yml]
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release/report-format-metadata-final
+          fetch-depth: 0
+      - name: Refresh public inventories and checksums
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+          for name in ['analytic_prefix_frequency_laws','mortality','sofic_markov_order']:
+              d=Path(name)
+              # Refresh package checksum file excluding itself.
+              lines=[]
+              for f in sorted(x for x in d.rglob('*') if x.is_file()):
+                  rel=f.relative_to(d).as_posix()
+                  if rel=='SHA256SUMS' or rel.startswith('recheck/') or '/.lake/' in rel: continue
+                  lines.append(f"{hashlib.sha256(f.read_bytes()).hexdigest()}  {rel}")
+              (d/'SHA256SUMS').write_text('\n'.join(lines)+'\n')
+              # Refresh PUBLICATION.json inventory if it has one, preserving higher-level metadata.
+              p=d/'PUBLICATION.json'
+              if p.exists():
+                  data=json.loads(p.read_text())
+                  if 'files' in data:
+                      files=[]
+                      for f in sorted(x for x in d.rglob('*') if x.is_file()):
+                          rel=f.relative_to(d).as_posix()
+                          if rel in {'PUBLICATION.json','SHA256SUMS'} or rel.startswith('recheck/') or '/.lake/' in rel: continue
+                          files.append({'path':rel,'bytes':f.stat().st_size,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()})
+                      data['files']=files
+                  p.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n')
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analytic_prefix_frequency_laws mortality sofic_markov_order
+          git commit -m 'Refresh public report inventories' || exit 0
+          git push origin HEAD:release/report-format-metadata-final
