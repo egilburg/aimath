@@ -1,16 +1,16 @@
 \input{preamble}
-\newcommand{\sourcecredit}{\href{https://github.com/egilburg/aimath}{github.com/egilburg/aimath}}
+\newcommand{\sourcecredit}{Source: \href{https://github.com/egilburg/aimath}{github.com/egilburg/aimath}}
 \title{Minimum-Rank and Mortality Bounds\\for Finite Real Matrix Monoids}
 \hypersetup{pdftitle={Minimum-Rank and Mortality Bounds for Finite Real Matrix Monoids}}
 \begin{document}
 \maketitle
+\input{disclosure}
 \begin{abstract}
 For a family of real \(n\times n\) matrices whose entire product monoid is finite, let \(s\) be its minimum rank. We prove that a word attaining rank \(s\) has length at most
 \[
  B(n,s)=n2^{n-s}-\frac{n(n+1)}2+\frac{s(s-1)}2.
 \]
-In the mortal case this gives \(B(n,0)=\Theta(n2^n)\), improving the \(\Theta(n^2 2^n)\) bound in revision r2 of this manuscript. Over the rationals, it improves Kiefer and Ryzhikov's (2026) bound \(3^{n^2}\) for both mortality and minimum-rank diameter, and Almeida and Steinberg's (2009) universal mortality bound \((2n-1)^{n^2}-1\) for \(n>1\). We also prove the sharp universal mortality threshold four in dimension two, additive bounds along invariant flags with sharp examples for factors of dimensions one and two, and existence of a minimum-rank witness with at most \(n^3+n^2+3n+1\) straight-line-program gates. A bounded, individually periodic pair on the real plane shows why finiteness of the entire monoid matters. These statements have accompanying Lean proofs; the compressed-witness result asserts existence, without a polynomial-time synthesis claim.
-Discoveries presented here were made through the use of artificial intelligence.
+In the mortal case this gives \(B(n,0)=\Theta(n2^n)\), improving the \(\Theta(n^2 2^n)\) bound in revision r2 of this report. Over the rationals, it improves Kiefer and Ryzhikov's (2026) bound \(3^{n^2}\) for both mortality and minimum-rank diameter, and Almeida and Steinberg's (2009) universal mortality bound \((2n-1)^{n^2}-1\) for \(n>1\). We also prove the sharp universal mortality threshold four in dimension two, additive bounds along invariant flags with sharp examples for factors of dimensions one and two, and existence of a minimum-rank witness with at most \(n^3+n^2+3n+1\) straight-line-program gates. A bounded, individually periodic pair on the real plane shows why finiteness of the entire monoid matters. These statements have accompanying Lean proofs; the compressed-witness result asserts existence, without a polynomial-time synthesis claim.
 \end{abstract}
 
 \section{Scope, bounds and prior work}
@@ -32,7 +32,9 @@ The same assertion holds over \(\Q\). In particular, if \(S\) is mortal then a z
 
 The expression is nonnegative for \(0\leq s\leq n\). Its Lean definition adds the nonnegative terms before natural-number subtraction; Section~\ref{sec:budget} proves an additive identity justifying the displayed integer formula.
 
-\subsection{What changes from the previous edition}
+\subsection{Mathematical changes from r2 to r3}
+Revision r4 changes presentation and disclosure only; its mathematical content and Lean proof are unchanged from r3. The mathematical comparison below is the change introduced from r2 to r3.
+
 Revision r2 \cite{PreviousEdition} proved only the mortality bound
 \[
  b(n)=2^{n-1}+(2^{n-1}-1)\frac{n(n+1)}2\quad(n\geq1).
@@ -211,7 +213,6 @@ The development formalizes the real and rational minimum-rank bounds, mortality 
 
 The proof package is extracted at declaration level from shared research code. Its endpoint assumptions and definitions are checked against the pinned source, and the extracted project is rebuilt with an empty project build directory. The endpoint audits allow only Lean's standard propositional extensionality, classical choice and quotient soundness axioms; no project axiom or admitted proof supports these results. These checks concern the encoded propositions. They do not establish global optimality, historical novelty, or the deferred algorithmic claims.
 
-\input{disclosure}
 \bibliographystyle{plain}
 \bibliography{bibliography}
 \end{document}

@@ -1,16 +1,19 @@
 {
   "schema_version": 1,
   "publication_id": "analytic_prefix_frequency_laws",
-  "document_type": "machine-generated mathematical report",
+  "document_type": "AI-generated mathematical report",
   "title": "Analytic laws for recognizable prefix frequencies",
-  "version": "r1",
+  "version": "r2",
   "date": "2026-09-10",
   "license": "CC-BY-4.0",
-  "repository_maintainer": "https://github.com/egilburg/aimath",
   "formal_source": "73edf1d96438cde89dbac16c70106003b35d2f06",
   "formal_receipt": "cfdc9de0f7d6ea8a08530027c814db959d68c850",
   "mathematical_source": "7e21b43e34aa0bedc79b4e46b72bcc182cf9a653",
   "review_status": "not_peer_reviewed",
   "priority_status": "global_priority_not_claimed",
-  "corrections": "https://github.com/egilburg/aimath/issues"
+  "corrections": "https://github.com/egilburg/aimath/issues",
+  "source": "https://github.com/egilburg/aimath",
+  "edition_change_class": "presentation_and_disclosure_only",
+  "mathematics_changed": false,
+  "lean_changed": false
 }

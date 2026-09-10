@@ -1,8 +1,8 @@
 Minimum-Rank and Mortality Bounds for Finite Real Matrix Monoids
-Manuscript revision 2026-09-10-r3 (10 September 2026).
+Report revision 2026-09-10-r4 (10 September 2026).
 
 Read exponential_mortality_bound_for_finite_real_matrix_monoids.pdf or its editable TeX source.
-Build the manuscript with bash build_manuscript.sh. The public Lean supplement
+Build the report with bash build_report.sh. The public Lean supplement
 and reproduction commands are described in lean/README.txt; see
 verification/README.txt and verification/CLAIM_MAP.txt for scope and checks.
 
@@ -20,7 +20,7 @@ Its recorded clean build, 20 exact statement checks and endpoint axiom audits
 passed. The source and manuscript bytes are unchanged during public transfer;
 the included verification logs retain their original check date.
 
-Edition alias mortality-r3 is pending creation. The PDF's Archived edition link
+Edition alias mortality-r4 is pending creation. The PDF's Archived edition link
 will resolve when that tag is created. Use the exact public commit link in the
 repository-root RELEASES.txt in the meantime; earlier r1/r2 tags remain fixed.
 
@@ -31,4 +31,4 @@ unmatched best-known assertion is made. Read the manuscript's exact comparisons.
 License: LICENSE.txt (CC-BY-4.0 for publisher-controlled material, to the extent
 applicable rights exist). Third-party exceptions: THIRD_PARTY_NOTICES.txt.
 Citation: citation.bib. Changes: CHANGES.txt. Corrections: CORRECTIONS.txt.
-Source credit: https://github.com/egilburg/aimath
+Source: https://github.com/egilburg/aimath
