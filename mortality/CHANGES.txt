@@ -15,3 +15,5 @@ axiom audits. Public transfer reuses those verified bytes and recorded results.
 
 Earlier editions: ../RELEASES.txt and the frozen mortality-r1/mortality-r2 tags.
 The r3 tag is pending; use the exact public snapshot in ../RELEASES.txt.
+2026-09-10 r4: Presentation/disclosure-only report edition. Mathematics and Lean sources are unchanged from the preceding edition. Uses the canonical opening AI disclosure, Source line, sans-serif report styling, and removes the generic AI sentence from the abstract.
+

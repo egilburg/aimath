@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "title": "Sharp Finite Markov Order in Intrinsic Sofic Dimension",
-  "version": "2026-09-08-r2",
-  "release_date": "2026-09-08",
+  "version": "2026-09-10-r3",
+  "release_date": "2026-09-10",
   "public_release_status": "released",
   "source_credit": {
-    "text": "github.com/egilburg/aimath",
+    "text": "Source: github.com/egilburg/aimath",
     "url": "https://github.com/egilburg/aimath",
     "role": null
   },
@@ -18,7 +18,7 @@
     "commit": "735383665b012b5b2d30450735ed062fde7bd030",
     "url": "https://github.com/egilburg/aimath/tree/735383665b012b5b2d30450735ed062fde7bd030/sofic_markov_order"
   },
-  "changes": "Paper-specific Lean extraction and naming; unchanged mathematical claims and arguments; updated manuscript formal references and current version metadata.",
+  "changes": "Presentation/disclosure-only report edition; mathematical claims and Lean sources unchanged from r2.",
   "verification": {
     "status": "passed",
     "source_build": "Recorded successful build and audits of the unchanged r2 proof sources; no new build claimed for supporting-documentation maintenance.",
@@ -30,347 +30,424 @@
     {
       "path": ".gitignore",
       "bytes": 59,
-      "sha256": "0f0f5ad2aefbb1360fe25e2561c0f6ac946cf5d2da04b10f67ca75259456314b"
+      "sha256": "0f0f5ad2aefbb1360fe25e2561c0f6ac946cf5d2da04b10f67ca75259456314b",
+      "category": "reader instructions"
     },
     {
       "path": "CORRECTIONS.txt",
       "bytes": 1486,
-      "sha256": "3f5fbb39dd7eda951fc69d373a1c6178a7cd51866475634f86dfc6afe7f1e0b0"
+      "sha256": "3f5fbb39dd7eda951fc69d373a1c6178a7cd51866475634f86dfc6afe7f1e0b0",
+      "category": "reader instructions"
     },
     {
       "path": "LICENSE.txt",
       "bytes": 17023,
-      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744",
+      "category": "license/citation"
     },
     {
       "path": "README.txt",
-      "bytes": 2865,
-      "sha256": "294468614f5351f83033549135a4a3ad1ffa0bb509149ca338c9ade4f228e8b6"
+      "bytes": 2893,
+      "sha256": "acb94a9e4343233437500356d62fbb43a00cf482616780b4e7cac251e4c93ee8",
+      "category": "reader instructions"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
       "bytes": 1473,
-      "sha256": "b015168105f78be7cfdddd6e9df61c59a48a5d20756f14090cfb9ad5cdbf2ca7"
+      "sha256": "b015168105f78be7cfdddd6e9df61c59a48a5d20756f14090cfb9ad5cdbf2ca7",
+      "category": "license/citation"
     },
     {
       "path": "bibliography.bib",
       "bytes": 1823,
-      "sha256": "842af9c2d29c36caa45bf9d61b154988d4fe395554adfd7847002895b707d8c4"
+      "sha256": "842af9c2d29c36caa45bf9d61b154988d4fe395554adfd7847002895b707d8c4",
+      "category": "license/citation"
     },
     {
-      "path": "build_manuscript.sh",
+      "path": "build_report.sh",
       "bytes": 275,
-      "sha256": "d6d31496100fe96086405a6ee0d70a34d14b44d18de2309ee04a6dbaa6ae19b2"
+      "sha256": "d6d31496100fe96086405a6ee0d70a34d14b44d18de2309ee04a6dbaa6ae19b2",
+      "category": "report/source"
     },
     {
       "path": "citation.bib",
       "bytes": 648,
-      "sha256": "77315aeddecceeb8e57c87f3662e5e22dc6f00b432099118c703da4d67d85f3f"
+      "sha256": "77315aeddecceeb8e57c87f3662e5e22dc6f00b432099118c703da4d67d85f3f",
+      "category": "license/citation"
     },
     {
       "path": "disclosure.tex",
-      "bytes": 943,
-      "sha256": "56f5117a8b1578debc58f7d2fb2eb5c1f941d43d021947886dd57021a078a85d"
+      "bytes": 1013,
+      "sha256": "685da440ae534ed499b0a4f438f383b701508041b5d24698f1471d335de2fc32",
+      "category": "report/source"
     },
     {
       "path": "lean/Audit.lean",
       "bytes": 604,
-      "sha256": "40a5e03cd99e4bf04e47c02aec86a847d66b092f148cb9dfc356664e18a6504a"
+      "sha256": "40a5e03cd99e4bf04e47c02aec86a847d66b092f148cb9dfc356664e18a6504a",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/Publication.lean",
       "bytes": 77,
-      "sha256": "a8960824da2c3fb0ce3ad9b22e63cd19662389e5205a9b8459062338cc3369bb"
+      "sha256": "a8960824da2c3fb0ce3ad9b22e63cd19662389e5205a9b8459062338cc3369bb",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/README.txt",
       "bytes": 5071,
-      "sha256": "da98987dfd3aa349a16109cb429dcc103f79b09d5c13ef5855fa053f7dce0442"
+      "sha256": "da98987dfd3aa349a16109cb429dcc103f79b09d5c13ef5855fa053f7dce0442",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/BasisChain.lean",
       "bytes": 3230,
-      "sha256": "fe6d34d591c4cf80b5ba0a70454103771916ef8d563731454d8e22e98228824b"
+      "sha256": "fe6d34d591c4cf80b5ba0a70454103771916ef8d563731454d8e22e98228824b",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/CanonicalHankel.lean",
       "bytes": 5580,
-      "sha256": "d26fe18a2eeab0a1053c630814eaf1255a3f9b0eec32cd52053c37e3cd4ad86c"
+      "sha256": "d26fe18a2eeab0a1053c630814eaf1255a3f9b0eec32cd52053c37e3cd4ad86c",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/CommonKernel.lean",
       "bytes": 4444,
-      "sha256": "00bdfb6911d02cd4522a6c665e1a44c04858f38f22c56c0e1340d6c42af64386"
+      "sha256": "00bdfb6911d02cd4522a6c665e1a44c04858f38f22c56c0e1340d6c42af64386",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/ExteriorPairs.lean",
       "bytes": 4435,
-      "sha256": "b4d89c418db7a8757c0856233fec872cfb013e110420dfc146fbcfdd631c1e74"
+      "sha256": "b4d89c418db7a8757c0856233fec872cfb013e110420dfc146fbcfdd631c1e74",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/ExteriorRank.lean",
       "bytes": 2983,
-      "sha256": "cfca2ee25e34fe9e9266041a78f18a8465dc149f8f03a293b02946261cc40942"
+      "sha256": "cfca2ee25e34fe9e9266041a78f18a8465dc149f8f03a293b02946261cc40942",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/FiniteWords.lean",
       "bytes": 866,
-      "sha256": "3d34d573c04d0bc301b40716402582efac64d0e8ac97903364689283e715a853"
+      "sha256": "3d34d573c04d0bc301b40716402582efac64d0e8ac97903364689283e715a853",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/HankelRankCriterion.lean",
       "bytes": 8425,
-      "sha256": "2d77815336ec0904a87fefbe5d2e61e3eba4ad5a243cb509f3a843902b057f51"
+      "sha256": "2d77815336ec0904a87fefbe5d2e61e3eba4ad5a243cb509f3a843902b057f51",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/IIDMeasure.lean",
       "bytes": 3680,
-      "sha256": "168b6481b76db629921bf62011044e2665b7cb152aff36268664adc5eee90942"
+      "sha256": "168b6481b76db629921bf62011044e2665b7cb152aff36268664adc5eee90942",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/IIDPairFactor.lean",
       "bytes": 7771,
-      "sha256": "7967de52314868a674aa0024202ed0738ff370bfbc57f43f8a91a23b90e42c43"
+      "sha256": "7967de52314868a674aa0024202ed0738ff370bfbc57f43f8a91a23b90e42c43",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/IIDWordLaw.lean",
       "bytes": 3299,
-      "sha256": "6839f9f4137164db137e1e4a15841543bcbb3e55cfedd560598ffeead20bf4c6"
+      "sha256": "6839f9f4137164db137e1e4a15841543bcbb3e55cfedd560598ffeead20bf4c6",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/PairChain.lean",
       "bytes": 3111,
-      "sha256": "f761ea699ade2b55814b8a3fc592bdb88fd0faac97ea733d32f8ac8f67511f72"
+      "sha256": "f761ea699ade2b55814b8a3fc592bdb88fd0faac97ea733d32f8ac8f67511f72",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/PositiveCompletion.lean",
       "bytes": 5773,
-      "sha256": "617a99571b7ae52685ba9cc9a337232228fd33ff7f92606de293b4aa22f39705"
+      "sha256": "617a99571b7ae52685ba9cc9a337232228fd33ff7f92606de293b4aa22f39705",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/ProcessMarkov.lean",
       "bytes": 5218,
-      "sha256": "93ecfc0adc76e28a26cbd140fec48b8cb546c368b78f36e0f300733cfca7626a"
+      "sha256": "93ecfc0adc76e28a26cbd140fec48b8cb546c368b78f36e0f300733cfca7626a",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/RationalSharpness.lean",
       "bytes": 4883,
-      "sha256": "7eea12d0e38bac5e6107fd4a7926d0acb3da423ab26b75a28241ca2e00ccdd45"
+      "sha256": "7eea12d0e38bac5e6107fd4a7926d0acb3da423ab26b75a28241ca2e00ccdd45",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/SelectorWeights.lean",
       "bytes": 3104,
-      "sha256": "b8a426bb89c5d1b7e01ef79abad8d37e721a83fe0174c2e634431a329dc267fe"
+      "sha256": "b8a426bb89c5d1b7e01ef79abad8d37e721a83fe0174c2e634431a329dc267fe",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/SequenceSpace.lean",
       "bytes": 1408,
-      "sha256": "fee227c2ba90af5d86f33256cc71c2bd8b89a59ac4ab9f67c6f1241b32b65490"
+      "sha256": "fee227c2ba90af5d86f33256cc71c2bd8b89a59ac4ab9f67c6f1241b32b65490",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/SharpProcess.lean",
       "bytes": 2701,
-      "sha256": "4af90dd5e91f2fb68da254170fd26ad26599cc87b5b3bd192bd398fee78e20e8"
+      "sha256": "4af90dd5e91f2fb68da254170fd26ad26599cc87b5b3bd192bd398fee78e20e8",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/SharpWordLaw.lean",
       "bytes": 9405,
-      "sha256": "9cee7274cc1623292696b03dce143d0484b0f6ade1834c60be14a0ef9c0cc43e"
+      "sha256": "9cee7274cc1623292696b03dce143d0484b0f6ade1834c60be14a0ef9c0cc43e",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/StationaryWordLaw.lean",
       "bytes": 4306,
-      "sha256": "d4eeefcc0251cf4947d33a6e97c8695da02595e3f19a76aef692f06887abd168"
+      "sha256": "d4eeefcc0251cf4947d33a6e97c8695da02595e3f19a76aef692f06887abd168",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/UniformRealization.lean",
       "bytes": 7717,
-      "sha256": "add5dd21a20f77fbe7c23b454045caffcb6c5f0ee508cf511123f445304b63a4"
+      "sha256": "add5dd21a20f77fbe7c23b454045caffcb6c5f0ee508cf511123f445304b63a4",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/SoficMarkovOrder/WordProducts.lean",
       "bytes": 1470,
-      "sha256": "031c9dd5b51aefe07f9baf5111dd3587718aef58127497f672943793aff2d48a"
+      "sha256": "031c9dd5b51aefe07f9baf5111dd3587718aef58127497f672943793aff2d48a",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/lake-manifest.json",
       "bytes": 3523,
-      "sha256": "dce322d8f0afe8609dae4720b6933916972811d15e32cd167655e35f35271a67"
+      "sha256": "dce322d8f0afe8609dae4720b6933916972811d15e32cd167655e35f35271a67",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/lakefile.toml",
       "bytes": 259,
-      "sha256": "fea4f0d4b2ccb8721477ee2201698b8f40e91e340fd11b49364e4419502a89b3"
+      "sha256": "fea4f0d4b2ccb8721477ee2201698b8f40e91e340fd11b49364e4419502a89b3",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/lean-toolchain",
       "bytes": 25,
-      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+      "category": "proof/dependency"
     },
     {
       "path": "lean/verify.sh",
       "bytes": 1507,
-      "sha256": "691b22a8bcf8ed22951bb75207228b36e4033a7acc70db88fdfa8f83baab198a"
+      "sha256": "691b22a8bcf8ed22951bb75207228b36e4033a7acc70db88fdfa8f83baab198a",
+      "category": "proof/dependency"
     },
     {
       "path": "preamble.tex",
-      "bytes": 1039,
-      "sha256": "6f25ca924da8c2c8c1a899244fadd7bef5f2bb8b1fbfaaed44edb7518cca372a"
+      "bytes": 1212,
+      "sha256": "60909c1edfd8bd6bebdf75db582a79fa7ce91a0ee5610739656adb1b5ef6effb",
+      "category": "report/source"
     },
     {
       "path": "sharp_finite_markov_order_in_intrinsic_sofic_dimension.pdf",
-      "bytes": 346919,
-      "sha256": "a0238d5eb5e91ee4502b0f7c6e43937d4951b4520fdc5b4f2900a489be6babf2"
+      "bytes": 346673,
+      "sha256": "afe106a155ac74d024775193119a6b0359b25927a77f56019e13bdf6e915c574",
+      "category": "report/source"
     },
     {
       "path": "sharp_finite_markov_order_in_intrinsic_sofic_dimension.tex",
-      "bytes": 14812,
-      "sha256": "445806cf26c3d998f47e46a4fec38adf084ff80d04902d6c8026d6c4f199f9e6"
+      "bytes": 14732,
+      "sha256": "6a72c26223b9236cd82db3c60f0dd199d14296dcfbf1c9f9082bb65f9eab6f7c",
+      "category": "report/source"
     },
     {
       "path": "third_party_licenses/Cli.txt",
       "bytes": 1062,
-      "sha256": "f7e95706807e931782b6efd9a9d2789508a52423ad67b56ee7e5e324362d4aac"
+      "sha256": "f7e95706807e931782b6efd9a9d2789508a52423ad67b56ee7e5e324362d4aac",
+      "category": "reader instructions"
     },
     {
       "path": "third_party_licenses/Lean-LICENSE.txt",
       "bytes": 9160,
-      "sha256": "8b28515ffffc5c0fe2807d8ae3735b00b324d9b7ce807dd63ff6ac8922fbce7e"
+      "sha256": "8b28515ffffc5c0fe2807d8ae3735b00b324d9b7ce807dd63ff6ac8922fbce7e",
+      "category": "license/citation"
     },
     {
       "path": "third_party_licenses/Lean-LICENSES.txt",
       "bytes": 81854,
-      "sha256": "00cce2ac071f63d470a287438a7c6bbc4334706be244384e9af4fc9ead11cdce"
+      "sha256": "00cce2ac071f63d470a287438a7c6bbc4334706be244384e9af4fc9ead11cdce",
+      "category": "license/citation"
     },
     {
       "path": "third_party_licenses/LeanSearchClient.txt",
       "bytes": 11357,
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "category": "reader instructions"
     },
     {
       "path": "third_party_licenses/Qq.txt",
       "bytes": 11357,
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "category": "reader instructions"
     },
     {
       "path": "third_party_licenses/aesop.txt",
       "bytes": 11357,
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "category": "reader instructions"
     },
     {
       "path": "third_party_licenses/batteries.txt",
       "bytes": 11357,
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "category": "reader instructions"
     },
     {
       "path": "third_party_licenses/importGraph.txt",
       "bytes": 11357,
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "category": "reader instructions"
     },
     {
       "path": "third_party_licenses/mathlib.txt",
       "bytes": 11357,
-      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "category": "reader instructions"
     },
     {
       "path": "third_party_licenses/plausible.txt",
       "bytes": 11357,
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "category": "reader instructions"
     },
     {
       "path": "third_party_licenses/proofwidgets.txt",
       "bytes": 11357,
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "category": "reader instructions"
     },
     {
       "path": "verification/CLAIM_MAP.txt",
       "bytes": 2828,
-      "sha256": "915e34cdf0420f306b9fbad5da89db45011c4241a974c35c045a1f3dbb5d7fe6"
+      "sha256": "915e34cdf0420f306b9fbad5da89db45011c4241a974c35c045a1f3dbb5d7fe6",
+      "category": "artifact verification"
     },
     {
       "path": "verification/ENVIRONMENT.json",
       "bytes": 5438,
-      "sha256": "137d02041cf59c7ad570e0c4b43f4e0b4b3a367d30c7388999844295956d157a"
+      "sha256": "137d02041cf59c7ad570e0c4b43f4e0b4b3a367d30c7388999844295956d157a",
+      "category": "artifact verification"
     },
     {
       "path": "verification/PROVENANCE.json",
       "bytes": 3420,
-      "sha256": "bece6634b8b18ab1f1293102d92fbca41b9348c65d8bc1a38867002a6db538bd"
+      "sha256": "bece6634b8b18ab1f1293102d92fbca41b9348c65d8bc1a38867002a6db538bd",
+      "category": "artifact verification"
     },
     {
       "path": "verification/README.txt",
       "bytes": 2492,
-      "sha256": "2ef6a0891a3c9ac15d8bfcce9b5a42f341aad8559c198fc51c5445455757301e"
+      "sha256": "2ef6a0891a3c9ac15d8bfcce9b5a42f341aad8559c198fc51c5445455757301e",
+      "category": "artifact verification"
     },
     {
       "path": "verification/REFACTOR.txt",
       "bytes": 1177,
-      "sha256": "69d51c9c58875a0c4de590697eff4b695bbd96ef3fb8c6647c66ebaf3a0ea97a"
+      "sha256": "69d51c9c58875a0c4de590697eff4b695bbd96ef3fb8c6647c66ebaf3a0ea97a",
+      "category": "artifact verification"
     },
     {
       "path": "verification/REFACTOR_MAP.json",
       "bytes": 93854,
-      "sha256": "6e9ed5e46754d5342cdd619da54c9935b7384902b8908a946c63e3fe8eb31fa3"
+      "sha256": "6e9ed5e46754d5342cdd619da54c9935b7384902b8908a946c63e3fe8eb31fa3",
+      "category": "artifact verification"
     },
     {
       "path": "verification/SHA256SUMS",
       "bytes": 4419,
-      "sha256": "bafd3199078a26918495cc1212781b26c3d5ae9ea053cfaa5930048ee028110c"
+      "sha256": "bafd3199078a26918495cc1212781b26c3d5ae9ea053cfaa5930048ee028110c",
+      "category": "artifact verification"
     },
     {
       "path": "verification/SemanticComparison.lean",
       "bytes": 3451,
-      "sha256": "9756acdd3f9d41f053df8cd356baa53bb64808e142125712f0b82ca15691d637"
+      "sha256": "9756acdd3f9d41f053df8cd356baa53bb64808e142125712f0b82ca15691d637",
+      "category": "artifact verification"
     },
     {
       "path": "verification/VERIFICATION_ENVIRONMENT.txt",
       "bytes": 2081,
-      "sha256": "498e91805a475ea33fa1680b60c69f7d2a208313955c4f8f4a7c1f66731996cc"
+      "sha256": "498e91805a475ea33fa1680b60c69f7d2a208313955c4f8f4a7c1f66731996cc",
+      "category": "artifact verification"
     },
     {
       "path": "verification/axioms_and_statements.txt",
       "bytes": 9711,
-      "sha256": "0680f766ebaaaf1851ec06de8867cf74ce598218ad46f969458679ada2a595d6"
+      "sha256": "0680f766ebaaaf1851ec06de8867cf74ce598218ad46f969458679ada2a595d6",
+      "category": "artifact verification"
     },
     {
       "path": "verification/build.log",
       "bytes": 16395,
-      "sha256": "5a17270fc81bd71d2ee36fdfcdb72121e9cdc1ada2d2212f85020e7bd4a535c2"
+      "sha256": "5a17270fc81bd71d2ee36fdfcdb72121e9cdc1ada2d2212f85020e7bd4a535c2",
+      "category": "artifact verification"
     },
     {
       "path": "verification/manuscript-build.log",
       "bytes": 27990,
-      "sha256": "4210648641705d4d5900a4f3f4392387c15ed737d619d1052cdd990ae5ccf132"
+      "sha256": "4210648641705d4d5900a4f3f4392387c15ed737d619d1052cdd990ae5ccf132",
+      "category": "artifact verification"
     },
     {
       "path": "verification/runtime-self-exe.c",
       "bytes": 560,
-      "sha256": "a41c81f0c36f54833593352e95384deccd01145c3f2df07fcf9911fd62eb06b9"
+      "sha256": "a41c81f0c36f54833593352e95384deccd01145c3f2df07fcf9911fd62eb06b9",
+      "category": "artifact verification"
     },
     {
       "path": "verification/semantic_comparison.log",
       "bytes": 2664,
-      "sha256": "7044d6656146c374f603c0f442b18444913e563ddd40213588609b385079cb5a"
+      "sha256": "7044d6656146c374f603c0f442b18444913e563ddd40213588609b385079cb5a",
+      "category": "artifact verification"
     },
     {
       "path": "verification/source_closure.json",
       "bytes": 6900,
-      "sha256": "1f7d1a3f57d74a322973406667421e94bf4a312d607bdc8cf2a988e1412d832e"
+      "sha256": "1f7d1a3f57d74a322973406667421e94bf4a312d607bdc8cf2a988e1412d832e",
+      "category": "artifact verification"
     },
     {
       "path": "verification/source_comparison.json",
       "bytes": 5564,
-      "sha256": "6ed52f7d81cf44a8e8302b51be52d3f5007378ea516340c3f837a2f3aa6623ea"
+      "sha256": "6ed52f7d81cf44a8e8302b51be52d3f5007378ea516340c3f837a2f3aa6623ea",
+      "category": "artifact verification"
     },
     {
       "path": "verification/source_comparison.py",
       "bytes": 3585,
-      "sha256": "893cbd0a27d9c00339e55676d4f0a94e6c48516681d8c133425947f89f3ea197"
+      "sha256": "893cbd0a27d9c00339e55676d4f0a94e6c48516681d8c133425947f89f3ea197",
+      "category": "artifact verification"
     }
   ],
   "supporting_documentation": {
     "revision": "2026-09-09",
     "scope": "Public documentation and inventory cleanup; manuscript and formal proof revision remain r2.",
     "identity": "The containing Git commit identifies the current supporting files; immutable_snapshot identifies the original r2 publication."
-  }
+  },
+  "document_type": "AI-generated mathematical report",
+  "date": "2026-09-10",
+  "edition_tag": {
+    "name": "sofic_markov_order-r3",
+    "status": "pending_creation"
+  },
+  "edition_change_class": "presentation_and_disclosure_only",
+  "mathematics_changed": false,
+  "lean_changed": false
 }

@@ -1,12 +1,12 @@
 \input{preamble}
-\newcommand{\sourcecredit}{\href{https://github.com/egilburg/aimath}{github.com/egilburg/aimath}}
+\newcommand{\sourcecredit}{Source: \href{https://github.com/egilburg/aimath}{github.com/egilburg/aimath}}
 \title{Sharp Finite Markov Order\\in Intrinsic Sofic Dimension}
 \hypersetup{pdftitle={Sharp Finite Markov Order in Intrinsic Sofic Dimension}}
 \begin{document}
 \maketitle
+\input{disclosure}
 \begin{abstract}
 Let \(n\) be the real Hankel dimension of the cylinder probabilities of a stationary finite-alphabet process. If its Markov order is finite, we prove that it is at most \(\binom n2\). For every \(n\ge2\), we construct a stationary process with a nonnegative rational presentation of minimal dimension \(n\) and exact order \(\binom n2\), allowing the alphabet to grow. In the stationary sofic setting this improves the horizon \(2^{n^2-1}\) of B\'eal, Jug\'e, Mairesse and Perrin, \emph{Sofic measures} (2026), Theorem 5.1. The deterministic binomial-delay precedent is due to B\'eal and Senellart (1998); the extremal pair-chain core occurs in Trahtman's 1998 construction, which we realize stochastically. The upper proof combines Holland's rank criterion with classical exterior-square and nilpotence arguments. An accompanying Lean development proves the one-sided process theorem and rational stationary sharpness.
-Discoveries presented here were made through the use of artificial intelligence.
 \end{abstract}
 
 \section{The result and its scope}
@@ -181,7 +181,7 @@ The critical word \(a_1\cdots a_{D-1}\) has rank two and positive mass
 For \(n=2\), this is the empty word and its mass is one. If order \(k<D\) held, the length-\(k\) prefix matrix of the critical word would have rank at most one; multiplying by its remainder would contradict its rank two. This proves sharpness in Theorem \ref{thm:main}.
 
 \section{Formal verification and provenance}
-The accompanying \texttt{lean/} directory supplies a self-contained development for this paper, its pinned manifest, entrypoint \texttt{Publication.lean} and \texttt{Audit.lean}. The environment is Lean 4.33.1 and Mathlib commit \texttt{0df444a360eaa60ab8c11dca51a86af692955474}, credited in \cite{Lean,Mathlib}. The included \texttt{verification/} supplement supplies build logs, exact statement and axiom audits, source hashes, and verification provenance; its \texttt{README.txt} explains reproduction and \texttt{SHA256SUMS} checks the proof files. The manuscript-to-formal correspondence is recorded in \texttt{CLAIM\_MAP.txt}. This revision extracts the needed lemmas into subject-specific modules; the supplement records their correspondence to the earlier proof and the fresh build checks.
+The accompanying \texttt{lean/} directory supplies a self-contained development for this report, its pinned manifest, entrypoint \texttt{Publication.lean} and \texttt{Audit.lean}. The environment is Lean 4.33.1 and Mathlib commit \texttt{0df444a360eaa60ab8c11dca51a86af692955474}, credited in \cite{Lean,Mathlib}. The included \texttt{verification/} supplement supplies build logs, exact statement and axiom audits, source hashes, and verification provenance; its \texttt{README.txt} explains reproduction and \texttt{SHA256SUMS} checks the proof files. The report-to-formal correspondence is recorded in \texttt{CLAIM\_MAP.txt}. This revision extracts the needed lemmas into subject-specific modules; the supplement records their correspondence to the earlier proof and the fresh build checks.
 
 The principal declarations, in namespace \texttt{SoficMarkovOrder}, are:
 \begin{itemize}
@@ -190,14 +190,13 @@ The principal declarations, in namespace \texttt{SoficMarkovOrder}, are:
 \item \texttt{exists\_rational\_sharp\_sofic\_process};
 \item \texttt{processMarkov\_iff\_rankOne}.
 \end{itemize}
-The endpoint axioms are limited to \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}. The upper endpoint constructs a reduced representation internally. The Trahtman comparison and two-sided extension explanation are manuscript-level arguments, not separately formalized Lean theorems.
+The endpoint axioms are limited to \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}. The upper endpoint constructs a reduced representation internally. The Trahtman comparison and two-sided extension explanation are report-level arguments, not separately formalized Lean theorems.
 
 \paragraph{Documented research process.}
 The AI investigation reformulated rank collapse on the exterior square, then exposed the uniform-nilpotence argument through common-kernel stabilization. Exact small-dimensional computations preceded the all-dimensional formal proof. Formalization replaced row fillers by single-entry residual letters and used a two-block IID construction for actual process semantics. Later primary-source inspection identified Trahtman's matching pair-chain core and narrowed the originality account.
 
 Formal checking and the focused literature search do not certify global priority. No fixed-alphabet classification or efficiency claim for large constructions is asserted. Corrections should identify the version and affected statement through the route in the accompanying \texttt{CORRECTIONS.txt}.
 
-\input{disclosure}
 
 \bibliographystyle{plain}
 \bibliography{bibliography}
