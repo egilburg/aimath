@@ -20,6 +20,7 @@ jobs:
         env:
           ARTIFACT_URL: "https://sdmntprwestcentralus.oaiusercontent.com/files/00000000-aab4-81fb-b9d3-ba79aeee55fe/raw?se=2026-09-10T20%3A46%3A38Z&sp=r&sv=2026-02-06&sr=b&scid=6f87b554-930f-5903-8b8b-07d64aaf002c&skoid=c69179d1-5b5d-430f-afa3-b9bdcf9d6497&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-10T03%3A13%3A42Z&ske=2026-09-11T03%3A13%3A42Z&sks=b&skv=2026-02-06&sig=UpF3dZaKwz%2BMBIIH//2KqiBUnB/o7ZSUtvysaeeAuWg%3D"
         run: |
+          # trigger import after workflow registration
           set -euo pipefail
           curl -fL "$ARTIFACT_URL" -o /tmp/artifact.zip
           rm -rf /tmp/artifact && mkdir /tmp/artifact
